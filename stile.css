@@ -1,0 +1,84 @@
+/* Note Crypto — kit grafico Luca Valente (palette in 01_ISTRUZIONI/riferimenti_grafica/PALETTE.md).
+   Responsive a 360 / 768 / 1440. Nessun font esterno: Georgia per i titoli, Arial per il resto. */
+
+:root{
+  --bg:#052C25; --panel:#0A382F; --ivory:#F4F0E3; --muted:#B7C9BF;
+  --lime:#C9F77B; --cyan:#71D8D2; --coral:#FF978B; --line:#42665A;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--bg); color:var(--ivory);
+  font-family:Arial,Helvetica,sans-serif; font-size:17px; line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--cyan); text-decoration:none}
+a:hover{text-decoration:underline}
+
+.testata{
+  display:flex; justify-content:space-between; align-items:flex-end; gap:16px; flex-wrap:wrap;
+  max-width:1100px; margin:0 auto; padding:28px 24px 16px;
+  border-bottom:1px solid var(--line);
+}
+.marchio a{font-family:Georgia,serif; font-size:22px; letter-spacing:.02em; color:var(--ivory)}
+.marchio small{display:block; font-size:11px; letter-spacing:.2em; color:var(--muted); margin-top:4px}
+nav a{font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-left:18px}
+nav a.attiva{color:var(--lime)}
+
+main{max-width:1100px; margin:0 auto; padding:28px 24px 64px}
+
+.intro{margin-bottom:34px}
+.intro h1{font-family:Georgia,serif; font-weight:normal; font-size:40px; line-height:1.05; letter-spacing:-1px}
+.intro p{color:var(--muted); font-size:19px; margin-top:8px}
+
+.elenco{display:flex; flex-direction:column; gap:26px}
+.voce{
+  display:grid; grid-template-columns:160px 1fr; gap:22px;
+  background:var(--panel); border:1px solid var(--line); padding:18px;
+}
+.voce-immagine img{width:100%; height:auto; display:block}
+.voce-data{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--lime)}
+.voce h2{font-family:Georgia,serif; font-weight:normal; font-size:26px; line-height:1.15; margin:6px 0 8px}
+.voce h2 a{color:var(--ivory)}
+.voce p{color:var(--muted)}
+
+.pezzo{max-width:720px; margin:0 auto}
+.pezzo-data{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--lime)}
+.pezzo h1{font-family:Georgia,serif; font-weight:normal; font-size:40px; line-height:1.08; letter-spacing:-1px; margin:8px 0 22px}
+.pezzo h2{font-family:Georgia,serif; font-weight:normal; font-size:25px; margin:30px 0 8px}
+.pezzo h3{font-size:17px; letter-spacing:.06em; text-transform:uppercase; color:var(--cyan); margin:26px 0 6px}
+.pezzo p{margin:14px 0}
+.pezzo figure{margin:24px 0}
+.pezzo figure img{width:100%; height:auto; display:block; border:1px solid var(--line)}
+.pezzo figcaption{font-size:14px; color:var(--muted); margin-top:8px}
+.pezzo .copertina{margin:0 0 28px}
+.pezzo blockquote{
+  background:var(--ivory); color:var(--bg); padding:18px 20px; margin:26px 0;
+  font-size:17px; line-height:1.45;
+}
+.pezzo strong{color:var(--ivory)}
+.track{border-top:1px solid var(--line); margin-top:38px; padding-top:18px}
+.track h2{font-family:Georgia,serif; font-weight:normal; font-size:22px; color:var(--lime)}
+
+.piede{
+  max-width:1100px; margin:0 auto; padding:18px 24px 40px;
+  border-top:1px solid var(--line); display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;
+  color:var(--muted); font-size:12px;
+}
+/* La riga legale sta da sola, sotto le altre due, su tutta la larghezza. */
+.piede .legale{flex-basis:100%; order:3}
+
+@media (max-width:768px){
+  main{padding:22px 16px 48px}
+  .testata{padding:22px 16px 14px}
+  .piede{padding:16px 16px 32px}
+  .intro h1,.pezzo h1{font-size:32px}
+  .voce{grid-template-columns:110px 1fr; gap:16px; padding:14px}
+  .voce h2{font-size:22px}
+}
+@media (max-width:420px){
+  body{font-size:16px}
+  .voce{grid-template-columns:1fr}
+  .voce-immagine img{max-height:260px; object-fit:cover; object-position:top}
+  nav a{margin:0 14px 0 0}
+  .testata{padding-bottom:12px}
+}

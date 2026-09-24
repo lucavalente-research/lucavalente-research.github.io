@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+  <title>Luca Valente · Crypto research</title>
+  <link>https://lucavalente-research.github.io</link>
+  <description>Research notes on what people actually do on chain.</description>
+  <language>en</language>
+  <item>
+    <title>Optimism's Price Jumped. Its Transactions and Its Developers Didn't</title>
+    <link>https://lucavalente-research.github.io/004-optimism-2026-09-19.html</link>
+    <guid isPermaLink="true">https://lucavalente-research.github.io/004-optimism-2026-09-19.html</guid>
+    <pubDate>Sat, 19 Sep 2026 00:00:00 +0000</pubDate>
+    <description>On 19 September Optimism's price capped a 29% rise in three days while its transaction count fell sharply the same day.</description>
+  </item>
+  <item>
+    <title>Has a Fee Spike This Big Happened Before?</title>
+    <link>https://lucavalente-research.github.io/005-aerodrome-v1-2026-09-16.html</link>
+    <guid isPermaLink="true">https://lucavalente-research.github.io/005-aerodrome-v1-2026-09-16.html</guid>
+    <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+    <description>Fees on Aerodrome V1 jumped 192.4% in a single day, to their highest level in ninety days of data.</description>
+  </item>
+</channel></rss>
