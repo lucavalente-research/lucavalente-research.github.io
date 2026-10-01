@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"><channel>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
   <title>Luca Valente · Crypto research</title>
-  <link>https://lucavalente-research.github.io</link>
-  <description>Research notes on what people actually do on chain.</description>
+  <link>https://lucavalente-research.github.io/</link>
+  <atom:link href="https://lucavalente-research.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>On-chain and macro research by Luca Valente.</description>
   <language>en</language>
+  <lastBuildDate>Thu, 01 Oct 2026 20:31:04 +0000</lastBuildDate>
 
 </channel></rss>
