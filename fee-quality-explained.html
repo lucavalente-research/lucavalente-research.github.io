@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fee quality: earned every day, or on a few days? · Luca Valente · Crypto research</title>
+<meta name="description" content="The fees of the last 30 days split into recurring and one-off: what it measures, how to read it, what it does not say, the data and the code.">
+<link rel="canonical" href="https://lucavalente-research.github.io/fee-quality-explained.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Luca Valente · Crypto research">
+<meta property="og:title" content="Fee quality: earned every day, or on a few days? · Luca Valente · Crypto research">
+<meta property="og:description" content="The fees of the last 30 days split into recurring and one-off: what it measures, how to read it, what it does not say, the data and the code.">
+<meta property="og:url" content="https://lucavalente-research.github.io/fee-quality-explained.html">
+<meta property="og:image" content="https://lucavalente-research.github.io/immagini/gallery/2026-09-30/preview_fee_quality_top10_2026-09-30_1600x900.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@LukkVal">
+<meta name="twitter:title" content="Fee quality: earned every day, or on a few days? · Luca Valente · Crypto research">
+<meta name="twitter:description" content="The fees of the last 30 days split into recurring and one-off: what it measures, how to read it, what it does not say, the data and the code.">
+<meta name="twitter:image" content="https://lucavalente-research.github.io/immagini/gallery/2026-09-30/preview_fee_quality_top10_2026-09-30_1600x900.jpg">
+<link rel="alternate" type="application/rss+xml" title="Luca Valente · Crypto research" href="feed.xml">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23052C25'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23F4F0E3' text-anchor='middle'%3ELV%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="stile.css">
+</head><body>
+<header class="testata">
+  <div class="marchio"><a href="index.html">LV / LUCA VALENTE<small>ON-CHAIN AND MACRO RESEARCH</small></a></div>
+  <nav><a href="index.html">Home</a> <a href="charts.html">Charts</a> <a href="method.html" class="attiva">Method</a> <a href="about.html">About</a> <a href="contact.html">Contact</a></nav>
+  <p class="seguimi"><a href="https://x.com/LukkVal" rel="me noopener">X</a> <a href="https://www.tradingview.com/u/lukkval/" rel="me noopener">TradingView</a> <a href="https://www.linkedin.com/in/lucavalenteweb3/" rel="me noopener">LinkedIn</a> <a href="https://github.com/lucavalente-research/defi-observatory" rel="me noopener">Code &amp; data</a></p>
+</header>
+<main>
+<h1>Fee quality: earned every day, or on a few days?</h1>
+<h2>What it measures</h2>
+<ul class="fatti">
+<li>Two protocols can show the same 30-day fees while one earns them every day and the other earned most of them in an afternoon.</li>
+<li>This measure splits the fees of the last 30 days into recurring and one-off.</li>
+<li>A day is one-off when the data check marked it, or when it is more than 3 times the protocol’s median day.</li>
+</ul>
+<h2>How to read it</h2>
+<ul class="fatti">
+<li>Recurring share: the part of the 30-day fees that did not come from one-off days. A one-off day counts in full.</li>
+<li>Several strong days in a row are not one-off under this rule: a sustained rise is recurring.</li>
+<li>Fees settled once a week arrive in a few large days and look one-off although they return every week: those series are marked as paid in lumps and their split is not quoted.</li>
+</ul>
+<h2>What it does not say</h2>
+<ul class="fatti">
+<li>It does not say why a day stood out.</li>
+<li>It describes the last 30 days only.</li>
+</ul>
+<h2>A real example</h2>
+<div class="voce-galleria"><p class="data">30 Sep 2026</p><h3><a href="fee-quality-2026-09-30.html">Uniswap V4: 10% of its 30-day fees came from one day</a></h3>
+<figure><a href="fee-quality-2026-09-30.html"><picture><source media="(max-width:600px)" srcset="immagini/gallery/2026-09-30/fee_quality_top10_2026-09-30_1080x1350.png" width="1080" height="1350"><img src="immagini/gallery/2026-09-30/fee_quality_top10_2026-09-30_1600x900.png" alt="Uniswap V4: 10% of its 30-day fees came from one day" width="1600" height="900" loading="lazy"></picture></a><figcaption>Among the ten protocols with the most fees in the 30 days to 29 Sep 2026, 1 had at least one one-off day (a day above 3 times the protocol&#x27;s median day, or flagged by the data check); the lowest recurring share was 90% (Uniswap V4). Source: DefiLlama.</figcaption></figure></div>
+<p class="sotto"><a href="fee-quality.html">All “Fee quality” charts</a></p>
+<h2>Data and code</h2>
+<ul class="fatti">
+<li><a href="https://github.com/lucavalente-research/defi-observatory/blob/main/data/fee_quality_latest.csv" rel="noopener">The latest numbers (CSV) on GitHub</a></li>
+<li><a href="https://github.com/lucavalente-research/defi-observatory/blob/main/defi_observatory/fee_quality.py" rel="noopener">The code that computes it</a></li>
+<li><a href="code-and-data.html">About the open-source code and the data</a></li>
+</ul>
+</main>
+<footer class="piede">
+  <p class="seguimi"><a href="https://x.com/LukkVal" rel="me noopener">X</a> <a href="https://www.tradingview.com/u/lukkval/" rel="me noopener">TradingView</a> <a href="https://www.linkedin.com/in/lucavalenteweb3/" rel="me noopener">LinkedIn</a> <a href="https://github.com/lucavalente-research/defi-observatory" rel="me noopener">Code &amp; data</a></p>
+  <p><a href="mailto:luca.valente.cv@gmail.com">luca.valente.cv@gmail.com</a> · <a href="contact.html">Contact</a> · <a href="disclaimer.html">Disclaimer</a> · <a href="feed.xml">RSS</a></p>
+  <p class="fonti">Data: DefiLlama, GitHub, CoinGecko · growthepie (<a href="https://www.growthepie.com">growthepie.com</a>, CC BY 4.0)</p>
+  <p class="legale">Not financial advice. Research based on public on-chain and market data.</p>
+</footer>
+</body></html>

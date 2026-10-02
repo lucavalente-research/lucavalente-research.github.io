@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Real money: prices or deposits · Luca Valente · Crypto research</title>
-<meta name="description" content="When value locked grows, was it token prices or new deposits? How the 30-day change is split in two, how to read it, the daily data and the code.">
-<link rel="canonical" href="https://lucavalente-research.github.io/real-money-explained.html">
+<title>After the headline: what followed an event · Luca Valente · Crypto research</title>
+<meta name="description" content="What followed an event, such as a governance vote or a security incident, compared with the rest of the sector: what it measures, how to read it, what it does not say, the code.">
+<link rel="canonical" href="https://lucavalente-research.github.io/after-the-headline-explained.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Luca Valente · Crypto research">
-<meta property="og:title" content="Real money: prices or deposits · Luca Valente · Crypto research">
-<meta property="og:description" content="When value locked grows, was it token prices or new deposits? How the 30-day change is split in two, how to read it, the daily data and the code.">
-<meta property="og:url" content="https://lucavalente-research.github.io/real-money-explained.html">
+<meta property="og:title" content="After the headline: what followed an event · Luca Valente · Crypto research">
+<meta property="og:description" content="What followed an event, such as a governance vote or a security incident, compared with the rest of the sector: what it measures, how to read it, what it does not say, the code.">
+<meta property="og:url" content="https://lucavalente-research.github.io/after-the-headline-explained.html">
 <meta property="og:image" content="https://lucavalente-research.github.io/immagini/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@LukkVal">
-<meta name="twitter:title" content="Real money: prices or deposits · Luca Valente · Crypto research">
-<meta name="twitter:description" content="When value locked grows, was it token prices or new deposits? How the 30-day change is split in two, how to read it, the daily data and the code.">
+<meta name="twitter:title" content="After the headline: what followed an event · Luca Valente · Crypto research">
+<meta name="twitter:description" content="What followed an event, such as a governance vote or a security incident, compared with the rest of the sector: what it measures, how to read it, what it does not say, the code.">
 <meta name="twitter:image" content="https://lucavalente-research.github.io/immagini/og.png">
 <link rel="alternate" type="application/rss+xml" title="Luca Valente · Crypto research" href="feed.xml">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23052C25'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23F4F0E3' text-anchor='middle'%3ELV%3C/text%3E%3C/svg%3E">
@@ -25,29 +25,30 @@
   <p class="seguimi"><a href="https://x.com/LukkVal" rel="me noopener">X</a> <a href="https://www.tradingview.com/u/lukkval/" rel="me noopener">TradingView</a> <a href="https://www.linkedin.com/in/lucavalenteweb3/" rel="me noopener">LinkedIn</a> <a href="https://github.com/lucavalente-research/defi-observatory" rel="me noopener">Code &amp; data</a></p>
 </header>
 <main>
-<h1>Real money: prices or deposits</h1>
+<h1>After the headline: what followed an event</h1>
 <h2>What it measures</h2>
 <ul class="fatti">
-<li>Value locked is quantity times price. When it grows, either the tokens got more expensive or people deposited more.</li>
-<li>This measure splits the 30-day change in value locked into those two parts: the price effect and net deposits.</li>
-<li>The two parts add up to the published change.</li>
+<li>What followed an event, such as a governance vote or a security incident, compared with the rest of the sector.</li>
+<li>The change after the event is set against the median change of sector peers over the same days, so a move shared by the whole sector does not count.</li>
+<li>Value locked compares the level some days later with the median of the 5 days before; fees and transactions compare the daily average after with the average of the 7 days before.</li>
 </ul>
 <h2>How to read it</h2>
 <ul class="fatti">
-<li>Price effect: the quantities held 30 days earlier, times the change in each token’s price.</li>
-<li>Net deposits: the change in quantities at today’s prices, deposits minus withdrawals.</li>
-<li>Both parts are shares of the value locked 30 days earlier. Net deposits of −10% means that withdrawals, at today’s prices, were worth 10% of the starting value: it is not the change in the number of tokens deposited.</li>
-<li>Stablecoins count at a fixed price. Tokens that accrue yield rise in price on their own: that part lands in the price effect.</li>
-<li>The starting day is the one with the median value locked among the five days around 30 days earlier, so one odd day cannot inflate the result.</li>
-<li>When one token is replaced by another the two effects cancel out: those cases are marked, not read as a flow.</li>
+<li>The gap is in percentage points: the protocol’s change minus the median change of its peers.</li>
+<li>For a type of event the gaps of many events are averaged, with a 90% interval. Below 15 events no average is given.</li>
 </ul>
-
+<h2>What it does not say</h2>
+<ul class="fatti">
+<li>Same period is not proven cause: other things happen on the same days.</li>
+<li>Survivors only: protocols that disappeared after an incident are not in today’s list, so the averages understate what incidents can do.</li>
+<li>Peers are a blunt control: the sector median removes market-wide moves, not everything else.</li>
+</ul>
 
 
 <h2>Data and code</h2>
 <ul class="fatti">
-<li><a href="https://github.com/lucavalente-research/defi-observatory/blob/main/data/real_money_latest.csv" rel="noopener">The latest numbers (CSV) on GitHub</a></li>
-<li><a href="https://github.com/lucavalente-research/defi-observatory/blob/main/defi_observatory/decomposition.py" rel="noopener">The code that computes it</a></li>
+
+<li><a href="https://github.com/lucavalente-research/defi-observatory/blob/main/defi_observatory/event_study.py" rel="noopener">The code that computes it</a></li>
 <li><a href="code-and-data.html">About the open-source code and the data</a></li>
 </ul>
 </main>
