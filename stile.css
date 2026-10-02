@@ -38,12 +38,25 @@ main p{margin:0 0 12px}
 .fonti-pezzo{color:var(--muted);font-size:14px !important}
 .voce{padding:14px 0;border-bottom:1px solid var(--line)}
 .voce h2{margin:0 0 4px;color:var(--ivory)}
+.galleria figure,.voce-galleria figure{margin:0 0 14px;border:1px solid var(--line);background:var(--panel)}
+.galleria figcaption,.voce-galleria figcaption{font-size:14px;color:var(--muted);padding:10px 12px;border-top:1px solid var(--line)}
+.galleria .data,.voce-galleria .data{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);margin-bottom:6px}
+.galleria .data a,.voce-galleria .data a{color:var(--lime)}
+.galleria .lettura{font-size:18px;line-height:1.65;max-width:720px}
+.voce-galleria{padding:18px 0;border-bottom:1px solid var(--line)}
+.voce-galleria h3{font-size:22px;line-height:1.2;margin:0 0 10px}
+.voce-galleria h3 a{color:var(--ivory)}
+.rubriche{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px}
+.rubriche a{font-size:13px;border:1px solid var(--line);padding:4px 10px;border-radius:3px}
+pre{background:var(--panel);border:1px solid var(--line);padding:12px 14px;overflow-x:auto;margin:0 0 12px;font-size:14px;line-height:1.5}
+code{font-family:Menlo,Consolas,monospace;font-size:.92em;color:var(--sand)}
 .piede{border-top:1px solid var(--line);padding-top:18px;padding-bottom:36px;color:var(--muted);font-size:13px}
 .piede p{margin:8px 0}
 .piede .legale{color:var(--ivory)}
 @media (min-width:760px){
   main h1{font-size:44px}
   .tavole{grid-template-columns:1fr 1fr}
+  .recenti{display:grid;grid-template-columns:1fr 1fr;gap:0 22px}
   .testata{display:grid;grid-template-columns:auto 1fr;align-items:end;column-gap:28px}
   .testata nav{justify-self:end;margin-top:0}
   .testata .seguimi{grid-column:1 / -1}
