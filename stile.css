@@ -61,3 +61,48 @@ code{font-family:Menlo,Consolas,monospace;font-size:.92em;color:var(--sand)}
   .testata nav{justify-self:end;margin-top:0}
   .testata .seguimi{grid-column:1 / -1}
 }
+
+.cruscotto .parola{font-family:Georgia,serif;font-size:44px;line-height:1.1;margin:4px 0 14px}
+.cruscotto .parola small{display:block;font-family:Arial,sans-serif;font-size:14px;color:var(--muted);margin-top:6px}
+.su{color:var(--lime)}.giu{color:var(--coral)}.fermo{color:var(--sand)}
+.prova{border:1px dashed var(--line);color:var(--muted);font-size:14px;padding:8px 12px;margin:0 0 14px}
+.frasi{list-style:none;margin:0 0 8px}
+.frasi li{font-size:18px;line-height:1.5;padding:8px 0;border-bottom:1px solid var(--line)}
+.blocco{border:1px solid var(--line);background:var(--panel);padding:14px 16px;margin:18px 0}
+.blocco h2{margin:0 0 4px;color:var(--ivory)}
+.blocco .stato{font-family:Arial,sans-serif;font-size:14px;margin:0 0 10px}
+.valori{display:grid;grid-template-columns:1fr;gap:0;margin:0 0 10px}
+.valori div{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 14px;padding:8px 0;border-bottom:1px solid var(--line)}
+.valori dt{color:var(--muted);font-size:15px}
+.valori dd{font-size:15px;text-align:right}
+.valori dd b{font-family:Georgia,serif;font-weight:normal;font-size:20px;margin-right:8px}
+.valori dd span{color:var(--muted);font-size:13px;margin-left:8px;white-space:nowrap}
+.grafico,.quadranti,.storico{margin:8px 0 4px}
+.grafico svg,.quadranti svg,.storico svg{display:block;width:100%;height:auto}
+.grafico figcaption,.quadranti figcaption{font-size:13px;color:var(--muted);margin-top:2px}
+.tabella{width:100%;border-collapse:collapse;font-size:14px;margin:8px 0}
+.tabella th,.tabella td{text-align:right;padding:6px 4px;border-bottom:1px solid var(--line)}
+.tabella th,.tabella td{white-space:nowrap}
+.tabella th:first-child,.tabella td:first-child{text-align:left;white-space:normal;overflow-wrap:normal;word-break:normal;min-width:104px}
+.tabella th{color:var(--muted);font-weight:normal;white-space:nowrap}
+.scorri{overflow-x:auto}
+.cruscotti-home{display:grid;grid-template-columns:1fr;gap:14px;margin:0 0 10px}
+.cruscotti-home a{display:block;border:1px solid var(--line);background:var(--panel);padding:14px 16px;color:var(--ivory)}
+.cruscotti-home a:hover{text-decoration:none;border-color:var(--cyan)}
+.cruscotti-home b{display:block;font-family:Georgia,serif;font-weight:normal;font-size:22px}
+.cruscotti-home span{font-size:14px;color:var(--muted)}
+.cruscotti-home i{display:block;font-style:normal;font-size:16px;margin:2px 0 4px}
+.stato-home{border:1px solid var(--line);background:var(--panel);padding:16px 18px;margin:0 0 18px}
+.stato-home .data{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 4px}
+.stato-home .parola{font-family:Georgia,serif;font-size:44px;line-height:1.1;margin:0 0 4px}
+.stato-home .parola small{display:block;font-family:Arial,sans-serif;font-size:14px;color:var(--muted);margin-top:6px}
+.termometri{list-style:none;display:grid;grid-template-columns:1fr;gap:0 18px;margin:12px 0 8px}
+.termometri li{display:flex;justify-content:space-between;gap:8px;padding:7px 0;border-bottom:1px solid var(--line);font-size:14px}
+.termometri b{font-weight:normal;white-space:nowrap}
+.termometri span{text-align:right}
+.righe-cruscotti{list-style:none;margin:0 0 18px}
+.righe-cruscotti li{padding:10px 0;border-bottom:1px solid var(--line)}
+.righe-cruscotti a{font-family:Georgia,serif;font-size:19px}
+.righe-cruscotti span{display:block;color:var(--muted);font-size:15px}
+.fonti-tabella td:first-child{white-space:nowrap}
+@media (min-width:760px){.valori{grid-template-columns:1fr 1fr;column-gap:26px}.cruscotti-home{grid-template-columns:1fr 1fr}.termometri{grid-template-columns:1fr 1fr 1fr}}
