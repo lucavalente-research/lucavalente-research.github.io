@@ -2,19 +2,19 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Data check · Luca Valente · Crypto research</title>
-<meta name="description" content="Data check: charts by Luca Valente, each with its date and its public source.">
+<meta name="description" content="Rankings of who grew the most reward the strangest numbers, often a single day. What the data check marks, how to read it, the daily data and the code.">
 <link rel="canonical" href="https://lucavalente-research.github.io/data-check.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Luca Valente · Crypto research">
 <meta property="og:title" content="Data check · Luca Valente · Crypto research">
-<meta property="og:description" content="Data check: charts by Luca Valente, each with its date and its public source.">
+<meta property="og:description" content="Rankings of who grew the most reward the strangest numbers, often a single day. What the data check marks, how to read it, the daily data and the code.">
 <meta property="og:url" content="https://lucavalente-research.github.io/data-check.html">
-<meta property="og:image" content="https://lucavalente-research.github.io/immagini/gallery/2026-09-30/preview_data_check_aerodrome-slipstream_commissioni_2026-09-30_1600x900.jpg">
+<meta property="og:image" content="https://lucavalente-research.github.io/immagini/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@LukkVal">
 <meta name="twitter:title" content="Data check · Luca Valente · Crypto research">
-<meta name="twitter:description" content="Data check: charts by Luca Valente, each with its date and its public source.">
-<meta name="twitter:image" content="https://lucavalente-research.github.io/immagini/gallery/2026-09-30/preview_data_check_aerodrome-slipstream_commissioni_2026-09-30_1600x900.jpg">
+<meta name="twitter:description" content="Rankings of who grew the most reward the strangest numbers, often a single day. What the data check marks, how to read it, the daily data and the code.">
+<meta name="twitter:image" content="https://lucavalente-research.github.io/immagini/og.png">
 <link rel="alternate" type="application/rss+xml" title="Luca Valente · Crypto research" href="feed.xml">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23052C25'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23F4F0E3' text-anchor='middle'%3ELV%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="stile.css">
@@ -25,12 +25,32 @@
   <p class="seguimi"><a href="https://x.com/LukkVal" rel="me noopener">X</a> <a href="https://www.tradingview.com/u/lukkval/" rel="me noopener">TradingView</a> <a href="https://www.linkedin.com/in/lucavalenteweb3/" rel="me noopener">LinkedIn</a> <a href="https://github.com/lucavalente-research/defi-observatory" rel="me noopener">Code &amp; data</a></p>
 </header>
 <main>
-<h1>Data check</h1>
-<ul class="rubriche"><li><a href="data-check.html">Data check</a></li><li><a href="whos-winning.html">Who’s winning</a></li></ul>
-<p class="sotto"><a href="data-check-explained.html">What it measures and how to read it</a></p>
-<div class="voce-galleria"><p class="data">30 Sep 2026</p><h3><a href="data-check-2026-09-30.html">Aerodrome Slipstream fees “up 200%” in a month? One day did it.</a></h3>
-<figure><a href="data-check-2026-09-30.html"><picture><source media="(max-width:600px)" srcset="immagini/gallery/2026-09-30/data_check_aerodrome-slipstream_commissioni_2026-09-30_1080x1350.webp" width="1080" height="1350"><img src="immagini/gallery/2026-09-30/data_check_aerodrome-slipstream_commissioni_2026-09-30_1600x900.webp" alt="Aerodrome Slipstream fees “up 200%” in a month? One day did it." width="1600" height="900"></picture></a><figcaption>The public series shows $8.08M of fees for Aerodrome Slipstream on 9 Sep, 33 times the median of the 14 days around it ($248.1K). With that day the 30-day change to 29 Sep 2026 is +200%; without it, +53%. Source: DefiLlama (daily fees), check by LV.</figcaption></figure>
-<p class="sotto"><a href="data-check-2026-09-30.html">The reading</a></p></div>
+<ul class="rubriche"><li><a href="whos-winning.html">Who’s winning</a></li></ul>
+<h1>Data check: can the number be trusted?</h1>
+<h2>What it measures</h2>
+<ul class="fatti">
+<li>Rankings of “who grew the most” reward the strangest numbers, and the strangest number is often a single day.</li>
+<li>For the last 90 days of each daily series the check marks gaps, isolated spikes, isolated drops and revisions.</li>
+<li>The data is never corrected: the day is marked, and the 30-day change is shown with and without it.</li>
+</ul>
+<h2>How to read it</h2>
+<ul class="fatti">
+<li>Isolated spike: a day above 5 times the median of the 14 days around it, with both neighbouring days below 2 times.</li>
+<li>Isolated drop (levels such as value locked): a day below half that median, with both neighbouring days above half.</li>
+<li>Gap: a day the source did not publish. A published zero is data, not a gap.</li>
+<li>Revision: a past day that changed by more than 1% between two downloads made on different days.</li>
+<li>Cleanliness is the share of days with no mark, from 0 to 100.</li>
+<li>A marked day is not treated as an error. It may be a real one-day event. Either way it is not a trend.</li>
+</ul>
+
+
+
+<h2>Data and code</h2>
+<ul class="fatti">
+<li><a href="https://github.com/lucavalente-research/defi-observatory/blob/main/data/data_check_latest.csv" rel="noopener">The latest numbers (CSV) on GitHub</a></li>
+<li><a href="https://github.com/lucavalente-research/defi-observatory/blob/main/defi_observatory/data_check.py" rel="noopener">The code that computes it</a></li>
+<li><a href="code-and-data.html">About the open-source code and the data</a></li>
+</ul>
 </main>
 <footer class="piede">
   <p class="seguimi"><a href="https://x.com/LukkVal" rel="me noopener">X</a> <a href="https://www.tradingview.com/u/lukkval/" rel="me noopener">TradingView</a> <a href="https://www.linkedin.com/in/lucavalenteweb3/" rel="me noopener">LinkedIn</a> <a href="https://github.com/lucavalente-research/defi-observatory" rel="me noopener">Code &amp; data</a></p>
