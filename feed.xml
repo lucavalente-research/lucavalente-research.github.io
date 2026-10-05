@@ -5,19 +5,68 @@
   <atom:link href="https://lucavalente-research.github.io/feed.xml" rel="self" type="application/rss+xml"/>
   <description>On-chain and macro research by Luca Valente.</description>
   <language>en</language>
-  <lastBuildDate>Sun, 04 Oct 2026 05:35:02 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 05 Oct 2026 12:06:29 +0000</lastBuildDate>
   <item>
-    <title>Ethereum collected 16% of all fees among its peers, up from 12%</title>
-    <link>https://lucavalente-research.github.io/whos-winning-2026-10-03.html</link>
-    <guid isPermaLink="true">https://lucavalente-research.github.io/whos-winning-2026-10-03.html</guid>
+    <title>Orca DEX collected 147% more fees than a month earlier</title>
+    <link>https://lucavalente-research.github.io/outlier-2026-10-03.html</link>
+    <guid isPermaLink="true">https://lucavalente-research.github.io/outlier-2026-10-03.html</guid>
     <pubDate>Sat, 03 Oct 2026 00:00:00 +0000</pubDate>
-    <description>Ethereum had 16% of 30-day fees among 29 peer chains on 2 Oct 2026, against 12% thirty days earlier. Source: DefiLlama.</description>
+    <description>Orca DEX&#x27;s fees rose 147% in the 30 days to 2 Oct 2026; the median of its 15 peer DEXs rose 18%. Source: DefiLlama, CoinGecko, GitHub.</description>
   </item>
   <item>
-    <title>Uniswap handled 37% of DEX trading in the last 30 days, up from 26%</title>
-    <link>https://lucavalente-research.github.io/whos-winning-2026-09-30.html</link>
-    <guid isPermaLink="true">https://lucavalente-research.github.io/whos-winning-2026-09-30.html</guid>
+    <title>Jupiter Perpetual Exchange: net withdrawals of $23.3M in 30 days; value locked +7.7%</title>
+    <link>https://lucavalente-research.github.io/real-money-2026-10-03.html</link>
+    <guid isPermaLink="true">https://lucavalente-research.github.io/real-money-2026-10-03.html</guid>
+    <pubDate>Sat, 03 Oct 2026 00:00:00 +0000</pubDate>
+    <description>Jupiter Perpetual Exchange&#x27;s value locked went from $751.0M to $808.8M in the 30 days to 3 Oct 2026 (+7.7%). Token prices account for +11% of the change and net deposits for −3.1%. Source: DefiLlama.</description>
+  </item>
+  <item>
+    <title>Avalanche collected 238% more fees than a month earlier</title>
+    <link>https://lucavalente-research.github.io/outlier-2026-10-02.html</link>
+    <guid isPermaLink="true">https://lucavalente-research.github.io/outlier-2026-10-02.html</guid>
+    <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+    <description>Avalanche&#x27;s fees rose 238% in the 30 days to 1 Oct 2026; the median of its 29 peer chains rose 27%. Source: DefiLlama, CoinGecko.</description>
+  </item>
+  <item>
+    <title>WETH deposited in mETH Protocol fell 0.2% in 30 days; value locked +11%</title>
+    <link>https://lucavalente-research.github.io/real-money-2026-10-02.html</link>
+    <guid isPermaLink="true">https://lucavalente-research.github.io/real-money-2026-10-02.html</guid>
+    <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+    <description>mETH Protocol&#x27;s value locked went from $572.7M to $637.2M in the 30 days to 2 Oct 2026 (+11%). Token prices account for +11% of the change and net deposits for −0.2%. Source: DefiLlama.</description>
+  </item>
+  <item>
+    <title>Not one of 110 tokens paid above the standard funding rate</title>
+    <link>https://lucavalente-research.github.io/health-index-2026-10-02.html</link>
+    <guid isPermaLink="true">https://lucavalente-research.github.io/health-index-2026-10-02.html</guid>
+    <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+    <description>On 2 Oct 2026, 0 of 110 tokens had a 7-day average funding rate above the standard +0.0100% per period, 9 were at it and 101 below. The lowest was SAND at −0.0583%. Source: Binance futures.</description>
+  </item>
+  <item>
+    <title>Raydium&#x27;s 30-day fees: the highest since August 2025</title>
+    <link>https://lucavalente-research.github.io/outlier-2026-10-01.html</link>
+    <guid isPermaLink="true">https://lucavalente-research.github.io/outlier-2026-10-01.html</guid>
+    <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+    <description>Raydium&#x27;s fees rose 395% in the 30 days to 30 Sep 2026; the median of its 15 peer DEXs rose 15%. Source: DefiLlama, CoinGecko.</description>
+  </item>
+  <item>
+    <title>SOL deposited in Marinade Liquid Staking fell 2.2% in 30 days; value locked +13%</title>
+    <link>https://lucavalente-research.github.io/real-money-2026-10-01.html</link>
+    <guid isPermaLink="true">https://lucavalente-research.github.io/real-money-2026-10-01.html</guid>
+    <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+    <description>Marinade Liquid Staking&#x27;s value locked went from $241.3M to $272.5M in the 30 days to 1 Oct 2026 (+13%). Token prices account for +15% of the change and net deposits for −2.6%. Source: DefiLlama.</description>
+  </item>
+  <item>
+    <title>Not one of 110 tokens paid above the standard funding rate</title>
+    <link>https://lucavalente-research.github.io/health-index-2026-10-01.html</link>
+    <guid isPermaLink="true">https://lucavalente-research.github.io/health-index-2026-10-01.html</guid>
+    <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+    <description>On 1 Oct 2026, 0 of 110 tokens had a 7-day average funding rate above the standard +0.0100% per period, 8 were at it and 102 below. The lowest was TRX at −0.0268%. Source: Binance futures.</description>
+  </item>
+  <item>
+    <title>Not one of 110 tokens paid above the standard funding rate</title>
+    <link>https://lucavalente-research.github.io/health-index-2026-09-30.html</link>
+    <guid isPermaLink="true">https://lucavalente-research.github.io/health-index-2026-09-30.html</guid>
     <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-    <description>Uniswap had 37% of 30-day trading volume among 14 peer DEXs on 29 Sep 2026, against 26% thirty days earlier. Source: DefiLlama.</description>
+    <description>On 30 Sep 2026, 0 of 110 tokens had a 7-day average funding rate above the standard +0.0100% per period, 11 were at it and 99 below. The lowest was TRX at −0.0220%. Source: Binance futures.</description>
   </item>
 </channel></rss>

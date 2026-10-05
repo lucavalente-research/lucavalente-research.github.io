@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Health index: what it measures — Luca Valente</title>
+<meta name="description" content="A 0 to 100 health index for DeFi protocols, each compared only with its own sector: what it measures, how to read it, the daily data and the code.">
+<link rel="canonical" href="https://lucavalente-research.github.io/health-index-explained.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Luca Valente · Crypto research">
+<meta property="og:title" content="Health index: what it measures — Luca Valente">
+<meta property="og:description" content="A 0 to 100 health index for DeFi protocols, each compared only with its own sector: what it measures, how to read it, the daily data and the code.">
+<meta property="og:url" content="https://lucavalente-research.github.io/health-index-explained.html">
+<meta property="og:image" content="https://lucavalente-research.github.io/immagini/gallery/2026-10-02/preview_health_index_derivatives_2026-10-02_1600x900.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@LukkVal">
+<meta name="twitter:title" content="Health index: what it measures — Luca Valente">
+<meta name="twitter:description" content="A 0 to 100 health index for DeFi protocols, each compared only with its own sector: what it measures, how to read it, the daily data and the code.">
+<meta name="twitter:image" content="https://lucavalente-research.github.io/immagini/gallery/2026-10-02/preview_health_index_derivatives_2026-10-02_1600x900.jpg">
+<link rel="alternate" type="application/rss+xml" title="Luca Valente · Crypto research" href="feed.xml">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23052C25'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23F4F0E3' text-anchor='middle'%3ELV%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="stile.css">
+</head><body><a class="skip" href="#main">Skip to content</a>
+<header class="testata">
+  <div class="marchio"><a href="./">LV / LUCA VALENTE<small>ON-CHAIN AND MACRO RESEARCH</small></a></div>
+  <nav aria-label="Main navigation"><a href="./">Home</a> <a href="charts.html">Charts</a> <a href="method.html" class="attiva">Methodology & data</a> <a href="code-and-data.html">Code & data</a> <a href="about.html">About</a> <a href="contact.html">Contact</a><a href="archive.html">Archive</a></nav>
+  
+</header>
+<main id="main">
+<h1>Health index: what it measures</h1>
+<h2>What it measures</h2>
+<ul class="fatti">
+<li>A number from 0 to 100 for each DeFi protocol.</li>
+<li>It says where the protocol stands inside its own sector on up to five measures: deposit growth, fees on value locked, transactions, token return against BTC over 90 days, and how clean its data is.</li>
+<li>Each measure becomes a percentile rank among sector peers. The index is their plain average.</li>
+</ul>
+<h2>How to read it</h2>
+<ul class="fatti">
+<li>90 means near the top of its own sector on most measures. It does not mean “90% healthy”.</li>
+<li>The middle of every sector sits near 50 by construction, so two sectors cannot be compared through this index.</li>
+<li>A protocol gets an index only above $50M in value locked, with at least 90 days of history, at least three of the five measures available and at least five peers in its sector.</li>
+<li>A rank inside a small group moves in large steps.</li>
+<li>It describes where a protocol stands today. It says nothing about what comes next.</li>
+</ul>
+
+<h2>A real example</h2>
+<div class="voce-galleria"><p class="data">2 Oct 2026</p><h3><a href="health-index-2026-10-02.html">Not one of 110 tokens paid above the standard funding rate</a></h3>
+<figure><a href="health-index-2026-10-02.html"><picture><source media="(max-width:600px)" srcset="immagini/gallery/2026-10-02/health_index_derivatives_2026-10-02_1080x1350.webp" width="1080" height="1350"><img src="immagini/gallery/2026-10-02/health_index_derivatives_2026-10-02_1600x900.webp" alt="Not one of 110 tokens paid above the standard funding rate" width="1600" height="900" loading="lazy"></picture></a><figcaption>On 2 Oct 2026, 0 of 110 tokens had a 7-day average funding rate above the standard +0.0100% per period, 9 were at it and 101 below. The lowest was SAND at −0.0583%. Source: Binance futures.</figcaption></figure></div>
+<p class="sotto"><a href="health-index.html">All “Health index” charts</a></p>
+<h2>Data and code</h2>
+<ul class="fatti">
+<li><a href="https://github.com/lucavalente-research/defi-observatory/blob/main/data/health_index_latest.csv" rel="noopener">The latest numbers (CSV) on GitHub</a></li>
+<li><a href="https://github.com/lucavalente-research/defi-observatory/blob/main/defi_observatory/health_index.py" rel="noopener">The code that computes it</a></li>
+<li><a href="code-and-data.html">About the open-source code and the data</a></li>
+</ul>
+</main>
+<footer class="piede">
+  <p class="seguimi"><a href="https://x.com/LukkVal" rel="me noopener">X</a> <a href="https://www.tradingview.com/u/lukkval/" rel="me noopener">TradingView</a> <a href="https://www.linkedin.com/in/lucavalenteweb3/" rel="me noopener">LinkedIn</a> <a href="https://github.com/lucavalente-research/defi-observatory" rel="me noopener">GitHub</a></p>
+  <p><a href="mailto:luca.valente.cv@gmail.com">luca.valente.cv@gmail.com</a> · <a href="contact.html">Contact</a> · <a href="disclaimer.html">Disclaimer</a> · <a href="feed.xml">RSS</a></p>
+  <p class="fonti">Data: DefiLlama, GitHub, CoinGecko · growthepie (<a href="https://www.growthepie.com">growthepie.com</a>, CC BY 4.0)</p>
+  <p class="legale">Not financial advice. Research based on public on-chain and market data.</p>
+</footer>
+</body></html>
