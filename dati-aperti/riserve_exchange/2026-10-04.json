@@ -1,0 +1,895 @@
+{
+  "metadati": {
+    "dataset": "riserve_exchange",
+    "data": "2026-10-04",
+    "prelevato_utc": "2026-10-05T12:40:38.484939+00:00",
+    "fonti": [
+      "https://api.llama.fi/cexs"
+    ],
+    "dati_fino_a": "Snapshot al momento del prelievo; non ricostruisce lo stato di ieri.",
+    "licenza": "Licenza dei dati terzi non verificata come aperta: valgono i termini della fonte; accesso pubblico non equivale a diritto di ripubblicazione. Codice locale originale CC0; nessuna nuova licenza applicata ai dati.",
+    "note": "Valori e unità della fonte; null e campi assenti non sono zero. currentTvl USD degli indirizzi censiti; non prova di passività, solvibilità o riserve complete."
+  },
+  "dati": [
+    {
+      "id": "2269",
+      "name": "Binance",
+      "walletsLink": "https://www.binance.com/en/blog/community/our-commitment-to-transparency-2895840147147652626",
+      "currentTvl": 180296756813.2193,
+      "cleanAssetsTvl": 152239865503.81622,
+      "inflows_24h": 6020342.067493219,
+      "inflows_1w": -79692953.55844529,
+      "inflows_1m": 549428603.1874528
+    },
+    {
+      "id": "2272",
+      "name": "OKX",
+      "walletsLink": "https://twitter.com/okx/status/1590812545346330624",
+      "currentTvl": 32003356210.36375,
+      "cleanAssetsTvl": 30441901495.687744,
+      "inflows_24h": -94999953.46828407,
+      "inflows_1w": -242134328.5657463,
+      "inflows_1m": 58177045.26244286
+    },
+    {
+      "id": "2275",
+      "name": "Bitfinex",
+      "walletsLink": "https://github.com/bitfinexcom/pub/blob/main/wallets.txt",
+      "currentTvl": 21017259107.897125,
+      "cleanAssetsTvl": 15131877878.797932,
+      "inflows_24h": 35659060.679959916,
+      "inflows_1w": 359326491.4754813,
+      "inflows_1m": 1022789508.2520741
+    },
+    {
+      "id": "3732",
+      "name": "Robinhood",
+      "walletsLink": null,
+      "currentTvl": 15812826409.828545,
+      "cleanAssetsTvl": 15812826409.828545,
+      "inflows_24h": 2631.282083957646,
+      "inflows_1w": 39123.98723040394,
+      "inflows_1m": 122529.17170654426
+    },
+    {
+      "id": "6469",
+      "name": "Gemini",
+      "walletsLink": "https://www.gemini.com/trust-center/",
+      "currentTvl": 5762057356.441604,
+      "cleanAssetsTvl": 5762057356.441604,
+      "inflows_24h": 5258868.278029744,
+      "inflows_1w": -10236267.230440121,
+      "inflows_1m": -7874517.589071044
+    },
+    {
+      "id": "2286",
+      "name": "Bybit",
+      "walletsLink": "https://twitter.com/benbybit/status/1592797790518018048",
+      "currentTvl": 17024653357.828703,
+      "cleanAssetsTvl": 16303140080.703974,
+      "inflows_24h": -420567.87435722025,
+      "inflows_1w": -60965152.37022837,
+      "inflows_1m": -299591725.53169805
+    },
+    {
+      "id": "2270",
+      "name": "Crypto.com",
+      "walletsLink": "https://crypto.com/document/proof-of-reserves",
+      "currentTvl": 2620618938.55725,
+      "cleanAssetsTvl": 2614261908.356794,
+      "inflows_24h": 3812611.876846944,
+      "inflows_1w": 56829718.19818347,
+      "inflows_1m": -64010792.907083526
+    },
+    {
+      "id": "2276",
+      "name": "HTX",
+      "walletsLink": "https://www.huobi.com/support/en-us/detail/24922606430831",
+      "currentTvl": 4269103966.3825107,
+      "cleanAssetsTvl": 4254414375.6150002,
+      "inflows_24h": 74038.795125161,
+      "inflows_1w": -11597424.480268132,
+      "inflows_1m": 421267838.2938166
+    },
+    {
+      "id": "2274",
+      "name": "KuCoin",
+      "walletsLink": "https://www.kucoin.com/blog/transparency-and-trust-a-detailed-list-of-kucoin-s-wallets",
+      "currentTvl": 3613358087.3535185,
+      "cleanAssetsTvl": 3078859852.8117805,
+      "inflows_24h": -34731373.54667642,
+      "inflows_1w": -6832941.0940075,
+      "inflows_1m": 35524281.42430535
+    },
+    {
+      "id": "3543",
+      "name": "Bitstamp",
+      "walletsLink": null,
+      "currentTvl": 3769701796.522053,
+      "cleanAssetsTvl": 3769701796.522053,
+      "inflows_24h": -2008942.616809709,
+      "inflows_1w": -51851074.028711975,
+      "inflows_1m": -1241307751.9631376
+    },
+    {
+      "id": "2273",
+      "name": "Deribit",
+      "walletsLink": "https://insights.deribit.com/exchange-updates/proof-of-reserves-deribit/",
+      "currentTvl": 4275550314.0137987,
+      "cleanAssetsTvl": 4275550314.0137987,
+      "inflows_24h": -16321515.61239594,
+      "inflows_1w": -939054077.8263322,
+      "inflows_1m": -1145425376.7359724
+    },
+    {
+      "id": "5517",
+      "name": "Bitkub",
+      "walletsLink": null,
+      "currentTvl": 1602224913.736993,
+      "cleanAssetsTvl": 1602224913.736993,
+      "inflows_24h": -607331.5337795137,
+      "inflows_1w": 6981554.826051807,
+      "inflows_1m": 15845337.346466206
+    },
+    {
+      "id": "2314",
+      "name": "Gate",
+      "walletsLink": "https://github.com/gateio/proof-of-reserves",
+      "currentTvl": 7696943443.874819,
+      "cleanAssetsTvl": 6450260762.567375,
+      "inflows_24h": -19892483.215511195,
+      "inflows_1w": 982256.4452177283,
+      "inflows_1m": 72063985.75653078
+    },
+    {
+      "id": "2352",
+      "name": "Bitget",
+      "walletsLink": "https://twitter.com/bitgetglobal/status/1602256957376794624",
+      "currentTvl": 6397350851.754673,
+      "cleanAssetsTvl": 5893974344.917249,
+      "inflows_24h": 27364234.164192118,
+      "inflows_1w": 26429999.645963635,
+      "inflows_1m": 21811814.26649635
+    },
+    {
+      "id": "3075",
+      "name": "MEXC",
+      "walletsLink": null,
+      "currentTvl": 5494327256.289968,
+      "cleanAssetsTvl": 4864227466.638127,
+      "inflows_24h": 4941508.401467189,
+      "inflows_1w": -27837624.17266296,
+      "inflows_1m": -28364156.737556063
+    },
+    {
+      "id": "2293",
+      "name": "Bitmex",
+      "walletsLink": "https://github.com/BitMEX/proof-of-reserves-liabilities",
+      "currentTvl": 758221559.572465,
+      "cleanAssetsTvl": 758221559.572465,
+      "inflows_24h": 1808373.1899190603,
+      "inflows_1w": 364604.17378667125,
+      "inflows_1m": -115181679.6256333
+    },
+    {
+      "id": "2295",
+      "name": "SwissBorg",
+      "walletsLink": "https://github.com/swissborg/pub",
+      "currentTvl": 1124105840.7095356,
+      "cleanAssetsTvl": 977304701.5657699,
+      "inflows_24h": -357778.0717083485,
+      "inflows_1w": -610367.8342795306,
+      "inflows_1m": 516770.82483776595
+    },
+    {
+      "id": "2301",
+      "name": "Korbit",
+      "walletsLink": "https://korbit.co.kr/reserve",
+      "currentTvl": 539617139.1740283,
+      "cleanAssetsTvl": 539617139.1740283,
+      "inflows_24h": -24018.501127922147,
+      "inflows_1w": 3355243.024359332,
+      "inflows_1m": 2563540.0808120104
+    },
+    {
+      "id": "2369",
+      "name": "Phemex",
+      "walletsLink": "https://phemex.com/proof-of-reserves",
+      "currentTvl": 298376145.68303,
+      "cleanAssetsTvl": 298376145.68303,
+      "inflows_24h": -334439.45605678955,
+      "inflows_1w": 8358045.193914379,
+      "inflows_1m": 6270423.738204727
+    },
+    {
+      "id": "4907",
+      "name": "ProBit Global",
+      "walletsLink": null,
+      "currentTvl": 13341622.171053229,
+      "cleanAssetsTvl": 13341622.171053229,
+      "inflows_24h": 0,
+      "inflows_1w": 0,
+      "inflows_1m": 1.205335434501064e-07
+    },
+    {
+      "id": "2346",
+      "name": "WOO X",
+      "walletsLink": "https://woo.org/proof-of-reserves",
+      "currentTvl": 2635996.594036178,
+      "cleanAssetsTvl": 2500991.3741353084,
+      "inflows_24h": -6780.459206668323,
+      "inflows_1w": -524828.7422675261,
+      "inflows_1m": -779092.3381232305
+    },
+    {
+      "id": "2292",
+      "name": "Bake.io",
+      "walletsLink": "https://blog.bake.io/proof-of-reserves/",
+      "currentTvl": 257.01610978794037,
+      "cleanAssetsTvl": 257.01610978794037,
+      "inflows_24h": 0,
+      "inflows_1w": 0,
+      "inflows_1m": 0
+    },
+    {
+      "id": "4859",
+      "name": "BingX",
+      "walletsLink": "https://bingx.com/en/balance-reserve/",
+      "currentTvl": 661414004.7952632,
+      "cleanAssetsTvl": 661414004.7952632,
+      "inflows_24h": -3692433.709234849,
+      "inflows_1w": -4587467.506460039,
+      "inflows_1m": -46696808.9699125
+    },
+    {
+      "id": "2298",
+      "name": "Coinsquare",
+      "walletsLink": "https://twitter.com/Coinsquare/status/1594176519986810881",
+      "currentTvl": 4083543.2342346716,
+      "cleanAssetsTvl": 4083543.2342346716,
+      "inflows_24h": 0,
+      "inflows_1w": 84013.05430582465,
+      "inflows_1m": 48962.81853879191
+    },
+    {
+      "id": "4935",
+      "name": "Toobit",
+      "walletsLink": "https://support.toobit.com/hc/en-us/articles/35739879881881-Toobit-Asset-Transparency-Report-Safeguarding-User-Assets",
+      "currentTvl": 74912974.53163037,
+      "cleanAssetsTvl": 74912974.53163037,
+      "inflows_24h": 0,
+      "inflows_1w": 0,
+      "inflows_1m": 0.7589944165149851
+    },
+    {
+      "id": "3544",
+      "name": "CoinW",
+      "walletsLink": null,
+      "currentTvl": 23443.25302559757,
+      "cleanAssetsTvl": 23443.25302559757,
+      "inflows_24h": 0,
+      "inflows_1w": 0,
+      "inflows_1m": -191225.29882051208
+    },
+    {
+      "id": "4042",
+      "name": "CoinDCX",
+      "walletsLink": "https://twitter.com/smtgpt/status/1595745395787071497",
+      "currentTvl": 194997665.08017066,
+      "cleanAssetsTvl": 194997665.08017066,
+      "inflows_24h": 368.8947592590275,
+      "inflows_1w": 16345.823895597981,
+      "inflows_1m": -125781.36466159641
+    },
+    {
+      "id": "3547",
+      "name": "Fastex",
+      "walletsLink": "https://www.fastex.com/proof-of-reserves",
+      "currentTvl": 104276.16537501155,
+      "cleanAssetsTvl": 104276.16537501155,
+      "inflows_24h": -1.8188032960475678e-12,
+      "inflows_1w": -47546.23254393492,
+      "inflows_1m": -26062.777045816758
+    },
+    {
+      "id": "2310",
+      "name": "NBX",
+      "walletsLink": "https://nbx.com/en/proof-of-reserves",
+      "currentTvl": 1195056.968080007,
+      "cleanAssetsTvl": 1195056.968080007,
+      "inflows_24h": -76639.23041277504,
+      "inflows_1w": 13036.448164638423,
+      "inflows_1m": -193620.16945925343
+    },
+    {
+      "id": "3113",
+      "name": "Okcoin",
+      "walletsLink": "https://www.okcoin.com/proof-of-reserves/download",
+      "currentTvl": 20753112.387022473,
+      "cleanAssetsTvl": 20753112.387022473,
+      "inflows_24h": -6534991.712549669,
+      "inflows_1w": -877.3390716876854,
+      "inflows_1m": -14305.9835449691
+    },
+    {
+      "id": "2507",
+      "name": "BitVenus",
+      "walletsLink": null,
+      "currentTvl": 20372358.163160253,
+      "cleanAssetsTvl": 20372358.163160253,
+      "inflows_24h": 28744.727199894045,
+      "inflows_1w": -1361031.0682069415,
+      "inflows_1m": -6703348.96592983
+    },
+    {
+      "id": "7489",
+      "name": "Coinstore",
+      "walletsLink": null,
+      "currentTvl": 59945933.98835543,
+      "cleanAssetsTvl": 59945933.98835543,
+      "inflows_24h": -10474.301640749178,
+      "inflows_1w": -379022.1634903684,
+      "inflows_1m": -601.5642717574519
+    },
+    {
+      "id": "5673",
+      "name": "Coin8",
+      "walletsLink": null,
+      "currentTvl": 52345466.90635479,
+      "cleanAssetsTvl": 52345466.90635479,
+      "inflows_24h": 0,
+      "inflows_1w": 534199.7440151453,
+      "inflows_1m": 906820.3472953651
+    },
+    {
+      "id": "5254",
+      "name": "Exmo",
+      "walletsLink": null,
+      "currentTvl": 14735.482500592356,
+      "cleanAssetsTvl": 14735.482500592356,
+      "inflows_24h": 0,
+      "inflows_1w": 0,
+      "inflows_1m": 14718.000604144623
+    },
+    {
+      "id": "4579",
+      "name": "Flipster",
+      "walletsLink": "https://flipster.io/support/proof-of-reserves",
+      "currentTvl": 27162880.70960483,
+      "cleanAssetsTvl": 27162880.70960483,
+      "inflows_24h": -94979.14448899262,
+      "inflows_1w": -633855.1924117138,
+      "inflows_1m": -4010068.6512641613
+    },
+    {
+      "id": "4576",
+      "name": "NonKYC",
+      "walletsLink": "https://nonkyc.io/allreserves",
+      "currentTvl": 7557657.014734052,
+      "cleanAssetsTvl": 2279557.4994149935,
+      "inflows_24h": 274468.7442319035,
+      "inflows_1w": 422009.5155022778,
+      "inflows_1m": 536695.5811042592
+    },
+    {
+      "id": "5731",
+      "name": "Bitrue",
+      "walletsLink": null,
+      "currentTvl": 179934860.31379658,
+      "cleanAssetsTvl": 179934860.31379658,
+      "inflows_24h": 348419.2099410548,
+      "inflows_1w": 1102671.2671981996,
+      "inflows_1m": -2021738.0939548342
+    },
+    {
+      "id": "2932",
+      "name": "Latoken",
+      "walletsLink": null,
+      "currentTvl": 390007.33856467245,
+      "cleanAssetsTvl": 390007.33856467245,
+      "inflows_24h": -4.524708787505436,
+      "inflows_1w": 3186.880004955122,
+      "inflows_1m": 3447.0044886251
+    },
+    {
+      "id": "3577",
+      "name": "BitMart",
+      "walletsLink": null,
+      "currentTvl": 5568506.658002613,
+      "cleanAssetsTvl": 5568506.658002613,
+      "inflows_24h": -16558.523469127547,
+      "inflows_1w": 430.88966432739727,
+      "inflows_1m": -174158.7748212801
+    },
+    {
+      "id": "3579",
+      "name": "BTSE",
+      "walletsLink": null,
+      "currentTvl": 1721248.9549601406,
+      "cleanAssetsTvl": 1721248.9549601406,
+      "inflows_24h": 0,
+      "inflows_1w": 0,
+      "inflows_1m": 0.2529981388383284
+    },
+    {
+      "id": "4795",
+      "name": "HashKey Exchange",
+      "walletsLink": null,
+      "currentTvl": 1722188980.24307,
+      "cleanAssetsTvl": 1722188980.24307,
+      "inflows_24h": 20036873.42850443,
+      "inflows_1w": -10651285.262825144,
+      "inflows_1m": -85498595.34640665
+    },
+    {
+      "id": "5108",
+      "name": "Biconomy.com",
+      "walletsLink": null,
+      "currentTvl": 108763455.79392259,
+      "cleanAssetsTvl": 108763455.79392259,
+      "inflows_24h": 0,
+      "inflows_1w": 86035693.09933701,
+      "inflows_1m": 86035693.09933701
+    },
+    {
+      "id": "5112",
+      "name": "Pionex",
+      "walletsLink": null,
+      "currentTvl": 130524485.80970182,
+      "cleanAssetsTvl": 130524485.80970182,
+      "inflows_24h": 319365.9273212456,
+      "inflows_1w": 1251699.2662713556,
+      "inflows_1m": -272917.21291129105
+    },
+    {
+      "id": "5053",
+      "name": "Bitunix",
+      "walletsLink": "https://support.bitunix.com/hc/en-us/articles/36928276763289-Bitunix-Launching-Proof-or-Reserve-to-Improve-Transparency",
+      "currentTvl": 237495541.9676605,
+      "cleanAssetsTvl": 237495541.9676605,
+      "inflows_24h": -7859724.418378245,
+      "inflows_1w": -37486623.87867805,
+      "inflows_1m": -28005081.39896892
+    },
+    {
+      "id": "5045",
+      "name": "BloFin",
+      "walletsLink": null,
+      "currentTvl": 105232282.86101003,
+      "cleanAssetsTvl": 105232282.86101003,
+      "inflows_24h": 1323842.0801755195,
+      "inflows_1w": 2027514.5976227701,
+      "inflows_1m": -2416595.824832411
+    },
+    {
+      "id": "4266",
+      "name": "Backpack",
+      "walletsLink": "https://dune.com/21co/backpack-exchange",
+      "currentTvl": 613292435.0669823,
+      "cleanAssetsTvl": 613292435.0669823,
+      "inflows_24h": -1636827.5506079972,
+      "inflows_1w": -2553642.279142906,
+      "inflows_1m": -6365329.674236287
+    },
+    {
+      "id": "5988",
+      "name": "Hotcoin",
+      "walletsLink": null,
+      "currentTvl": 1946054.8575276486,
+      "cleanAssetsTvl": 1946054.8575276486,
+      "inflows_24h": -68367.43841614088,
+      "inflows_1w": 192143.11624677945,
+      "inflows_1m": -378504.904428759
+    },
+    {
+      "id": "5342",
+      "name": "Ourbit",
+      "walletsLink": "https://www.ourbit.com/assets/reserve-proof",
+      "currentTvl": 124044424.2470713,
+      "cleanAssetsTvl": 124044424.2470713,
+      "inflows_24h": 77067.36225621247,
+      "inflows_1w": 46904968.26656062,
+      "inflows_1m": 48508461.426045775
+    },
+    {
+      "id": "6443",
+      "name": "Indodax",
+      "walletsLink": null,
+      "currentTvl": 537072847.2923865,
+      "cleanAssetsTvl": 537072847.2923865,
+      "inflows_24h": -2091725.3944459623,
+      "inflows_1w": 2164838.4576150365,
+      "inflows_1m": -2081775.554147231
+    },
+    {
+      "id": "6456",
+      "name": "Tothemoon",
+      "walletsLink": null,
+      "currentTvl": 7060763.36735322,
+      "cleanAssetsTvl": 7060763.36735322,
+      "inflows_24h": 4205964.862319285,
+      "inflows_1w": 3772261.908258448,
+      "inflows_1m": 3899543.9321513134
+    },
+    {
+      "id": "4700",
+      "name": "HashKey Global",
+      "walletsLink": null,
+      "currentTvl": 10396245.490486667,
+      "cleanAssetsTvl": 10396245.490486667,
+      "inflows_24h": 2624.7796109864184,
+      "inflows_1w": -428164.0295121309,
+      "inflows_1m": -527060.1535668481
+    },
+    {
+      "id": "5332",
+      "name": "P2PB2B",
+      "walletsLink": null,
+      "currentTvl": 5721881.597909236,
+      "cleanAssetsTvl": 5721881.597909236,
+      "inflows_24h": 0,
+      "inflows_1w": -8209.893486856765,
+      "inflows_1m": -1627.9398998944318
+    },
+    {
+      "id": "6010",
+      "name": "OrangeX",
+      "walletsLink": null,
+      "currentTvl": 43586269.47884616,
+      "cleanAssetsTvl": 43586269.47884616,
+      "inflows_24h": 0,
+      "inflows_1w": 0,
+      "inflows_1m": -850189.6811575942
+    },
+    {
+      "id": "4928",
+      "name": "BigONE",
+      "walletsLink": null,
+      "currentTvl": 48110195.736531734,
+      "cleanAssetsTvl": 48110195.736531734,
+      "inflows_24h": -27870.592171344386,
+      "inflows_1w": 10112258.889849085,
+      "inflows_1m": 9205541.476248587
+    },
+    {
+      "id": "5415",
+      "name": "Arkham Exchange",
+      "walletsLink": null,
+      "currentTvl": 5545.283136298229,
+      "cleanAssetsTvl": 5545.283136298229,
+      "inflows_24h": 0,
+      "inflows_1w": 0,
+      "inflows_1m": 0
+    },
+    {
+      "id": "4687",
+      "name": "Hibt",
+      "walletsLink": null,
+      "currentTvl": 17344304.973532487,
+      "cleanAssetsTvl": 17344304.973532487,
+      "inflows_24h": -102843.40377249455,
+      "inflows_1w": -413179.9098222007,
+      "inflows_1m": -232976.35742913187
+    },
+    {
+      "id": "5962",
+      "name": "LBank",
+      "walletsLink": null,
+      "currentTvl": 11562731.62981344,
+      "cleanAssetsTvl": 11562731.62981344,
+      "inflows_24h": 164204.8968579958,
+      "inflows_1w": 985233.5775008048,
+      "inflows_1m": 2525009.90445028
+    },
+    {
+      "id": "6021",
+      "name": "TradeOgre",
+      "walletsLink": null,
+      "currentTvl": 76577.32462402865,
+      "cleanAssetsTvl": 76577.32462402865,
+      "inflows_24h": 0,
+      "inflows_1w": 0,
+      "inflows_1m": 0
+    },
+    {
+      "id": "5449",
+      "name": "BiTomato",
+      "walletsLink": null,
+      "currentTvl": 2216.415767595315,
+      "cleanAssetsTvl": 2216.415767595315,
+      "inflows_24h": 0,
+      "inflows_1w": 0,
+      "inflows_1m": 0
+    },
+    {
+      "id": "6234",
+      "name": "Zoomex",
+      "walletsLink": null,
+      "currentTvl": 37339623.70581028,
+      "cleanAssetsTvl": 37339623.70581028,
+      "inflows_24h": -176451.8145044751,
+      "inflows_1w": 2111097.425114845,
+      "inflows_1m": 137222.95483319188
+    },
+    {
+      "id": "3546",
+      "name": "CoinEx",
+      "walletsLink": null,
+      "currentTvl": 29168905.79061463,
+      "cleanAssetsTvl": 29168905.79061463,
+      "inflows_24h": -1189114.5888616645,
+      "inflows_1w": 1426616.6141668009,
+      "inflows_1m": -138032163.6297161
+    },
+    {
+      "id": null,
+      "name": "Coinbase",
+      "walletsLink": null,
+      "currentTvl": null,
+      "cleanAssetsTvl": null,
+      "inflows_24h": null,
+      "inflows_1w": null,
+      "inflows_1m": null
+    },
+    {
+      "id": null,
+      "name": "Coinone",
+      "walletsLink": null,
+      "currentTvl": null,
+      "cleanAssetsTvl": null,
+      "inflows_24h": null,
+      "inflows_1w": null,
+      "inflows_1m": null
+    },
+    {
+      "id": "2435",
+      "name": "NEXO",
+      "walletsLink": null,
+      "currentTvl": 327280084.00509083,
+      "cleanAssetsTvl": 10787026.416984856,
+      "inflows_24h": -3734021.767097387,
+      "inflows_1w": -539694.5694063067,
+      "inflows_1m": -3585961.056567721
+    },
+    {
+      "id": null,
+      "name": "Coincheck",
+      "walletsLink": null,
+      "currentTvl": null,
+      "cleanAssetsTvl": null,
+      "inflows_24h": null,
+      "inflows_1w": null,
+      "inflows_1m": null
+    },
+    {
+      "id": null,
+      "name": "Bithumb",
+      "walletsLink": null,
+      "currentTvl": null,
+      "cleanAssetsTvl": null,
+      "inflows_24h": null,
+      "inflows_1w": null,
+      "inflows_1m": null
+    },
+    {
+      "id": "7481",
+      "name": "Poloniex",
+      "walletsLink": null,
+      "currentTvl": 1701093386.409308,
+      "cleanAssetsTvl": 1701093386.409308,
+      "inflows_24h": 6053640.904638061,
+      "inflows_1w": -10263545.122507893,
+      "inflows_1m": 22524614.506020002
+    },
+    {
+      "id": null,
+      "name": "Upbit",
+      "walletsLink": null,
+      "currentTvl": null,
+      "cleanAssetsTvl": null,
+      "inflows_24h": null,
+      "inflows_1w": null,
+      "inflows_1m": null
+    },
+    {
+      "id": null,
+      "name": "bitFlyer",
+      "walletsLink": null,
+      "currentTvl": null,
+      "cleanAssetsTvl": null,
+      "inflows_24h": null,
+      "inflows_1w": null,
+      "inflows_1m": null
+    },
+    {
+      "id": null,
+      "name": "BTCC",
+      "walletsLink": null,
+      "currentTvl": null,
+      "cleanAssetsTvl": null,
+      "inflows_24h": null,
+      "inflows_1w": null,
+      "inflows_1m": null
+    },
+    {
+      "id": null,
+      "name": "Deepcoin",
+      "walletsLink": null,
+      "currentTvl": null,
+      "cleanAssetsTvl": null,
+      "inflows_24h": null,
+      "inflows_1w": null,
+      "inflows_1m": null
+    },
+    {
+      "id": "6652",
+      "name": "CEX.IO",
+      "walletsLink": null,
+      "currentTvl": 3055037.7100852993,
+      "cleanAssetsTvl": 3055037.7100852993,
+      "inflows_24h": 295847.04067647754,
+      "inflows_1w": 1216530.2855698753,
+      "inflows_1m": 761179.8887246458
+    },
+    {
+      "id": "6715",
+      "name": "Bitlo",
+      "walletsLink": null,
+      "currentTvl": 16345966.518396644,
+      "cleanAssetsTvl": 16345966.518396644,
+      "inflows_24h": 508.67015295564767,
+      "inflows_1w": 30421.241501512635,
+      "inflows_1m": 42502.57408433918
+    },
+    {
+      "id": "6781",
+      "name": "VALR",
+      "walletsLink": null,
+      "currentTvl": 124364325.28996657,
+      "cleanAssetsTvl": 124364325.28996657,
+      "inflows_24h": -8779105.405829813,
+      "inflows_1w": -8217238.7620127695,
+      "inflows_1m": -11111425.826793432
+    },
+    {
+      "id": "6831",
+      "name": "BitKan",
+      "walletsLink": null,
+      "currentTvl": 31793878.631919887,
+      "cleanAssetsTvl": 31793878.631919887,
+      "inflows_24h": -6062971.156510127,
+      "inflows_1w": -1006563.2135726041,
+      "inflows_1m": -7258501.352711004
+    },
+    {
+      "id": "1210",
+      "name": "Voyager",
+      "walletsLink": null,
+      "currentTvl": 0,
+      "cleanAssetsTvl": 0,
+      "inflows_24h": 0,
+      "inflows_1w": 0,
+      "inflows_1m": 0
+    },
+    {
+      "id": "7013",
+      "name": "Gate US",
+      "walletsLink": null,
+      "currentTvl": 9912395.434663855,
+      "cleanAssetsTvl": 9912395.434663855,
+      "inflows_24h": -5135.40295445771,
+      "inflows_1w": -41040471.167449884,
+      "inflows_1m": -46103051.03108405
+    },
+    {
+      "id": "7060",
+      "name": "LeveX",
+      "walletsLink": null,
+      "currentTvl": 8435899.944742432,
+      "cleanAssetsTvl": 8435899.944742432,
+      "inflows_24h": 7878.766153942654,
+      "inflows_1w": -234596.1873244255,
+      "inflows_1m": -917168.5024106128
+    },
+    {
+      "id": "7211",
+      "name": "WEEX",
+      "walletsLink": null,
+      "currentTvl": 308422123.54157573,
+      "cleanAssetsTvl": 194443121.9898948,
+      "inflows_24h": -1423748.66841773,
+      "inflows_1w": -4660765.072231805,
+      "inflows_1m": 7211742.118694265
+    },
+    {
+      "id": "7222",
+      "name": "BYDFi",
+      "walletsLink": null,
+      "currentTvl": 85549171.42366561,
+      "cleanAssetsTvl": 85549171.42366561,
+      "inflows_24h": -8250116.314170329,
+      "inflows_1w": -8655614.27970781,
+      "inflows_1m": -8015970.26875661
+    },
+    {
+      "id": "7248",
+      "name": "OSL Exchange",
+      "walletsLink": null,
+      "currentTvl": 798158359.9162045,
+      "cleanAssetsTvl": 798158359.9162045,
+      "inflows_24h": -1643144.0146964383,
+      "inflows_1w": -11491944.582700508,
+      "inflows_1m": -18388184.885898873
+    },
+    {
+      "id": "7280",
+      "name": "Byte Exchange",
+      "walletsLink": null,
+      "currentTvl": 45806156.72557693,
+      "cleanAssetsTvl": 45806156.72557693,
+      "inflows_24h": 0,
+      "inflows_1w": 0,
+      "inflows_1m": 0
+    },
+    {
+      "id": "7281",
+      "name": "GroveX",
+      "walletsLink": null,
+      "currentTvl": 1783.132749221789,
+      "cleanAssetsTvl": 1783.132749221789,
+      "inflows_24h": 0,
+      "inflows_1w": 0,
+      "inflows_1m": 0
+    },
+    {
+      "id": "7576",
+      "name": "Bitvavo",
+      "walletsLink": null,
+      "currentTvl": 233106915.03807762,
+      "cleanAssetsTvl": 233106915.03807762,
+      "inflows_24h": -3870043.4077643077,
+      "inflows_1w": -485489827.7722107,
+      "inflows_1m": -402943022.04650307
+    },
+    {
+      "id": "7951",
+      "name": "SCLiTE",
+      "walletsLink": null,
+      "currentTvl": 19249.179257722484,
+      "cleanAssetsTvl": 19249.179257722484,
+      "inflows_24h": -0.0036112445657999065,
+      "inflows_1w": -0.0360990689324559,
+      "inflows_1m": null
+    },
+    {
+      "id": "8341",
+      "name": "Webot",
+      "walletsLink": null,
+      "currentTvl": 3589103.3118493203,
+      "cleanAssetsTvl": 3589103.3118493203,
+      "inflows_24h": -35025.73801412621,
+      "inflows_1w": -135786.55230158663,
+      "inflows_1m": -292434.0612329457
+    },
+    {
+      "id": "8441",
+      "name": "Niza",
+      "walletsLink": null,
+      "currentTvl": 52208214.02320948,
+      "cleanAssetsTvl": 52208214.02320948,
+      "inflows_24h": 0,
+      "inflows_1w": 0,
+      "inflows_1m": -22114120.996179648
+    },
+    {
+      "id": "8485",
+      "name": "Websea",
+      "walletsLink": null,
+      "currentTvl": 46373.96963767429,
+      "cleanAssetsTvl": 46373.96963767429,
+      "inflows_24h": -0.43374445808614126,
+      "inflows_1w": -137201.44316917146,
+      "inflows_1m": -18056623.894090533
+    }
+  ]
+}

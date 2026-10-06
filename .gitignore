@@ -1,0 +1,9 @@
+
+# Backup locali: conservarli sul Mac, escluderli dalle nuove aggiunte.
+*.bak*
+
+# ROSSI1700: sorgenti CSV esclusi, distribuzione gzip frazionata.
+dati-aperti/fee_catene/*.csv
+
+# ROSSI1700: sorgenti CSV esclusi, distribuzione gzip frazionata.
+dati-aperti/fee_catene/*.csv

@@ -1,0 +1,35 @@
+{
+  "metadati": {
+    "dataset": "attivita_sviluppatori",
+    "data": "2026-10-04",
+    "prelevato_utc": "2026-10-05T12:40:42.740152+00:00",
+    "fonti": [
+      "https://api.github.com/repos/bitcoin/bitcoin/commits?since=2026-10-04T00:00:00Z&until=2026-10-05T00:00:00Z&per_page=100&page=1",
+      "https://api.github.com/repos/ethereum/go-ethereum/commits?since=2026-10-04T00:00:00Z&until=2026-10-05T00:00:00Z&per_page=100&page=1",
+      "https://api.github.com/repos/anza-xyz/agave/commits?since=2026-10-04T00:00:00Z&until=2026-10-05T00:00:00Z&per_page=100&page=1"
+    ],
+    "dati_fino_a": "Commit sul branch predefinito nel giorno UTC richiesto, tre repository pubblici; zero commit è un risultato valido.",
+    "licenza": "Licenza dei dati terzi non verificata come aperta: valgono i termini della fonte; accesso pubblico non equivale a diritto di ripubblicazione. Codice locale originale CC0; nessuna nuova licenza applicata ai dati.",
+    "note": "Valori e unità della fonte; null e campi assenti non sono zero. Proxy di attività, non numero sviluppatori. Campione Bitcoin Core, Geth e Agave; non tutta l’attività degli ecosistemi."
+  },
+  "dati": {
+    "bitcoin/bitcoin": {
+      "numero_commit": 1,
+      "commit": [
+        {
+          "sha": "052cf121ab0a5373d1753564d90075f1997f4610",
+          "url": "https://github.com/bitcoin/bitcoin/commit/052cf121ab0a5373d1753564d90075f1997f4610",
+          "data_commit": "2026-10-04T05:14:46Z"
+        }
+      ]
+    },
+    "ethereum/go-ethereum": {
+      "numero_commit": 0,
+      "commit": []
+    },
+    "anza-xyz/agave": {
+      "numero_commit": 0,
+      "commit": []
+    }
+  }
+}

@@ -1,0 +1,1390 @@
+{
+  "metadati": {
+    "licenza": "CC BY 4.0",
+    "licenza_url": "https://creativecommons.org/licenses/by/4.0/",
+    "attribuzione": "Luca Valente",
+    "nota_licenza_fonti": "CC BY 4.0 applies to the original compilation and editorial work by Luca Valente. Underlying third-party data retain their source terms, including Coin Metrics CC BY-NC 4.0 where indicated; this export does not replace those terms.",
+    "fonte": "DefiLlama (fees, revenue)",
+    "fonti": [
+      "DefiLlama (fees, revenue)"
+    ],
+    "sorgente": "dati/cruscotti/revenue_quality/latest.json",
+    "data": "2026-10-05"
+  },
+  "dati": {
+    "nome": "revenue_quality",
+    "titolo": "Revenue Quality",
+    "data": "2026-10-05",
+    "dati_fino_a": "2026-10-04",
+    "parola": null,
+    "da_quando": null,
+    "blocchi": [
+      {
+        "id": "insieme",
+        "titolo": "All large protocols",
+        "valori": [
+          {
+            "etichetta": "Recurring share of the 30-day fees of 40 large protocols",
+            "valore": 0.974515,
+            "unita": "quota",
+            "tipo": "level, change in points",
+            "variazioni": {
+              "7": 0.0125,
+              "30": 0.0472,
+              "90": -0.0004
+            },
+            "percentile_1a": null,
+            "percentile_storia": 93.4,
+            "storia_dal": "2026-04-08",
+            "serie_dal": "2026-04-08",
+            "giorni_di_storia": 181,
+            "giorni_presenti": null,
+            "giorni_finestra": null,
+            "stato": "expanding",
+            "da_quando": "2026-09-22",
+            "da_quando_almeno": false,
+            "banda_flat": 0.02,
+            "finestra_stato": 30,
+            "fonte": "DefiLlama",
+            "dati_fino_a": "2026-10-05",
+            "punti": [
+              [
+                "2026-07-08",
+                0.977621
+              ],
+              [
+                "2026-07-09",
+                0.974916
+              ],
+              [
+                "2026-07-10",
+                0.973654
+              ],
+              [
+                "2026-07-11",
+                0.964051
+              ],
+              [
+                "2026-07-12",
+                0.957262
+              ],
+              [
+                "2026-07-13",
+                0.950414
+              ],
+              [
+                "2026-07-14",
+                0.950454
+              ],
+              [
+                "2026-07-15",
+                0.945316
+              ],
+              [
+                "2026-07-16",
+                0.935153
+              ],
+              [
+                "2026-07-17",
+                0.93956
+              ],
+              [
+                "2026-07-18",
+                0.937772
+              ],
+              [
+                "2026-07-19",
+                0.934205
+              ],
+              [
+                "2026-07-20",
+                0.951859
+              ],
+              [
+                "2026-07-21",
+                0.951327
+              ],
+              [
+                "2026-07-22",
+                0.964247
+              ],
+              [
+                "2026-07-23",
+                0.97435
+              ],
+              [
+                "2026-07-24",
+                0.974512
+              ],
+              [
+                "2026-07-25",
+                0.981057
+              ],
+              [
+                "2026-07-26",
+                0.973753
+              ],
+              [
+                "2026-07-27",
+                0.979497
+              ],
+              [
+                "2026-07-28",
+                0.973613
+              ],
+              [
+                "2026-07-29",
+                0.980051
+              ],
+              [
+                "2026-07-30",
+                0.969951
+              ],
+              [
+                "2026-07-31",
+                0.976734
+              ],
+              [
+                "2026-08-01",
+                0.972469
+              ],
+              [
+                "2026-08-02",
+                0.97902
+              ],
+              [
+                "2026-08-03",
+                0.968642
+              ],
+              [
+                "2026-08-04",
+                0.976067
+              ],
+              [
+                "2026-08-05",
+                0.965544
+              ],
+              [
+                "2026-08-06",
+                0.976676
+              ],
+              [
+                "2026-08-07",
+                0.966047
+              ],
+              [
+                "2026-08-08",
+                0.9762
+              ],
+              [
+                "2026-08-09",
+                0.966323
+              ],
+              [
+                "2026-08-10",
+                0.976846
+              ],
+              [
+                "2026-08-11",
+                0.963116
+              ],
+              [
+                "2026-08-12",
+                0.972261
+              ],
+              [
+                "2026-08-13",
+                0.971236
+              ],
+              [
+                "2026-08-14",
+                0.972393
+              ],
+              [
+                "2026-08-15",
+                0.973361
+              ],
+              [
+                "2026-08-16",
+                0.974378
+              ],
+              [
+                "2026-08-17",
+                0.971436
+              ],
+              [
+                "2026-08-18",
+                0.972359
+              ],
+              [
+                "2026-08-19",
+                0.972413
+              ],
+              [
+                "2026-08-20",
+                0.95817
+              ],
+              [
+                "2026-08-21",
+                0.955817
+              ],
+              [
+                "2026-08-22",
+                0.942014
+              ],
+              [
+                "2026-08-23",
+                0.93973
+              ],
+              [
+                "2026-08-24",
+                0.934774
+              ],
+              [
+                "2026-08-25",
+                0.936292
+              ],
+              [
+                "2026-08-26",
+                0.936409
+              ],
+              [
+                "2026-08-27",
+                0.937448
+              ],
+              [
+                "2026-08-28",
+                0.936627
+              ],
+              [
+                "2026-08-29",
+                0.936452
+              ],
+              [
+                "2026-08-30",
+                0.938381
+              ],
+              [
+                "2026-08-31",
+                0.938159
+              ],
+              [
+                "2026-09-01",
+                0.935943
+              ],
+              [
+                "2026-09-02",
+                0.930977
+              ],
+              [
+                "2026-09-03",
+                0.923977
+              ],
+              [
+                "2026-09-04",
+                0.933704
+              ],
+              [
+                "2026-09-05",
+                0.927317
+              ],
+              [
+                "2026-09-06",
+                0.929548
+              ],
+              [
+                "2026-09-07",
+                0.920118
+              ],
+              [
+                "2026-09-08",
+                0.928665
+              ],
+              [
+                "2026-09-09",
+                0.923108
+              ],
+              [
+                "2026-09-10",
+                0.91438
+              ],
+              [
+                "2026-09-11",
+                0.923695
+              ],
+              [
+                "2026-09-12",
+                0.922198
+              ],
+              [
+                "2026-09-13",
+                0.930205
+              ],
+              [
+                "2026-09-14",
+                0.92834
+              ],
+              [
+                "2026-09-15",
+                0.936707
+              ],
+              [
+                "2026-09-16",
+                0.936639
+              ],
+              [
+                "2026-09-17",
+                0.93835
+              ],
+              [
+                "2026-09-18",
+                0.940181
+              ],
+              [
+                "2026-09-19",
+                0.946354
+              ],
+              [
+                "2026-09-20",
+                0.954212
+              ],
+              [
+                "2026-09-21",
+                0.960648
+              ],
+              [
+                "2026-09-22",
+                0.960001
+              ],
+              [
+                "2026-09-23",
+                0.960658
+              ],
+              [
+                "2026-09-24",
+                0.959953
+              ],
+              [
+                "2026-09-25",
+                0.962073
+              ],
+              [
+                "2026-09-26",
+                0.962014
+              ],
+              [
+                "2026-09-27",
+                0.961187
+              ],
+              [
+                "2026-09-28",
+                0.961809
+              ],
+              [
+                "2026-09-29",
+                0.962678
+              ],
+              [
+                "2026-09-30",
+                0.962248
+              ],
+              [
+                "2026-10-01",
+                0.959874
+              ],
+              [
+                "2026-10-02",
+                0.960619
+              ],
+              [
+                "2026-10-03",
+                0.960988
+              ],
+              [
+                "2026-10-04",
+                0.960143
+              ],
+              [
+                "2026-10-05",
+                0.974515
+              ]
+            ]
+          },
+          {
+            "etichetta": "Protocols with at least one one-off fee day in 30 days",
+            "valore": 12,
+            "unita": "unita",
+            "su": 40
+          },
+          {
+            "etichetta": "Protocols paid in lumps (not split)",
+            "valore": 0,
+            "unita": "unita",
+            "su": 40
+          }
+        ],
+        "serie": [
+          {
+            "etichetta": "Recurring share of fees",
+            "unita": "quota",
+            "punti": [
+              [
+                "2026-07-08",
+                0.977621
+              ],
+              [
+                "2026-07-09",
+                0.974916
+              ],
+              [
+                "2026-07-10",
+                0.973654
+              ],
+              [
+                "2026-07-11",
+                0.964051
+              ],
+              [
+                "2026-07-12",
+                0.957262
+              ],
+              [
+                "2026-07-13",
+                0.950414
+              ],
+              [
+                "2026-07-14",
+                0.950454
+              ],
+              [
+                "2026-07-15",
+                0.945316
+              ],
+              [
+                "2026-07-16",
+                0.935153
+              ],
+              [
+                "2026-07-17",
+                0.93956
+              ],
+              [
+                "2026-07-18",
+                0.937772
+              ],
+              [
+                "2026-07-19",
+                0.934205
+              ],
+              [
+                "2026-07-20",
+                0.951859
+              ],
+              [
+                "2026-07-21",
+                0.951327
+              ],
+              [
+                "2026-07-22",
+                0.964247
+              ],
+              [
+                "2026-07-23",
+                0.97435
+              ],
+              [
+                "2026-07-24",
+                0.974512
+              ],
+              [
+                "2026-07-25",
+                0.981057
+              ],
+              [
+                "2026-07-26",
+                0.973753
+              ],
+              [
+                "2026-07-27",
+                0.979497
+              ],
+              [
+                "2026-07-28",
+                0.973613
+              ],
+              [
+                "2026-07-29",
+                0.980051
+              ],
+              [
+                "2026-07-30",
+                0.969951
+              ],
+              [
+                "2026-07-31",
+                0.976734
+              ],
+              [
+                "2026-08-01",
+                0.972469
+              ],
+              [
+                "2026-08-02",
+                0.97902
+              ],
+              [
+                "2026-08-03",
+                0.968642
+              ],
+              [
+                "2026-08-04",
+                0.976067
+              ],
+              [
+                "2026-08-05",
+                0.965544
+              ],
+              [
+                "2026-08-06",
+                0.976676
+              ],
+              [
+                "2026-08-07",
+                0.966047
+              ],
+              [
+                "2026-08-08",
+                0.9762
+              ],
+              [
+                "2026-08-09",
+                0.966323
+              ],
+              [
+                "2026-08-10",
+                0.976846
+              ],
+              [
+                "2026-08-11",
+                0.963116
+              ],
+              [
+                "2026-08-12",
+                0.972261
+              ],
+              [
+                "2026-08-13",
+                0.971236
+              ],
+              [
+                "2026-08-14",
+                0.972393
+              ],
+              [
+                "2026-08-15",
+                0.973361
+              ],
+              [
+                "2026-08-16",
+                0.974378
+              ],
+              [
+                "2026-08-17",
+                0.971436
+              ],
+              [
+                "2026-08-18",
+                0.972359
+              ],
+              [
+                "2026-08-19",
+                0.972413
+              ],
+              [
+                "2026-08-20",
+                0.95817
+              ],
+              [
+                "2026-08-21",
+                0.955817
+              ],
+              [
+                "2026-08-22",
+                0.942014
+              ],
+              [
+                "2026-08-23",
+                0.93973
+              ],
+              [
+                "2026-08-24",
+                0.934774
+              ],
+              [
+                "2026-08-25",
+                0.936292
+              ],
+              [
+                "2026-08-26",
+                0.936409
+              ],
+              [
+                "2026-08-27",
+                0.937448
+              ],
+              [
+                "2026-08-28",
+                0.936627
+              ],
+              [
+                "2026-08-29",
+                0.936452
+              ],
+              [
+                "2026-08-30",
+                0.938381
+              ],
+              [
+                "2026-08-31",
+                0.938159
+              ],
+              [
+                "2026-09-01",
+                0.935943
+              ],
+              [
+                "2026-09-02",
+                0.930977
+              ],
+              [
+                "2026-09-03",
+                0.923977
+              ],
+              [
+                "2026-09-04",
+                0.933704
+              ],
+              [
+                "2026-09-05",
+                0.927317
+              ],
+              [
+                "2026-09-06",
+                0.929548
+              ],
+              [
+                "2026-09-07",
+                0.920118
+              ],
+              [
+                "2026-09-08",
+                0.928665
+              ],
+              [
+                "2026-09-09",
+                0.923108
+              ],
+              [
+                "2026-09-10",
+                0.91438
+              ],
+              [
+                "2026-09-11",
+                0.923695
+              ],
+              [
+                "2026-09-12",
+                0.922198
+              ],
+              [
+                "2026-09-13",
+                0.930205
+              ],
+              [
+                "2026-09-14",
+                0.92834
+              ],
+              [
+                "2026-09-15",
+                0.936707
+              ],
+              [
+                "2026-09-16",
+                0.936639
+              ],
+              [
+                "2026-09-17",
+                0.93835
+              ],
+              [
+                "2026-09-18",
+                0.940181
+              ],
+              [
+                "2026-09-19",
+                0.946354
+              ],
+              [
+                "2026-09-20",
+                0.954212
+              ],
+              [
+                "2026-09-21",
+                0.960648
+              ],
+              [
+                "2026-09-22",
+                0.960001
+              ],
+              [
+                "2026-09-23",
+                0.960658
+              ],
+              [
+                "2026-09-24",
+                0.959953
+              ],
+              [
+                "2026-09-25",
+                0.962073
+              ],
+              [
+                "2026-09-26",
+                0.962014
+              ],
+              [
+                "2026-09-27",
+                0.961187
+              ],
+              [
+                "2026-09-28",
+                0.961809
+              ],
+              [
+                "2026-09-29",
+                0.962678
+              ],
+              [
+                "2026-09-30",
+                0.962248
+              ],
+              [
+                "2026-10-01",
+                0.959874
+              ],
+              [
+                "2026-10-02",
+                0.960619
+              ],
+              [
+                "2026-10-03",
+                0.960988
+              ],
+              [
+                "2026-10-04",
+                0.960143
+              ],
+              [
+                "2026-10-05",
+                0.974515
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "settori",
+        "titolo": "By sector (at least 5 protocols)",
+        "tabella": {
+          "colonne": [
+            "Sector",
+            "Protocols",
+            "Median recurring share of fees",
+            "With a one-off day",
+            "Fees, 30 days (usd)"
+          ],
+          "righe": [
+            [
+              "Lending",
+              11,
+              1.0,
+              3,
+              85863971
+            ],
+            [
+              "Liquid staking",
+              10,
+              1.0,
+              2,
+              73891064
+            ],
+            [
+              "DEXs",
+              9,
+              1.0,
+              3,
+              411401958
+            ]
+          ]
+        }
+      },
+      {
+        "id": "protocolli",
+        "titolo": "Protocols of the public list",
+        "tabella": {
+          "colonne": [
+            "Protocol",
+            "Sector",
+            "Fees, 30 days (usd)",
+            "Recurring share of fees",
+            "One-off days",
+            "Paid in lumps",
+            "Recurring share of revenue",
+            "One-off revenue days"
+          ],
+          "righe": [
+            [
+              "Pump.fun",
+              "Launchpad",
+              176907389,
+              1.0,
+              0,
+              "",
+              1.0,
+              0
+            ],
+            [
+              "PumpSwap",
+              "DEXs",
+              112702925,
+              1.0,
+              0,
+              "",
+              1.0,
+              0
+            ],
+            [
+              "Uniswap V4",
+              "DEXs",
+              109279250,
+              1.0,
+              0,
+              "",
+              null,
+              null
+            ],
+            [
+              "Hyperliquid",
+              "Derivatives",
+              87529020,
+              1.0,
+              0,
+              "",
+              1.0,
+              0
+            ],
+            [
+              "Uniswap V3",
+              "DEXs",
+              54269366,
+              1.0,
+              0,
+              "",
+              1.0,
+              0
+            ],
+            [
+              "Lido",
+              "Liquid staking",
+              51711983,
+              1.0,
+              0,
+              "",
+              1.0,
+              0
+            ],
+            [
+              "Raydium",
+              "DEXs",
+              46059714,
+              1.0,
+              0,
+              "",
+              1.0,
+              0
+            ],
+            [
+              "Aave V3",
+              "Lending",
+              36270333,
+              1.0,
+              0,
+              "",
+              1.0,
+              0
+            ],
+            [
+              "Meteora",
+              "DEXs",
+              33708433,
+              1.0,
+              0,
+              "",
+              1.0,
+              0
+            ],
+            [
+              "Polymarket International",
+              "Prediction markets",
+              31638539,
+              1.0,
+              0,
+              "",
+              1.0,
+              0
+            ],
+            [
+              "Sky Lending",
+              "Collateralised debt",
+              26892545,
+              1.0,
+              0,
+              "",
+              1.0,
+              0
+            ],
+            [
+              "PancakeSwap",
+              "DEXs",
+              22016859,
+              0.846,
+              1,
+              "",
+              0.8486,
+              1
+            ],
+            [
+              "Morpho Blue",
+              "Lending",
+              19957990,
+              1.0,
+              0,
+              "",
+              null,
+              null
+            ],
+            [
+              "Aerodrome Finance",
+              "DEXs",
+              18990002,
+              0.569,
+              1,
+              "",
+              0.4741,
+              1
+            ],
+            [
+              "Ethena USDe",
+              "Basis trading",
+              18338229,
+              0.0001,
+              12,
+              "yes",
+              0.1107,
+              9
+            ],
+            [
+              "Jupiter",
+              "DEX Aggregator",
+              18047097,
+              1.0,
+              0,
+              "",
+              1.0,
+              0
+            ],
+            [
+              "Orca DEX",
+              "DEXs",
+              10955414,
+              1.0,
+              0,
+              "",
+              1.0,
+              0
+            ],
+            [
+              "Maple",
+              "Lending",
+              9611326,
+              0.4194,
+              4,
+              "",
+              0.3447,
+              5
+            ],
+            [
+              "Sanctum Validator LSTs",
+              "Liquid staking",
+              7851289,
+              1.0,
+              0,
+              "",
+              1.0,
+              0
+            ],
+            [
+              "Jupiter Perpetual Exchange",
+              "Derivatives",
+              7800434,
+              1.0,
+              0,
+              "",
+              1.0,
+              0
+            ],
+            [
+              "SparkLend",
+              "Lending",
+              6513342,
+              1.0,
+              0,
+              "",
+              1.0,
+              0
+            ],
+            [
+              "Jito Liquid Staking",
+              "Liquid staking",
+              4479407,
+              1.0,
+              0,
+              "",
+              null,
+              null
+            ],
+            [
+              "Jupiter Lend",
+              "Lending",
+              3897906,
+              1.0,
+              0,
+              "",
+              1.0,
+              0
+            ],
+            [
+              "Curve DEX",
+              "DEXs",
+              3419995,
+              0.6632,
+              4,
+              "",
+              0.1952,
+              6
+            ],
+            [
+              "Rocket Pool",
+              "Liquid staking",
+              2917082,
+              0.6101,
+              4,
+              "",
+              null,
+              null
+            ],
+            [
+              "Compound V3",
+              "Lending",
+              2386352,
+              1.0,
+              0,
+              "",
+              1.0,
+              0
+            ],
+            [
+              "Convex Finance",
+              "Yield",
+              2374918,
+              0.6928,
+              2,
+              "",
+              0.309,
+              2
+            ],
+            [
+              "Kelp",
+              "Liquid restaking",
+              2283393,
+              0.5985,
+              5,
+              "",
+              0.7351,
+              3
+            ],
+            [
+              "Kinetiq kHYPE",
+              "Liquid staking",
+              1871326,
+              1.0,
+              0,
+              "",
+              1.0,
+              0
+            ],
+            [
+              "Euler V2",
+              "Lending",
+              1747344,
+              1.0,
+              0,
+              "",
+              1.0,
+              0
+            ],
+            [
+              "Lombard LBTC",
+              "Restaked BTC",
+              1670226,
+              0.286,
+              7,
+              "",
+              0.286,
+              7
+            ],
+            [
+              "Venus Core Pool",
+              "Lending",
+              1532817,
+              0.7539,
+              2,
+              "",
+              0.3116,
+              7
+            ],
+            [
+              "JustLend V1",
+              "Lending",
+              1510341,
+              1.0,
+              0,
+              "",
+              1.0,
+              0
+            ],
+            [
+              "mETH Protocol",
+              "Liquid staking",
+              1271731,
+              1.0,
+              0,
+              "",
+              1.0,
+              0
+            ],
+            [
+              "Dolomite",
+              "Lending",
+              1245505,
+              1.0,
+              0,
+              "",
+              1.0,
+              0
+            ],
+            [
+              "Marinade Liquid Staking",
+              "Liquid staking",
+              1220065,
+              1.0,
+              0,
+              "",
+              1.0,
+              0
+            ],
+            [
+              "HyperLend Pooled",
+              "Lending",
+              1190715,
+              0.6312,
+              4,
+              "",
+              0.3548,
+              8
+            ],
+            [
+              "Benqi Staked Avax",
+              "Liquid staking",
+              955118,
+              0.7145,
+              2,
+              "",
+              0.7145,
+              2
+            ],
+            [
+              "StakeWise V3",
+              "Liquid staking",
+              855983,
+              1.0,
+              0,
+              "",
+              1.0,
+              0
+            ],
+            [
+              "Lista Liquid Staking",
+              "Liquid staking",
+              757080,
+              1.0,
+              0,
+              "",
+              1.0,
+              0
+            ],
+            [
+              "Pendle V2",
+              "Yield",
+              509235,
+              0.5149,
+              2,
+              "",
+              0.5098,
+              2
+            ]
+          ]
+        },
+        "nota": "paid in lumps = fees settle a few times a month (weekly, for example): the recurring / one-off split does not describe these series"
+      },
+      {
+        "id": "incentivi",
+        "titolo": "Dependence on incentives",
+        "disponibile": false,
+        "nota": "not available: the archive holds no series of incentives paid"
+      }
+    ],
+    "frasi": [
+      {
+        "id": "totale",
+        "testo": "97% of the 30-day fees of 40 large protocols were recurring",
+        "modello": "cruscotti.revenue_quality.totale",
+        "contratto": "contratto",
+        "numeri": {
+          "quota_ricorrente": 0.9745,
+          "protocolli": 40,
+          "commissioni_30g_usd": 926809790
+        },
+        "misura": "quota_ricorrente",
+        "finestra_giorni": 30,
+        "base": 926809789.8399999,
+        "base_minima": 100000000.0,
+        "quota_primo_contributo": 0.19087777334607187,
+        "cancello": "fermato",
+        "motivo": "stopped by the gate"
+      },
+      {
+        "id": "conteggio",
+        "testo": "12 of 40 large protocols had at least one one-off fee day in 30 days",
+        "modello": "cruscotti.revenue_quality.conteggio",
+        "contratto": "contratto",
+        "numeri": {
+          "con_un_giorno_una_tantum": 12,
+          "protocolli": 40
+        },
+        "misura": "quota_ricorrente",
+        "finestra_giorni": 30,
+        "base": 40,
+        "base_minima": 20,
+        "cancello": "passa"
+      },
+      {
+        "id": "settore_lending",
+        "testo": "The median recurring share of fees among Lending was 100%",
+        "modello": "cruscotti.revenue_quality.settore",
+        "contratto": "contratto",
+        "numeri": {
+          "mediana_quota_ricorrente": 1.0,
+          "protocolli": 11
+        },
+        "misura": "quota_ricorrente",
+        "finestra_giorni": 30,
+        "base": 11,
+        "base_minima": 5,
+        "cancello": "fermato",
+        "motivo": "stopped by the gate"
+      },
+      {
+        "id": "settore_liquid_staking",
+        "testo": "The median recurring share of fees among Liquid staking was 100%",
+        "modello": "cruscotti.revenue_quality.settore",
+        "contratto": "contratto",
+        "numeri": {
+          "mediana_quota_ricorrente": 1.0,
+          "protocolli": 10
+        },
+        "misura": "quota_ricorrente",
+        "finestra_giorni": 30,
+        "base": 10,
+        "base_minima": 5,
+        "cancello": "fermato",
+        "motivo": "stopped by the gate"
+      },
+      {
+        "id": "settore_dexs",
+        "testo": "The median recurring share of fees among DEXs was 100%",
+        "modello": "cruscotti.revenue_quality.settore",
+        "contratto": "contratto",
+        "numeri": {
+          "mediana_quota_ricorrente": 1.0,
+          "protocolli": 9
+        },
+        "misura": "quota_ricorrente",
+        "finestra_giorni": 30,
+        "base": 9,
+        "base_minima": 5,
+        "cancello": "fermato",
+        "motivo": "stopped by the gate"
+      }
+    ],
+    "fonti": [
+      "DefiLlama (fees, revenue)"
+    ],
+    "fuori_dal_totale": {
+      "incasso_a_blocchi": [
+        "Ethena USDe"
+      ]
+    },
+    "metodo": "fees, not net revenue or profit; 'ordinary' means statistically regular, not economically verified; protocols whose fees arrive in blocks (1 today) are listed but left out of the total and of the counts, on every day of the history; a day is one-off when the data check flags it as an isolated spike or when it is above 3 times the median of its 30 days; the whole day's fees count as one-off; 30 days through 2026-10-04",
+    "cancello": "ok",
+    "cancello_nota": "gate result for the sentences: ok = at least one sentence passed; each sentence carries its own result; the values in tables and history are not certified one by one",
+    "motivi": [
+      "totale: stopped by the gate",
+      "settore_lending: stopped by the gate",
+      "settore_liquid_staking: stopped by the gate",
+      "settore_dexs: stopped by the gate"
+    ],
+    "immagini": {
+      "1600x900": "immagine_2026-10-05_1600x900.png",
+      "1080x1350": "immagine_2026-10-05_1080x1350.png"
+    },
+    "immagine_titolo": "12 of 40 large protocols had at least one one-off fee day in 30 days",
+    "carta_x": {
+      "file": "x_card.png",
+      "formato": "1200x675",
+      "data": "2026-10-01",
+      "nuova": false,
+      "motivo": "no cover layout allowed today by the rules",
+      "modello": "B",
+      "frase_id": "totale",
+      "titolo": "96% of protocol fees came from ordinary days",
+      "note": [
+        "High: 98%, 25 Jul",
+        "Low: 91%, 10 Sep",
+        "1 Oct: 96%"
+      ]
+    },
+    "immagini_problemi": 2,
+    "generato_il": "2026-10-06T03:55:35Z"
+  }
+}

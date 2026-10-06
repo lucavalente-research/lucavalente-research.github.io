@@ -1,0 +1,909 @@
+{
+  "metadati": {
+    "dataset": "funding_medio",
+    "data": "2026-10-04",
+    "prelevato_utc": "2026-10-05T12:40:39.215026+00:00",
+    "fonti": [
+      "https://api.hyperliquid.xyz/info"
+    ],
+    "dati_fino_a": "Snapshot al momento del prelievo; non ricostruisce lo stato di ieri.",
+    "licenza": "Licenza dei dati terzi non verificata come aperta: valgono i termini della fonte; accesso pubblico non equivale a diritto di ripubblicazione. Codice locale originale CC0; nessuna nuova licenza applicata ai dati.",
+    "note": "Valori e unità della fonte; null e campi assenti non sono zero. Solo perpetual Hyperliquid universo principale attivo. Tasso frazionario orario, non percentuale e non media mondiale."
+  },
+  "dati": {
+    "media_semplice_oraria": 1.6069282584269666e-05,
+    "media_ponderata_oi_oraria": 1.2956696253162178e-05,
+    "contratti": [
+      {
+        "asset": "BTC",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 3247145843.1807203
+      },
+      {
+        "asset": "ETH",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 3224979208.6857395
+      },
+      {
+        "asset": "ATOM",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 2787483.5921400003
+      },
+      {
+        "asset": "DYDX",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 2601827.77844
+      },
+      {
+        "asset": "SOL",
+        "funding_orario": 5.9166e-06,
+        "open_interest_usd": 659474469.405
+      },
+      {
+        "asset": "AVAX",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 36934858.24952
+      },
+      {
+        "asset": "BNB",
+        "funding_orario": 2.71741e-05,
+        "open_interest_usd": 57188049.218820006
+      },
+      {
+        "asset": "APE",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 2019074.9990400001
+      },
+      {
+        "asset": "OP",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 3533702.5071360003
+      },
+      {
+        "asset": "LTC",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 48191721.62304
+      },
+      {
+        "asset": "ARB",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 25011924.894720003
+      },
+      {
+        "asset": "DOGE",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 109507000.09031999
+      },
+      {
+        "asset": "INJ",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 7544882.1096
+      },
+      {
+        "asset": "SUI",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 105327270.21959998
+      },
+      {
+        "asset": "kPEPE",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 34508888.747999996
+      },
+      {
+        "asset": "CRV",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 26848242.449961998
+      },
+      {
+        "asset": "LDO",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 12862943.502656
+      },
+      {
+        "asset": "LINK",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 82561162.85240002
+      },
+      {
+        "asset": "STX",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 1479608.683008
+      },
+      {
+        "asset": "CFX",
+        "funding_orario": 2.26638e-05,
+        "open_interest_usd": 3850651.43376
+      },
+      {
+        "asset": "GMX",
+        "funding_orario": 5.49839e-05,
+        "open_interest_usd": 1081065.049348
+      },
+      {
+        "asset": "SNX",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 471005.723
+      },
+      {
+        "asset": "XRP",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 311181233.251
+      },
+      {
+        "asset": "BCH",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 10453235.675400002
+      },
+      {
+        "asset": "APT",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 4902921.24672
+      },
+      {
+        "asset": "AAVE",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 81623966.40200001
+      },
+      {
+        "asset": "COMP",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 951006.36296
+      },
+      {
+        "asset": "WLD",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 92676040.49539196
+      },
+      {
+        "asset": "YGG",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 205915.325464
+      },
+      {
+        "asset": "TRX",
+        "funding_orario": -6.0793e-06,
+        "open_interest_usd": 13992496.453119999
+      },
+      {
+        "asset": "kSHIB",
+        "funding_orario": 4.14943e-05,
+        "open_interest_usd": 3597764.413032
+      },
+      {
+        "asset": "UNI",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 90691269.88896003
+      },
+      {
+        "asset": "SEI",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 5253450.361304
+      },
+      {
+        "asset": "RUNE",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 2302008.672336
+      },
+      {
+        "asset": "ZRO",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 96624086.28872001
+      },
+      {
+        "asset": "DOT",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 5759429.229400001
+      },
+      {
+        "asset": "BANANA",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 179671.81595999998
+      },
+      {
+        "asset": "TRB",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 450243.2596800001
+      },
+      {
+        "asset": "BIGTIME",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 168432.84123
+      },
+      {
+        "asset": "KAS",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 2592228.761476
+      },
+      {
+        "asset": "BLUR",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 1275176.7915
+      },
+      {
+        "asset": "TIA",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 7874149.520678
+      },
+      {
+        "asset": "BSV",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 1323628.1868599998
+      },
+      {
+        "asset": "ADA",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 45028083.459240004
+      },
+      {
+        "asset": "MINA",
+        "funding_orario": -8.9933e-06,
+        "open_interest_usd": 3285821.44074
+      },
+      {
+        "asset": "POLYX",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 51172.245488
+      },
+      {
+        "asset": "GAS",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 96778.59846000001
+      },
+      {
+        "asset": "PENDLE",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 15695927.2232
+      },
+      {
+        "asset": "FET",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 15472122.666
+      },
+      {
+        "asset": "NEAR",
+        "funding_orario": 1.61963e-05,
+        "open_interest_usd": 360775035.51559997
+      },
+      {
+        "asset": "MEME",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 505092.294972
+      },
+      {
+        "asset": "ORDI",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 734215.030296
+      },
+      {
+        "asset": "NEO",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 654904.745474
+      },
+      {
+        "asset": "ZEN",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 1643013.611604
+      },
+      {
+        "asset": "FIL",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 8986468.91044
+      },
+      {
+        "asset": "PYTH",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 1777817.3829360001
+      },
+      {
+        "asset": "SUSHI",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 463246.49804599996
+      },
+      {
+        "asset": "IMX",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 5418677.623338
+      },
+      {
+        "asset": "kBONK",
+        "funding_orario": 3.2118e-05,
+        "open_interest_usd": 15534450.874368
+      },
+      {
+        "asset": "GMT",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 108769.339236
+      },
+      {
+        "asset": "SUPER",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 963254.3999999999
+      },
+      {
+        "asset": "JUP",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 15043402.14227
+      },
+      {
+        "asset": "kLUNC",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 309180.432408
+      },
+      {
+        "asset": "RSR",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 248126.52959999998
+      },
+      {
+        "asset": "GALA",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 521685.48854399996
+      },
+      {
+        "asset": "JTO",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 7481679.73972
+      },
+      {
+        "asset": "ACE",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 279698.90286
+      },
+      {
+        "asset": "WIF",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 7980321.272640001
+      },
+      {
+        "asset": "CAKE",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 2751459.52816
+      },
+      {
+        "asset": "PEOPLE",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 246486.63239200003
+      },
+      {
+        "asset": "ENS",
+        "funding_orario": 5.53909e-05,
+        "open_interest_usd": 3468230.324636
+      },
+      {
+        "asset": "ETC",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 5034442.52304
+      },
+      {
+        "asset": "XAI",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 391003.066272
+      },
+      {
+        "asset": "MANTA",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 459817.9729
+      },
+      {
+        "asset": "UMA",
+        "funding_orario": 9.9704e-06,
+        "open_interest_usd": 233795.6848
+      },
+      {
+        "asset": "ONDO",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 58476537.636
+      },
+      {
+        "asset": "ALT",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 810390.930756
+      },
+      {
+        "asset": "ZETA",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 1084608.262858
+      },
+      {
+        "asset": "DYM",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 364800.18089
+      },
+      {
+        "asset": "W",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 7253254.234038
+      },
+      {
+        "asset": "STRK",
+        "funding_orario": 2.59694e-05,
+        "open_interest_usd": 13891297.675679998
+      },
+      {
+        "asset": "TAO",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 73561800.48322001
+      },
+      {
+        "asset": "AR",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 4100390.762886
+      },
+      {
+        "asset": "kFLOKI",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 715888.66982
+      },
+      {
+        "asset": "BOME",
+        "funding_orario": 3.19761e-05,
+        "open_interest_usd": 4339054.7681
+      },
+      {
+        "asset": "ETHFI",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 19832925.225584
+      },
+      {
+        "asset": "ENA",
+        "funding_orario": 3.05031e-05,
+        "open_interest_usd": 169745817.524
+      },
+      {
+        "asset": "MNT",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 7124754.486156
+      },
+      {
+        "asset": "TNSR",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 212255.22816000003
+      },
+      {
+        "asset": "SAGA",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 1631388.3055199997
+      },
+      {
+        "asset": "MERL",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 558056.002944
+      },
+      {
+        "asset": "HBAR",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 13746131.97216
+      },
+      {
+        "asset": "POPCAT",
+        "funding_orario": 1.86274e-05,
+        "open_interest_usd": 2596471.3389
+      },
+      {
+        "asset": "EIGEN",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 4204275.322015999
+      },
+      {
+        "asset": "REZ",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 1765268.85612
+      },
+      {
+        "asset": "NOT",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 91620.346096
+      },
+      {
+        "asset": "TURBO",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 252974.468736
+      },
+      {
+        "asset": "BRETT",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 236360.630828
+      },
+      {
+        "asset": "IO",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 1075918.182144
+      },
+      {
+        "asset": "ZK",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 898630.104512
+      },
+      {
+        "asset": "RENDER",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 3480996.7959600003
+      },
+      {
+        "asset": "POL",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 6781655.653651999
+      },
+      {
+        "asset": "CELO",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 500254.25645999995
+      },
+      {
+        "asset": "HMSTR",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 1546912.258934
+      },
+      {
+        "asset": "kNEIRO",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 143945.6181
+      },
+      {
+        "asset": "GOAT",
+        "funding_orario": 1.84907e-05,
+        "open_interest_usd": 1451899.955184
+      },
+      {
+        "asset": "MOODENG",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 383478.079572
+      },
+      {
+        "asset": "GRASS",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 36697962.910280004
+      },
+      {
+        "asset": "PURR",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 20094917.0517
+      },
+      {
+        "asset": "PNUT",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 1517932.1679999998
+      },
+      {
+        "asset": "XLM",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 19510914.64822
+      },
+      {
+        "asset": "SAND",
+        "funding_orario": -9.98264e-05,
+        "open_interest_usd": 5530848.29479
+      },
+      {
+        "asset": "IOTA",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 2093016.621604
+      },
+      {
+        "asset": "ALGO",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 4805775.4248
+      },
+      {
+        "asset": "HYPE",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 1900640229.4937592
+      },
+      {
+        "asset": "ME",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 315336.16704200004
+      },
+      {
+        "asset": "MOVE",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 380406.26558400004
+      },
+      {
+        "asset": "VIRTUAL",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 10222655.218
+      },
+      {
+        "asset": "PENGU",
+        "funding_orario": 2.17508e-05,
+        "open_interest_usd": 16388302.277438
+      },
+      {
+        "asset": "USUAL",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 423686.045384
+      },
+      {
+        "asset": "FARTCOIN",
+        "funding_orario": 5.32826e-05,
+        "open_interest_usd": 40612272.442328
+      },
+      {
+        "asset": "AIXBT",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 291106.40277600003
+      },
+      {
+        "asset": "BIO",
+        "funding_orario": 4.63151e-05,
+        "open_interest_usd": 1467555.767224
+      },
+      {
+        "asset": "GRIFFAIN",
+        "funding_orario": 0.0002490994,
+        "open_interest_usd": 1922983.6416000002
+      },
+      {
+        "asset": "SPX",
+        "funding_orario": 0.0001010372,
+        "open_interest_usd": 9198515.025603998
+      },
+      {
+        "asset": "S",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 1076664.755232
+      },
+      {
+        "asset": "MORPHO",
+        "funding_orario": 1.33673e-05,
+        "open_interest_usd": 8875370.228899999
+      },
+      {
+        "asset": "TRUMP",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 11614585.7325
+      },
+      {
+        "asset": "MELANIA",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 1746283.944752
+      },
+      {
+        "asset": "ANIME",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 245939.6814
+      },
+      {
+        "asset": "VVV",
+        "funding_orario": 1.32427e-05,
+        "open_interest_usd": 69706592.74655998
+      },
+      {
+        "asset": "BERA",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 2346111.17888
+      },
+      {
+        "asset": "LAYER",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 523904.26311999996
+      },
+      {
+        "asset": "KAITO",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 2285747.09232
+      },
+      {
+        "asset": "NIL",
+        "funding_orario": 3.0552e-05,
+        "open_interest_usd": 9324646.647106001
+      },
+      {
+        "asset": "PAXG",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 23255303.4476
+      },
+      {
+        "asset": "BABY",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 136625.366706
+      },
+      {
+        "asset": "WCT",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 93307.67504999999
+      },
+      {
+        "asset": "HYPER",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 62717.52884399999
+      },
+      {
+        "asset": "ZORA",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 1297550.535996
+      },
+      {
+        "asset": "INIT",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 309156.52411999996
+      },
+      {
+        "asset": "NXPC",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 324529.41556
+      },
+      {
+        "asset": "SOPH",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 226571.156376
+      },
+      {
+        "asset": "RESOLV",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 1493339.821242
+      },
+      {
+        "asset": "SYRUP",
+        "funding_orario": 6.32034e-05,
+        "open_interest_usd": 10108602.1845
+      },
+      {
+        "asset": "PUMP",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 347242583.38001
+      },
+      {
+        "asset": "PROVE",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 169197.39336
+      },
+      {
+        "asset": "XPL",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 86820940.407124
+      },
+      {
+        "asset": "WLFI",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 10465395.828971999
+      },
+      {
+        "asset": "LINEA",
+        "funding_orario": 3.32359e-05,
+        "open_interest_usd": 3226759.078842
+      },
+      {
+        "asset": "SKY",
+        "funding_orario": 7.05911e-05,
+        "open_interest_usd": 10645731.960892
+      },
+      {
+        "asset": "ASTER",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 28351312.509786
+      },
+      {
+        "asset": "AVNT",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 983464.5745800001
+      },
+      {
+        "asset": "STBL",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 1896387.359616
+      },
+      {
+        "asset": "0G",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 3997067.13748
+      },
+      {
+        "asset": "HEMI",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 979239.9512880001
+      },
+      {
+        "asset": "APEX",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 2208430.50108
+      },
+      {
+        "asset": "2Z",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 2601017.29136
+      },
+      {
+        "asset": "ZEC",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 620114467.56
+      },
+      {
+        "asset": "MON",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 61859449.741335995
+      },
+      {
+        "asset": "MET",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 4531017.587040001
+      },
+      {
+        "asset": "MEGA",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 9318887.637192
+      },
+      {
+        "asset": "CC",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 6949567.917186
+      },
+      {
+        "asset": "ICP",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 4053101.7452800004
+      },
+      {
+        "asset": "AERO",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 36099063.66168
+      },
+      {
+        "asset": "STABLE",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 723522.18482
+      },
+      {
+        "asset": "FOGO",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 618470.5048240001
+      },
+      {
+        "asset": "LIT",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 200081534.235
+      },
+      {
+        "asset": "XMR",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 73901729.5679
+      },
+      {
+        "asset": "AXS",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 704795.6637800001
+      },
+      {
+        "asset": "DASH",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 4029211.2783999997
+      },
+      {
+        "asset": "SKR",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 545786.2555600001
+      },
+      {
+        "asset": "AZTEC",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 1745015.6052
+      },
+      {
+        "asset": "CHIP",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 14687841.92223
+      },
+      {
+        "asset": "GRAM",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 44121887.4208
+      },
+      {
+        "asset": "CASHCAT",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 34425452.32952
+      },
+      {
+        "asset": "PONS",
+        "funding_orario": 2.55788e-05,
+        "open_interest_usd": 47740197.78576
+      },
+      {
+        "asset": "USELESS",
+        "funding_orario": 1.25e-05,
+        "open_interest_usd": 11341578.71628
+      }
+    ]
+  }
+}

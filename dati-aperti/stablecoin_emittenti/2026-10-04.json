@@ -1,0 +1,6864 @@
+{
+  "metadati": {
+    "dataset": "stablecoin_emittenti",
+    "data": "2026-10-04",
+    "prelevato_utc": "2026-10-05T12:40:40.145690+00:00",
+    "fonti": [
+      "https://stablecoins.llama.fi/stablecoins?includePrices=true"
+    ],
+    "dati_fino_a": "Snapshot al momento del prelievo; non ricostruisce lo stato di ieri.",
+    "licenza": "Licenza dei dati terzi non verificata come aperta: valgono i termini della fonte; accesso pubblico non equivale a diritto di ripubblicazione. Codice locale originale CC0; nessuna nuova licenza applicata ai dati.",
+    "note": "Valori e unità della fonte; null e campi assenti non sono zero. Mappa editoriale esplicita; emittenti ignoti separati per asset. circulating è offerta nominale della valuta di peg: non sommare valute diverse come USD."
+  },
+  "dati": {
+    "offerta_per_emittente_e_valuta_peg": {
+      "Tether": {
+        "peggedUSD": 184016864857.95468
+      },
+      "Circle": {
+        "peggedUSD": 73999384464.84041,
+        "peggedEUR": 469455049.0485265
+      },
+      "Sky/Maker": {
+        "peggedUSD": 11744021053.899256
+      },
+      "Ethena": {
+        "peggedUSD": 4905192067.968442
+      },
+      "Non mappato: World Liberty Financial USD": {
+        "peggedUSD": 4441808801.947556
+      },
+      "Non mappato: Global Dollar": {
+        "peggedUSD": 3096091585.087575
+      },
+      "Paxos": {
+        "peggedUSD": 3178026349.807717
+      },
+      "Ripple": {
+        "peggedUSD": 2432919210.7487526
+      },
+      "Non mappato: Circle USYC": {
+        "peggedUSD": 2404574009.1926827
+      },
+      "Non mappato: BlackRock USD": {
+        "peggedUSD": 2245118660.017649
+      },
+      "Non mappato: Ondo US Dollar Yield": {
+        "peggedUSD": 2205424655.846712
+      },
+      "Non mappato: Falcon USD": {
+        "peggedUSD": 1655079582.8800476
+      },
+      "Non mappato: USDD": {
+        "peggedUSD": 1565515490.6716917
+      },
+      "Non mappato: United Stables": {
+        "peggedUSD": 1530486159.3839343
+      },
+      "Non mappato: USDGO": {
+        "peggedUSD": 1276808448.9406533
+      },
+      "Non mappato: GHO": {
+        "peggedUSD": 698598598.1960316
+      },
+      "Non mappato: Open USD": {
+        "peggedUSD": 667726889.4385929
+      },
+      "Non mappato: Usual USD": {
+        "peggedUSD": 546117435.673135
+      },
+      "Non mappato: Ethena USDtb": {
+        "peggedUSD": 533535227.9106657
+      },
+      "Non mappato: YLDS": {
+        "peggedUSD": 513419798.2704443
+      },
+      "Non mappato: Polymarket USD": {
+        "peggedUSD": 508375210.9734016
+      },
+      "Non mappato: Multipli rwaUSDi": {
+        "peggedUSD": 487411262.52384907
+      },
+      "Techteryx": {
+        "peggedUSD": 484287068.3299087
+      },
+      "Non mappato: Neutrino USD": {
+        "peggedUSD": 408891137.096548
+      },
+      "Non mappato: USD.AI": {
+        "peggedUSD": 334785308.44805634
+      },
+      "Non mappato: SoFiUSD": {
+        "peggedUSD": 332108707.8157582
+      },
+      "First Digital": {
+        "peggedUSD": 324681815.9377563
+      },
+      "Non mappato: Gate USD": {
+        "peggedUSD": 319446932.34711635
+      },
+      "Non mappato: apxUSD": {
+        "peggedUSD": 311910862.5398085
+      },
+      "Non mappato: Re Protocol reUSD": {
+        "peggedUSD": 288353686.6908165
+      },
+      "Non mappato: crvUSD": {
+        "peggedUSD": 259269377.0318769
+      },
+      "Non mappato: Agora Dollar": {
+        "peggedUSD": 249068820.53878996
+      },
+      "Non mappato: Solstice USX": {
+        "peggedUSD": 212114628.9945769
+      },
+      "Non mappato: M by M0": {
+        "peggedUSD": 196810093.211663
+      },
+      "Non mappato: HUSD": {
+        "peggedUSD": 192313547.97963187
+      },
+      "Non mappato: USAT": {
+        "peggedUSD": 183242701.80352622
+      },
+      "Non mappato: flexUSD": {
+        "peggedUSD": 166339625.82059345
+      },
+      "Non mappato: Mustang Finance": {
+        "peggedUSD": 154377694.44759512
+      },
+      "Frax": {
+        "peggedUSD": 153266932.81943354
+      },
+      "Non mappato: Avalon USDa": {
+        "peggedUSD": 145559989.88545725
+      },
+      "Non mappato: River Stablecoin": {
+        "peggedUSD": 136172420.49137595
+      },
+      "Non mappato: CASH": {
+        "peggedUSD": 126346979.07085523
+      },
+      "Non mappato: Avant USD": {
+        "peggedUSD": 125029901.91401161
+      },
+      "Non mappato: CFX MoveUSD": {
+        "peggedUSD": 115305675.33606619
+      },
+      "Non mappato: Astherus": {
+        "peggedUSD": 111208553.81649822
+      },
+      "Non mappato: Dola": {
+        "peggedUSD": 108595588.63365124
+      },
+      "Non mappato: Frax USD": {
+        "peggedUSD": 103459068.97654097
+      },
+      "Non mappato: Valtorum USD": {
+        "peggedUSD": 99462296.4466311
+      },
+      "Non mappato: US Permissionless Dollar": {
+        "peggedUSD": 98934783.08929051
+      },
+      "Non mappato: Saturn Dollar": {
+        "peggedUSD": 93785186.70502806
+      },
+      "Non mappato: fxUSD": {
+        "peggedUSD": 90610487.26853009
+      },
+      "Non mappato: USDBridge": {
+        "peggedUSD": 86797632.5
+      },
+      "Non mappato: AP USDA": {
+        "peggedUSD": 79165422.42937413
+      },
+      "Non mappato: Sui Dollar": {
+        "peggedUSD": 78905618.3412108
+      },
+      "Non mappato: Lista USD": {
+        "peggedUSD": 75697041.71553524
+      },
+      "Non mappato: Cygnus Finance Global USD": {
+        "peggedUSD": 75599144.17278098
+      },
+      "Non mappato: Tori trUSD": {
+        "peggedUSD": 74531501.90093121
+      },
+      "Non mappato: sUSD": {
+        "peggedUSD": 69836695.22363867
+      },
+      "Non mappato: Ondo U.S. Dollar Token": {
+        "peggedUSD": 68535147.63312511
+      },
+      "Non mappato: USP Stablecoin": {
+        "peggedUSD": 65433711.31491579
+      },
+      "Non mappato: PathUSD": {
+        "peggedUSD": 64932713.5155402
+      },
+      "Non mappato: Cap cUSD": {
+        "peggedUSD": 61962005.947070844
+      },
+      "Non mappato: Axis USD": {
+        "peggedUSD": 61811246.77255093
+      },
+      "Non mappato: Yuzu USD": {
+        "peggedUSD": 58754868.22679057
+      },
+      "Non mappato: StandX DUSD": {
+        "peggedUSD": 55052812.455855034
+      },
+      "Non mappato: Unitas": {
+        "peggedUSD": 52119038.49732523
+      },
+      "Non mappato: USDKG": {
+        "peggedUSD": 50049321.95147126
+      },
+      "Non mappato: Fidelity Digital Dollar": {
+        "peggedUSD": 49923178.289487354
+      },
+      "Non mappato: Resupply USD": {
+        "peggedUSD": 49508783.613686144
+      },
+      "Non mappato: JupUSD": {
+        "peggedUSD": 48578828.94121365
+      },
+      "Non mappato: MNEE USD": {
+        "peggedUSD": 48440841.2114
+      },
+      "Non mappato: Metronome Synth USD": {
+        "peggedUSD": 45477587.85242825
+      },
+      "Non mappato: infiniFi USD": {
+        "peggedUSD": 44876531.2002949
+      },
+      "Non mappato: pmUSD": {
+        "peggedUSD": 43401528.76937413
+      },
+      "Non mappato: SoulPeg USD": {
+        "peggedUSD": 41713168.10594763
+      },
+      "Non mappato: Main Street USD": {
+        "peggedUSD": 41564430.782519326
+      },
+      "Non mappato: StraitsX XUSD": {
+        "peggedUSD": 41146961.34270038
+      },
+      "Non mappato: Neutrl USD": {
+        "peggedUSD": 39785609.37052978
+      },
+      "Non mappato: Unity USD": {
+        "peggedUSD": 38513090.984742455
+      },
+      "Non mappato: Gemini Dollar": {
+        "peggedUSD": 38310179.31978899
+      },
+      "Non mappato: Liquity BOLD": {
+        "peggedUSD": 37743357.56156482
+      },
+      "Non mappato: Noon USN": {
+        "peggedUSD": 36945579.826861076
+      },
+      "Non mappato: Aegis YUSD": {
+        "peggedUSD": 34347394.672671296
+      },
+      "Non mappato: Metamask USD": {
+        "peggedUSD": 34275992.0203339
+      },
+      "Non mappato: Bean": {
+        "peggedUSD": 33390536.715659
+      },
+      "Non mappato: Universal USD": {
+        "peggedUSD": 30759928.73
+      },
+      "Non mappato: Mezo USD": {
+        "peggedUSD": 29923442.392108884
+      },
+      "Non mappato: Zoth ZeUSD": {
+        "peggedUSD": 27644172.32101312
+      },
+      "Non mappato: Gyroscope GYD": {
+        "peggedUSD": 26558618.801549315
+      },
+      "Non mappato: Liquity USD": {
+        "peggedUSD": 26238585.839464586
+      },
+      "Non mappato: Hylo HYUSD": {
+        "peggedUSD": 26044526.544789
+      },
+      "Non mappato: Bucket Protocol BUCK Stablecoin": {
+        "peggedUSD": 25866893.01734335
+      },
+      "Non mappato: Electronic USD": {
+        "peggedUSD": 23421393.59549194
+      },
+      "Non mappato: YU": {
+        "peggedUSD": 22687955.845646325
+      },
+      "Non mappato: Hex Trust USDX": {
+        "peggedUSD": 22168168.634456396
+      },
+      "Non mappato: XSY UTY": {
+        "peggedUSD": 20987555.11940489
+      },
+      "Non mappato: dForce USD": {
+        "peggedUSD": 20814311.38600501
+      },
+      "Non mappato: Western Union USDPT": {
+        "peggedUSD": 20295061.458387207
+      },
+      "Non mappato: Stable Coin": {
+        "peggedUSD": 20168661.232671514
+      },
+      "Non mappato: Fantom USD": {
+        "peggedUSD": 18935786.61234426
+      },
+      "Non mappato: Real USD": {
+        "peggedUSD": 17989699.497131303
+      },
+      "Non mappato: TOR": {
+        "peggedUSD": 17070481.490329992
+      },
+      "Non mappato: GAIB AID": {
+        "peggedUSD": 16968788.017593
+      },
+      "Non mappato: MegaUSD": {
+        "peggedUSD": 16796280.59203006
+      },
+      "Non mappato: Mento Dollar": {
+        "peggedUSD": 16377223.39836632
+      },
+      "Non mappato: Mu Digital AZND": {
+        "peggedUSD": 16326375.99
+      },
+      "Non mappato: OpenDollar USDO": {
+        "peggedUSD": 14535072.552328814
+      },
+      "Non mappato: Defi.money": {
+        "peggedUSD": 14037660.091216758
+      },
+      "Non mappato: Hydrated Dollar": {
+        "peggedUSD": 13750463.034167256
+      },
+      "Non mappato: Moneta": {
+        "peggedUSD": 13576788.986004481
+      },
+      "Non mappato: Stable Mint USD": {
+        "peggedUSD": 13063169.844708957
+      },
+      "Non mappato: USD CoinVertible": {
+        "peggedUSD": 12526841.09278222
+      },
+      "Non mappato: eSui Dollar": {
+        "peggedUSD": 12365007.117222594
+      },
+      "Non mappato: YUSD Stablecoin": {
+        "peggedUSD": 11802872.529282067
+      },
+      "Non mappato: USDB Blast": {
+        "peggedUSD": 10884906.434764534
+      },
+      "Non mappato: R": {
+        "peggedUSD": 10721499.019714134
+      },
+      "Non mappato: Pinto": {
+        "peggedUSD": 10654962.177364
+      },
+      "Non mappato: Saga Dollar": {
+        "peggedUSD": 10387680.402778203
+      },
+      "Non mappato: USDX": {
+        "peggedUSD": 9989936
+      },
+      "Non mappato: Telcoin eUSD": {
+        "peggedUSD": 9988700.863699047
+      },
+      "Non mappato: Alchemix USD": {
+        "peggedUSD": 9984185.650243169
+      },
+      "Non mappato: Felix feUSD": {
+        "peggedUSD": 9720629.315179901
+      },
+      "Non mappato: Lift Dollar": {
+        "peggedUSD": 9003252.317569753
+      },
+      "Non mappato: Royal Dollar": {
+        "peggedUSD": 9000015
+      },
+      "Non mappato: Quantoz USDQ": {
+        "peggedUSD": 8089815.796226
+      },
+      "Non mappato: NXUSD": {
+        "peggedUSD": 7752915.684549774
+      },
+      "Non mappato: Anzen USDz": {
+        "peggedUSD": 7571818.691797158
+      },
+      "Non mappato: USBD": {
+        "peggedUSD": 7507153.527626624
+      },
+      "Non mappato: USDH Stablecoin": {
+        "peggedUSD": 7485386.330568291
+      },
+      "Non mappato: Solomon USDv": {
+        "peggedUSD": 7409293.62204223
+      },
+      "Non mappato: StablR USD": {
+        "peggedUSD": 6744149.2
+      },
+      "Non mappato: Origin Dollar": {
+        "peggedUSD": 6073833.2383928355
+      },
+      "Non mappato: HomeCoin": {
+        "peggedUSD": 6066445.081905909
+      },
+      "Non mappato: USDX Money USDX": {
+        "peggedUSD": 6064803.798901945
+      },
+      "Non mappato: Bitcoin USD": {
+        "peggedUSD": 5249863.691509683
+      },
+      "Non mappato: USP": {
+        "peggedUSD": 5205389.025176742
+      },
+      "Non mappato: USDST": {
+        "peggedUSD": 4979068.096531211
+      },
+      "Non mappato: XAI": {
+        "peggedUSD": 4857719.980064528
+      },
+      "Non mappato: Startale USD": {
+        "peggedUSD": 4479112.93857014
+      },
+      "Non mappato: Flying Tulip USD": {
+        "peggedUSD": 4402930.720355092
+      },
+      "Non mappato: Parrot USD": {
+        "peggedUSD": 4223731.855056
+      },
+      "Non mappato: USDR": {
+        "peggedUSD": 4180012.243214053
+      },
+      "Non mappato: Anzens USDA": {
+        "peggedUSD": 4168173.420789441
+      },
+      "Non mappato: Fei USD": {
+        "peggedUSD": 3975673.07161475
+      },
+      "Non mappato: Citrea USD": {
+        "peggedUSD": 3642538.694184
+      },
+      "Non mappato: Palm USD": {
+        "peggedUSD": 3475882.8832688043
+      },
+      "Non mappato: USD Somnia": {
+        "peggedUSD": 3308634.822449473
+      },
+      "Non mappato: Monetrix USDM": {
+        "peggedUSD": 3114076.977907
+      },
+      "Non mappato: Deel USD": {
+        "peggedUSD": 3042212.344959
+      },
+      "Non mappato: mStable USD": {
+        "peggedUSD": 2994523.856020581
+      },
+      "Non mappato: DigitalDollar": {
+        "peggedUSD": 2952135.421183026
+      },
+      "Non mappato: Dollar on Chain": {
+        "peggedUSD": 2923002.2516921326
+      },
+      "Non mappato: Plume USD": {
+        "peggedUSD": 2352850.708042521
+      },
+      "Non mappato: RIF US Dollar": {
+        "peggedUSD": 2173145.342489842
+      },
+      "Non mappato: Synnax Stablecoin": {
+        "peggedUSD": 2150642.2905625096
+      },
+      "Non mappato: Hermetica USDh": {
+        "peggedUSD": 1982917.48054929
+      },
+      "Non mappato: Nexus USD": {
+        "peggedUSD": 1971713.0949590646
+      },
+      "Non mappato: XUSD": {
+        "peggedUSD": 1959058.5784254216
+      },
+      "Non mappato: FinChain Dollar": {
+        "peggedUSD": 1893661.5194097671
+      },
+      "Non mappato: Web 3 Dollar": {
+        "peggedUSD": 1693248.006085641
+      },
+      "Non mappato: Initia iUSD": {
+        "peggedUSD": 1622288.510237
+      },
+      "Non mappato: Streamflow USD+": {
+        "peggedUSD": 1616857.702121237
+      },
+      "Non mappato: Sovryn Dollar": {
+        "peggedUSD": 1598701.4976359864
+      },
+      "Non mappato: Hyperbeat USD": {
+        "peggedUSD": 1586174.437222
+      },
+      "Non mappato: Noble Dollar": {
+        "peggedUSD": 1567111.243128
+      },
+      "Non mappato: The Fedz FUSD": {
+        "peggedUSD": 1546188.8376408801
+      },
+      "Non mappato: Interest Protocol": {
+        "peggedUSD": 1526808.5495665937
+      },
+      "Non mappato: Nerona USD": {
+        "peggedUSD": 1520780.4360424364
+      },
+      "Non mappato: Djed StableCoin": {
+        "peggedUSD": 1472219.3598906128
+      },
+      "Non mappato: USDW": {
+        "peggedUSD": 1444759.5021935203
+      },
+      "Non mappato: iUSD": {
+        "peggedUSD": 1424903.2247600185
+      },
+      "Non mappato: USN": {
+        "peggedUSD": 1419009.2920023445
+      },
+      "Non mappato: USDM": {
+        "peggedUSD": 1398687.372127441
+      },
+      "Non mappato: dTRINITY USD": {
+        "peggedUSD": 1390608.9258230939
+      },
+      "Non mappato: Alto DUSD": {
+        "peggedUSD": 1325616.0199160883
+      },
+      "Non mappato: Cod3x USD": {
+        "peggedUSD": 1270547.8788187876
+      },
+      "Non mappato: Liquid Loans USDL": {
+        "peggedUSD": 1215180.1301858895
+      },
+      "Non mappato: Vai": {
+        "peggedUSD": 1194972.9523154828
+      },
+      "Non mappato: Note": {
+        "peggedUSD": 1193184.4766965334
+      },
+      "Non mappato: zkUSD Dollar": {
+        "peggedUSD": 1179024.211088974
+      },
+      "Non mappato: USDH": {
+        "peggedUSD": 1122917.6650941384
+      },
+      "Non mappato: Youves uUSD": {
+        "peggedUSD": 1090570.1299811972
+      },
+      "Non mappato: Multipli rwaUSD": {
+        "peggedUSD": 1042987.6627146137
+      },
+      "Non mappato: Glo Dollar": {
+        "peggedUSD": 986575.0553133059
+      },
+      "Non mappato: US Sonic Dollar": {
+        "peggedUSD": 971457.9116021008
+      },
+      "Non mappato: Frontier Stable Token": {
+        "peggedUSD": 966252.0994341626
+      },
+      "Non mappato: Czodiac USD": {
+        "peggedUSD": 921133.1329183631
+      },
+      "Non mappato: Magic Internet Money": {
+        "peggedUSD": 921018.5708863802
+      },
+      "Non mappato: Meme Dollar": {
+        "peggedUSD": 913412.5806275646
+      },
+      "Non mappato: Balanced Dollars": {
+        "peggedUSD": 900584.687051741
+      },
+      "Non mappato: Angle USDA": {
+        "peggedUSD": 820892.1796618423
+      },
+      "Non mappato: Solayer USD": {
+        "peggedUSD": 817730.1847809431
+      },
+      "Non mappato: SMARDEX USDN": {
+        "peggedUSD": 808317.4983617938
+      },
+      "Non mappato: Pareto USP": {
+        "peggedUSD": 787154.7137113941
+      },
+      "Non mappato: Parallel USDp": {
+        "peggedUSD": 785839.3256799778
+      },
+      "Non mappato: Kolibri USD": {
+        "peggedUSD": 746061.6047244685
+      },
+      "Non mappato: Rings scUSD": {
+        "peggedUSD": 645899.2975619495
+      },
+      "Non mappato: Pleasing USD": {
+        "peggedUSD": 644376.430278012
+      },
+      "Non mappato: Fathom Dollar": {
+        "peggedUSD": 634623.570015065
+      },
+      "Non mappato: Sigma Money bnbUSD": {
+        "peggedUSD": 603475.4984817229
+      },
+      "Non mappato: eUSD (V2)": {
+        "peggedUSD": 602719.7693879437
+      },
+      "Non mappato: Worldwide USD": {
+        "peggedUSD": 599283.6509050614
+      },
+      "Non mappato: Threshold USD": {
+        "peggedUSD": 539902.4956891537
+      },
+      "Non mappato: USDJ": {
+        "peggedUSD": 539417.8112110178
+      },
+      "Non mappato: Good Game US Dollar": {
+        "peggedUSD": 533664.4943728762
+      },
+      "Non mappato: Overnight USD+": {
+        "peggedUSD": 525601.9145739999
+      },
+      "Non mappato: PXDC Stablecoin": {
+        "peggedUSD": 524289.3216911093
+      },
+      "Non mappato: Resolv USD": {
+        "peggedUSD": 504111.8227000647
+      },
+      "Non mappato: WEUSD": {
+        "peggedUSD": 490369.79984
+      },
+      "Non mappato: USDK": {
+        "peggedUSD": 488679.80153734854
+      },
+      "Non mappato: Verified USD": {
+        "peggedUSD": 455177.64002800005
+      },
+      "Non mappato: mantraUSD": {
+        "peggedUSD": 434651.20487293904
+      },
+      "Non mappato: Delpho USDV": {
+        "peggedUSD": 414037.91935718706
+      },
+      "Non mappato: Level USD": {
+        "peggedUSD": 403649.6329415327
+      },
+      "Non mappato: Bread": {
+        "peggedUSD": 392637.69770530716
+      },
+      "Non mappato: Lets Get HAI": {
+        "peggedUSD": 369438.82378907094
+      },
+      "Non mappato: KEI Stablecoin": {
+        "peggedUSD": 362288.12475051376
+      },
+      "Non mappato: Stable Jack aUSD": {
+        "peggedUSD": 345055.2808602699
+      },
+      "Non mappato: GRAI": {
+        "peggedUSD": 305579.948609589
+      },
+      "Non mappato: Zunami USD": {
+        "peggedUSD": 303340.47330951825
+      },
+      "Non mappato: Elara USD": {
+        "peggedUSD": 297970.3844985233
+      },
+      "Non mappato: UXD Stablecoin": {
+        "peggedUSD": 297863.7291304726
+      },
+      "Non mappato: Nectar": {
+        "peggedUSD": 296139.30664071743
+      },
+      "Non mappato: Opus CASH": {
+        "peggedUSD": 293026.41303747834
+      },
+      "Non mappato: BAI Stablecoin": {
+        "peggedUSD": 263881.43534765975
+      },
+      "Non mappato: rUSD": {
+        "peggedUSD": 258644.86395452745
+      },
+      "Non mappato: bitSmiley USD": {
+        "peggedUSD": 253486.75535778035
+      },
+      "Non mappato: Asymmetry USDaf V2": {
+        "peggedUSD": 248714.15062204696
+      },
+      "Non mappato: mkUSD": {
+        "peggedUSD": 244341.8472061886
+      },
+      "Non mappato: USDT+": {
+        "peggedUSD": 238458.36888700133
+      },
+      "Non mappato: Reservoir Stablecoin": {
+        "peggedUSD": 227354.61893949276
+      },
+      "Non mappato: USDCB": {
+        "peggedUSD": 225185.6236225722
+      },
+      "Non mappato: USDtez": {
+        "peggedUSD": 223286.25695761153
+      },
+      "Non mappato: Inter Stable Token": {
+        "peggedUSD": 213609.76649462004
+      },
+      "Non mappato: Reserve": {
+        "peggedUSD": 202914.4312911972
+      },
+      "Non mappato: Legacy BOLD": {
+        "peggedUSD": 201374.88991637016
+      },
+      "Non mappato: USDFC": {
+        "peggedUSD": 193812.40580732585
+      },
+      "Non mappato: STBL": {
+        "peggedUSD": 181480.17988677867
+      },
+      "Non mappato: USDLemma": {
+        "peggedUSD": 175104.64189160152
+      },
+      "Non mappato: Savvy USD": {
+        "peggedUSD": 173761.20767385064
+      },
+      "Non mappato: aUSD Seed": {
+        "peggedUSD": 169371.68223052192
+      },
+      "Non mappato: SigmaUSD": {
+        "peggedUSD": 159812.64718644234
+      },
+      "Non mappato: USD Balance": {
+        "peggedUSD": 147519.9949331899
+      },
+      "Non mappato: USE": {
+        "peggedUSD": 142573.77275654644
+      },
+      "Non mappato: Davos Protocol": {
+        "peggedUSD": 141218.02513166805
+      },
+      "Non mappato: ZUSD": {
+        "peggedUSD": 126889.48444723294
+      },
+      "Non mappato: Base Dollar": {
+        "peggedUSD": 119572.36396391818
+      },
+      "Non mappato: Quill USD": {
+        "peggedUSD": 117290.89839452125
+      },
+      "Non mappato: Last USD": {
+        "peggedUSD": 112889.5438357575
+      },
+      "Non mappato: High Yield USD": {
+        "peggedUSD": 108548.97995841673
+      },
+      "Non mappato: peg-eUSD": {
+        "peggedUSD": 104747.50248305534
+      },
+      "Non mappato: iAUSD": {
+        "peggedUSD": 100560.50062620279
+      },
+      "Non mappato: eUSD": {
+        "peggedUSD": 97077.37247651981
+      },
+      "Non mappato: Phoenix USD": {
+        "peggedUSD": 94998.42230380123
+      },
+      "Non mappato: UST1": {
+        "peggedUSD": 87863.395025
+      },
+      "Non mappato: HYDT": {
+        "peggedUSD": 83295.72705493208
+      },
+      "Non mappato: Magma Wen": {
+        "peggedUSD": 83253.25906394221
+      },
+      "Non mappato: arUSD": {
+        "peggedUSD": 78366.85820893984
+      },
+      "Non mappato: Vesta Stable": {
+        "peggedUSD": 77768.44281152131
+      },
+      "Non mappato: Stabl.fi Cash": {
+        "peggedUSD": 70336.38407255418
+      },
+      "Non mappato: Mynth MyUSD": {
+        "peggedUSD": 68566.94159591619
+      },
+      "Non mappato: STAR": {
+        "peggedUSD": 66491.1141717586
+      },
+      "Non mappato: invUSD Stablecoin": {
+        "peggedUSD": 62259.95207781021
+      },
+      "Non mappato: USDU Finance": {
+        "peggedUSD": 57618.9346086025
+      },
+      "Non mappato: Orby USC": {
+        "peggedUSD": 55809.373215964486
+      },
+      "Non mappato: VDollar Finance": {
+        "peggedUSD": 54675.79922639786
+      },
+      "Non mappato: Ethos Reserve Note": {
+        "peggedUSD": 51655.939216197316
+      },
+      "Non mappato: HEX Dollar Coin": {
+        "peggedUSD": 51080.44481978785
+      },
+      "Non mappato: XBANKING USDE": {
+        "peggedUSD": 49147.574013545
+      },
+      "Non mappato: NonDollar": {
+        "peggedUSD": 48507.70522752964
+      },
+      "Non mappato: Bytecash": {
+        "peggedUSD": 43316.2905865947
+      },
+      "Non mappato: Redeemable USD": {
+        "peggedUSD": 38699.248849348856
+      },
+      "Non mappato: Whale Asset Dollar": {
+        "peggedUSD": 38600.5360246567
+      },
+      "Non mappato: Hedge USD": {
+        "peggedUSD": 38312.010931171
+      },
+      "Non mappato: Coin98 Dollar": {
+        "peggedUSD": 36355.142553351514
+      },
+      "Non mappato: Coinshift": {
+        "peggedUSD": 34994.341362467436
+      },
+      "Non mappato: Moremoney USD": {
+        "peggedUSD": 34554.18763089219
+      },
+      "Non mappato: HRUSD": {
+        "peggedUSD": 32614.290484999998
+      },
+      "Non mappato: Move Dollar": {
+        "peggedUSD": 31924.831462301852
+      },
+      "Non mappato: Dyad": {
+        "peggedUSD": 31492.634995549593
+      },
+      "Non mappato: Nerite USND": {
+        "peggedUSD": 31473.909113650916
+      },
+      "Non mappato: ARYZE eUSD": {
+        "peggedUSD": 26708.003122110596
+      },
+      "Non mappato: BaoUSD": {
+        "peggedUSD": 25183.768434935966
+      },
+      "Non mappato: 3USD": {
+        "peggedUSD": 23522.688602847105
+      },
+      "Non mappato: Parallel USD": {
+        "peggedUSD": 22369.557337423394
+      },
+      "Non mappato: CLever USD": {
+        "peggedUSD": 22355.554506995686
+      },
+      "Non mappato: Digital Standard Unit": {
+        "peggedUSD": 21756.24247744709
+      },
+      "Non mappato: UNO": {
+        "peggedUSD": 20941.579512971963
+      },
+      "Non mappato: BOB": {
+        "peggedUSD": 20836.364299026452
+      },
+      "Non mappato: EBUSD": {
+        "peggedUSD": 18659.098854783588
+      },
+      "Non mappato: DAI+": {
+        "peggedUSD": 17853.85610640582
+      },
+      "Non mappato: Hyperstable USD": {
+        "peggedUSD": 15678.300066586145
+      },
+      "Non mappato: Fuse Dollar V3": {
+        "peggedUSD": 15591.50681194516
+      },
+      "Non mappato: GAI Stablecoin": {
+        "peggedUSD": 14298.136977736487
+      },
+      "Non mappato: Classic USD": {
+        "peggedUSD": 13957.13062
+      },
+      "Non mappato: btcUSD": {
+        "peggedUSD": 13429.565805054888
+      },
+      "Non mappato: PrismaLRT Ultra": {
+        "peggedUSD": 12913.710009821401
+      },
+      "Non mappato: Mead": {
+        "peggedUSD": 12874.368771265652
+      },
+      "Non mappato: Dackie USD": {
+        "peggedUSD": 11158.099429808504
+      },
+      "Non mappato: Revenue Generating USD": {
+        "peggedUSD": 10890.194053016625
+      },
+      "Non mappato: Arche Protocol MSD": {
+        "peggedUSD": 10820.365946504797
+      },
+      "Non mappato: Offshift anonUSD": {
+        "peggedUSD": 10802.15709554491
+      },
+      "Non mappato: Chi USC": {
+        "peggedUSD": 7033.508445862369
+      },
+      "Non mappato: PUSd": {
+        "peggedUSD": 6645.6651512850995
+      },
+      "Non mappato: Jigsaw USD": {
+        "peggedUSD": 6507.123971352501
+      },
+      "Non mappato: Nexus": {
+        "peggedUSD": 5183.768611075374
+      },
+      "Non mappato: USK": {
+        "peggedUSD": 5099.014746
+      },
+      "Non mappato: TREN Debt Token": {
+        "peggedUSD": 4578.880122918908
+      },
+      "Non mappato: Fixed Income Asset Token": {
+        "peggedUSD": 4263.3929643117
+      },
+      "Non mappato: USDi": {
+        "peggedUSD": 3742.8680677373573
+      },
+      "Non mappato: KNOX Dollar": {
+        "peggedUSD": 3419.064683993109
+      },
+      "Non mappato: Asymmetry USDaf": {
+        "peggedUSD": 2649.7228146085613
+      },
+      "Non mappato: Money Protocol": {
+        "peggedUSD": 2199.37391064729
+      },
+      "Non mappato: Orki USD": {
+        "peggedUSD": 2180.815485078135
+      },
+      "Non mappato: Parabol USD": {
+        "peggedUSD": 2032.2702654027976
+      },
+      "Non mappato: Deaderal Reserve Note": {
+        "peggedUSD": 1656.4246175134426
+      },
+      "Non mappato: Gaming XP USD": {
+        "peggedUSD": 1477.8156527887904
+      },
+      "Non mappato: Kerne USD": {
+        "peggedUSD": 1110.243248
+      },
+      "Non mappato: Uncap USD": {
+        "peggedUSD": 915.0069511663183
+      },
+      "Non mappato: USD Stable Colb": {
+        "peggedUSD": 821.185484270835
+      },
+      "Non mappato: litUSD": {
+        "peggedUSD": 506.90763782960363
+      },
+      "Non mappato: PSY": {
+        "peggedUSD": 403.9742093406712
+      },
+      "Non mappato: Deuterium": {
+        "peggedUSD": 107.47584241131348
+      },
+      "Non mappato: Phase Dollar": {
+        "peggedUSD": 70.61930702095457
+      },
+      "Non mappato: fUSD": {
+        "peggedUSD": 60.3
+      },
+      "Non mappato: Chad USD": {
+        "peggedUSD": 50.023693381579456
+      },
+      "Non mappato: Rocky USDr": {
+        "peggedUSD": 1.4179424712328792
+      },
+      "Non mappato: Monet USDmo": {
+        "peggedUSD": 1.0178339586970735
+      },
+      "Non mappato: Elixir deUSD": {
+        "peggedUSD": 0.921532113337797
+      },
+      "Non mappato: TerraClassicUSD": {
+        "peggedUSD": 0
+      },
+      "Non mappato: VOLT Protocol": {
+        "peggedVAR": 76847.29815128063
+      },
+      "Non mappato: Rai Reflex Index": {
+        "peggedVAR": 1568429.3957960743
+      },
+      "Non mappato: Float Protocol Float": {
+        "peggedVAR": 654066.2384612531
+      },
+      "Non mappato: Euro Tether": {
+        "peggedEUR": 4675449.076327312
+      },
+      "Non mappato: Stasis Euro": {
+        "peggedEUR": 8010827.15289552
+      },
+      "Non mappato: Mento Euro": {
+        "peggedEUR": 1634679.261412921
+      },
+      "Non mappato: sEUR": {
+        "peggedEUR": 1122793.4689599685
+      },
+      "Non mappato: EURA": {
+        "peggedEUR": 1587657.2747199421
+      },
+      "Non mappato: Parallel": {
+        "peggedEUR": 1247157.3990813673
+      },
+      "Non mappato: Frax Price Index": {
+        "peggedVAR": 7019095.278499995
+      },
+      "Non mappato: Iron Bank EURO": {
+        "peggedEUR": 3376667.2294445387
+      },
+      "Non mappato: EUROe Stablecoin": {
+        "peggedEUR": 122650.64257582219
+      },
+      "Non mappato: Monerium EUR emoney": {
+        "peggedEUR": 33594075.31676188
+      },
+      "Non mappato: DeFi Franc": {
+        "peggedVAR": 51873.4405705045
+      },
+      "Non mappato: SILK": {
+        "peggedVAR": 0
+      },
+      "Non mappato: GYEN": {
+        "peggedJPY": 5920496.360734335
+      },
+      "Non mappato: Alternity CNY": {
+        "peggedCNY": 3587.078760615814
+      },
+      "Non mappato: UAHT": {
+        "peggedUAH": 3119.5676024713775
+      },
+      "Non mappato: NARS": {
+        "peggedARS": 1740.2680630842888
+      },
+      "Non mappato: Collateralized Debt Token": {
+        "peggedVAR": 0
+      },
+      "Non mappato: ARYZE eEUR": {
+        "peggedEUR": 18755.997066822612
+      },
+      "Non mappato: ARYZE eGBP": {
+        "peggedGBP": 10632.80543269132
+      },
+      "Non mappato: CAD Coin": {
+        "peggedCAD": 1704669.8912303399
+      },
+      "Non mappato: Anchored Coins AEUR": {
+        "peggedEUR": 41995.565310371996
+      },
+      "Non mappato: VNX Swiss Franc": {
+        "peggedCHF": 2569801.2751084114
+      },
+      "Non mappato: VNX EURO": {
+        "peggedEUR": 1047215.6595258856
+      },
+      "Non mappato: Quantoz EURD": {
+        "peggedEUR": 2074.1853790308965
+      },
+      "Non mappato: AUDD": {
+        "peggedAUD": 7369882.4265594715
+      },
+      "Non mappato: Fractional ETH": {
+        "peggedVAR": 479994.96229181084
+      },
+      "Non mappato: EURO3": {
+        "peggedEUR": 22864.76137698433
+      },
+      "Non mappato: CJPY": {
+        "peggedJPY": 476636.9762162816
+      },
+      "Non mappato: Zunami ETH": {
+        "peggedVAR": 71.1011888512174
+      },
+      "Non mappato: International Stable Currency": {
+        "peggedVAR": 2415720.0399473417
+      },
+      "Non mappato: Mento Real": {
+        "peggedREAL": 217386.02753793678
+      },
+      "Non mappato: Hedera Swiss Franc": {
+        "peggedCHF": 59013.924096587616
+      },
+      "Non mappato: Frankencoin": {
+        "peggedCHF": 43628679.45453271
+      },
+      "Non mappato: StablR Euro": {
+        "peggedEUR": 14331567.662741857
+      },
+      "Non mappato: Schuman EUROP": {
+        "peggedEUR": 16298144.709932294
+      },
+      "Non mappato: EUR CoinVertible": {
+        "peggedEUR": 186594588.31012183
+      },
+      "Non mappato: A7A5": {
+        "peggedRUB": 559424740.6642768
+      },
+      "Non mappato: Quantoz EURQ": {
+        "peggedEUR": 9711246.016337441
+      },
+      "Non mappato: Tether CNH": {
+        "peggedCNY": 3057989.884005
+      },
+      "Non mappato: Mexican Peso Tether": {
+        "peggedMXN": 1077212.750328
+      },
+      "Non mappato: XSGD": {
+        "peggedSGD": 12957139.264567427
+      },
+      "Non mappato: VNX British Pound": {
+        "peggedGBP": 169128.46493360028
+      },
+      "Non mappato: PHT Stablecoin": {
+        "peggedPHP": 3597744.217932166
+      },
+      "Non mappato: Bilira": {
+        "peggedTRY": 5156278.373083193
+      },
+      "Non mappato: Tokenised GBP": {
+        "peggedGBP": 26619386.061559264
+      },
+      "Non mappato: AllUnity EUR": {
+        "peggedEUR": 272209.83049741434
+      },
+      "Non mappato: Eurite": {
+        "peggedEUR": 37121493.23594122
+      },
+      "Non mappato: Macropod": {
+        "peggedAUD": 2442456.3708819826
+      },
+      "Non mappato: Tetris Money": {
+        "peggedRUB": 2051718.295828977
+      },
+      "Non mappato: BRTH": {
+        "peggedREAL": 567.9046674828061
+      },
+      "Non mappato: JPY Coin": {
+        "peggedJPY": 23044072.34526818
+      },
+      "Non mappato: Mento British Pound": {
+        "peggedGBP": 308947.82450652024
+      },
+      "Non mappato: Mento Philippine Peso": {
+        "peggedPHP": 25839.8512898202
+      },
+      "Non mappato: Mento Canadian Dollar": {
+        "peggedCAD": 681.381061272463
+      },
+      "Non mappato: Mento Australian Dollar": {
+        "peggedAUD": 5981.840288409216
+      },
+      "Non mappato: Mento Colombian Peso": {
+        "peggedCOP": 22698.521028376646
+      },
+      "Non mappato: Mento Japanese Yen": {
+        "peggedJPY": 98460.76133173417
+      },
+      "Non mappato: BRLA Digital": {
+        "peggedREAL": 30559049.237255957
+      },
+      "Non mappato: Mento Kenyan Shilling": {
+        "peggedKES": 67428.59910038712
+      },
+      "Non mappato: Mento South African Rand": {
+        "peggedZAR": 666.9630158747341
+      },
+      "Non mappato: Mento Nigerian Naira": {
+        "peggedNGN": 51146.95046288218
+      },
+      "Non mappato: Mento Swiss Franc": {
+        "peggedCHF": 87992.18596349815
+      },
+      "Non mappato: Mento West African CFA Franc": {
+        "peggedXOF": 9208.53836116538
+      },
+      "Non mappato: Mento Ghanaian Cedi": {
+        "peggedGHS": 23780.998374040886
+      },
+      "Non mappato: Argentine Peso": {
+        "peggedARS": 9647423.332712214
+      },
+      "Non mappato: Brazilian Real": {
+        "peggedREAL": 1699583.037299649
+      },
+      "Non mappato: Chilean Peso": {
+        "peggedCLP": 70779.22529829209
+      },
+      "Non mappato: Colombian Peso": {
+        "peggedCOP": 417467.5427412946
+      },
+      "Non mappato: Mexican Peso": {
+        "peggedMXN": 474066.3778076121
+      },
+      "Non mappato: Peruvian Sol": {
+        "peggedPEN": 39751.518401160334
+      },
+      "Non mappato: CAD Digital": {
+        "peggedCAD": 866976.4788250354
+      },
+      "Non mappato: Newrails Euro": {
+        "peggedEUR": 932425.9326367415
+      },
+      "Non mappato: Harbor haEUR": {
+        "peggedEUR": 6604.621429905341
+      },
+      "Non mappato: Agant GBP": {
+        "peggedGBP": 2512128.2468586564
+      },
+      "Non mappato: MYR Stablecoin": {
+        "peggedMYR": 27327.332174083414
+      },
+      "Non mappato: Royal Euro": {
+        "peggedEUR": 16883336.147222694
+      },
+      "Non mappato: Forte AUD": {
+        "peggedAUD": 4006218.524034113
+      },
+      "Non mappato: Decentralized Euro": {
+        "peggedEUR": 1411123.736789134
+      },
+      "Non mappato: Stablecorp QCAD": {
+        "peggedCAD": 1489104.4862056877
+      },
+      "Non mappato: JPYSC": {
+        "peggedJPY": 127050591.19078815
+      },
+      "Non mappato: KRWQ": {
+        "peggedKRW": 541544.9436819745
+      },
+      "Non mappato: KRW1": {
+        "peggedKRW": 11152.766463190004
+      },
+      "Non mappato: Revolut Euro": {
+        "peggedEUR": 1891197.8952107604
+      },
+      "Non mappato: HKD At Par": {
+        "peggedHKD": 778228.9957326197
+      },
+      "Non mappato: Quantillon Euro": {
+        "peggedEUR": 1388.1944569499547
+      }
+    },
+    "asset": [
+      {
+        "nome": "Tether",
+        "simbolo": "USDT",
+        "emittente": "Tether",
+        "circulating": {
+          "peggedUSD": 184016864857.95468
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 184014833927.4541
+        },
+        "price": 0.9997785264308191,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USD Coin",
+        "simbolo": "USDC",
+        "emittente": "Circle",
+        "circulating": {
+          "peggedUSD": 73999384464.84041
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 74211316652.8497
+        },
+        "price": 0.999878904172157,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Sky Dollar",
+        "simbolo": "USDS",
+        "emittente": "Sky/Maker",
+        "circulating": {
+          "peggedUSD": 6928763981.053672
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 6706954871.66452
+        },
+        "price": 0.999782245638306,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Ethena USDe",
+        "simbolo": "USDe",
+        "emittente": "Ethena",
+        "circulating": {
+          "peggedUSD": 4905192067.968442
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 4903495145.582711
+        },
+        "price": 0.9996268609071091,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Dai",
+        "simbolo": "DAI",
+        "emittente": "Sky/Maker",
+        "circulating": {
+          "peggedUSD": 4796511271.288029
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 4794304160.781431
+        },
+        "price": 0.9999733038830043,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "World Liberty Financial USD",
+        "simbolo": "USD1",
+        "emittente": "Non mappato: World Liberty Financial USD",
+        "circulating": {
+          "peggedUSD": 4441808801.947556
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 4441808801.960402
+        },
+        "price": 0.9995533531406635,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Global Dollar",
+        "simbolo": "USDG",
+        "emittente": "Non mappato: Global Dollar",
+        "circulating": {
+          "peggedUSD": 3096091585.087575
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 3091878694.341885
+        },
+        "price": 0.999968067176437,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "PayPal USD",
+        "simbolo": "PYUSD",
+        "emittente": "Paxos",
+        "circulating": {
+          "peggedUSD": 2873787226.7399173
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 2850695473.772079
+        },
+        "price": 0.9999664533074317,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Ripple USD",
+        "simbolo": "RLUSD",
+        "emittente": "Ripple",
+        "circulating": {
+          "peggedUSD": 2432919210.7487526
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 2503536376.0817647
+        },
+        "price": 0.9999865237563766,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Circle USYC",
+        "simbolo": "USYC",
+        "emittente": "Non mappato: Circle USYC",
+        "circulating": {
+          "peggedUSD": 2404574009.1926827
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 2404156193.138103
+        },
+        "price": 1.1390028153095486,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "BlackRock USD",
+        "simbolo": "BUIDL",
+        "emittente": "Non mappato: BlackRock USD",
+        "circulating": {
+          "peggedUSD": 2245118660.017649
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 2245118660.017649
+        },
+        "price": 1,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Ondo US Dollar Yield",
+        "simbolo": "USDY",
+        "emittente": "Non mappato: Ondo US Dollar Yield",
+        "circulating": {
+          "peggedUSD": 2205424655.846712
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 2205527238.0949993
+        },
+        "price": 1.1487313836525896,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Falcon USD",
+        "simbolo": "USDf",
+        "emittente": "Non mappato: Falcon USD",
+        "circulating": {
+          "peggedUSD": 1655079582.8800476
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1527845526.59091
+        },
+        "price": 0.9959748025051824,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USDD",
+        "simbolo": "USDD",
+        "emittente": "Non mappato: USDD",
+        "circulating": {
+          "peggedUSD": 1565515490.6716917
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1523897336.7759042
+        },
+        "price": 0.999456168133989,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "United Stables",
+        "simbolo": "U",
+        "emittente": "Non mappato: United Stables",
+        "circulating": {
+          "peggedUSD": 1530486159.3839343
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1558464881.370243
+        },
+        "price": 0.9992436396668829,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USDGO",
+        "simbolo": "USDGO",
+        "emittente": "Non mappato: USDGO",
+        "circulating": {
+          "peggedUSD": 1276808448.9406533
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1198802458.772722
+        },
+        "price": 1.0001409086214683,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "GHO",
+        "simbolo": "GHO",
+        "emittente": "Non mappato: GHO",
+        "circulating": {
+          "peggedUSD": 698598598.1960316
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 698598598.1960316
+        },
+        "price": 0.9994257484921768,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Open USD",
+        "simbolo": "OUSD",
+        "emittente": "Non mappato: Open USD",
+        "circulating": {
+          "peggedUSD": 667726889.4385929
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 666227646.8216535
+        },
+        "price": 0.9999293406059806,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Usual USD",
+        "simbolo": "USD0",
+        "emittente": "Non mappato: Usual USD",
+        "circulating": {
+          "peggedUSD": 546117435.673135
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 546137747.5340817
+        },
+        "price": 0.9989322303183823,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Ethena USDtb",
+        "simbolo": "USDTB",
+        "emittente": "Non mappato: Ethena USDtb",
+        "circulating": {
+          "peggedUSD": 533535227.9106657
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 533515236.3732897
+        },
+        "price": 0.9995768688005645,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "YLDS",
+        "simbolo": "YLDS",
+        "emittente": "Non mappato: YLDS",
+        "circulating": {
+          "peggedUSD": 513419798.2704443
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 514477416.59007627
+        },
+        "price": 0.9997735822721133,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Polymarket USD",
+        "simbolo": "pUSD",
+        "emittente": "Non mappato: Polymarket USD",
+        "circulating": {
+          "peggedUSD": 508375210.9734016
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 489085169.33285403
+        },
+        "price": 0.9998399930779803,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Multipli rwaUSDi",
+        "simbolo": "rwaUSDi",
+        "emittente": "Non mappato: Multipli rwaUSDi",
+        "circulating": {
+          "peggedUSD": 487411262.52384907
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 487411262.52384907
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "TrueUSD",
+        "simbolo": "TUSD",
+        "emittente": "Techteryx",
+        "circulating": {
+          "peggedUSD": 484287068.3299087
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 484287068.3299087
+        },
+        "price": 0.9995920396817628,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Neutrino USD",
+        "simbolo": "USDN",
+        "emittente": "Non mappato: Neutrino USD",
+        "circulating": {
+          "peggedUSD": 408891137.096548
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 408891137.239405
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USD.AI",
+        "simbolo": "USDai",
+        "emittente": "Non mappato: USD.AI",
+        "circulating": {
+          "peggedUSD": 334785308.44805634
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 324547906.52175784
+        },
+        "price": 1.00017038744366,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "SoFiUSD",
+        "simbolo": "SOFID",
+        "emittente": "Non mappato: SoFiUSD",
+        "circulating": {
+          "peggedUSD": 332108707.8157582
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 332108707.8157582
+        },
+        "price": 0.9995625707610424,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "First Digital USD",
+        "simbolo": "FDUSD",
+        "emittente": "First Digital",
+        "circulating": {
+          "peggedUSD": 324681815.9377563
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 324681815.93777525
+        },
+        "price": 0.9988900501775957,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Gate USD",
+        "simbolo": "GUSD",
+        "emittente": "Non mappato: Gate USD",
+        "circulating": {
+          "peggedUSD": 319446932.34711635
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 319446932.34711635
+        },
+        "price": 0.9982716635847386,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "apxUSD",
+        "simbolo": "apxUSD",
+        "emittente": "Non mappato: apxUSD",
+        "circulating": {
+          "peggedUSD": 311910862.5398085
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 311910862.5398085
+        },
+        "price": 0.9911865330674935,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Re Protocol reUSD",
+        "simbolo": "reUSD",
+        "emittente": "Non mappato: Re Protocol reUSD",
+        "circulating": {
+          "peggedUSD": 288353686.6908165
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 284398254.01052666
+        },
+        "price": 1.1045051479525083,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "crvUSD",
+        "simbolo": "crvUSD",
+        "emittente": "Non mappato: crvUSD",
+        "circulating": {
+          "peggedUSD": 259269377.0318769
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 257459416.9393894
+        },
+        "price": 0.9998005532519988,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Agora Dollar",
+        "simbolo": "AUSD",
+        "emittente": "Non mappato: Agora Dollar",
+        "circulating": {
+          "peggedUSD": 249068820.53878996
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 249068812.8062131
+        },
+        "price": 0.9998198707551096,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Binance Peg BUSD",
+        "simbolo": "BUSD",
+        "emittente": "Paxos",
+        "circulating": {
+          "peggedUSD": 233360955.89443883
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 233360955.89443883
+        },
+        "price": 1.001707345992311,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Solstice USX",
+        "simbolo": "USX",
+        "emittente": "Non mappato: Solstice USX",
+        "circulating": {
+          "peggedUSD": 212114628.9945769
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 212364550.03314137
+        },
+        "price": 0.9993486071732173,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "M by M0",
+        "simbolo": "M",
+        "emittente": "Non mappato: M by M0",
+        "circulating": {
+          "peggedUSD": 196810093.211663
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 196583976.931071
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "HUSD",
+        "simbolo": "HUSD",
+        "emittente": "Non mappato: HUSD",
+        "circulating": {
+          "peggedUSD": 192313547.97963187
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 192313547.97963187
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USAT",
+        "simbolo": "USAT",
+        "emittente": "Non mappato: USAT",
+        "circulating": {
+          "peggedUSD": 183242701.80352622
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 183242701.80352622
+        },
+        "price": 0.9995915083854637,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "flexUSD",
+        "simbolo": "FLEXUSD",
+        "emittente": "Non mappato: flexUSD",
+        "circulating": {
+          "peggedUSD": 166339625.82059345
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 166339625.82059345
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Mustang Finance",
+        "simbolo": "MUST",
+        "emittente": "Non mappato: Mustang Finance",
+        "circulating": {
+          "peggedUSD": 154377694.44759512
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 154377694.44759512
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Frax",
+        "simbolo": "FRAX",
+        "emittente": "Frax",
+        "circulating": {
+          "peggedUSD": 153266932.81943354
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 152520714.73700416
+        },
+        "price": 0.9922677077555588,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Avalon USDa",
+        "simbolo": "USDA",
+        "emittente": "Non mappato: Avalon USDa",
+        "circulating": {
+          "peggedUSD": 145559989.88545725
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 145559862.00627926
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "River Stablecoin",
+        "simbolo": "satUSD",
+        "emittente": "Non mappato: River Stablecoin",
+        "circulating": {
+          "peggedUSD": 136172420.49137595
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 136172420.49137595
+        },
+        "price": 0.9946320607874075,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "CASH",
+        "simbolo": "CASH",
+        "emittente": "Non mappato: CASH",
+        "circulating": {
+          "peggedUSD": 126346979.07085523
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 126346980.07229035
+        },
+        "price": 0.9994831206707294,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Avant USD",
+        "simbolo": "avUSD",
+        "emittente": "Non mappato: Avant USD",
+        "circulating": {
+          "peggedUSD": 125029901.91401161
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 124850596.34484789
+        },
+        "price": 0.9989813132802209,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "CFX MoveUSD",
+        "simbolo": "MOVEUSD",
+        "emittente": "Non mappato: CFX MoveUSD",
+        "circulating": {
+          "peggedUSD": 115305675.33606619
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 115266184.30726592
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Astherus",
+        "simbolo": "USDF",
+        "emittente": "Non mappato: Astherus",
+        "circulating": {
+          "peggedUSD": 111208553.81649822
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 111269153.83838055
+        },
+        "price": 0.9982955576282793,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Dola",
+        "simbolo": "DOLA",
+        "emittente": "Non mappato: Dola",
+        "circulating": {
+          "peggedUSD": 108595588.63365124
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 108595588.63365124
+        },
+        "price": 0.997496699569247,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Frax USD",
+        "simbolo": "FRXUSD",
+        "emittente": "Non mappato: Frax USD",
+        "circulating": {
+          "peggedUSD": 103459068.97654097
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 102747115.49462332
+        },
+        "price": 0.9997836011137431,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Valtorum USD",
+        "simbolo": "USDV",
+        "emittente": "Non mappato: Valtorum USD",
+        "circulating": {
+          "peggedUSD": 99462296.4466311
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 99462296.54589805
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "US Permissionless Dollar",
+        "simbolo": "USPD",
+        "emittente": "Non mappato: US Permissionless Dollar",
+        "circulating": {
+          "peggedUSD": 98934783.08929051
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 480271.27563724905
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Saturn Dollar",
+        "simbolo": "USDAT",
+        "emittente": "Non mappato: Saturn Dollar",
+        "circulating": {
+          "peggedUSD": 93785186.70502806
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 92334881.34331451
+        },
+        "price": 0.9997158285393353,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "fxUSD",
+        "simbolo": "fxUSD",
+        "emittente": "Non mappato: fxUSD",
+        "circulating": {
+          "peggedUSD": 90610487.26853009
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 90611393.91755399
+        },
+        "price": 0.9996005761425953,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USDBridge",
+        "simbolo": "USDB",
+        "emittente": "Non mappato: USDBridge",
+        "circulating": {
+          "peggedUSD": 86797632.5
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 86299304.37
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "AP USDA",
+        "simbolo": "USDA",
+        "emittente": "Non mappato: AP USDA",
+        "circulating": {
+          "peggedUSD": 79165422.42937413
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 79165422.42937413
+        },
+        "price": 0.9102900678484921,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Sui Dollar",
+        "simbolo": "USDSUI",
+        "emittente": "Non mappato: Sui Dollar",
+        "circulating": {
+          "peggedUSD": 78905618.3412108
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 78605309.4905493
+        },
+        "price": 1.000695936892714,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Lista USD",
+        "simbolo": "LISUSD",
+        "emittente": "Non mappato: Lista USD",
+        "circulating": {
+          "peggedUSD": 75697041.71553524
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 75696903.6097849
+        },
+        "price": 0.9975760921681366,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Cygnus Finance Global USD",
+        "simbolo": "cgUSD",
+        "emittente": "Non mappato: Cygnus Finance Global USD",
+        "circulating": {
+          "peggedUSD": 75599144.17278098
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 75599144.17099524
+        },
+        "price": 0.9920803454357157,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Tori trUSD",
+        "simbolo": "trUSD",
+        "emittente": "Non mappato: Tori trUSD",
+        "circulating": {
+          "peggedUSD": 74531501.90093121
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 75432061.90287247
+        },
+        "price": 0.9995955662989661,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "sUSD",
+        "simbolo": "SUSD",
+        "emittente": "Non mappato: sUSD",
+        "circulating": {
+          "peggedUSD": 69836695.22363867
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 69796695.22363867
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Ondo U.S. Dollar Token",
+        "simbolo": "USDon",
+        "emittente": "Non mappato: Ondo U.S. Dollar Token",
+        "circulating": {
+          "peggedUSD": 68535147.63312511
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 66890987.2768631
+        },
+        "price": 1,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USP Stablecoin",
+        "simbolo": "USP",
+        "emittente": "Non mappato: USP Stablecoin",
+        "circulating": {
+          "peggedUSD": 65433711.31491579
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 65433711.31491579
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "PathUSD",
+        "simbolo": "pathUSD",
+        "emittente": "Non mappato: PathUSD",
+        "circulating": {
+          "peggedUSD": 64932713.5155402
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 62256983.314410634
+        },
+        "price": 0.999529972247083,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Cap cUSD",
+        "simbolo": "CUSD",
+        "emittente": "Non mappato: Cap cUSD",
+        "circulating": {
+          "peggedUSD": 61962005.947070844
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 61661850.37788733
+        },
+        "price": 0.99989477,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Axis USD",
+        "simbolo": "USDx",
+        "emittente": "Non mappato: Axis USD",
+        "circulating": {
+          "peggedUSD": 61811246.77255093
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 60797411.59716382
+        },
+        "price": 0.9995867361858933,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Yuzu USD",
+        "simbolo": "YZUSD",
+        "emittente": "Non mappato: Yuzu USD",
+        "circulating": {
+          "peggedUSD": 58754868.22679057
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 58184587.29694483
+        },
+        "price": 0.9997911209665123,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "StandX DUSD",
+        "simbolo": "DUSD",
+        "emittente": "Non mappato: StandX DUSD",
+        "circulating": {
+          "peggedUSD": 55052812.455855034
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 55040528.03134452
+        },
+        "price": 0.9989312238293925,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Unitas",
+        "simbolo": "USDU",
+        "emittente": "Non mappato: Unitas",
+        "circulating": {
+          "peggedUSD": 52119038.49732523
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 52011070.502195336
+        },
+        "price": 0.999878904172157,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USDKG",
+        "simbolo": "USDKG",
+        "emittente": "Non mappato: USDKG",
+        "circulating": {
+          "peggedUSD": 50049321.95147126
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 50049321.95147126
+        },
+        "price": 1.0009864390294252,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Fidelity Digital Dollar",
+        "simbolo": "FIDD",
+        "emittente": "Non mappato: Fidelity Digital Dollar",
+        "circulating": {
+          "peggedUSD": 49923178.289487354
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 49923178.289487354
+        },
+        "price": 0.9996550054076662,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Resupply USD",
+        "simbolo": "REUSD",
+        "emittente": "Non mappato: Resupply USD",
+        "circulating": {
+          "peggedUSD": 49508783.613686144
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 49577147.58616768
+        },
+        "price": 0.9905292462925902,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "JupUSD",
+        "simbolo": "JUPUSD",
+        "emittente": "Non mappato: JupUSD",
+        "circulating": {
+          "peggedUSD": 48578828.94121365
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 49093039.14413263
+        },
+        "price": 0.9994137060511423,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "MNEE USD",
+        "simbolo": "MNEE",
+        "emittente": "Non mappato: MNEE USD",
+        "circulating": {
+          "peggedUSD": 48440841.2114
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 48440841.2114
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Metronome Synth USD",
+        "simbolo": "MSUSD",
+        "emittente": "Non mappato: Metronome Synth USD",
+        "circulating": {
+          "peggedUSD": 45477587.85242825
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 45481918.372084595
+        },
+        "price": 0.8807646690479947,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "infiniFi USD",
+        "simbolo": "IUSD",
+        "emittente": "Non mappato: infiniFi USD",
+        "circulating": {
+          "peggedUSD": 44876531.2002949
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 44155159.34175285
+        },
+        "price": 0.9998128564205975,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "pmUSD",
+        "simbolo": "pmUSD",
+        "emittente": "Non mappato: pmUSD",
+        "circulating": {
+          "peggedUSD": 43401528.76937413
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 43401528.76937413
+        },
+        "price": 0.4617124791699354,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "SoulPeg USD",
+        "simbolo": "SPUSD",
+        "emittente": "Non mappato: SoulPeg USD",
+        "circulating": {
+          "peggedUSD": 41713168.10594763
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 38442789.346502624
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Main Street USD",
+        "simbolo": "MSUSD",
+        "emittente": "Non mappato: Main Street USD",
+        "circulating": {
+          "peggedUSD": 41564430.782519326
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 41547755.06714444
+        },
+        "price": 0.5507845443832643,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "StraitsX XUSD",
+        "simbolo": "XUSD",
+        "emittente": "Non mappato: StraitsX XUSD",
+        "circulating": {
+          "peggedUSD": 41146961.34270038
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 41146961.34270038
+        },
+        "price": 1.0003684983419332,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Neutrl USD",
+        "simbolo": "NUSD",
+        "emittente": "Non mappato: Neutrl USD",
+        "circulating": {
+          "peggedUSD": 39785609.37052978
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 39792824.53582624
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Unity USD",
+        "simbolo": "UUSD",
+        "emittente": "Non mappato: Unity USD",
+        "circulating": {
+          "peggedUSD": 38513090.984742455
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 38513090.984742455
+        },
+        "price": 0.9998717366212749,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Gemini Dollar",
+        "simbolo": "GUSD",
+        "emittente": "Non mappato: Gemini Dollar",
+        "circulating": {
+          "peggedUSD": 38310179.31978899
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 38310179.31978899
+        },
+        "price": 0.9994585381045367,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Liquity BOLD",
+        "simbolo": "BOLD",
+        "emittente": "Non mappato: Liquity BOLD",
+        "circulating": {
+          "peggedUSD": 37743357.56156482
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 37805789.281293444
+        },
+        "price": 0.995956057657591,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Noon USN",
+        "simbolo": "USN",
+        "emittente": "Non mappato: Noon USN",
+        "circulating": {
+          "peggedUSD": 36945579.826861076
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 38567023.96785042
+        },
+        "price": 0.9994527095269834,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Binance USD",
+        "simbolo": "BUSD",
+        "emittente": "Paxos",
+        "circulating": {
+          "peggedUSD": 34377474.68658855
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 34377474.68658855
+        },
+        "price": 0.998883399375224,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Aegis YUSD",
+        "simbolo": "YUSD",
+        "emittente": "Non mappato: Aegis YUSD",
+        "circulating": {
+          "peggedUSD": 34347394.672671296
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 34347394.7418308
+        },
+        "price": 0.9996605276773894,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Metamask USD",
+        "simbolo": "MUSD",
+        "emittente": "Non mappato: Metamask USD",
+        "circulating": {
+          "peggedUSD": 34275992.0203339
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 34073060.86394562
+        },
+        "price": 0.9997695594414895,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Bean",
+        "simbolo": "BEAN",
+        "emittente": "Non mappato: Bean",
+        "circulating": {
+          "peggedUSD": 33390536.715659
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 33390536.715659
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Universal USD",
+        "simbolo": "USDU",
+        "emittente": "Non mappato: Universal USD",
+        "circulating": {
+          "peggedUSD": 30759928.73
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 30759928.73
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Mezo USD",
+        "simbolo": "MUSD",
+        "emittente": "Non mappato: Mezo USD",
+        "circulating": {
+          "peggedUSD": 29923442.392108884
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 29916816.437382422
+        },
+        "price": 0.9901735247559537,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Zoth ZeUSD",
+        "simbolo": "ZeUSD",
+        "emittente": "Non mappato: Zoth ZeUSD",
+        "circulating": {
+          "peggedUSD": 27644172.32101312
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 27644172.32101312
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Gyroscope GYD",
+        "simbolo": "GYD",
+        "emittente": "Non mappato: Gyroscope GYD",
+        "circulating": {
+          "peggedUSD": 26558618.801549315
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 26558618.801549315
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Liquity USD",
+        "simbolo": "LUSD",
+        "emittente": "Non mappato: Liquity USD",
+        "circulating": {
+          "peggedUSD": 26238585.839464586
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 26240898.376355067
+        },
+        "price": 1.0052551201084092,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Hylo HYUSD",
+        "simbolo": "HYUSD",
+        "emittente": "Non mappato: Hylo HYUSD",
+        "circulating": {
+          "peggedUSD": 26044526.544789
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 25851661.275
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Pax Dollar",
+        "simbolo": "USDP",
+        "emittente": "Paxos",
+        "circulating": {
+          "peggedUSD": 25948728.670339115
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 25948728.670339115
+        },
+        "price": 0.9948022871291675,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Bucket Protocol BUCK Stablecoin",
+        "simbolo": "BUCK",
+        "emittente": "Non mappato: Bucket Protocol BUCK Stablecoin",
+        "circulating": {
+          "peggedUSD": 25866893.01734335
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 25866893.01734335
+        },
+        "price": 0.9981089740324625,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Electronic USD",
+        "simbolo": "EUSD",
+        "emittente": "Non mappato: Electronic USD",
+        "circulating": {
+          "peggedUSD": 23421393.59549194
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 23441395.804052293
+        },
+        "price": 0.997938422343665,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "YU",
+        "simbolo": "YU",
+        "emittente": "Non mappato: YU",
+        "circulating": {
+          "peggedUSD": 22687955.845646325
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 22681385.017155286
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Hex Trust USDX",
+        "simbolo": "USDX",
+        "emittente": "Non mappato: Hex Trust USDX",
+        "circulating": {
+          "peggedUSD": 22168168.634456396
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 22168168.634456396
+        },
+        "price": 1.006262262206687,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "XSY UTY",
+        "simbolo": "UTY",
+        "emittente": "Non mappato: XSY UTY",
+        "circulating": {
+          "peggedUSD": 20987555.11940489
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 20987555.11940489
+        },
+        "price": 0.9999182769119563,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "dForce USD",
+        "simbolo": "USX",
+        "emittente": "Non mappato: dForce USD",
+        "circulating": {
+          "peggedUSD": 20814311.38600501
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 20814311.393971335
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Western Union USDPT",
+        "simbolo": "USDPT",
+        "emittente": "Non mappato: Western Union USDPT",
+        "circulating": {
+          "peggedUSD": 20295061.458387207
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 20295061.458387207
+        },
+        "price": 0.9996713434335303,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Stable Coin",
+        "simbolo": "SBC",
+        "emittente": "Non mappato: Stable Coin",
+        "circulating": {
+          "peggedUSD": 20168661.232671514
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 19457213.053649276
+        },
+        "price": 0.9997733855557605,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Fantom USD",
+        "simbolo": "FUSD",
+        "emittente": "Non mappato: Fantom USD",
+        "circulating": {
+          "peggedUSD": 18935786.61234426
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 18935786.61234426
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "SpiceUSD",
+        "simbolo": "USDS",
+        "emittente": "Sky/Maker",
+        "circulating": {
+          "peggedUSD": 18046576.49121598
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 18046576.49121598
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Real USD",
+        "simbolo": "USDR",
+        "emittente": "Non mappato: Real USD",
+        "circulating": {
+          "peggedUSD": 17989699.497131303
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 17989699.497131303
+        },
+        "price": 0.40662879824345705,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "TOR",
+        "simbolo": "TOR",
+        "emittente": "Non mappato: TOR",
+        "circulating": {
+          "peggedUSD": 17070481.490329992
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 17070481.490329992
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "GAIB AID",
+        "simbolo": "AID",
+        "emittente": "Non mappato: GAIB AID",
+        "circulating": {
+          "peggedUSD": 16968788.017593
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 16988376.0055266
+        },
+        "price": 1,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "MegaUSD",
+        "simbolo": "USDM",
+        "emittente": "Non mappato: MegaUSD",
+        "circulating": {
+          "peggedUSD": 16796280.59203006
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 17159219.59203006
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Mento Dollar",
+        "simbolo": "USDm",
+        "emittente": "Non mappato: Mento Dollar",
+        "circulating": {
+          "peggedUSD": 16377223.39836632
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 16424680.764061827
+        },
+        "price": 1.0028418403137744,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Mu Digital AZND",
+        "simbolo": "AZND",
+        "emittente": "Non mappato: Mu Digital AZND",
+        "circulating": {
+          "peggedUSD": 16326375.99
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 16326375.99
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "OpenDollar USDO",
+        "simbolo": "USDO",
+        "emittente": "Non mappato: OpenDollar USDO",
+        "circulating": {
+          "peggedUSD": 14535072.552328814
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 14532367.557936909
+        },
+        "price": 0.9979205365986251,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Defi.money",
+        "simbolo": "MONEY",
+        "emittente": "Non mappato: Defi.money",
+        "circulating": {
+          "peggedUSD": 14037660.091216758
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 14037660.091216758
+        },
+        "price": 1.0025459168288768,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Hydrated Dollar",
+        "simbolo": "HOLLAR",
+        "emittente": "Non mappato: Hydrated Dollar",
+        "circulating": {
+          "peggedUSD": 13750463.034167256
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 13718349.9539657
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Moneta",
+        "simbolo": "USDM",
+        "emittente": "Non mappato: Moneta",
+        "circulating": {
+          "peggedUSD": 13576788.986004481
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 13576788.986004481
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Stable Mint USD",
+        "simbolo": "USDSM",
+        "emittente": "Non mappato: Stable Mint USD",
+        "circulating": {
+          "peggedUSD": 13063169.844708957
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 13062042.13807507
+        },
+        "price": 1.0074116131604416,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USD CoinVertible",
+        "simbolo": "USDCV",
+        "emittente": "Non mappato: USD CoinVertible",
+        "circulating": {
+          "peggedUSD": 12526841.09278222
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 12526841.09278222
+        },
+        "price": 0.9984585024544298,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "eSui Dollar",
+        "simbolo": "suiUSDe",
+        "emittente": "Non mappato: eSui Dollar",
+        "circulating": {
+          "peggedUSD": 12365007.117222594
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 12365007.117222594
+        },
+        "price": 0.9990948357802623,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "YUSD Stablecoin",
+        "simbolo": "YUSD",
+        "emittente": "Non mappato: YUSD Stablecoin",
+        "circulating": {
+          "peggedUSD": 11802872.529282067
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 11802872.529282067
+        },
+        "price": 0.9964659686583909,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USDB Blast",
+        "simbolo": "USDB",
+        "emittente": "Non mappato: USDB Blast",
+        "circulating": {
+          "peggedUSD": 10884906.434764534
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 10983886.994659489
+        },
+        "price": 0.9890710437202358,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "R",
+        "simbolo": "R",
+        "emittente": "Non mappato: R",
+        "circulating": {
+          "peggedUSD": 10721499.019714134
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 10721499.019714134
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Pinto",
+        "simbolo": "PINTO",
+        "emittente": "Non mappato: Pinto",
+        "circulating": {
+          "peggedUSD": 10654962.177364
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 10654914.054429
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Saga Dollar",
+        "simbolo": "D",
+        "emittente": "Non mappato: Saga Dollar",
+        "circulating": {
+          "peggedUSD": 10387680.402778203
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 10387680.402778203
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USDX",
+        "simbolo": "USDX",
+        "emittente": "Non mappato: USDX",
+        "circulating": {
+          "peggedUSD": 9989936
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 9972592
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Telcoin eUSD",
+        "simbolo": "eUSD",
+        "emittente": "Non mappato: Telcoin eUSD",
+        "circulating": {
+          "peggedUSD": 9988700.863699047
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 9988700.863699047
+        },
+        "price": 0.9994654489479995,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Alchemix USD",
+        "simbolo": "ALUSD",
+        "emittente": "Non mappato: Alchemix USD",
+        "circulating": {
+          "peggedUSD": 9984185.650243169
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 9983452.480930958
+        },
+        "price": 0.9569340348007879,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Felix feUSD",
+        "simbolo": "FEUSD",
+        "emittente": "Non mappato: Felix feUSD",
+        "circulating": {
+          "peggedUSD": 9720629.315179901
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 9735521.953553192
+        },
+        "price": 1.0010658809351294,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Lift Dollar",
+        "simbolo": "USDL",
+        "emittente": "Non mappato: Lift Dollar",
+        "circulating": {
+          "peggedUSD": 9003252.317569753
+        },
+        "circulatingPrevDay": {},
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Royal Dollar",
+        "simbolo": "RUSD",
+        "emittente": "Non mappato: Royal Dollar",
+        "circulating": {
+          "peggedUSD": 9000015
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 9000015
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Quantoz USDQ",
+        "simbolo": "USDQ",
+        "emittente": "Non mappato: Quantoz USDQ",
+        "circulating": {
+          "peggedUSD": 8089815.796226
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 8089815.796226
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Bera USD",
+        "simbolo": "BUSD",
+        "emittente": "Paxos",
+        "circulating": {
+          "peggedUSD": 7913620.860395904
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 7945480.9995653285
+        },
+        "price": 1.0032213714331617,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "NXUSD",
+        "simbolo": "NXUSD",
+        "emittente": "Non mappato: NXUSD",
+        "circulating": {
+          "peggedUSD": 7752915.684549774
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 7752915.684549774
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Anzen USDz",
+        "simbolo": "USDz",
+        "emittente": "Non mappato: Anzen USDz",
+        "circulating": {
+          "peggedUSD": 7571818.691797158
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 7571818.691797158
+        },
+        "price": 0.9415153825112701,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USBD",
+        "simbolo": "USBD",
+        "emittente": "Non mappato: USBD",
+        "circulating": {
+          "peggedUSD": 7507153.527626624
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 7507153.527626624
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USDH Stablecoin",
+        "simbolo": "USDH",
+        "emittente": "Non mappato: USDH Stablecoin",
+        "circulating": {
+          "peggedUSD": 7485386.330568291
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 7511048.839083681
+        },
+        "price": 0.9994790316402422,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Solomon USDv",
+        "simbolo": "USDV",
+        "emittente": "Non mappato: Solomon USDv",
+        "circulating": {
+          "peggedUSD": 7409293.62204223
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 7388904.985143987
+        },
+        "price": 1.0014557148309247,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "StablR USD",
+        "simbolo": "USDR",
+        "emittente": "Non mappato: StablR USD",
+        "circulating": {
+          "peggedUSD": 6744149.2
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 6744149.2
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Origin Dollar",
+        "simbolo": "OUSD",
+        "emittente": "Non mappato: Origin Dollar",
+        "circulating": {
+          "peggedUSD": 6073833.2383928355
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 6086307.672546952
+        },
+        "price": 0.9991325140297295,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "HomeCoin",
+        "simbolo": "HOME",
+        "emittente": "Non mappato: HomeCoin",
+        "circulating": {
+          "peggedUSD": 6066445.081905909
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 6066445.081905909
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USDX Money USDX",
+        "simbolo": "USDX",
+        "emittente": "Non mappato: USDX Money USDX",
+        "circulating": {
+          "peggedUSD": 6064803.798901945
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 0
+        },
+        "price": 0.00887390856058053,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Bitcoin USD",
+        "simbolo": "BtcUSD",
+        "emittente": "Non mappato: Bitcoin USD",
+        "circulating": {
+          "peggedUSD": 5249863.691509683
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 5233499.206730764
+        },
+        "price": 0.9983976131760692,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USP",
+        "simbolo": "USP",
+        "emittente": "Non mappato: USP",
+        "circulating": {
+          "peggedUSD": 5205389.025176742
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 5204990.145680347
+        },
+        "price": 1.1365901741510513,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USDST",
+        "simbolo": "USDST",
+        "emittente": "Non mappato: USDST",
+        "circulating": {
+          "peggedUSD": 4979068.096531211
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 4979050.279914145
+        },
+        "price": 0.9998425,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "XAI",
+        "simbolo": "XAI",
+        "emittente": "Non mappato: XAI",
+        "circulating": {
+          "peggedUSD": 4857719.980064528
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 4857719.980064528
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Startale USD",
+        "simbolo": "USDSC",
+        "emittente": "Non mappato: Startale USD",
+        "circulating": {
+          "peggedUSD": 4479112.93857014
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 4479187.927180009
+        },
+        "price": 1.000700715254568,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Flying Tulip USD",
+        "simbolo": "ftUSD",
+        "emittente": "Non mappato: Flying Tulip USD",
+        "circulating": {
+          "peggedUSD": 4402930.720355092
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 4180334.4436596264
+        },
+        "price": 0.9980620801881868,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Parrot USD",
+        "simbolo": "PAI",
+        "emittente": "Non mappato: Parrot USD",
+        "circulating": {
+          "peggedUSD": 4223731.855056
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 4223731.855056
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USDR",
+        "simbolo": "USDR",
+        "emittente": "Non mappato: USDR",
+        "circulating": {
+          "peggedUSD": 4180012.243214053
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 4180012.243214053
+        },
+        "price": 1.0031460949412516,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Anzens USDA",
+        "simbolo": "USDA",
+        "emittente": "Non mappato: Anzens USDA",
+        "circulating": {
+          "peggedUSD": 4168173.420789441
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 4168173.420789441
+        },
+        "price": 1.0157259689811904,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Fei USD",
+        "simbolo": "FEI",
+        "emittente": "Non mappato: Fei USD",
+        "circulating": {
+          "peggedUSD": 3975673.07161475
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 3974673.290775526
+        },
+        "price": 0.9998015271174832,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Citrea USD",
+        "simbolo": "ctUSD",
+        "emittente": "Non mappato: Citrea USD",
+        "circulating": {
+          "peggedUSD": 3642538.694184
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 3642538.694184
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Palm USD",
+        "simbolo": "PUSD",
+        "emittente": "Non mappato: Palm USD",
+        "circulating": {
+          "peggedUSD": 3475882.8832688043
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 3475882.8832688043
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USD Somnia",
+        "simbolo": "USDso",
+        "emittente": "Non mappato: USD Somnia",
+        "circulating": {
+          "peggedUSD": 3308634.822449473
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 3278033.3986583194
+        },
+        "price": 0.9998064781357953,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Monetrix USDM",
+        "simbolo": "USDM",
+        "emittente": "Non mappato: Monetrix USDM",
+        "circulating": {
+          "peggedUSD": 3114076.977907
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 3050836.454221
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Deel USD",
+        "simbolo": "DLUSD",
+        "emittente": "Non mappato: Deel USD",
+        "circulating": {
+          "peggedUSD": 3042212.344959
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 3245692.364959
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "mStable USD",
+        "simbolo": "MUSD",
+        "emittente": "Non mappato: mStable USD",
+        "circulating": {
+          "peggedUSD": 2994523.856020581
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 2994523.856020581
+        },
+        "price": 0.9990939273898267,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "DigitalDollar",
+        "simbolo": "DUSD",
+        "emittente": "Non mappato: DigitalDollar",
+        "circulating": {
+          "peggedUSD": 2952135.421183026
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 2952135.421183026
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Dollar on Chain",
+        "simbolo": "DOC",
+        "emittente": "Non mappato: Dollar on Chain",
+        "circulating": {
+          "peggedUSD": 2923002.2516921326
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 2922614.7553444924
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USDP Stablecoin",
+        "simbolo": "USDP",
+        "emittente": "Paxos",
+        "circulating": {
+          "peggedUSD": 2638342.9560368974
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 2638342.9560368974
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Plume USD",
+        "simbolo": "pUSD",
+        "emittente": "Non mappato: Plume USD",
+        "circulating": {
+          "peggedUSD": 2352850.708042521
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 2353078.920404599
+        },
+        "price": 0.9992871601085228,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "RIF US Dollar",
+        "simbolo": "USDRIF",
+        "emittente": "Non mappato: RIF US Dollar",
+        "circulating": {
+          "peggedUSD": 2173145.342489842
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 2173145.342489842
+        },
+        "price": 0.9969005234,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Synnax Stablecoin",
+        "simbolo": "syUSD",
+        "emittente": "Non mappato: Synnax Stablecoin",
+        "circulating": {
+          "peggedUSD": 2150642.2905625096
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 2150642.2905625096
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Hermetica USDh",
+        "simbolo": "USDH",
+        "emittente": "Non mappato: Hermetica USDh",
+        "circulating": {
+          "peggedUSD": 1982917.48054929
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1982623.60408148
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Nexus USD",
+        "simbolo": "NUSD",
+        "emittente": "Non mappato: Nexus USD",
+        "circulating": {
+          "peggedUSD": 1971713.0949590646
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1971713.0949590644
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "XUSD",
+        "simbolo": "XUSD",
+        "emittente": "Non mappato: XUSD",
+        "circulating": {
+          "peggedUSD": 1959058.5784254216
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1951617.7663177538
+        },
+        "price": 0.9953538155428198,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "FinChain Dollar",
+        "simbolo": "FUSD",
+        "emittente": "Non mappato: FinChain Dollar",
+        "circulating": {
+          "peggedUSD": 1893661.5194097671
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1893399.189668306
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Web 3 Dollar",
+        "simbolo": "USD3",
+        "emittente": "Non mappato: Web 3 Dollar",
+        "circulating": {
+          "peggedUSD": 1693248.006085641
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1693248.006085641
+        },
+        "price": 1.1112537730485725,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Initia iUSD",
+        "simbolo": "iUSD",
+        "emittente": "Non mappato: Initia iUSD",
+        "circulating": {
+          "peggedUSD": 1622288.510237
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1622218.608703
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Streamflow USD+",
+        "simbolo": "USD+",
+        "emittente": "Non mappato: Streamflow USD+",
+        "circulating": {
+          "peggedUSD": 1616857.702121237
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1511978.098361307
+        },
+        "price": 0.9996713407341478,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Sovryn Dollar",
+        "simbolo": "DLLR",
+        "emittente": "Non mappato: Sovryn Dollar",
+        "circulating": {
+          "peggedUSD": 1598701.4976359864
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1598701.410792874
+        },
+        "price": 1.0093271748748736,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Hyperbeat USD",
+        "simbolo": "beatUSD",
+        "emittente": "Non mappato: Hyperbeat USD",
+        "circulating": {
+          "peggedUSD": 1586174.437222
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1567482.798443
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Noble Dollar",
+        "simbolo": "USDN",
+        "emittente": "Non mappato: Noble Dollar",
+        "circulating": {
+          "peggedUSD": 1567111.243128
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1566921.057093
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "The Fedz FUSD",
+        "simbolo": "FUSD",
+        "emittente": "Non mappato: The Fedz FUSD",
+        "circulating": {
+          "peggedUSD": 1546188.8376408801
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1546188.8376408801
+        },
+        "price": 0.960365737665143,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Interest Protocol",
+        "simbolo": "USDI",
+        "emittente": "Non mappato: Interest Protocol",
+        "circulating": {
+          "peggedUSD": 1526808.5495665937
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1526808.5495665937
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Nerona USD",
+        "simbolo": "USDnr",
+        "emittente": "Non mappato: Nerona USD",
+        "circulating": {
+          "peggedUSD": 1520780.4360424364
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1505983.1367526671
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Djed StableCoin",
+        "simbolo": "DJED",
+        "emittente": "Non mappato: Djed StableCoin",
+        "circulating": {
+          "peggedUSD": 1472219.3598906128
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1472219.3598906128
+        },
+        "price": 1.0069714859134125,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USDW",
+        "simbolo": "USDW",
+        "emittente": "Non mappato: USDW",
+        "circulating": {
+          "peggedUSD": 1444759.5021935203
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1444759.5021935203
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "iUSD",
+        "simbolo": "IUSD",
+        "emittente": "Non mappato: iUSD",
+        "circulating": {
+          "peggedUSD": 1424903.2247600185
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1424979.8861594654
+        },
+        "price": 0.9903912159525939,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USN",
+        "simbolo": "USN",
+        "emittente": "Non mappato: USN",
+        "circulating": {
+          "peggedUSD": 1419009.2920023445
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1419009.2920023445
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USDM",
+        "simbolo": "USDM",
+        "emittente": "Non mappato: USDM",
+        "circulating": {
+          "peggedUSD": 1398687.372127441
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1398687.372127441
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "dTRINITY USD",
+        "simbolo": "dUSD",
+        "emittente": "Non mappato: dTRINITY USD",
+        "circulating": {
+          "peggedUSD": 1390608.9258230939
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1390608.9258230939
+        },
+        "price": 0.9985708618718196,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Alto DUSD",
+        "simbolo": "DUSD",
+        "emittente": "Non mappato: Alto DUSD",
+        "circulating": {
+          "peggedUSD": 1325616.0199160883
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1325616.0199160883
+        },
+        "price": 1.0013983797358175,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Cod3x USD",
+        "simbolo": "cdxUSD",
+        "emittente": "Non mappato: Cod3x USD",
+        "circulating": {
+          "peggedUSD": 1270547.8788187876
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1270547.8788187876
+        },
+        "price": 0.20659315102744513,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Liquid Loans USDL",
+        "simbolo": "USDL",
+        "emittente": "Non mappato: Liquid Loans USDL",
+        "circulating": {
+          "peggedUSD": 1215180.1301858895
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1216680.0717552244
+        },
+        "price": 0.9872227945698047,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Vai",
+        "simbolo": "VAI",
+        "emittente": "Non mappato: Vai",
+        "circulating": {
+          "peggedUSD": 1194972.9523154828
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1246502.977599779
+        },
+        "price": 0.9987296230206516,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Note",
+        "simbolo": "NOTE",
+        "emittente": "Non mappato: Note",
+        "circulating": {
+          "peggedUSD": 1193184.4766965334
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1193184.4766965334
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "zkUSD Dollar",
+        "simbolo": "zkUSD",
+        "emittente": "Non mappato: zkUSD Dollar",
+        "circulating": {
+          "peggedUSD": 1179024.211088974
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1179024.211088974
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USDH",
+        "simbolo": "USDH",
+        "emittente": "Non mappato: USDH",
+        "circulating": {
+          "peggedUSD": 1122917.6650941384
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1122890.6465031796
+        },
+        "price": 0.9950741246886892,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Youves uUSD",
+        "simbolo": "UUSD",
+        "emittente": "Non mappato: Youves uUSD",
+        "circulating": {
+          "peggedUSD": 1090570.1299811972
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1090256.5753906632
+        },
+        "price": 0.9961203962605699,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Multipli rwaUSD",
+        "simbolo": "rwaUSD",
+        "emittente": "Non mappato: Multipli rwaUSD",
+        "circulating": {
+          "peggedUSD": 1042987.6627146137
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1042987.6627146137
+        },
+        "price": 1,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Glo Dollar",
+        "simbolo": "USDGLO",
+        "emittente": "Non mappato: Glo Dollar",
+        "circulating": {
+          "peggedUSD": 986575.0553133059
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 986624.0240867117
+        },
+        "price": 0.9993627225671277,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "US Sonic Dollar",
+        "simbolo": "USSD",
+        "emittente": "Non mappato: US Sonic Dollar",
+        "circulating": {
+          "peggedUSD": 971457.9116021008
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 970845.2136271009
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Frontier Stable Token",
+        "simbolo": "FRNT",
+        "emittente": "Non mappato: Frontier Stable Token",
+        "circulating": {
+          "peggedUSD": 966252.0994341626
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 966252.0994341626
+        },
+        "price": 0.9982480250807401,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Czodiac USD",
+        "simbolo": "CZUSD",
+        "emittente": "Non mappato: Czodiac USD",
+        "circulating": {
+          "peggedUSD": 921133.1329183631
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 921133.1329183631
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Magic Internet Money",
+        "simbolo": "MIM",
+        "emittente": "Non mappato: Magic Internet Money",
+        "circulating": {
+          "peggedUSD": 921018.5708863802
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 921018.5708863805
+        },
+        "price": 0.03131774725264169,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Meme Dollar",
+        "simbolo": "PINA",
+        "emittente": "Non mappato: Meme Dollar",
+        "circulating": {
+          "peggedUSD": 913412.5806275646
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 913412.5806275646
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Balanced Dollars",
+        "simbolo": "BNUSD",
+        "emittente": "Non mappato: Balanced Dollars",
+        "circulating": {
+          "peggedUSD": 900584.687051741
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 900584.687051741
+        },
+        "price": 0.959869689944742,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Angle USDA",
+        "simbolo": "USDA",
+        "emittente": "Non mappato: Angle USDA",
+        "circulating": {
+          "peggedUSD": 820892.1796618423
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 821128.9089872891
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Solayer USD",
+        "simbolo": "sUSD",
+        "emittente": "Non mappato: Solayer USD",
+        "circulating": {
+          "peggedUSD": 817730.1847809431
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 816693.1439619488
+        },
+        "price": 1.1157666745292187,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "SMARDEX USDN",
+        "simbolo": "USDN",
+        "emittente": "Non mappato: SMARDEX USDN",
+        "circulating": {
+          "peggedUSD": 808317.4983617938
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 808317.4983617938
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Pareto USP",
+        "simbolo": "USP",
+        "emittente": "Non mappato: Pareto USP",
+        "circulating": {
+          "peggedUSD": 787154.7137113941
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 787154.7137113941
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Parallel USDp",
+        "simbolo": "USDp",
+        "emittente": "Non mappato: Parallel USDp",
+        "circulating": {
+          "peggedUSD": 785839.3256799778
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 787474.9045994729
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Kolibri USD",
+        "simbolo": "KUSD",
+        "emittente": "Non mappato: Kolibri USD",
+        "circulating": {
+          "peggedUSD": 746061.6047244685
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 746061.6047244685
+        },
+        "price": 1.4728737646044356,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Rings scUSD",
+        "simbolo": "SCUSD",
+        "emittente": "Non mappato: Rings scUSD",
+        "circulating": {
+          "peggedUSD": 645899.2975619495
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 645945.6332235044
+        },
+        "price": 1.0003957601728173,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Pleasing USD",
+        "simbolo": "PUSD",
+        "emittente": "Non mappato: Pleasing USD",
+        "circulating": {
+          "peggedUSD": 644376.430278012
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 644376.430278012
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Fathom Dollar",
+        "simbolo": "FXD",
+        "emittente": "Non mappato: Fathom Dollar",
+        "circulating": {
+          "peggedUSD": 634623.570015065
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 634623.570015065
+        },
+        "price": 0.8138977284070117,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Sigma Money bnbUSD",
+        "simbolo": "BNBUSD",
+        "emittente": "Non mappato: Sigma Money bnbUSD",
+        "circulating": {
+          "peggedUSD": 603475.4984817229
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 603475.4984817229
+        },
+        "price": 0.9767414688774629,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "eUSD (V2)",
+        "simbolo": "eUSD(v2)",
+        "emittente": "Non mappato: eUSD (V2)",
+        "circulating": {
+          "peggedUSD": 602719.7693879437
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 602719.7693879437
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Worldwide USD",
+        "simbolo": "WUSD",
+        "emittente": "Non mappato: Worldwide USD",
+        "circulating": {
+          "peggedUSD": 599283.6509050614
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 599283.6509050614
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Threshold USD",
+        "simbolo": "THUSD",
+        "emittente": "Non mappato: Threshold USD",
+        "circulating": {
+          "peggedUSD": 539902.4956891537
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 539902.4956891537
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USDJ",
+        "simbolo": "USDJ",
+        "emittente": "Non mappato: USDJ",
+        "circulating": {
+          "peggedUSD": 539417.8112110178
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 539417.8112110178
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Good Game US Dollar",
+        "simbolo": "GGUSD",
+        "emittente": "Non mappato: Good Game US Dollar",
+        "circulating": {
+          "peggedUSD": 533664.4943728762
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 533382.1532769356
+        },
+        "price": 0.9993448994359615,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Overnight USD+",
+        "simbolo": "USD+",
+        "emittente": "Non mappato: Overnight USD+",
+        "circulating": {
+          "peggedUSD": 525601.9145739999
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 527735.570731
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "PXDC Stablecoin",
+        "simbolo": "PXDC",
+        "emittente": "Non mappato: PXDC Stablecoin",
+        "circulating": {
+          "peggedUSD": 524289.3216911093
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 522360.0237993488
+        },
+        "price": 0.9990792805902073,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Sperax USD",
+        "simbolo": "USDS",
+        "emittente": "Sky/Maker",
+        "circulating": {
+          "peggedUSD": 513762.06233394874
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 513762.06233394874
+        },
+        "price": 0.9991074002178414,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Resolv USD",
+        "simbolo": "USR",
+        "emittente": "Non mappato: Resolv USD",
+        "circulating": {
+          "peggedUSD": 504111.8227000647
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 504111.8227000647
+        },
+        "price": 0.08263297102947773,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "WEUSD",
+        "simbolo": "WEUSD",
+        "emittente": "Non mappato: WEUSD",
+        "circulating": {
+          "peggedUSD": 490369.79984
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 490369.79984
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USDK",
+        "simbolo": "USDK",
+        "emittente": "Non mappato: USDK",
+        "circulating": {
+          "peggedUSD": 488679.80153734854
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 488679.80153734854
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Verified USD",
+        "simbolo": "USDV",
+        "emittente": "Non mappato: Verified USD",
+        "circulating": {
+          "peggedUSD": 455177.64002800005
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 455177.64002800005
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "mantraUSD",
+        "simbolo": "mantraUSD",
+        "emittente": "Non mappato: mantraUSD",
+        "circulating": {
+          "peggedUSD": 434651.20487293904
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 434651.20487293904
+        },
+        "price": 0.999878904172157,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Delpho USDV",
+        "simbolo": "USDV",
+        "emittente": "Non mappato: Delpho USDV",
+        "circulating": {
+          "peggedUSD": 414037.91935718706
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 362562.57617552986
+        },
+        "price": 1.0008783907177634,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Level USD",
+        "simbolo": "LVLUSD",
+        "emittente": "Non mappato: Level USD",
+        "circulating": {
+          "peggedUSD": 403649.6329415327
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 403649.6329415327
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Bread",
+        "simbolo": "BREAD",
+        "emittente": "Non mappato: Bread",
+        "circulating": {
+          "peggedUSD": 392637.69770530716
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 393260.378827513
+        },
+        "price": 0.9988585888270796,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Lets Get HAI",
+        "simbolo": "HAI",
+        "emittente": "Non mappato: Lets Get HAI",
+        "circulating": {
+          "peggedUSD": 369438.82378907094
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 370081.3735971324
+        },
+        "price": 1.2367642676648465,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "KEI Stablecoin",
+        "simbolo": "KEI",
+        "emittente": "Non mappato: KEI Stablecoin",
+        "circulating": {
+          "peggedUSD": 362288.12475051376
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 362288.12475051376
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Stable Jack aUSD",
+        "simbolo": "aUSD",
+        "emittente": "Non mappato: Stable Jack aUSD",
+        "circulating": {
+          "peggedUSD": 345055.2808602699
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 345094.27837057755
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "GRAI",
+        "simbolo": "GRAI",
+        "emittente": "Non mappato: GRAI",
+        "circulating": {
+          "peggedUSD": 305579.948609589
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 305579.948609589
+        },
+        "price": 0.7285896503429843,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Zunami USD",
+        "simbolo": "zunUSD",
+        "emittente": "Non mappato: Zunami USD",
+        "circulating": {
+          "peggedUSD": 303340.47330951825
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 303340.47330951825
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Elara USD",
+        "simbolo": "elUSD",
+        "emittente": "Non mappato: Elara USD",
+        "circulating": {
+          "peggedUSD": 297970.3844985233
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 297825.95634196815
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "UXD Stablecoin",
+        "simbolo": "UXD",
+        "emittente": "Non mappato: UXD Stablecoin",
+        "circulating": {
+          "peggedUSD": 297863.7291304726
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 297863.7291304726
+        },
+        "price": 1.0011574881493859,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Nectar",
+        "simbolo": "NECT",
+        "emittente": "Non mappato: Nectar",
+        "circulating": {
+          "peggedUSD": 296139.30664071743
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 294697.8272943712
+        },
+        "price": 1.0036699078122295,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Opus CASH",
+        "simbolo": "CASH",
+        "emittente": "Non mappato: Opus CASH",
+        "circulating": {
+          "peggedUSD": 293026.41303747834
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 293026.41303747834
+        },
+        "price": 1.001263957623933,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "BAI Stablecoin",
+        "simbolo": "BAI",
+        "emittente": "Non mappato: BAI Stablecoin",
+        "circulating": {
+          "peggedUSD": 263881.43534765975
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 263881.43534765975
+        },
+        "price": 1.1077738227708938,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "rUSD",
+        "simbolo": "rUSD",
+        "emittente": "Non mappato: rUSD",
+        "circulating": {
+          "peggedUSD": 258644.86395452745
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 258644.86395452745
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "bitSmiley USD",
+        "simbolo": "bitUSD",
+        "emittente": "Non mappato: bitSmiley USD",
+        "circulating": {
+          "peggedUSD": 253486.75535778035
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 253486.75535778035
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Asymmetry USDaf V2",
+        "simbolo": "USDaf",
+        "emittente": "Non mappato: Asymmetry USDaf V2",
+        "circulating": {
+          "peggedUSD": 248714.15062204696
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 248713.59140926527
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "mkUSD",
+        "simbolo": "mkUSD",
+        "emittente": "Non mappato: mkUSD",
+        "circulating": {
+          "peggedUSD": 244341.8472061886
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 244341.8472061886
+        },
+        "price": 0.9963881704920353,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USDT+",
+        "simbolo": "USDT+",
+        "emittente": "Non mappato: USDT+",
+        "circulating": {
+          "peggedUSD": 238458.36888700133
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 238458.36888700133
+        },
+        "price": 0.9989259620829929,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Reservoir Stablecoin",
+        "simbolo": "rUSD",
+        "emittente": "Non mappato: Reservoir Stablecoin",
+        "circulating": {
+          "peggedUSD": 227354.61893949276
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 227354.6184902759
+        },
+        "price": 0.9999848417596752,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USDCB",
+        "simbolo": "USDCB",
+        "emittente": "Non mappato: USDCB",
+        "circulating": {
+          "peggedUSD": 225185.6236225722
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 225185.6236225722
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USDtez",
+        "simbolo": "USDTZ",
+        "emittente": "Non mappato: USDtez",
+        "circulating": {
+          "peggedUSD": 223286.25695761153
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 223286.25695761153
+        },
+        "price": 0.9986311609497331,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Inter Stable Token",
+        "simbolo": "IST",
+        "emittente": "Non mappato: Inter Stable Token",
+        "circulating": {
+          "peggedUSD": 213609.76649462004
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 213609.76649462004
+        },
+        "price": 0.9957543732564396,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Reserve",
+        "simbolo": "RSV",
+        "emittente": "Non mappato: Reserve",
+        "circulating": {
+          "peggedUSD": 202914.4312911972
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 202914.4312911972
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Legacy BOLD",
+        "simbolo": "BOLD",
+        "emittente": "Non mappato: Legacy BOLD",
+        "circulating": {
+          "peggedUSD": 201374.88991637016
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 201374.88991637016
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USDFC",
+        "simbolo": "USDFC",
+        "emittente": "Non mappato: USDFC",
+        "circulating": {
+          "peggedUSD": 193812.40580732585
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 193812.40580732585
+        },
+        "price": 1.017625462718049,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "STBL",
+        "simbolo": "STBL",
+        "emittente": "Non mappato: STBL",
+        "circulating": {
+          "peggedUSD": 181480.17988677867
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 181480.17988677867
+        },
+        "price": 0.9077826503343697,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USDLemma",
+        "simbolo": "USDL",
+        "emittente": "Non mappato: USDLemma",
+        "circulating": {
+          "peggedUSD": 175104.64189160152
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 175104.64189160152
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Savvy USD",
+        "simbolo": "SVUSD",
+        "emittente": "Non mappato: Savvy USD",
+        "circulating": {
+          "peggedUSD": 173761.20767385064
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 173761.20767385064
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "aUSD Seed",
+        "simbolo": "aSEED",
+        "emittente": "Non mappato: aUSD Seed",
+        "circulating": {
+          "peggedUSD": 169371.68223052192
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 169371.68223052192
+        },
+        "price": 0.06243980247903458,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "SigmaUSD",
+        "simbolo": "SIGUSD",
+        "emittente": "Non mappato: SigmaUSD",
+        "circulating": {
+          "peggedUSD": 159812.64718644234
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 159812.64718644234
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USD Balance",
+        "simbolo": "USDB",
+        "emittente": "Non mappato: USD Balance",
+        "circulating": {
+          "peggedUSD": 147519.9949331899
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 147519.9949331899
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USE",
+        "simbolo": "USE",
+        "emittente": "Non mappato: USE",
+        "circulating": {
+          "peggedUSD": 142573.77275654644
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 142573.77275654644
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Davos Protocol",
+        "simbolo": "DUSD",
+        "emittente": "Non mappato: Davos Protocol",
+        "circulating": {
+          "peggedUSD": 141218.02513166805
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 141218.02513166805
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "ZUSD",
+        "simbolo": "ZUSD",
+        "emittente": "Non mappato: ZUSD",
+        "circulating": {
+          "peggedUSD": 126889.48444723294
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 126889.48444723294
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Base Dollar",
+        "simbolo": "BD",
+        "emittente": "Non mappato: Base Dollar",
+        "circulating": {
+          "peggedUSD": 119572.36396391818
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 125302.66956466688
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Quill USD",
+        "simbolo": "USDQ",
+        "emittente": "Non mappato: Quill USD",
+        "circulating": {
+          "peggedUSD": 117290.89839452125
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 117290.89839452125
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Last USD",
+        "simbolo": "USDXL",
+        "emittente": "Non mappato: Last USD",
+        "circulating": {
+          "peggedUSD": 112889.5438357575
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 112930.00248516658
+        },
+        "price": 0.9987870826663171,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "High Yield USD",
+        "simbolo": "HYUSD",
+        "emittente": "Non mappato: High Yield USD",
+        "circulating": {
+          "peggedUSD": 108548.97995841673
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 108548.97995841673
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "peg-eUSD",
+        "simbolo": "peUSD",
+        "emittente": "Non mappato: peg-eUSD",
+        "circulating": {
+          "peggedUSD": 104747.50248305534
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 105138.7554721967
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "TheStandard USD",
+        "simbolo": "USDS",
+        "emittente": "Sky/Maker",
+        "circulating": {
+          "peggedUSD": 100769.6492615901
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 100769.6492615901
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "iAUSD",
+        "simbolo": "IAUSD",
+        "emittente": "Non mappato: iAUSD",
+        "circulating": {
+          "peggedUSD": 100560.50062620279
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 100560.50062620279
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "eUSD",
+        "simbolo": "EUSD",
+        "emittente": "Non mappato: eUSD",
+        "circulating": {
+          "peggedUSD": 97077.37247651981
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 98808.63447177965
+        },
+        "price": 1.0932816962096454,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Phoenix USD",
+        "simbolo": "phUSD",
+        "emittente": "Non mappato: Phoenix USD",
+        "circulating": {
+          "peggedUSD": 94998.42230380123
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 94937.15745056715
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "UST1",
+        "simbolo": "UST1",
+        "emittente": "Non mappato: UST1",
+        "circulating": {
+          "peggedUSD": 87863.395025
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 88479.068949
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Sable Coin",
+        "simbolo": "USDS",
+        "emittente": "Sky/Maker",
+        "circulating": {
+          "peggedUSD": 84693.35474238377
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 84804.96941216434
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "HYDT",
+        "simbolo": "HYDT",
+        "emittente": "Non mappato: HYDT",
+        "circulating": {
+          "peggedUSD": 83295.72705493208
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 83295.72705493208
+        },
+        "price": 0.9323437296433102,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Magma Wen",
+        "simbolo": "WEN",
+        "emittente": "Non mappato: Magma Wen",
+        "circulating": {
+          "peggedUSD": 83253.25906394221
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 83253.25906394221
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "arUSD",
+        "simbolo": "ARUSD",
+        "emittente": "Non mappato: arUSD",
+        "circulating": {
+          "peggedUSD": 78366.85820893984
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 78366.85820893984
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Vesta Stable",
+        "simbolo": "VST",
+        "emittente": "Non mappato: Vesta Stable",
+        "circulating": {
+          "peggedUSD": 77768.44281152131
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 77068.48749830725
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Stabl.fi Cash",
+        "simbolo": "CASH",
+        "emittente": "Non mappato: Stabl.fi Cash",
+        "circulating": {
+          "peggedUSD": 70336.38407255418
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 70336.38407255418
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Mynth MyUSD",
+        "simbolo": "MyUSD",
+        "emittente": "Non mappato: Mynth MyUSD",
+        "circulating": {
+          "peggedUSD": 68566.94159591619
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 68566.94159591619
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "STAR",
+        "simbolo": "STAR",
+        "emittente": "Non mappato: STAR",
+        "circulating": {
+          "peggedUSD": 66491.1141717586
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 66491.1141717586
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "invUSD Stablecoin",
+        "simbolo": "invUSD",
+        "emittente": "Non mappato: invUSD Stablecoin",
+        "circulating": {
+          "peggedUSD": 62259.95207781021
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 61262.890399611584
+        },
+        "price": 0.9968643465255665,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USDU Finance",
+        "simbolo": "USDU",
+        "emittente": "Non mappato: USDU Finance",
+        "circulating": {
+          "peggedUSD": 57618.9346086025
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 57618.9346086025
+        },
+        "price": 0.999878904172157,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Orby USC",
+        "simbolo": "USC",
+        "emittente": "Non mappato: Orby USC",
+        "circulating": {
+          "peggedUSD": 55809.373215964486
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 55809.373215964486
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "VDollar Finance",
+        "simbolo": "VUSD",
+        "emittente": "Non mappato: VDollar Finance",
+        "circulating": {
+          "peggedUSD": 54675.79922639786
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 54675.79922639786
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Ethos Reserve Note",
+        "simbolo": "ERN",
+        "emittente": "Non mappato: Ethos Reserve Note",
+        "circulating": {
+          "peggedUSD": 51655.939216197316
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 51655.939216197316
+        },
+        "price": 1.001169907758758,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "HEX Dollar Coin",
+        "simbolo": "HEXDC",
+        "emittente": "Non mappato: HEX Dollar Coin",
+        "circulating": {
+          "peggedUSD": 51080.44481978785
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 51080.44481978785
+        },
+        "price": 1.029868553385521,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "XBANKING USDE",
+        "simbolo": "USDE",
+        "emittente": "Non mappato: XBANKING USDE",
+        "circulating": {
+          "peggedUSD": 49147.574013545
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 49147.574013545
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "NonDollar",
+        "simbolo": "USDA+",
+        "emittente": "Non mappato: NonDollar",
+        "circulating": {
+          "peggedUSD": 48507.70522752964
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 48507.70522752964
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Bytecash",
+        "simbolo": "BYC",
+        "emittente": "Non mappato: Bytecash",
+        "circulating": {
+          "peggedUSD": 43316.2905865947
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 43316.2905865947
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Redeemable USD",
+        "simbolo": "RUSD",
+        "emittente": "Non mappato: Redeemable USD",
+        "circulating": {
+          "peggedUSD": 38699.248849348856
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 38699.248849348856
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Whale Asset Dollar",
+        "simbolo": "WAD",
+        "emittente": "Non mappato: Whale Asset Dollar",
+        "circulating": {
+          "peggedUSD": 38600.5360246567
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 38372.550776768694
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Hedge USD",
+        "simbolo": "USH",
+        "emittente": "Non mappato: Hedge USD",
+        "circulating": {
+          "peggedUSD": 38312.010931171
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 38312.102424501
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Coin98 Dollar",
+        "simbolo": "CUSD",
+        "emittente": "Non mappato: Coin98 Dollar",
+        "circulating": {
+          "peggedUSD": 36355.142553351514
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 36355.142553351514
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Coinshift",
+        "simbolo": "csUSDL",
+        "emittente": "Non mappato: Coinshift",
+        "circulating": {
+          "peggedUSD": 34994.341362467436
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 34994.341362467436
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Moremoney USD",
+        "simbolo": "MONEY",
+        "emittente": "Non mappato: Moremoney USD",
+        "circulating": {
+          "peggedUSD": 34554.18763089219
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 34554.18763089219
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "HRUSD",
+        "simbolo": "HRUSD",
+        "emittente": "Non mappato: HRUSD",
+        "circulating": {
+          "peggedUSD": 32614.290484999998
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 32602.275105999997
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Move Dollar",
+        "simbolo": "MOD",
+        "emittente": "Non mappato: Move Dollar",
+        "circulating": {
+          "peggedUSD": 31924.831462301852
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 31924.831462301852
+        },
+        "price": 0.9948094850611963,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Dyad",
+        "simbolo": "DYAD",
+        "emittente": "Non mappato: Dyad",
+        "circulating": {
+          "peggedUSD": 31492.634995549593
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 31492.634995549593
+        },
+        "price": 1.0016427102228032,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Nerite USND",
+        "simbolo": "USND",
+        "emittente": "Non mappato: Nerite USND",
+        "circulating": {
+          "peggedUSD": 31473.909113650916
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 31894.08838165452
+        },
+        "price": 0.9935219614430421,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "ARYZE eUSD",
+        "simbolo": "eUSD",
+        "emittente": "Non mappato: ARYZE eUSD",
+        "circulating": {
+          "peggedUSD": 26708.003122110596
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 26708.003122110596
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "BaoUSD",
+        "simbolo": "BAOUSD",
+        "emittente": "Non mappato: BaoUSD",
+        "circulating": {
+          "peggedUSD": 25183.768434935966
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 25183.768434935966
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "3USD",
+        "simbolo": "3USD",
+        "emittente": "Non mappato: 3USD",
+        "circulating": {
+          "peggedUSD": 23522.688602847105
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 23522.688602847105
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Parallel USD",
+        "simbolo": "PAUSD",
+        "emittente": "Non mappato: Parallel USD",
+        "circulating": {
+          "peggedUSD": 22369.557337423394
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 22369.557337423394
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "CLever USD",
+        "simbolo": "clevUSD",
+        "emittente": "Non mappato: CLever USD",
+        "circulating": {
+          "peggedUSD": 22355.554506995686
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 22355.554506995686
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Digital Standard Unit",
+        "simbolo": "DSU",
+        "emittente": "Non mappato: Digital Standard Unit",
+        "circulating": {
+          "peggedUSD": 21756.24247744709
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 21756.24247744709
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "UNO",
+        "simbolo": "UNO",
+        "emittente": "Non mappato: UNO",
+        "circulating": {
+          "peggedUSD": 20941.579512971963
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 20941.579512971963
+        },
+        "price": 1.2727484539765308,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "BOB",
+        "simbolo": "BOB",
+        "emittente": "Non mappato: BOB",
+        "circulating": {
+          "peggedUSD": 20836.364299026452
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 20838.01959312611
+        },
+        "price": 0.9987065516329412,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "EBUSD",
+        "simbolo": "EBUSD",
+        "emittente": "Non mappato: EBUSD",
+        "circulating": {
+          "peggedUSD": 18659.098854783588
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 18659.098854783588
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "DAI+",
+        "simbolo": "DAI+",
+        "emittente": "Non mappato: DAI+",
+        "circulating": {
+          "peggedUSD": 17853.85610640582
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 17853.85610640582
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Hyperstable USD",
+        "simbolo": "USH",
+        "emittente": "Non mappato: Hyperstable USD",
+        "circulating": {
+          "peggedUSD": 15678.300066586145
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 15678.300066586145
+        },
+        "price": 0.9997911209665197,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Fuse Dollar V3",
+        "simbolo": "FUSD",
+        "emittente": "Non mappato: Fuse Dollar V3",
+        "circulating": {
+          "peggedUSD": 15591.50681194516
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 15043.293597858763
+        },
+        "price": 0.9132741260460397,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "GAI Stablecoin",
+        "simbolo": "GAI",
+        "emittente": "Non mappato: GAI Stablecoin",
+        "circulating": {
+          "peggedUSD": 14298.136977736487
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 14298.136977736487
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Classic USD",
+        "simbolo": "USC",
+        "emittente": "Non mappato: Classic USD",
+        "circulating": {
+          "peggedUSD": 13957.13062
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 13957.13062
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "btcUSD",
+        "simbolo": "btcUSD",
+        "emittente": "Non mappato: btcUSD",
+        "circulating": {
+          "peggedUSD": 13429.565805054888
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 13429.565805054888
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "PrismaLRT Ultra",
+        "simbolo": "ULTRA",
+        "emittente": "Non mappato: PrismaLRT Ultra",
+        "circulating": {
+          "peggedUSD": 12913.710009821401
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 12913.710009821401
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Mead",
+        "simbolo": "MEAD",
+        "emittente": "Non mappato: Mead",
+        "circulating": {
+          "peggedUSD": 12874.368771265652
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 12874.368771265652
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Dackie USD",
+        "simbolo": "DCKUSD",
+        "emittente": "Non mappato: Dackie USD",
+        "circulating": {
+          "peggedUSD": 11158.099429808504
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 11158.099429808504
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Revenue Generating USD",
+        "simbolo": "rgUSD",
+        "emittente": "Non mappato: Revenue Generating USD",
+        "circulating": {
+          "peggedUSD": 10890.194053016625
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 10890.194053016625
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Arche Protocol MSD",
+        "simbolo": "MSD",
+        "emittente": "Non mappato: Arche Protocol MSD",
+        "circulating": {
+          "peggedUSD": 10820.365946504797
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 10820.365946504797
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Offshift anonUSD",
+        "simbolo": "ANONUSD",
+        "emittente": "Non mappato: Offshift anonUSD",
+        "circulating": {
+          "peggedUSD": 10802.15709554491
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 10802.15709554491
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Chi USC",
+        "simbolo": "USC",
+        "emittente": "Non mappato: Chi USC",
+        "circulating": {
+          "peggedUSD": 7033.508445862369
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 7033.508445862369
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "PUSd",
+        "simbolo": "PUSD",
+        "emittente": "Non mappato: PUSd",
+        "circulating": {
+          "peggedUSD": 6645.6651512850995
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 6645.6651512850995
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Jigsaw USD",
+        "simbolo": "JUSD",
+        "emittente": "Non mappato: Jigsaw USD",
+        "circulating": {
+          "peggedUSD": 6507.123971352501
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 6507.123971352501
+        },
+        "price": 1.0121703619820712,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Nexus",
+        "simbolo": "NEX",
+        "emittente": "Non mappato: Nexus",
+        "circulating": {
+          "peggedUSD": 5183.768611075374
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 5183.768611075374
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USK",
+        "simbolo": "USK",
+        "emittente": "Non mappato: USK",
+        "circulating": {
+          "peggedUSD": 5099.014746
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 5099.014746
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "TREN Debt Token",
+        "simbolo": "XY",
+        "emittente": "Non mappato: TREN Debt Token",
+        "circulating": {
+          "peggedUSD": 4578.880122918908
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 4578.880122918908
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Fixed Income Asset Token",
+        "simbolo": "FIAT",
+        "emittente": "Non mappato: Fixed Income Asset Token",
+        "circulating": {
+          "peggedUSD": 4263.3929643117
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 4263.3929643117
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USDi",
+        "simbolo": "USDI",
+        "emittente": "Non mappato: USDi",
+        "circulating": {
+          "peggedUSD": 3742.8680677373573
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 3742.8680677373573
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "KNOX Dollar",
+        "simbolo": "KNOX",
+        "emittente": "Non mappato: KNOX Dollar",
+        "circulating": {
+          "peggedUSD": 3419.064683993109
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 3419.064683993109
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Asymmetry USDaf",
+        "simbolo": "USDaf",
+        "emittente": "Non mappato: Asymmetry USDaf",
+        "circulating": {
+          "peggedUSD": 2649.7228146085613
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 2649.7228146085613
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Money Protocol",
+        "simbolo": "BPD",
+        "emittente": "Non mappato: Money Protocol",
+        "circulating": {
+          "peggedUSD": 2199.37391064729
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 2199.37391064729
+        },
+        "price": 0.9951918147725294,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Orki USD",
+        "simbolo": "USDK",
+        "emittente": "Non mappato: Orki USD",
+        "circulating": {
+          "peggedUSD": 2180.815485078135
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 2180.815485078135
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Parabol USD",
+        "simbolo": "paraUSD",
+        "emittente": "Non mappato: Parabol USD",
+        "circulating": {
+          "peggedUSD": 2032.2702654027976
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 2032.2702654027976
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Deaderal Reserve Note",
+        "simbolo": "USDeAD",
+        "emittente": "Non mappato: Deaderal Reserve Note",
+        "circulating": {
+          "peggedUSD": 1656.4246175134426
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1656.4246175134426
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Gaming XP USD",
+        "simbolo": "xpUSD",
+        "emittente": "Non mappato: Gaming XP USD",
+        "circulating": {
+          "peggedUSD": 1477.8156527887904
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1477.8156527887904
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Kerne USD",
+        "simbolo": "kUSD",
+        "emittente": "Non mappato: Kerne USD",
+        "circulating": {
+          "peggedUSD": 1110.243248
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1110.243248
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Uncap USD",
+        "simbolo": "USDU",
+        "emittente": "Non mappato: Uncap USD",
+        "circulating": {
+          "peggedUSD": 915.0069511663183
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 915.0069511663183
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "USD Stable Colb",
+        "simbolo": "SCB",
+        "emittente": "Non mappato: USD Stable Colb",
+        "circulating": {
+          "peggedUSD": 821.185484270835
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 821.185484270835
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "litUSD",
+        "simbolo": "litUSD",
+        "emittente": "Non mappato: litUSD",
+        "circulating": {
+          "peggedUSD": 506.90763782960363
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 506.90763782960363
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "PSY",
+        "simbolo": "sLSD",
+        "emittente": "Non mappato: PSY",
+        "circulating": {
+          "peggedUSD": 403.9742093406712
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 403.9742093406712
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Deuterium",
+        "simbolo": "d2O",
+        "emittente": "Non mappato: Deuterium",
+        "circulating": {
+          "peggedUSD": 107.47584241131348
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 107.47584241131348
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Phase Dollar",
+        "simbolo": "CASH",
+        "emittente": "Non mappato: Phase Dollar",
+        "circulating": {
+          "peggedUSD": 70.61930702095457
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 70.61930702095457
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "fUSD",
+        "simbolo": "FUSD",
+        "emittente": "Non mappato: fUSD",
+        "circulating": {
+          "peggedUSD": 60.3
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 60.3
+        },
+        "price": null,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Chad USD",
+        "simbolo": "cUSD",
+        "emittente": "Non mappato: Chad USD",
+        "circulating": {
+          "peggedUSD": 50.023693381579456
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 50.023693381579456
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Rocky USDr",
+        "simbolo": "USDR",
+        "emittente": "Non mappato: Rocky USDr",
+        "circulating": {
+          "peggedUSD": 1.4179424712328792
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1.4179424712328792
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Monet USDmo",
+        "simbolo": "USDMO",
+        "emittente": "Non mappato: Monet USDmo",
+        "circulating": {
+          "peggedUSD": 1.0178339586970735
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 1.0178339586970735
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "Elixir deUSD",
+        "simbolo": "DEUSD",
+        "emittente": "Non mappato: Elixir deUSD",
+        "circulating": {
+          "peggedUSD": 0.921532113337797
+        },
+        "circulatingPrevDay": {
+          "peggedUSD": 0.921532113337797
+        },
+        "price": 1e-08,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "TerraClassicUSD",
+        "simbolo": "USTC",
+        "emittente": "Non mappato: TerraClassicUSD",
+        "circulating": {
+          "peggedUSD": 0
+        },
+        "circulatingPrevDay": {},
+        "price": 0,
+        "pegType": "peggedUSD"
+      },
+      {
+        "nome": "VOLT Protocol",
+        "simbolo": "VOLT",
+        "emittente": "Non mappato: VOLT Protocol",
+        "circulating": {
+          "peggedVAR": 76847.29815128063
+        },
+        "circulatingPrevDay": {
+          "peggedVAR": 76847.29815128063
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedVAR"
+      },
+      {
+        "nome": "Rai Reflex Index",
+        "simbolo": "RAI",
+        "emittente": "Non mappato: Rai Reflex Index",
+        "circulating": {
+          "peggedVAR": 1568429.3957960743
+        },
+        "circulatingPrevDay": {
+          "peggedVAR": 1568429.3957960743
+        },
+        "price": 3.128968409676028,
+        "pegType": "peggedVAR"
+      },
+      {
+        "nome": "Float Protocol Float",
+        "simbolo": "FLOAT",
+        "emittente": "Non mappato: Float Protocol Float",
+        "circulating": {
+          "peggedVAR": 654066.2384612531
+        },
+        "circulatingPrevDay": {
+          "peggedVAR": 654066.2384612531
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedVAR"
+      },
+      {
+        "nome": "Euro Tether",
+        "simbolo": "EURT",
+        "emittente": "Non mappato: Euro Tether",
+        "circulating": {
+          "peggedEUR": 4675449.076327312
+        },
+        "circulatingPrevDay": {
+          "peggedEUR": 4675449.076327312
+        },
+        "price": null,
+        "pegType": "peggedEUR"
+      },
+      {
+        "nome": "EURC",
+        "simbolo": "EURC",
+        "emittente": "Circle",
+        "circulating": {
+          "peggedEUR": 469455049.0485265
+        },
+        "circulatingPrevDay": {
+          "peggedEUR": 475417836.088501
+        },
+        "price": 1.1197899020923585,
+        "pegType": "peggedEUR"
+      },
+      {
+        "nome": "Stasis Euro",
+        "simbolo": "EURS",
+        "emittente": "Non mappato: Stasis Euro",
+        "circulating": {
+          "peggedEUR": 8010827.15289552
+        },
+        "circulatingPrevDay": {
+          "peggedEUR": 8010827.15289552
+        },
+        "price": 1.1690167518031864,
+        "pegType": "peggedEUR"
+      },
+      {
+        "nome": "Mento Euro",
+        "simbolo": "EURm",
+        "emittente": "Non mappato: Mento Euro",
+        "circulating": {
+          "peggedEUR": 1634679.261412921
+        },
+        "circulatingPrevDay": {
+          "peggedEUR": 1635558.0455765626
+        },
+        "price": 1.1187552616583722,
+        "pegType": "peggedEUR"
+      },
+      {
+        "nome": "sEUR",
+        "simbolo": "SEUR",
+        "emittente": "Non mappato: sEUR",
+        "circulating": {
+          "peggedEUR": 1122793.4689599685
+        },
+        "circulatingPrevDay": {
+          "peggedEUR": 1122793.4689599685
+        },
+        "price": 1.12543,
+        "pegType": "peggedEUR"
+      },
+      {
+        "nome": "EURA",
+        "simbolo": "EURA",
+        "emittente": "Non mappato: EURA",
+        "circulating": {
+          "peggedEUR": 1587657.2747199421
+        },
+        "circulatingPrevDay": {
+          "peggedEUR": 1589485.4136294373
+        },
+        "price": 1.120537814243929,
+        "pegType": "peggedEUR"
+      },
+      {
+        "nome": "Parallel",
+        "simbolo": "PAR",
+        "emittente": "Non mappato: Parallel",
+        "circulating": {
+          "peggedEUR": 1247157.3990813673
+        },
+        "circulatingPrevDay": {
+          "peggedEUR": 1247157.3990813673
+        },
+        "price": 1.12134,
+        "pegType": "peggedEUR"
+      },
+      {
+        "nome": "Frax Price Index",
+        "simbolo": "FPI",
+        "emittente": "Non mappato: Frax Price Index",
+        "circulating": {
+          "peggedVAR": 7019095.278499995
+        },
+        "circulatingPrevDay": {
+          "peggedVAR": 7019095.278499995
+        },
+        "price": 1.1431920370733037,
+        "pegType": "peggedVAR"
+      },
+      {
+        "nome": "Iron Bank EURO",
+        "simbolo": "IBEUR",
+        "emittente": "Non mappato: Iron Bank EURO",
+        "circulating": {
+          "peggedEUR": 3376667.2294445387
+        },
+        "circulatingPrevDay": {
+          "peggedEUR": 3376667.2294445387
+        },
+        "price": null,
+        "pegType": "peggedEUR"
+      },
+      {
+        "nome": "EUROe Stablecoin",
+        "simbolo": "EUROe",
+        "emittente": "Non mappato: EUROe Stablecoin",
+        "circulating": {
+          "peggedEUR": 122650.64257582219
+        },
+        "circulatingPrevDay": {
+          "peggedEUR": 122650.64257582219
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedEUR"
+      },
+      {
+        "nome": "Monerium EUR emoney",
+        "simbolo": "EURE",
+        "emittente": "Non mappato: Monerium EUR emoney",
+        "circulating": {
+          "peggedEUR": 33594075.31676188
+        },
+        "circulatingPrevDay": {
+          "peggedEUR": 33420604.948371053
+        },
+        "price": 1.120901467403808,
+        "pegType": "peggedEUR"
+      },
+      {
+        "nome": "DeFi Franc",
+        "simbolo": "DCHF",
+        "emittente": "Non mappato: DeFi Franc",
+        "circulating": {
+          "peggedVAR": 51873.4405705045
+        },
+        "circulatingPrevDay": {
+          "peggedVAR": 51873.4405705045
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedVAR"
+      },
+      {
+        "nome": "SILK",
+        "simbolo": "SILK",
+        "emittente": "Non mappato: SILK",
+        "circulating": {
+          "peggedVAR": 0
+        },
+        "circulatingPrevDay": {
+          "peggedVAR": 0
+        },
+        "price": null,
+        "pegType": "peggedVAR"
+      },
+      {
+        "nome": "GYEN",
+        "simbolo": "GYEN",
+        "emittente": "Non mappato: GYEN",
+        "circulating": {
+          "peggedJPY": 5920496.360734335
+        },
+        "circulatingPrevDay": {
+          "peggedJPY": 5920496.360734335
+        },
+        "price": 0.006343139002118645,
+        "pegType": "peggedJPY"
+      },
+      {
+        "nome": "Alternity CNY",
+        "simbolo": "LCNY",
+        "emittente": "Non mappato: Alternity CNY",
+        "circulating": {
+          "peggedCNY": 3587.078760615814
+        },
+        "circulatingPrevDay": {
+          "peggedCNY": 3587.078760615814
+        },
+        "price": null,
+        "pegType": "peggedCNY"
+      },
+      {
+        "nome": "UAHT",
+        "simbolo": "UAHT",
+        "emittente": "Non mappato: UAHT",
+        "circulating": {
+          "peggedUAH": 3119.5676024713775
+        },
+        "circulatingPrevDay": {
+          "peggedUAH": 3119.5676024713775
+        },
+        "price": null,
+        "pegType": "peggedUAH"
+      },
+      {
+        "nome": "NARS",
+        "simbolo": "NARS",
+        "emittente": "Non mappato: NARS",
+        "circulating": {
+          "peggedARS": 1740.2680630842888
+        },
+        "circulatingPrevDay": {
+          "peggedARS": 1740.2680630842888
+        },
+        "price": null,
+        "pegType": "peggedARS"
+      },
+      {
+        "nome": "Collateralized Debt Token",
+        "simbolo": "CDT",
+        "emittente": "Non mappato: Collateralized Debt Token",
+        "circulating": {
+          "peggedVAR": 0
+        },
+        "circulatingPrevDay": {
+          "peggedVAR": 0
+        },
+        "price": null,
+        "pegType": "peggedVAR"
+      },
+      {
+        "nome": "ARYZE eEUR",
+        "simbolo": "eEUR",
+        "emittente": "Non mappato: ARYZE eEUR",
+        "circulating": {
+          "peggedEUR": 18755.997066822612
+        },
+        "circulatingPrevDay": {
+          "peggedEUR": 18755.997066822612
+        },
+        "price": null,
+        "pegType": "peggedEUR"
+      },
+      {
+        "nome": "ARYZE eGBP",
+        "simbolo": "eGBP",
+        "emittente": "Non mappato: ARYZE eGBP",
+        "circulating": {
+          "peggedGBP": 10632.80543269132
+        },
+        "circulatingPrevDay": {
+          "peggedGBP": 10632.80543269132
+        },
+        "price": null,
+        "pegType": "peggedGBP"
+      },
+      {
+        "nome": "CAD Coin",
+        "simbolo": "CADC",
+        "emittente": "Non mappato: CAD Coin",
+        "circulating": {
+          "peggedCAD": 1704669.8912303399
+        },
+        "circulatingPrevDay": {
+          "peggedCAD": 1704669.8912303399
+        },
+        "price": 0.6955008710455953,
+        "pegType": "peggedCAD"
+      },
+      {
+        "nome": "Anchored Coins AEUR",
+        "simbolo": "AEUR",
+        "emittente": "Non mappato: Anchored Coins AEUR",
+        "circulating": {
+          "peggedEUR": 41995.565310371996
+        },
+        "circulatingPrevDay": {
+          "peggedEUR": 41995.565310371996
+        },
+        "price": null,
+        "pegType": "peggedEUR"
+      },
+      {
+        "nome": "VNX Swiss Franc",
+        "simbolo": "VCHF",
+        "emittente": "Non mappato: VNX Swiss Franc",
+        "circulating": {
+          "peggedCHF": 2569801.2751084114
+        },
+        "circulatingPrevDay": {
+          "peggedCHF": 2567604.1422513966
+        },
+        "price": 1.225582351819295,
+        "pegType": "peggedCHF"
+      },
+      {
+        "nome": "VNX EURO",
+        "simbolo": "VEUR",
+        "emittente": "Non mappato: VNX EURO",
+        "circulating": {
+          "peggedEUR": 1047215.6595258856
+        },
+        "circulatingPrevDay": {
+          "peggedEUR": 1047215.6595258856
+        },
+        "price": null,
+        "pegType": "peggedEUR"
+      },
+      {
+        "nome": "Quantoz EURD",
+        "simbolo": "EURD",
+        "emittente": "Non mappato: Quantoz EURD",
+        "circulating": {
+          "peggedEUR": 2074.1853790308965
+        },
+        "circulatingPrevDay": {
+          "peggedEUR": 2074.1853790308965
+        },
+        "price": null,
+        "pegType": "peggedEUR"
+      },
+      {
+        "nome": "AUDD",
+        "simbolo": "AUDD",
+        "emittente": "Non mappato: AUDD",
+        "circulating": {
+          "peggedAUD": 7369882.4265594715
+        },
+        "circulatingPrevDay": {
+          "peggedAUD": 7464036.910985582
+        },
+        "price": 0.6954068950361513,
+        "pegType": "peggedAUD"
+      },
+      {
+        "nome": "Fractional ETH",
+        "simbolo": "fETH",
+        "emittente": "Non mappato: Fractional ETH",
+        "circulating": {
+          "peggedVAR": 479994.96229181084
+        },
+        "circulatingPrevDay": {
+          "peggedVAR": 479994.96229181084
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedVAR"
+      },
+      {
+        "nome": "EURO3",
+        "simbolo": "EURO3",
+        "emittente": "Non mappato: EURO3",
+        "circulating": {
+          "peggedEUR": 22864.76137698433
+        },
+        "circulatingPrevDay": {
+          "peggedEUR": 22864.76137698433
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedEUR"
+      },
+      {
+        "nome": "CJPY",
+        "simbolo": "CJPY",
+        "emittente": "Non mappato: CJPY",
+        "circulating": {
+          "peggedJPY": 476636.9762162816
+        },
+        "circulatingPrevDay": {
+          "peggedJPY": 476636.9762162816
+        },
+        "price": 0.005164585216522319,
+        "pegType": "peggedJPY"
+      },
+      {
+        "nome": "Zunami ETH",
+        "simbolo": "zunETH",
+        "emittente": "Non mappato: Zunami ETH",
+        "circulating": {
+          "peggedVAR": 71.1011888512174
+        },
+        "circulatingPrevDay": {
+          "peggedVAR": 71.1011888512174
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedVAR"
+      },
+      {
+        "nome": "International Stable Currency",
+        "simbolo": "ISC",
+        "emittente": "Non mappato: International Stable Currency",
+        "circulating": {
+          "peggedVAR": 2415720.0399473417
+        },
+        "circulatingPrevDay": {
+          "peggedVAR": 2415720.0399473417
+        },
+        "price": 2.163739704300399,
+        "pegType": "peggedVAR"
+      },
+      {
+        "nome": "Mento Real",
+        "simbolo": "BRLm",
+        "emittente": "Non mappato: Mento Real",
+        "circulating": {
+          "peggedREAL": 217386.02753793678
+        },
+        "circulatingPrevDay": {
+          "peggedREAL": 219796.71603352693
+        },
+        "price": 0.1921446419819986,
+        "pegType": "peggedREAL"
+      },
+      {
+        "nome": "Hedera Swiss Franc",
+        "simbolo": "HCHF",
+        "emittente": "Non mappato: Hedera Swiss Franc",
+        "circulating": {
+          "peggedCHF": 59013.924096587616
+        },
+        "circulatingPrevDay": {
+          "peggedCHF": 60378.18234990823
+        },
+        "price": null,
+        "pegType": "peggedCHF"
+      },
+      {
+        "nome": "Frankencoin",
+        "simbolo": "ZCHF",
+        "emittente": "Non mappato: Frankencoin",
+        "circulating": {
+          "peggedCHF": 43628679.45453271
+        },
+        "circulatingPrevDay": {
+          "peggedCHF": 43602494.89970266
+        },
+        "price": 1.2024978263786301,
+        "pegType": "peggedCHF"
+      },
+      {
+        "nome": "StablR Euro",
+        "simbolo": "EURR",
+        "emittente": "Non mappato: StablR Euro",
+        "circulating": {
+          "peggedEUR": 14331567.662741857
+        },
+        "circulatingPrevDay": {
+          "peggedEUR": 14331567.662741857
+        },
+        "price": null,
+        "pegType": "peggedEUR"
+      },
+      {
+        "nome": "Schuman EUROP",
+        "simbolo": "EUROP",
+        "emittente": "Non mappato: Schuman EUROP",
+        "circulating": {
+          "peggedEUR": 16298144.709932294
+        },
+        "circulatingPrevDay": {
+          "peggedEUR": 16253566.410758903
+        },
+        "price": 1.1200262498489746,
+        "pegType": "peggedEUR"
+      },
+      {
+        "nome": "EUR CoinVertible",
+        "simbolo": "EURCV",
+        "emittente": "Non mappato: EUR CoinVertible",
+        "circulating": {
+          "peggedEUR": 186594588.31012183
+        },
+        "circulatingPrevDay": {
+          "peggedEUR": 185173206.06200135
+        },
+        "price": 1.1196539582652136,
+        "pegType": "peggedEUR"
+      },
+      {
+        "nome": "A7A5",
+        "simbolo": "A7A5",
+        "emittente": "Non mappato: A7A5",
+        "circulating": {
+          "peggedRUB": 559424740.6642768
+        },
+        "circulatingPrevDay": {
+          "peggedRUB": 558827637.1615622
+        },
+        "price": null,
+        "pegType": "peggedRUB"
+      },
+      {
+        "nome": "Quantoz EURQ",
+        "simbolo": "EURQ",
+        "emittente": "Non mappato: Quantoz EURQ",
+        "circulating": {
+          "peggedEUR": 9711246.016337441
+        },
+        "circulatingPrevDay": {
+          "peggedEUR": 9711246.016337441
+        },
+        "price": null,
+        "pegType": "peggedEUR"
+      },
+      {
+        "nome": "Tether CNH",
+        "simbolo": "CNHT",
+        "emittente": "Non mappato: Tether CNH",
+        "circulating": {
+          "peggedCNY": 3057989.884005
+        },
+        "circulatingPrevDay": {
+          "peggedCNY": 3057989.884005
+        },
+        "price": 0.149145,
+        "pegType": "peggedCNY"
+      },
+      {
+        "nome": "Mexican Peso Tether",
+        "simbolo": "MXNT",
+        "emittente": "Non mappato: Mexican Peso Tether",
+        "circulating": {
+          "peggedMXN": 1077212.750328
+        },
+        "circulatingPrevDay": {
+          "peggedMXN": 1077212.750328
+        },
+        "price": 0.05506547,
+        "pegType": "peggedMXN"
+      },
+      {
+        "nome": "XSGD",
+        "simbolo": "XSGD",
+        "emittente": "Non mappato: XSGD",
+        "circulating": {
+          "peggedSGD": 12957139.264567427
+        },
+        "circulatingPrevDay": {
+          "peggedSGD": 12957139.264567427
+        },
+        "price": 0.7808776593108834,
+        "pegType": "peggedSGD"
+      },
+      {
+        "nome": "VNX British Pound",
+        "simbolo": "VGBP",
+        "emittente": "Non mappato: VNX British Pound",
+        "circulating": {
+          "peggedGBP": 169128.46493360028
+        },
+        "circulatingPrevDay": {
+          "peggedGBP": 169128.56549325556
+        },
+        "price": 1.335978365242451,
+        "pegType": "peggedGBP"
+      },
+      {
+        "nome": "PHT Stablecoin",
+        "simbolo": "PHT",
+        "emittente": "Non mappato: PHT Stablecoin",
+        "circulating": {
+          "peggedPHP": 3597744.217932166
+        },
+        "circulatingPrevDay": {
+          "peggedPHP": 3597744.217932166
+        },
+        "price": null,
+        "pegType": "peggedPHP"
+      },
+      {
+        "nome": "Bilira",
+        "simbolo": "TRYB",
+        "emittente": "Non mappato: Bilira",
+        "circulating": {
+          "peggedTRY": 5156278.373083193
+        },
+        "circulatingPrevDay": {
+          "peggedTRY": 5151599.520093019
+        },
+        "price": null,
+        "pegType": "peggedTRY"
+      },
+      {
+        "nome": "Tokenised GBP",
+        "simbolo": "tGBP",
+        "emittente": "Non mappato: Tokenised GBP",
+        "circulating": {
+          "peggedGBP": 26619386.061559264
+        },
+        "circulatingPrevDay": {
+          "peggedGBP": 26619386.06155927
+        },
+        "price": 1.3223819731030741,
+        "pegType": "peggedGBP"
+      },
+      {
+        "nome": "AllUnity EUR",
+        "simbolo": "EURAU",
+        "emittente": "Non mappato: AllUnity EUR",
+        "circulating": {
+          "peggedEUR": 272209.83049741434
+        },
+        "circulatingPrevDay": {
+          "peggedEUR": 272209.83049741434
+        },
+        "price": 1.1337009241776999,
+        "pegType": "peggedEUR"
+      },
+      {
+        "nome": "Eurite",
+        "simbolo": "EURI",
+        "emittente": "Non mappato: Eurite",
+        "circulating": {
+          "peggedEUR": 37121493.23594122
+        },
+        "circulatingPrevDay": {
+          "peggedEUR": 37121493.23594122
+        },
+        "price": 1.1201466381722769,
+        "pegType": "peggedEUR"
+      },
+      {
+        "nome": "Macropod",
+        "simbolo": "AUDM",
+        "emittente": "Non mappato: Macropod",
+        "circulating": {
+          "peggedAUD": 2442456.3708819826
+        },
+        "circulatingPrevDay": {
+          "peggedAUD": 2477284.2749470375
+        },
+        "price": 0.6937088801883868,
+        "pegType": "peggedAUD"
+      },
+      {
+        "nome": "Tetris Money",
+        "simbolo": "RUBT",
+        "emittente": "Non mappato: Tetris Money",
+        "circulating": {
+          "peggedRUB": 2051718.295828977
+        },
+        "circulatingPrevDay": {
+          "peggedRUB": 2051718.295828977
+        },
+        "price": null,
+        "pegType": "peggedRUB"
+      },
+      {
+        "nome": "BRTH",
+        "simbolo": "BRTH",
+        "emittente": "Non mappato: BRTH",
+        "circulating": {
+          "peggedREAL": 567.9046674828061
+        },
+        "circulatingPrevDay": {
+          "peggedREAL": 567.9046674828061
+        },
+        "price": null,
+        "pegType": "peggedREAL"
+      },
+      {
+        "nome": "JPY Coin",
+        "simbolo": "JPYC",
+        "emittente": "Non mappato: JPY Coin",
+        "circulating": {
+          "peggedJPY": 23044072.34526818
+        },
+        "circulatingPrevDay": {
+          "peggedJPY": 23289505.685311858
+        },
+        "price": 0.006307149234676881,
+        "pegType": "peggedJPY"
+      },
+      {
+        "nome": "Mento British Pound",
+        "simbolo": "GBPm",
+        "emittente": "Non mappato: Mento British Pound",
+        "circulating": {
+          "peggedGBP": 308947.82450652024
+        },
+        "circulatingPrevDay": {
+          "peggedGBP": 308897.4987538465
+        },
+        "price": 1.3232394256260727,
+        "pegType": "peggedGBP"
+      },
+      {
+        "nome": "Mento Philippine Peso",
+        "simbolo": "PHPm",
+        "emittente": "Non mappato: Mento Philippine Peso",
+        "circulating": {
+          "peggedPHP": 25839.8512898202
+        },
+        "circulatingPrevDay": {
+          "peggedPHP": 25839.8512898202
+        },
+        "price": null,
+        "pegType": "peggedPHP"
+      },
+      {
+        "nome": "Mento Canadian Dollar",
+        "simbolo": "CADm",
+        "emittente": "Non mappato: Mento Canadian Dollar",
+        "circulating": {
+          "peggedCAD": 681.381061272463
+        },
+        "circulatingPrevDay": {
+          "peggedCAD": 681.381061272463
+        },
+        "price": null,
+        "pegType": "peggedCAD"
+      },
+      {
+        "nome": "Mento Australian Dollar",
+        "simbolo": "AUDm",
+        "emittente": "Non mappato: Mento Australian Dollar",
+        "circulating": {
+          "peggedAUD": 5981.840288409216
+        },
+        "circulatingPrevDay": {
+          "peggedAUD": 5981.840288409216
+        },
+        "price": null,
+        "pegType": "peggedAUD"
+      },
+      {
+        "nome": "Mento Colombian Peso",
+        "simbolo": "COPm",
+        "emittente": "Non mappato: Mento Colombian Peso",
+        "circulating": {
+          "peggedCOP": 22698.521028376646
+        },
+        "circulatingPrevDay": {
+          "peggedCOP": 22698.521028376646
+        },
+        "price": null,
+        "pegType": "peggedCOP"
+      },
+      {
+        "nome": "Mento Japanese Yen",
+        "simbolo": "JPYm",
+        "emittente": "Non mappato: Mento Japanese Yen",
+        "circulating": {
+          "peggedJPY": 98460.76133173417
+        },
+        "circulatingPrevDay": {
+          "peggedJPY": 98460.76133173417
+        },
+        "price": null,
+        "pegType": "peggedJPY"
+      },
+      {
+        "nome": "BRLA Digital",
+        "simbolo": "BRLA",
+        "emittente": "Non mappato: BRLA Digital",
+        "circulating": {
+          "peggedREAL": 30559049.237255957
+        },
+        "circulatingPrevDay": {
+          "peggedREAL": 30138801.17224917
+        },
+        "price": 0.19064768209950528,
+        "pegType": "peggedREAL"
+      },
+      {
+        "nome": "Mento Kenyan Shilling",
+        "simbolo": "KESm",
+        "emittente": "Non mappato: Mento Kenyan Shilling",
+        "circulating": {
+          "peggedKES": 67428.59910038712
+        },
+        "circulatingPrevDay": {
+          "peggedKES": 67428.59910038712
+        },
+        "price": 0.007664718508551116,
+        "pegType": "peggedKES"
+      },
+      {
+        "nome": "Mento South African Rand",
+        "simbolo": "ZARm",
+        "emittente": "Non mappato: Mento South African Rand",
+        "circulating": {
+          "peggedZAR": 666.9630158747341
+        },
+        "circulatingPrevDay": {
+          "peggedZAR": 666.9630158747341
+        },
+        "price": null,
+        "pegType": "peggedZAR"
+      },
+      {
+        "nome": "Mento Nigerian Naira",
+        "simbolo": "NGNm",
+        "emittente": "Non mappato: Mento Nigerian Naira",
+        "circulating": {
+          "peggedNGN": 51146.95046288218
+        },
+        "circulatingPrevDay": {
+          "peggedNGN": 51146.95046288218
+        },
+        "price": null,
+        "pegType": "peggedNGN"
+      },
+      {
+        "nome": "Mento Swiss Franc",
+        "simbolo": "CHFm",
+        "emittente": "Non mappato: Mento Swiss Franc",
+        "circulating": {
+          "peggedCHF": 87992.18596349815
+        },
+        "circulatingPrevDay": {
+          "peggedCHF": 87978.6443599266
+        },
+        "price": null,
+        "pegType": "peggedCHF"
+      },
+      {
+        "nome": "Mento West African CFA Franc",
+        "simbolo": "XOFm",
+        "emittente": "Non mappato: Mento West African CFA Franc",
+        "circulating": {
+          "peggedXOF": 9208.53836116538
+        },
+        "circulatingPrevDay": {
+          "peggedXOF": 9187.506498332787
+        },
+        "price": null,
+        "pegType": "peggedXOF"
+      },
+      {
+        "nome": "Mento Ghanaian Cedi",
+        "simbolo": "GHSm",
+        "emittente": "Non mappato: Mento Ghanaian Cedi",
+        "circulating": {
+          "peggedGHS": 23780.998374040886
+        },
+        "circulatingPrevDay": {
+          "peggedGHS": 23775.953444492323
+        },
+        "price": 0.08591827448326335,
+        "pegType": "peggedGHS"
+      },
+      {
+        "nome": "Argentine Peso",
+        "simbolo": "WARS",
+        "emittente": "Non mappato: Argentine Peso",
+        "circulating": {
+          "peggedARS": 9647423.332712214
+        },
+        "circulatingPrevDay": {
+          "peggedARS": 9646423.396384872
+        },
+        "price": 0.0006204747283635746,
+        "pegType": "peggedARS"
+      },
+      {
+        "nome": "Brazilian Real",
+        "simbolo": "WBRL",
+        "emittente": "Non mappato: Brazilian Real",
+        "circulating": {
+          "peggedREAL": 1699583.037299649
+        },
+        "circulatingPrevDay": {
+          "peggedREAL": 1684193.7517796322
+        },
+        "price": 0.19251507566878412,
+        "pegType": "peggedREAL"
+      },
+      {
+        "nome": "Chilean Peso",
+        "simbolo": "WCLP",
+        "emittente": "Non mappato: Chilean Peso",
+        "circulating": {
+          "peggedCLP": 70779.22529829209
+        },
+        "circulatingPrevDay": {
+          "peggedCLP": 70779.22529829209
+        },
+        "price": 0.001079527358566864,
+        "pegType": "peggedCLP"
+      },
+      {
+        "nome": "Colombian Peso",
+        "simbolo": "WCOP",
+        "emittente": "Non mappato: Colombian Peso",
+        "circulating": {
+          "peggedCOP": 417467.5427412946
+        },
+        "circulatingPrevDay": {
+          "peggedCOP": 417467.5427412946
+        },
+        "price": 0.0003100254906990151,
+        "pegType": "peggedCOP"
+      },
+      {
+        "nome": "Mexican Peso",
+        "simbolo": "WMXN",
+        "emittente": "Non mappato: Mexican Peso",
+        "circulating": {
+          "peggedMXN": 474066.3778076121
+        },
+        "circulatingPrevDay": {
+          "peggedMXN": 474066.3778076121
+        },
+        "price": 0.05560446373856326,
+        "pegType": "peggedMXN"
+      },
+      {
+        "nome": "Peruvian Sol",
+        "simbolo": "WPEN",
+        "emittente": "Non mappato: Peruvian Sol",
+        "circulating": {
+          "peggedPEN": 39751.518401160334
+        },
+        "circulatingPrevDay": {
+          "peggedPEN": 39751.518401160334
+        },
+        "price": 0.3003513667063997,
+        "pegType": "peggedPEN"
+      },
+      {
+        "nome": "CAD Digital",
+        "simbolo": "CADD",
+        "emittente": "Non mappato: CAD Digital",
+        "circulating": {
+          "peggedCAD": 866976.4788250354
+        },
+        "circulatingPrevDay": {
+          "peggedCAD": 866976.4788250354
+        },
+        "price": 0.7011205624354411,
+        "pegType": "peggedCAD"
+      },
+      {
+        "nome": "Newrails Euro",
+        "simbolo": "EURW",
+        "emittente": "Non mappato: Newrails Euro",
+        "circulating": {
+          "peggedEUR": 932425.9326367415
+        },
+        "circulatingPrevDay": {
+          "peggedEUR": 772969.33767603
+        },
+        "price": 1.116702567005066,
+        "pegType": "peggedEUR"
+      },
+      {
+        "nome": "Harbor haEUR",
+        "simbolo": "haEUR",
+        "emittente": "Non mappato: Harbor haEUR",
+        "circulating": {
+          "peggedEUR": 6604.621429905341
+        },
+        "circulatingPrevDay": {
+          "peggedEUR": 6604.621429905341
+        },
+        "price": 0.9999361617343347,
+        "pegType": "peggedEUR"
+      },
+      {
+        "nome": "Agant GBP",
+        "simbolo": "GBPA",
+        "emittente": "Non mappato: Agant GBP",
+        "circulating": {
+          "peggedGBP": 2512128.2468586564
+        },
+        "circulatingPrevDay": {
+          "peggedGBP": 2512128.2468586564
+        },
+        "price": 1.3219313768351457,
+        "pegType": "peggedGBP"
+      },
+      {
+        "nome": "MYR Stablecoin",
+        "simbolo": "MYRT",
+        "emittente": "Non mappato: MYR Stablecoin",
+        "circulating": {
+          "peggedMYR": 27327.332174083414
+        },
+        "circulatingPrevDay": {
+          "peggedMYR": 27327.332174083414
+        },
+        "price": null,
+        "pegType": "peggedMYR"
+      },
+      {
+        "nome": "Royal Euro",
+        "simbolo": "REUR",
+        "emittente": "Non mappato: Royal Euro",
+        "circulating": {
+          "peggedEUR": 16883336.147222694
+        },
+        "circulatingPrevDay": {
+          "peggedEUR": 16883336.147222694
+        },
+        "price": null,
+        "pegType": "peggedEUR"
+      },
+      {
+        "nome": "Forte AUD",
+        "simbolo": "AUDF",
+        "emittente": "Non mappato: Forte AUD",
+        "circulating": {
+          "peggedAUD": 4006218.524034113
+        },
+        "circulatingPrevDay": {
+          "peggedAUD": 4006218.524034113
+        },
+        "price": 0.7026779451551917,
+        "pegType": "peggedAUD"
+      },
+      {
+        "nome": "Decentralized Euro",
+        "simbolo": "dEURO",
+        "emittente": "Non mappato: Decentralized Euro",
+        "circulating": {
+          "peggedEUR": 1411123.736789134
+        },
+        "circulatingPrevDay": {
+          "peggedEUR": 1418183.2224101594
+        },
+        "price": null,
+        "pegType": "peggedEUR"
+      },
+      {
+        "nome": "Stablecorp QCAD",
+        "simbolo": "QCAD",
+        "emittente": "Non mappato: Stablecorp QCAD",
+        "circulating": {
+          "peggedCAD": 1489104.4862056877
+        },
+        "circulatingPrevDay": {
+          "peggedCAD": 1489104.4862056877
+        },
+        "price": 0.700360157964809,
+        "pegType": "peggedCAD"
+      },
+      {
+        "nome": "JPYSC",
+        "simbolo": "JPYSC",
+        "emittente": "Non mappato: JPYSC",
+        "circulating": {
+          "peggedJPY": 127050591.19078815
+        },
+        "circulatingPrevDay": {
+          "peggedJPY": 126779350.22381805
+        },
+        "price": 0.006330204571022008,
+        "pegType": "peggedJPY"
+      },
+      {
+        "nome": "KRWQ",
+        "simbolo": "KRWQ",
+        "emittente": "Non mappato: KRWQ",
+        "circulating": {
+          "peggedKRW": 541544.9436819745
+        },
+        "circulatingPrevDay": {
+          "peggedKRW": 541544.9436819745
+        },
+        "price": 0.0006936807374252561,
+        "pegType": "peggedKRW"
+      },
+      {
+        "nome": "KRW1",
+        "simbolo": "KRW1",
+        "emittente": "Non mappato: KRW1",
+        "circulating": {
+          "peggedKRW": 11152.766463190004
+        },
+        "circulatingPrevDay": {
+          "peggedKRW": 11152.766463190004
+        },
+        "price": 0.0008277078471649581,
+        "pegType": "peggedKRW"
+      },
+      {
+        "nome": "Revolut Euro",
+        "simbolo": "EURR",
+        "emittente": "Non mappato: Revolut Euro",
+        "circulating": {
+          "peggedEUR": 1891197.8952107604
+        },
+        "circulatingPrevDay": {
+          "peggedEUR": 1891197.8952107604
+        },
+        "price": null,
+        "pegType": "peggedEUR"
+      },
+      {
+        "nome": "HKD At Par",
+        "simbolo": "HKDAP",
+        "emittente": "Non mappato: HKD At Par",
+        "circulating": {
+          "peggedHKD": 778228.9957326197
+        },
+        "circulatingPrevDay": {
+          "peggedHKD": 778228.9957326197
+        },
+        "price": null,
+        "pegType": "peggedHKD"
+      },
+      {
+        "nome": "Quantillon Euro",
+        "simbolo": "QEURO",
+        "emittente": "Non mappato: Quantillon Euro",
+        "circulating": {
+          "peggedEUR": 1388.1944569499547
+        },
+        "circulatingPrevDay": {
+          "peggedEUR": 1388.037236262674
+        },
+        "price": null,
+        "pegType": "peggedEUR"
+      }
+    ],
+    "mappa_emittenti": {
+      "USDT": "Tether",
+      "USDC": "Circle",
+      "EURC": "Circle",
+      "DAI": "Sky/Maker",
+      "USDS": "Sky/Maker",
+      "USDe": "Ethena",
+      "USDtb": "Ethena",
+      "FDUSD": "First Digital",
+      "PYUSD": "Paxos",
+      "USDP": "Paxos",
+      "BUSD": "Paxos",
+      "TUSD": "Techteryx",
+      "FRAX": "Frax",
+      "frxUSD": "Frax",
+      "RLUSD": "Ripple"
+    }
+  }
+}

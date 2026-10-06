@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fee Pressure v5 — Luca Valente</title>
+<meta name="description" content="Historical test, full table, methodology and limitations.">
+<link rel="canonical" href="https://lucavalente-research.github.io/backtest-fee-pressure-v5.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Luca Valente · Crypto research">
+<meta property="og:title" content="Fee Pressure v5 — Luca Valente">
+<meta property="og:description" content="Historical test, full table, methodology and limitations.">
+<meta property="og:url" content="https://lucavalente-research.github.io/backtest-fee-pressure-v5.html">
+<meta property="og:image" content="https://lucavalente-research.github.io/immagini/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@LukkVal">
+<meta name="twitter:title" content="Fee Pressure v5 — Luca Valente">
+<meta name="twitter:description" content="Historical test, full table, methodology and limitations.">
+<meta name="twitter:image" content="https://lucavalente-research.github.io/immagini/og.png">
+<link rel="alternate" type="application/rss+xml" title="Luca Valente · Crypto research" href="feed.xml">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23052C25'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23F4F0E3' text-anchor='middle'%3ELV%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="stile.css">
+</head><body><a class="skip" href="#main">Skip to content</a>
+<header class="testata">
+  <div class="marchio"><a href="./">LV / LUCA VALENTE<small>ON-CHAIN AND MACRO RESEARCH</small></a></div>
+  <nav aria-label="Main navigation"><a href="./">Home</a> <a href="charts.html">Charts</a> <a href="method.html">Methodology & data</a> <a href="code-and-data.html">Code & data</a> <a href="about.html">About</a> <a href="contact.html">Contact</a><a href="archive.html">Archive</a></nav>
+  
+</header>
+<main id="main">
+<h1>Fee Pressure v5</h1><p><a href="backtests.html">All backtests</a></p><p>Historical research through 2026-10-04. Retrospective results, revised source data, gross returns and overlapping events; no promise of future performance.</p><figure><img src="immagini/backtest/BACKTEST_lukkval_Fee_Pressure_v5.png" alt="Backtest results for Fee Pressure v5"></figure><p>Groups from left: BTC, ETH, SOL. Green: successes / mature events; red: false alarms / mature events. Bar height 260 px represents 100%; exact values in the table. Zero events produce empty bars.</p><p><a href="backtest-reports/BACKTEST_lukkval_Fee_Pressure_v5.md">Original report and methodology</a> · <a href="immagini/backtest/BACKTEST_lukkval_Fee_Pressure_v5.png">PNG</a></p><p>Periodo richiesto 2023-10-05–2026-10-04 UTC, riscaldamento dal 2023-06-27. Prezzi Binance BTC/ETH/SOLUSDT da cache BT1. Metrica: fee giornaliere delle chain Bitcoin, Ethereum e Solana (dailyFees USD), normalizzate con il rispettivo prezzo e mediana 90g. Nessuna sostituzione di dati mancanti; zero escluso. Serie giornaliera costruita senza buchi di calendario; valori mancanti invalidano tutta la finestra.</p>
+<p>I Pine non definiscono segnali operativi. Convenzione sperimentale dichiarata prima del calcolo: attraversamento sopra +15 = ipotesi rialzista, sotto −15 = ribassista; non si ripete l&#x27;allarme ogni giorno nella stessa banda. Nessuna ottimizzazione. Il valore mostrato al giorno t deriva soltanto da t−1, come result[1]; ingresso all&#x27;apertura UTC di t, esito alla chiusura di t+29 (30 candele). Successo: rendimento finale ≥+10% per rialzo oppure ≤−10% per ribasso. Falso allarme: ogni altro esito; non si misura il tocco intraperiodo. Ultimi 29 giorni senza esito completo esclusi, separatamente contati. Allarmi sovrapposti non indipendenti: nessun test di significatività.</p>
+<p>Controllo di base: frequenza di +10% / −10% tra tutte le aperture con 30 giorni completi. Strategia di confronto dichiarata: solo allarmi positivi, compra all&#x27;apertura, tieni 30 candele, poi liquidità; ignora allarmi durante una posizione, niente short. Allarmi non maturi ignorati anche dalla strategia. Confronto tieni sempre: prima apertura del periodo / ultima chiusura. Rendimenti lordi, commissioni, slippage, interessi e tasse esclusi; strategia e hold hanno esposizioni differenti. </p>
+<p>Nessuna promessa. Fee positive non sono automaticamente rialziste: il segno è soltanto una convenzione sperimentale. Gli esiti non provano congestione, flussi o causalità. I dati storici del provider sono revisionabili e non hanno timestamp di pubblicazione: nessuna validazione point-in-time. Fonte supply nominale globale diversa da una capitalizzazione a prezzo di mercato. USDT è una proxy USD; disponibilità e definizione TradingView non riconciliate.</p>
+<div class="scorri"><table><thead><tr><th scope="col">Asset</th><th scope="col">Giorni / letture</th><th scope="col">Allarmi + / −</th><th scope="col">Successi / maturi</th><th scope="col">Falsi</th><th scope="col">Pendenti</th><th scope="col">Base +10% / −10%</th><th scope="col">Strategia % (trade)</th><th scope="col">Tieni sempre %</th></tr></thead><tbody><tr><td>BTC</td><td>1096 / 774</td><td>49 / 62</td><td>22 / 111</td><td>89</td><td>7</td><td>300 / 155 su 1067</td><td>170.09 (17)</td><td>211.50</td></tr><tr><td>ETH</td><td>1096 / 1096</td><td>87 / 115</td><td>72 / 202</td><td>130</td><td>8</td><td>352 / 289 su 1067</td><td>20.55 (27)</td><td>65.61</td></tr><tr><td>SOL</td><td>1096 / 1096</td><td>61 / 65</td><td>43 / 126</td><td>83</td><td>5</td><td>425 / 298 su 1067</td><td>13.23 (21)</td><td>425.72</td></tr></tbody></table></div>
+<p>Fonti: {&quot;supply&quot;: &quot;https://stablecoins.llama.fi/stablecoincharts/all&quot;, &quot;BTC&quot;: &quot;https://api.llama.fi/summary/fees/bitcoin?dataType=dailyFees&quot;, &quot;ETH&quot;: &quot;https://api.llama.fi/summary/fees/ethereum?dataType=dailyFees&quot;, &quot;SOL&quot;: &quot;https://api.llama.fi/summary/fees/solana?dataType=dailyFees&quot;}. Cache e CSV: `/Users/ben/MOTORE CRYPTO/dati/backtest_pine2`. Dettaglio allarmi: PINE2_EVENTI.json. Letture e disponibilità ieri: PROVA_PINE2.json. I giorni senza metriche non sono segnali negativi. Totale letture inferiore a 1096 significa copertura incompleta, non un backtest completo di tre anni. La base prezzo e il tieni sempre usano tutto il periodo: non sono filtrati sui soli giorni di disponibilità della metrica, quindi per BTC Fee Pressure il confronto ha coperture differenti. Le serie supply dei tre asset sono identiche e non costituiscono tre prove indipendenti.</p>
+</main>
+<footer class="piede">
+  <p class="seguimi"><a href="https://x.com/LukkVal" rel="me noopener">X</a> <a href="https://www.tradingview.com/u/lukkval/" rel="me noopener">TradingView</a> <a href="https://www.linkedin.com/in/lucavalenteweb3/" rel="me noopener">LinkedIn</a> <a href="https://github.com/lucavalente-research/defi-observatory" rel="me noopener">GitHub</a></p>
+  <p><a href="mailto:luca.valente.cv@gmail.com">luca.valente.cv@gmail.com</a> · <a href="contact.html">Contact</a> · <a href="disclaimer.html">Disclaimer</a> · <a href="feed.xml">RSS</a></p>
+  <p class="fonti">Data: DefiLlama, GitHub, CoinGecko · growthepie (<a href="https://www.growthepie.com">growthepie.com</a>, CC BY 4.0)</p>
+  <p class="legale">Not financial advice. Research based on public on-chain and market data.</p>
+</footer>
+</body></html>

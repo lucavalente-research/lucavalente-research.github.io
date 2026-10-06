@@ -1,0 +1,1434 @@
+{
+  "metadati": {
+    "dataset": "stablecoin_catene",
+    "data": "2026-10-04",
+    "prelevato_utc": "2026-10-05T12:40:27.417748+00:00",
+    "fonti": [
+      "https://stablecoins.llama.fi/stablecoinchains"
+    ],
+    "dati_fino_a": "Snapshot al momento del prelievo; non ricostruisce lo stato di ieri.",
+    "licenza": "Licenza dei dati terzi non verificata come aperta: valgono i termini della fonte; accesso pubblico non equivale a diritto di ripubblicazione. Codice locale originale CC0; nessuna nuova licenza applicata ai dati.",
+    "note": "Valori e unità della fonte; null e campi assenti non sono zero. totalCirculatingUSD per catena e tipo di peg, in USD."
+  },
+  "dati": [
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 5876123.390252285
+      },
+      "name": "Manta"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "ThunderCore"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 37259351.406837165
+      },
+      "name": "Movement"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 32778.31116189656
+      },
+      "name": "Shiden"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "Corn"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 151624602.1415501
+      },
+      "name": "Starknet"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 94237884226.3824,
+        "peggedRUB": 552444457.8539367,
+        "peggedCNY": 2237175,
+        "peggedEUR": 6753334.458889077
+      },
+      "name": "Tron"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 2623888.9553549886
+      },
+      "name": "CORE"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 413011.1043138349
+      },
+      "name": "ApeChain"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0,
+        "peggedSGD": 978249.5204590043
+      },
+      "name": "Zilliqa"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "Evmos"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 991537.7652807671
+      },
+      "name": "Peaq"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "Milkomeda C1"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 727725256.9729755,
+        "peggedEUR": 1179550.7378492467
+      },
+      "name": "Monad"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "SX Network"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 1053537948.6537637
+      },
+      "name": "Aptos"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 29331786.655575782,
+        "peggedCHF": 3.736579985873703,
+        "peggedEUR": 1.5894985649164277
+      },
+      "name": "Tezos"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 32791186.52292271
+      },
+      "name": "PulseChain"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 239695.90193326244
+      },
+      "name": "Kusama"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 11317706.443693487
+      },
+      "name": "Immutable zkEVM"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 48000119.189860046,
+        "peggedAUD": 833.0974602533092,
+        "peggedCHF": 59013.924096587616,
+        "peggedSGD": 39043.882965544166
+      },
+      "name": "Hedera"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 53742050.684120744,
+        "peggedEUR": 768152.391263731
+      },
+      "name": "Algorand"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 990.7025443343408,
+        "peggedVAR": 0
+      },
+      "name": "Loopring"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 2940259563.0151725,
+        "peggedVAR": 10653.443093768738,
+        "peggedEUR": 7714692.994799953,
+        "peggedUAH": 3119.5676024713775,
+        "peggedARS": 26643.323023706143,
+        "peggedGBP": 119063.06393945489,
+        "peggedCAD": 47690.43213251808,
+        "peggedCHF": 92019.86467566687,
+        "peggedSGD": 1573186.8912187058,
+        "peggedTRY": 343723.33507465327,
+        "peggedREAL": 3964446.8668676075,
+        "peggedJPY": 11935234.43129913,
+        "peggedCLP": 4933.082696125771,
+        "peggedCOP": 6962.7691783515065,
+        "peggedMXN": 4761.35005594031,
+        "peggedPEN": 1253.2151344791614,
+        "peggedAUD": 506323.9500443412,
+        "peggedKRW": 25533.535066331704
+      },
+      "name": "Polygon"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "DefiChain"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 654531.20461586
+      },
+      "name": "MANTRA"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 31669936.361885164
+      },
+      "name": "Unichain"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 6144118.970179463
+      },
+      "name": "Metis"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 792746.013077401
+      },
+      "name": "Wanchain"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 67403110.38669674
+      },
+      "name": "Kava"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "Ontology"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 170472671.2397521
+      },
+      "name": "Ink"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 242179874.96346468,
+        "peggedJPY": 4516302.186198856
+      },
+      "name": "Kaia"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 2140.591043264183
+      },
+      "name": "Reinetwork"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 30966852.2627098,
+        "peggedKRW": 311.42341731153357
+      },
+      "name": "Morph"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 3971089.402310687
+      },
+      "name": "IoTeX"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 17453351.211089812,
+        "peggedVAR": 0
+      },
+      "name": "Osmosis"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 145906631552.98123,
+        "peggedVAR": 9421110.744340118,
+        "peggedEUR": 582487514.0490149,
+        "peggedJPY": 139196054.324736,
+        "peggedCNY": 824401.9627656158,
+        "peggedGBP": 20353260.047783192,
+        "peggedCAD": 2630923.2043873,
+        "peggedCHF": 38787296.41308056,
+        "peggedAUD": 8353526.266503655,
+        "peggedRUB": 9032001.102569707,
+        "peggedMXN": 1274624.3088405172,
+        "peggedSGD": 9013585.674969094,
+        "peggedTRY": 936599.6869188444,
+        "peggedARS": 8305097.0789479315,
+        "peggedREAL": 1058746.2656266298,
+        "peggedCLP": 4572.673875717203,
+        "peggedCOP": 149367.67432726623,
+        "peggedPEN": 1475.0463528174353,
+        "peggedMYR": 27327.332174083414,
+        "peggedKRW": 203537.6176824173,
+        "peggedHKD": 778228.9957326197
+      },
+      "name": "Ethereum"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 36645179.37387722,
+        "peggedEUR": 195091.1391293287
+      },
+      "name": "Linea"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 59009498.8514219,
+        "peggedAUD": 251347.8959581423
+      },
+      "name": "XDC"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 67364274.18105754,
+        "peggedEUR": 199.85941977339377
+      },
+      "name": "Cardano"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 73858.71448137482
+      },
+      "name": "EthereumClassic"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 402521563.58520144
+      },
+      "name": "Waves"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 6828128.023914897
+      },
+      "name": "Soneium"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 84524.49008247009
+      },
+      "name": "Vana"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 3879037.608165743
+      },
+      "name": "Somnia"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "Rari"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 669421.5438275113
+      },
+      "name": "Mode"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 10588972.736126112
+      },
+      "name": "KCC"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "Kardia"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 1715900.4003294911
+      },
+      "name": "Vaulta"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 1093230.826837381
+      },
+      "name": "EDU Chain"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 47413660.71894598
+      },
+      "name": "Berachain"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "Crab"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 332816.2891926773
+      },
+      "name": "Bittorrent"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 37113.58624422165
+      },
+      "name": "Theta"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "MultiversX"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 11825489.950361721
+      },
+      "name": "Katana"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 594573590.5930475,
+        "peggedVAR": 45780.00744046184,
+        "peggedEUR": 38526.17742111646,
+        "peggedJPY": 0.6406570392139831,
+        "peggedCHF": 1357988.9066241414
+      },
+      "name": "OP Mainnet"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 498377.3881710818
+      },
+      "name": "IOTA EVM"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 239695.90193326244
+      },
+      "name": "Statemine"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "Glue"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "Harmony"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 13301943675.735527,
+        "peggedEUR": 10100084.156578897,
+        "peggedGBP": 21584.39360642528,
+        "peggedTRY": 192415.0375549966,
+        "peggedARS": 52780.21374567704,
+        "peggedREAL": 45646.67999544427,
+        "peggedCLP": 4799.601790417208,
+        "peggedCOP": 7122.045715298017,
+        "peggedMXN": 5061.105403034593,
+        "peggedPEN": 1252.8166102647333
+      },
+      "name": "BSC"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "Dogechain"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 71476375.39754333
+      },
+      "name": "Flow"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 1557963.1795070479
+      },
+      "name": "Astar"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "Heco"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 404951.4702259483
+      },
+      "name": "Oasis Emerald"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 534246.8042901072
+      },
+      "name": "Data Network"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 3734757.0699793706
+      },
+      "name": "Citrea"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 1449901917.0191224,
+        "peggedVAR": 170.4711461438363,
+        "peggedEUR": 6586657.063083957,
+        "peggedCHF": 670397.3074979773,
+        "peggedSGD": 1328340.400676194,
+        "peggedTRY": 221106.17448895282,
+        "peggedGBP": 21.261766480610873,
+        "peggedJPY": 622212.7165827827,
+        "peggedAUD": 0
+      },
+      "name": "Avalanche"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 712674.6083095279
+      },
+      "name": "Telos"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 3804015648.382637,
+        "peggedVAR": 84416.86581784356,
+        "peggedEUR": 4750397.856732972,
+        "peggedJPY": 9273.402665168624,
+        "peggedCAD": 10502.06315278849,
+        "peggedCHF": 19857.56758648225,
+        "peggedSGD": 16924.117685776637,
+        "peggedGBP": 60610.14990683976
+      },
+      "name": "Arbitrum"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 792914.2156889014,
+        "peggedAUD": 105466.26653639122
+      },
+      "name": "Redbelly"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 11723448.774068326
+      },
+      "name": "Stacks"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 20213.412704960432
+      },
+      "name": "Viction"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 131103.45601538048
+      },
+      "name": "GOAT"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0,
+        "peggedEUR": 0
+      },
+      "name": "ZKsync Lite"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 463807.7322237006
+      },
+      "name": "Zircuit"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 482067682.18041885
+      },
+      "name": "Sui"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 345656.80847762
+      },
+      "name": "Arbitrum Nova"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 1387056990.793478,
+        "peggedEUR": 280000.68243643455,
+        "peggedTRY": 3287121.0238140193
+      },
+      "name": "Plasma"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 11670084.502517547
+      },
+      "name": "Rootstock"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 6408797.163198875
+      },
+      "name": "Abstract"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0,
+        "peggedREAL": 0
+      },
+      "name": "Moonbeam"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 728544733.7615055
+      },
+      "name": "TON"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 37587513.90133004,
+        "peggedVAR": 285798.0092683259
+      },
+      "name": "ZKsync Era"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 4578721.611534223,
+        "peggedEUR": 3944.0958366743307
+      },
+      "name": "Aurora"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 308863554.2381298
+      },
+      "name": "Sei"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 35486.67605631295
+      },
+      "name": "Gravity by Galxe"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 14255314.208754735
+      },
+      "name": "Injective"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 35418.604357140226
+      },
+      "name": "LightLink"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 1193184.4766965334
+      },
+      "name": "Canto"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 9255315.652839724,
+        "peggedEUR": 0
+      },
+      "name": "Scroll"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "Moonriver"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 34473911.81952622
+      },
+      "name": "Mixin"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "Meter"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 20866582.388482895
+      },
+      "name": "Stable"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 1557306205.9085467
+      },
+      "name": "X Layer"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 20233706.982302193
+      },
+      "name": "Etherlink"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 14767866.245070975,
+        "peggedVAR": 2448.1738531094566,
+        "peggedEUR": 21203074.502143905,
+        "peggedCHF": 1779187.3718031407,
+        "peggedGBP": 1962.6244681081926,
+        "peggedREAL": 499199.6585384914,
+        "peggedARS": 5807.739631065955,
+        "peggedCLP": 5015.49922128467,
+        "peggedCOP": 5989.998165438801,
+        "peggedMXN": 3781.174151891249,
+        "peggedPEN": 1171.3853477232942
+      },
+      "name": "Gnosis"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 90824.33524700894
+      },
+      "name": "Nibiru"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 20154062.381501947
+      },
+      "name": "Conflux"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 80024307.80482405
+      },
+      "name": "Omni"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 26425.325419318942
+      },
+      "name": "Rayls"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 113170778.80841972,
+        "peggedEUR": 1392116.8427289466,
+        "peggedCHF": 16681.805832788523,
+        "peggedREAL": 26328462.414140183,
+        "peggedGBP": 38217.2375922313
+      },
+      "name": "Celo"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 799631.6267865254
+      },
+      "name": "Taiko"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 219292.1367156527,
+        "peggedEUR": 5299.31280433237
+      },
+      "name": "Fuse"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 18529040.39189571
+      },
+      "name": "MegaETH"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 337427507.88522404,
+        "peggedEUR": 139589.7437795289
+      },
+      "name": "Fantom"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 7428489905.092169,
+        "peggedRUB": 0.0035995201695633162
+      },
+      "name": "Hyperliquid L1"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 9.997785264308191e-07
+      },
+      "name": "Zora"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 9265730.953361908
+      },
+      "name": "OKTChain"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 6448250.58929123
+      },
+      "name": "Hemi"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 558089850.959357
+      },
+      "name": "Mantle"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "Terra Classic"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 104179849.78653698
+      },
+      "name": "Near"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 48635380.68530117
+      },
+      "name": "Flare"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 4114731.444118958
+      },
+      "name": "Plume Mainnet"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 1575618.4201444297
+      },
+      "name": "Boba"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "NEO"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 235470.03290593973
+      },
+      "name": "Syscoin"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 4375798.6712821415,
+        "peggedEUR": 65.12554625482699
+      },
+      "name": "ICP"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 16464538271.793962,
+        "peggedEUR": 58257963.45617875,
+        "peggedJPY": 52.590965466565684,
+        "peggedCHF": 1185638.629289683,
+        "peggedAUD": 73081.68638788529,
+        "peggedVAR": 2415720.0399473417,
+        "peggedGBP": 383427.78339120373,
+        "peggedTRY": 164049.62210930546,
+        "peggedCAD": 1418.8106188098488,
+        "peggedKRW": 0.693680737425256
+      },
+      "name": "Solana"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 2180.815485078135
+      },
+      "name": "Swellchain"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 174.3415270216712
+      },
+      "name": "0G"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 732567845.1414797,
+        "peggedEUR": 1592009.2454651615,
+        "peggedGBP": 66097.89077313412
+      },
+      "name": "Tempo"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0,
+        "peggedEUR": 1855.9076148277027
+      },
+      "name": "Everscale"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 68078261.82058875
+      },
+      "name": "Polkadot"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 29521844.443909958
+      },
+      "name": "RISE"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 3255.3624104509117
+      },
+      "name": "Horizen L3"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 5104126.870076863
+      },
+      "name": "BSquared"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "Superposition"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 20327504.858058948
+      },
+      "name": "BOB"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 1235544731.905689,
+        "peggedAUD": 219281.94992916944,
+        "peggedEUR": 12729986.379757809,
+        "peggedSGD": 7808.7765931088325
+      },
+      "name": "XRPL"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 2.999632713000854
+      },
+      "name": "WEMIX3.0"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "Botanix"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 1025.835345574721
+      },
+      "name": "Edu_chain"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 90.46071425822501
+      },
+      "name": "Camp Network"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 85537.97254260232
+      },
+      "name": "Zkfair"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0.8998910137549413
+      },
+      "name": "Moca"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 261626.02748849057
+      },
+      "name": "Karura"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 33924.618878655005
+      },
+      "name": "Lisk"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 138627494.5170212,
+        "peggedEUR": 221599.8708531505
+      },
+      "name": "Cronos"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 5157148374.693701,
+        "peggedEUR": 62757078.46201438,
+        "peggedCAD": 1370216.3459696465,
+        "peggedCHF": 2285305.606583178,
+        "peggedAUD": 2241130.8206338277,
+        "peggedGBP": 7506631.908903735,
+        "peggedTRY": 11263.493122421762,
+        "peggedARS": 1016614.3937125612,
+        "peggedREAL": 483141.4534911203,
+        "peggedCLP": 4344.7178502666475,
+        "peggedCOP": 187226.4528026199,
+        "peggedMXN": 197427.02986010065,
+        "peggedPEN": 1252.8166102647333,
+        "peggedKRW": 306263.4018790129
+      },
+      "name": "Base"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 88892275.26124091,
+        "peggedEUR": 286806.2177087563
+      },
+      "name": "Noble"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 269480.4155427992
+      },
+      "name": "GateLayer"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 146098.17962731933
+      },
+      "name": "Shape"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 1.0360955179601767
+      },
+      "name": "Ronin"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "DFK"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 2079519.148409031
+      },
+      "name": "edgeX L1"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "Kadena"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 17205183.3564126,
+        "peggedEUR": 657619.5085093363,
+        "peggedARS": 242220.85171435564,
+        "peggedREAL": 96942.86810154852,
+        "peggedCLP": 47113.6498644806,
+        "peggedCOP": 60798.60255232015,
+        "peggedMXN": 65624.15982412813,
+        "peggedPEN": 33346.23834561098
+      },
+      "name": "World Chain"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 4813905.7144195195,
+        "peggedKRW": 0.0034684036871262805
+      },
+      "name": "Codex"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "Degen"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "Xc"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 4207310.18439192
+      },
+      "name": "ALEO"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 84.02718942559449
+      },
+      "name": "Apex Fusion"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 508813679.9701212,
+        "peggedEUR": 8277204.874142419,
+        "peggedGBP": 760399.2166534082
+      },
+      "name": "Arc"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 358716.83021555154
+      },
+      "name": "Bittensor EVM"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 914483172.5556511,
+        "peggedEUR": 22750711.323570844,
+        "peggedJPY": 212666.57990250687,
+        "peggedCHF": 3645.9705003317667,
+        "peggedAUD": 2067565.388021901
+      },
+      "name": "Stellar"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 377957.56598284387
+      },
+      "name": "Bitlayer"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 778432.9171459998
+      },
+      "name": "Fogo"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 50.79616205172983
+      },
+      "name": "Orderly Network"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 760739.1255618362
+      },
+      "name": "Gensyn"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 1292400.4591111857
+      },
+      "name": "Doma"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 12034129.33036963
+      },
+      "name": "Pharos"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "Polygon zkEVM"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 115475.755693184
+      },
+      "name": "Elastos"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 10.998667945893727
+      },
+      "name": "Nero"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 147147505.77779454,
+        "peggedEUR": 10559.635789698923,
+        "peggedCHF": 2.4049956527572602
+      },
+      "name": "Sonic"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "Perennial"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 25.014208516854044
+      },
+      "name": "Xai"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "Aztec"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 7806.862681998353
+      },
+      "name": "Velas"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 15570757.349534245,
+        "peggedCHF": 455.1445915300727,
+        "peggedEUR": 1340.8416117958245,
+        "peggedKRW": 17051.034950949972
+      },
+      "name": "Fraxtal"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 11717446.388486028
+      },
+      "name": "Blast"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 73755375.34442315
+      },
+      "name": "smartBCH"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "Acala"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 302386.4199429888
+      },
+      "name": "Ergo"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "Kujira"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 1444759.5021935203
+      },
+      "name": "EthereumPoW"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "re.al"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedEUR": 0
+      },
+      "name": "Concordium"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedVAR": 0
+      },
+      "name": "Secret"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 1.902759166581807
+      },
+      "name": "KiteAI"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 488.1958284978656
+      },
+      "name": "Penumbra"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 150081.2739202541
+      },
+      "name": "Agoric"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 1067101621.9441177
+      },
+      "name": "Robinhood Chain"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 9836.866400512208
+      },
+      "name": "VeChain"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedCHF": 0,
+        "peggedEUR": 1.1255557431481795e-05
+      },
+      "name": "Q Protocol"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 1434509.8285351966
+      },
+      "name": "Bifrost Network"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 16879.31091070647
+      },
+      "name": "Archway"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 873561.7267348302
+      },
+      "name": "Icon"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 4.2838556117118225
+      },
+      "name": "Havah"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0
+      },
+      "name": "BEVM"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 193812.40580732585
+      },
+      "name": "Filecoin"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 18569456.62566198
+      },
+      "name": "Abcore"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 939648.2035797355
+      },
+      "name": "Songbird"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 488180722.4693841
+      },
+      "name": "Provenance"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0.5799629738059141
+      },
+      "name": "TAC"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 29061128.47395943
+      },
+      "name": "Mezo"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 13750463.034167256
+      },
+      "name": "Hydration"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 154377694.44759512
+      },
+      "name": "Saga"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 43316.2905865947
+      },
+      "name": "Chia"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 21016.79533058053
+      },
+      "name": "Voi Network"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 1519052.8199474928
+      },
+      "name": "Fluent"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 0.28390388745020495
+      },
+      "name": "exSat"
+    },
+    {
+      "totalCirculatingUSD": {
+        "peggedUSD": 4979068.096531211
+      },
+      "name": "Strato Chain"
+    }
+  ]
+}

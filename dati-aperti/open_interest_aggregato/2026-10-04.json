@@ -1,0 +1,118 @@
+{
+  "metadati": {
+    "dataset": "open_interest_aggregato",
+    "data": "2026-10-04",
+    "prelevato_utc": "2026-10-05T12:40:39.484237+00:00",
+    "fonti": [
+      "https://api.llama.fi/cexs"
+    ],
+    "dati_fino_a": "Snapshot al momento del prelievo; non ricostruisce lo stato di ieri.",
+    "licenza": "Licenza dei dati terzi non verificata come aperta: valgono i termini della fonte; accesso pubblico non equivale a diritto di ripubblicazione. Codice locale originale CC0; nessuna nuova licenza applicata ai dati.",
+    "note": "Valori e unità della fonte; null e campi assenti non sono zero. Somma degli exchange con oi disponibile; deduplicata per cgDeriv. Copertura parziale, non intero mercato."
+  },
+  "dati": {
+    "totale_oi_usd": 109417493750.90482,
+    "exchange": [
+      {
+        "exchange": "Binance",
+        "identificatore": "binance_futures",
+        "oi_usd": 31526461955.55767
+      },
+      {
+        "exchange": "OKX",
+        "identificatore": "okex_swap",
+        "oi_usd": 8264517727.768966
+      },
+      {
+        "exchange": "Bitfinex",
+        "identificatore": "bitfinex_futures",
+        "oi_usd": 882494378.0397418
+      },
+      {
+        "exchange": "Bybit",
+        "identificatore": "bybit",
+        "oi_usd": 15101186530.63104
+      },
+      {
+        "exchange": "Crypto.com",
+        "identificatore": "crypto_com_futures",
+        "oi_usd": 1930404320.597056
+      },
+      {
+        "exchange": "HTX",
+        "identificatore": "huobi_dm",
+        "oi_usd": 3051042090.0875206
+      },
+      {
+        "exchange": "KuCoin",
+        "identificatore": "kumex",
+        "oi_usd": 3504234839.74492
+      },
+      {
+        "exchange": "Deribit",
+        "identificatore": "deribit",
+        "oi_usd": 2181807262.8357806
+      },
+      {
+        "exchange": "Gate",
+        "identificatore": "gate_futures",
+        "oi_usd": 14228006720.176144
+      },
+      {
+        "exchange": "Bitget",
+        "identificatore": "bitget_futures",
+        "oi_usd": 8933109314.834543
+      },
+      {
+        "exchange": "MEXC",
+        "identificatore": "mxc_futures",
+        "oi_usd": 14858101365.545294
+      },
+      {
+        "exchange": "Bitmex",
+        "identificatore": "bitmex",
+        "oi_usd": 0
+      },
+      {
+        "exchange": "Phemex",
+        "identificatore": "phemex_futures",
+        "oi_usd": 2329643851.3605866
+      },
+      {
+        "exchange": "Bitrue",
+        "identificatore": "bitrue_futures",
+        "oi_usd": 450277266.7621151
+      },
+      {
+        "exchange": "BitMart",
+        "identificatore": "bitmart_futures",
+        "oi_usd": 0
+      },
+      {
+        "exchange": "Bitunix",
+        "identificatore": "bitunix_futures",
+        "oi_usd": 1890522373.88778
+      },
+      {
+        "exchange": "CoinEx",
+        "identificatore": "coinex_futures",
+        "oi_usd": 0
+      },
+      {
+        "exchange": "bitFlyer",
+        "identificatore": "bitflyer_futures",
+        "oi_usd": 0
+      },
+      {
+        "exchange": "LeveX",
+        "identificatore": "levex-futures",
+        "oi_usd": 174952214.94475168
+      },
+      {
+        "exchange": "BYDFi",
+        "identificatore": "bydfi-futures",
+        "oi_usd": 110731538.13090898
+      }
+    ]
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "metadati": {
+    "licenza": "CC BY 4.0",
+    "licenza_url": "https://creativecommons.org/licenses/by/4.0/",
+    "attribuzione": "Luca Valente",
+    "nota_licenza_fonti": "CC BY 4.0 applies to the original compilation and editorial work by Luca Valente. Underlying third-party data retain their source terms, including Coin Metrics CC BY-NC 4.0 where indicated; this export does not replace those terms.",
+    "fonte": "DefiLlama (fees, token breakdown of value locked); Binance (open interest, funding); CoinGecko (prices, market value); CoinGecko categories (token families, 6 Oct 2026)",
+    "fonti": [
+      "DefiLlama (fees, token breakdown of value locked)",
+      "Binance (open interest, funding)",
+      "CoinGecko (prices, market value)",
+      "CoinGecko categories (token families, 6 Oct 2026)"
+    ],
+    "sorgente": "dati/cruscotti/fund_vs_pos/latest.json",
+    "data": "2026-10-05"
+  },
+  "dati": {
+    "nome": "fund_vs_pos",
+    "titolo": "Fundamentals vs Positioning",
+    "data": "2026-10-05",
+    "dati_fino_a": {
+      "livelli": "2026-10-05",
+      "somme": "2026-10-04"
+    },
+    "parola": null,
+    "da_quando": null,
+    "pronto_dal": "2026-11-21",
+    "rodaggio": true,
+    "blocchi": [
+      {
+        "id": "quadranti",
+        "titolo": "Four quadrants by token family, 30 days",
+        "assi": {
+          "x": "Fees, change over 30 days",
+          "y": "Open interest, change over 30 days"
+        },
+        "punti": [
+          {
+            "etichetta": "AI and compute",
+            "x": 0.7118,
+            "y": 0.6977
+          },
+          {
+            "etichetta": "DeFi",
+            "x": 0.156,
+            "y": 0.2222
+          },
+          {
+            "etichetta": "Other chains",
+            "x": 0.1186,
+            "y": 0.2277
+          }
+        ],
+        "conteggi": {
+          "rising use, rising positioning": 3
+        },
+        "nota": "inside a band of 5% on either axis a family is not placed in a quadrant; open interest history by token is shorter than 90 days until 2026-11-21"
+      },
+      {
+        "id": "famiglie",
+        "titolo": "By token family",
+        "tabella": {
+          "colonne": [
+            "Family",
+            "Tokens",
+            "Tokens with a fee series",
+            "Fees, change 30d",
+            "Net deposits in units, 30d (usd)",
+            "Net deposits, share of starting value",
+            "Open interest, change 30d",
+            "Median token price change 30d",
+            "Funding, yearly rate",
+            "Quadrant"
+          ],
+          "righe": [
+            [
+              "AI and compute",
+              27,
+              4,
+              0.7118,
+              null,
+              null,
+              0.6977,
+              0.338,
+              0.0479,
+              "rising use, rising positioning; a different quadrant without the largest token"
+            ],
+            [
+              "Bitcoin and Ether",
+              2,
+              2,
+              0.3523,
+              null,
+              null,
+              0.0365,
+              0.0913,
+              0.044,
+              "flat on one axis"
+            ],
+            [
+              "DeFi",
+              63,
+              44,
+              0.156,
+              2469690061,
+              0.0274,
+              0.2222,
+              0.2114,
+              0.0623,
+              "rising use, rising positioning"
+            ],
+            [
+              "Memecoins",
+              23,
+              1,
+              null,
+              125135202,
+              0.3554,
+              0.1169,
+              0.1114,
+              0.0746,
+              "not placed: fewer than two fee series"
+            ],
+            [
+              "Other chains",
+              44,
+              29,
+              0.1186,
+              null,
+              null,
+              0.2277,
+              0.3226,
+              0.0341,
+              "rising use, rising positioning"
+            ],
+            [
+              "Other tokens",
+              38,
+              0,
+              null,
+              null,
+              null,
+              0.5095,
+              0.2247,
+              -0.0116,
+              "not placed: fewer than two fee series"
+            ]
+          ]
+        },
+        "nota": "Memecoins and AI and compute are public CoinGecko categories, as downloaded on 6 Oct 2026; the tokens are those with data on the day and 30 days earlier, the same set as in Leverage & Crowding Regime; families with fewer than two fee series, or with less than $1M of fees in the 30 days before, have no use axis"
+      }
+    ],
+    "frasi": [
+      {
+        "id": "insieme",
+        "testo": "3 of 3 token families showed rising use and rising positioning over 30 days",
+        "modello": "cruscotti.fund_vs_pos.insieme",
+        "contratto": "contratto",
+        "numeri": {
+          "famiglie": 3,
+          "famiglie_nei_quadranti": 3
+        },
+        "misura": "fund_vs_pos",
+        "finestra_giorni": 30,
+        "base": 3,
+        "base_minima": 3,
+        "cancello": "fermato",
+        "motivo": "stopped by the gate"
+      },
+      {
+        "id": "divergenza",
+        "testo": "0 of 3 token families showed rising positioning with falling use over 30 days",
+        "modello": "cruscotti.fund_vs_pos.divergenza",
+        "contratto": "contratto",
+        "numeri": {
+          "famiglie": 0,
+          "famiglie_nei_quadranti": 3
+        },
+        "misura": "fund_vs_pos",
+        "finestra_giorni": 30,
+        "base": 3,
+        "base_minima": 3,
+        "cancello": "fermato",
+        "motivo": "stopped by the gate"
+      },
+      {
+        "id": "divergenza_inversa",
+        "testo": "0 of 3 token families showed rising use with falling positioning over 30 days",
+        "modello": "cruscotti.fund_vs_pos.divergenza_inversa",
+        "contratto": "contratto",
+        "numeri": {
+          "famiglie": 0,
+          "famiglie_nei_quadranti": 3
+        },
+        "misura": "fund_vs_pos",
+        "finestra_giorni": 30,
+        "base": 3,
+        "base_minima": 3,
+        "cancello": "passa"
+      }
+    ],
+    "fonti": [
+      "DefiLlama (fees, token breakdown of value locked)",
+      "Binance (open interest, funding)",
+      "CoinGecko (prices, market value)",
+      "CoinGecko categories (token families, 6 Oct 2026)"
+    ],
+    "metodo": "use = fees summed over the family's tokens, 30 days through 2026-10-04 against the 30 days before; positioning = open interest on Binance perpetuals over the same tokens at both ends",
+    "cancello": "ok",
+    "cancello_nota": "gate result for the sentences: ok = at least one sentence passed; each sentence carries its own result; the values in tables and history are not certified one by one",
+    "motivi": [
+      "insieme: stopped by the gate",
+      "divergenza: stopped by the gate"
+    ],
+    "immagini": {},
+    "carta_x": null,
+    "immagini_problemi": 0,
+    "generato_il": "2026-10-06T03:58:07Z"
+  }
+}

@@ -1,0 +1,1309 @@
+{
+  "metadati": {
+    "licenza": "CC BY 4.0",
+    "licenza_url": "https://creativecommons.org/licenses/by/4.0/",
+    "attribuzione": "Luca Valente",
+    "nota_licenza_fonti": "CC BY 4.0 applies to the original compilation and editorial work by Luca Valente. Underlying third-party data retain their source terms, including Coin Metrics CC BY-NC 4.0 where indicated; this export does not replace those terms.",
+    "fonte": "DefiLlama (token breakdown of value locked, per protocol)",
+    "fonti": [
+      "DefiLlama (token breakdown of value locked, per protocol)"
+    ],
+    "sorgente": "dati/cruscotti/real_money_flows/latest.json",
+    "data": "2026-10-04"
+  },
+  "dati": {
+    "nome": "real_money_flows",
+    "titolo": "Real Money Flows",
+    "data": "2026-10-04",
+    "dati_fino_a": "2026-10-04",
+    "parola": null,
+    "da_quando": null,
+    "blocchi": [
+      {
+        "id": "totale",
+        "titolo": "All protocols",
+        "finestre": {
+          "7": {
+            "flussi_usd": 618880685,
+            "prezzo_usd": -127269880,
+            "tvl_inizio_usd": 141587328288,
+            "quota": 0.004371017468110897,
+            "quota_prezzo": -0.0008988790256083016,
+            "protocolli": 207,
+            "non_scomponibili": 14,
+            "peso_primo_contributo": 0.1097,
+            "flussi_senza_il_primo_usd": 298809940
+          },
+          "30": {
+            "flussi_usd": 3610432632,
+            "prezzo_usd": 8668804622,
+            "tvl_inizio_usd": 125819555927,
+            "quota": 0.028695321685960788,
+            "quota_prezzo": 0.06889870623243653,
+            "protocolli": 203,
+            "non_scomponibili": 18,
+            "peso_primo_contributo": 0.1215,
+            "flussi_senza_il_primo_usd": 2536514316
+          },
+          "90": {
+            "flussi_usd": 4102935393,
+            "prezzo_usd": 21182856881,
+            "tvl_inizio_usd": 77081805289,
+            "quota": 0.05322832511715334,
+            "quota_prezzo": 0.2748100774438257,
+            "protocolli": 181,
+            "non_scomponibili": 40,
+            "peso_primo_contributo": 0.1428,
+            "flussi_senza_il_primo_usd": 2211677296
+          }
+        },
+        "protocolli_seguiti": 221,
+        "esclusi": [
+          {
+            "slug": "aera-v3",
+            "motivo": "category Onchain Capital Allocator is not counted"
+          },
+          {
+            "slug": "aerodrome-slipstream",
+            "motivo": "covered by the parent entry aerodrome-finance"
+          },
+          {
+            "slug": "api3",
+            "motivo": "category Risk Curators is not counted"
+          },
+          {
+            "slug": "armitage-by-wintermute",
+            "motivo": "category Risk Curators is not counted"
+          },
+          {
+            "slug": "astar-dapps-staking",
+            "motivo": "category Chain is not counted"
+          },
+          {
+            "slug": "aster-bridge",
+            "motivo": "bridge not in the public list"
+          },
+          {
+            "slug": "avalanche-core-bridge",
+            "motivo": "category Canonical Bridge is not counted"
+          },
+          {
+            "slug": "avant-avusd",
+            "motivo": "category Onchain Capital Allocator is not counted"
+          },
+          {
+            "slug": "axelar",
+            "motivo": "bridge not in the public list"
+          },
+          {
+            "slug": "b14g",
+            "motivo": "category Restaking is not counted"
+          },
+          {
+            "slug": "b2-buzz",
+            "motivo": "category Canonical Bridge is not counted"
+          },
+          {
+            "slug": "babylon-protocol",
+            "motivo": "category Restaking is not counted"
+          },
+          {
+            "slug": "backpack",
+            "motivo": "category CEX is not counted"
+          },
+          {
+            "slug": "base-bridge",
+            "motivo": "category Canonical Bridge is not counted"
+          },
+          {
+            "slug": "binance-bitcoin",
+            "motivo": "bridge not in the public list"
+          },
+          {
+            "slug": "binance-staked-eth",
+            "motivo": "custodial product"
+          },
+          {
+            "slug": "binance-staked-sol",
+            "motivo": "custodial product"
+          },
+          {
+            "slug": "bitget-bgbtc",
+            "motivo": "bridge not in the public list"
+          },
+          {
+            "slug": "bybit-staked-sol",
+            "motivo": "custodial product"
+          },
+          {
+            "slug": "ccip",
+            "motivo": "bridge not in the public list"
+          },
+          {
+            "slug": "circle-bitcoin",
+            "motivo": "bridge not in the public list"
+          },
+          {
+            "slug": "clearstar",
+            "motivo": "category Risk Curators is not counted"
+          },
+          {
+            "slug": "coinbase-bridge",
+            "motivo": "custodial product"
+          },
+          {
+            "slug": "coinbase-wrapped-staked-eth",
+            "motivo": "custodial product"
+          },
+          {
+            "slug": "concrete",
+            "motivo": "category Onchain Capital Allocator is not counted"
+          },
+          {
+            "slug": "debridge",
+            "motivo": "bridge not in the public list"
+          },
+          {
+            "slug": "eigencloud",
+            "motivo": "category Restaking is not counted"
+          },
+          {
+            "slug": "ember-protocol",
+            "motivo": "category Onchain Capital Allocator is not counted"
+          },
+          {
+            "slug": "ether.fi-liquid",
+            "motivo": "category Onchain Capital Allocator is not counted"
+          },
+          {
+            "slug": "exsat-staking-btc",
+            "motivo": "bridge not in the public list"
+          },
+          {
+            "slug": "fassets",
+            "motivo": "bridge not in the public list"
+          },
+          {
+            "slug": "function-fbtc",
+            "motivo": "bridge not in the public list"
+          },
+          {
+            "slug": "gate",
+            "motivo": "category CEX is not counted"
+          },
+          {
+            "slug": "gauntlet",
+            "motivo": "category Risk Curators is not counted"
+          },
+          {
+            "slug": "grove-finance",
+            "motivo": "category Onchain Capital Allocator is not counted"
+          },
+          {
+            "slug": "hyperithm",
+            "motivo": "category Risk Curators is not counted"
+          },
+          {
+            "slug": "hyperliquid-bridge",
+            "motivo": "bridge not in the public list"
+          },
+          {
+            "slug": "justcryptos",
+            "motivo": "bridge not in the public list"
+          },
+          {
+            "slug": "k3-capital",
+            "motivo": "category Risk Curators is not counted"
+          },
+          {
+            "slug": "kpk",
+            "motivo": "category Risk Curators is not counted"
+          },
+          {
+            "slug": "kraken-bitcoin",
+            "motivo": "bridge not in the public list"
+          },
+          {
+            "slug": "lagoon",
+            "motivo": "category Onchain Capital Allocator is not counted"
+          },
+          {
+            "slug": "layerzero-v2",
+            "motivo": "bridge not in the public list"
+          },
+          {
+            "slug": "lighter-bridge",
+            "motivo": "bridge not in the public list"
+          },
+          {
+            "slug": "linea-bridge",
+            "motivo": "category Canonical Bridge is not counted"
+          },
+          {
+            "slug": "liquid-collective",
+            "motivo": "custodial product"
+          },
+          {
+            "slug": "lisk-bridge",
+            "motivo": "category Canonical Bridge is not counted"
+          },
+          {
+            "slug": "lombard-btc.b",
+            "motivo": "bridge not in the public list"
+          },
+          {
+            "slug": "lorenzo-enzobtc",
+            "motivo": "bridge not in the public list"
+          },
+          {
+            "slug": "mellow-core",
+            "motivo": "category Onchain Capital Allocator is not counted"
+          },
+          {
+            "slug": "merlins-seal",
+            "motivo": "bridge not in the public list"
+          },
+          {
+            "slug": "mexc",
+            "motivo": "category CEX is not counted"
+          },
+          {
+            "slug": "near-bridge",
+            "motivo": "category Canonical Bridge is not counted"
+          },
+          {
+            "slug": "near-intents",
+            "motivo": "bridge not in the public list"
+          },
+          {
+            "slug": "nexo",
+            "motivo": "category CEX is not counted"
+          },
+          {
+            "slug": "nexus-btc",
+            "motivo": "bridge not in the public list"
+          },
+          {
+            "slug": "nonce-capital",
+            "motivo": "category Risk Curators is not counted"
+          },
+          {
+            "slug": "okx",
+            "motivo": "category CEX is not counted"
+          },
+          {
+            "slug": "robinhood-chain-bridge",
+            "motivo": "category Canonical Bridge is not counted"
+          },
+          {
+            "slug": "rockawayx",
+            "motivo": "category Risk Curators is not counted"
+          },
+          {
+            "slug": "ronin-bridge",
+            "motivo": "category Canonical Bridge is not counted"
+          },
+          {
+            "slug": "sentora-curator",
+            "motivo": "category Risk Curators is not counted"
+          },
+          {
+            "slug": "sky-money",
+            "motivo": "category Risk Curators is not counted"
+          },
+          {
+            "slug": "solvbtc",
+            "motivo": "bridge not in the public list"
+          },
+          {
+            "slug": "soon",
+            "motivo": "category Chain is not counted"
+          },
+          {
+            "slug": "spark-liquidity-layer",
+            "motivo": "category Onchain Capital Allocator is not counted"
+          },
+          {
+            "slug": "ssv-network",
+            "motivo": "infrastructure or restaking: counted in the protocols that use it"
+          },
+          {
+            "slug": "stacks-sbtc",
+            "motivo": "bridge not in the public list"
+          },
+          {
+            "slug": "stacks-staking",
+            "motivo": "category Chain is not counted"
+          },
+          {
+            "slug": "stargate-v2",
+            "motivo": "cross chain bridge not in the public list"
+          },
+          {
+            "slug": "steakhouse-financial",
+            "motivo": "category Risk Curators is not counted"
+          },
+          {
+            "slug": "swissborg",
+            "motivo": "category CEX is not counted"
+          },
+          {
+            "slug": "symbiotic",
+            "motivo": "infrastructure or restaking: counted in the protocols that use it"
+          },
+          {
+            "slug": "telos-consilium",
+            "motivo": "category Risk Curators is not counted"
+          },
+          {
+            "slug": "unit",
+            "motivo": "bridge not in the public list"
+          },
+          {
+            "slug": "upshift",
+            "motivo": "category Onchain Capital Allocator is not counted"
+          },
+          {
+            "slug": "usdt0",
+            "motivo": "bridge not in the public list"
+          },
+          {
+            "slug": "veda",
+            "motivo": "category Onchain Capital Allocator is not counted"
+          },
+          {
+            "slug": "wbtc",
+            "motivo": "custodial product"
+          },
+          {
+            "slug": "world-chain",
+            "motivo": "category Canonical Bridge is not counted"
+          },
+          {
+            "slug": "xdai-stake-bridge",
+            "motivo": "category Canonical Bridge is not counted"
+          },
+          {
+            "slug": "zksync-era-txbridge",
+            "motivo": "category Canonical Bridge is not counted"
+          },
+          {
+            "slug": "aave-horizon-rwa",
+            "motivo": "covered by the parent page aave"
+          },
+          {
+            "slug": "aave-v2",
+            "motivo": "covered by the parent page aave"
+          },
+          {
+            "slug": "aave-v4",
+            "motivo": "covered by the parent page aave"
+          }
+        ],
+        "serie": [
+          [
+            "2026-07-07",
+            -252483292
+          ],
+          [
+            "2026-07-08",
+            -1137784985
+          ],
+          [
+            "2026-07-09",
+            -1225791182
+          ],
+          [
+            "2026-07-10",
+            -1102722085
+          ],
+          [
+            "2026-07-11",
+            251407124
+          ],
+          [
+            "2026-07-12",
+            -329947307
+          ],
+          [
+            "2026-07-13",
+            -924254947
+          ],
+          [
+            "2026-07-14",
+            -800330449
+          ],
+          [
+            "2026-07-15",
+            -1266310069
+          ],
+          [
+            "2026-07-16",
+            -1838656474
+          ],
+          [
+            "2026-07-17",
+            -366156878
+          ],
+          [
+            "2026-07-18",
+            62962744
+          ],
+          [
+            "2026-07-19",
+            78441303
+          ],
+          [
+            "2026-07-20",
+            -465070451
+          ],
+          [
+            "2026-07-21",
+            -225278865
+          ],
+          [
+            "2026-07-22",
+            266203702
+          ],
+          [
+            "2026-07-23",
+            -295461419
+          ],
+          [
+            "2026-07-24",
+            -29933237
+          ],
+          [
+            "2026-07-25",
+            160379111
+          ],
+          [
+            "2026-07-26",
+            388475802
+          ],
+          [
+            "2026-07-27",
+            277029841
+          ],
+          [
+            "2026-07-28",
+            -95998088
+          ],
+          [
+            "2026-07-29",
+            41986377
+          ],
+          [
+            "2026-07-30",
+            186184827
+          ],
+          [
+            "2026-07-31",
+            119888117
+          ],
+          [
+            "2026-08-01",
+            -174817869
+          ],
+          [
+            "2026-08-02",
+            -596387524
+          ],
+          [
+            "2026-08-03",
+            -547325441
+          ],
+          [
+            "2026-08-04",
+            -1128401138
+          ],
+          [
+            "2026-08-05",
+            -613583450
+          ],
+          [
+            "2026-08-06",
+            -753098229
+          ],
+          [
+            "2026-08-07",
+            -297240581
+          ],
+          [
+            "2026-08-08",
+            -45968557
+          ],
+          [
+            "2026-08-09",
+            275840090
+          ],
+          [
+            "2026-08-10",
+            1030674434
+          ],
+          [
+            "2026-08-11",
+            1294387878
+          ],
+          [
+            "2026-08-12",
+            1097044613
+          ],
+          [
+            "2026-08-13",
+            1317352039
+          ],
+          [
+            "2026-08-14",
+            1071179996
+          ],
+          [
+            "2026-08-15",
+            1364178807
+          ],
+          [
+            "2026-08-16",
+            1728788364
+          ],
+          [
+            "2026-08-17",
+            1661859284
+          ],
+          [
+            "2026-08-18",
+            1534528425
+          ],
+          [
+            "2026-08-19",
+            1854019569
+          ],
+          [
+            "2026-08-20",
+            2000331902
+          ],
+          [
+            "2026-08-21",
+            1389159836
+          ],
+          [
+            "2026-08-22",
+            780780151
+          ],
+          [
+            "2026-08-23",
+            645565000
+          ],
+          [
+            "2026-08-24",
+            366610411
+          ],
+          [
+            "2026-08-25",
+            95469968
+          ],
+          [
+            "2026-08-26",
+            460528799
+          ],
+          [
+            "2026-08-27",
+            1014794951
+          ],
+          [
+            "2026-08-28",
+            1851695566
+          ],
+          [
+            "2026-08-29",
+            1328410927
+          ],
+          [
+            "2026-08-30",
+            1151914031
+          ],
+          [
+            "2026-08-31",
+            1084647646
+          ],
+          [
+            "2026-09-01",
+            1427219240
+          ],
+          [
+            "2026-09-02",
+            884230002
+          ],
+          [
+            "2026-09-03",
+            1353532562
+          ],
+          [
+            "2026-09-04",
+            1738461790
+          ],
+          [
+            "2026-09-05",
+            1500562126
+          ],
+          [
+            "2026-09-06",
+            1865800475
+          ],
+          [
+            "2026-09-07",
+            1711259909
+          ],
+          [
+            "2026-09-08",
+            1812774774
+          ],
+          [
+            "2026-09-09",
+            2204995744
+          ],
+          [
+            "2026-09-10",
+            1953374971
+          ],
+          [
+            "2026-09-11",
+            2097669786
+          ],
+          [
+            "2026-09-12",
+            2464338392
+          ],
+          [
+            "2026-09-13",
+            2356290247
+          ],
+          [
+            "2026-09-14",
+            2304246899
+          ],
+          [
+            "2026-09-15",
+            2435778109
+          ],
+          [
+            "2026-09-16",
+            2202293244
+          ],
+          [
+            "2026-09-17",
+            2076994509
+          ],
+          [
+            "2026-09-18",
+            2122383101
+          ],
+          [
+            "2026-09-19",
+            2504979991
+          ],
+          [
+            "2026-09-20",
+            3502845822
+          ],
+          [
+            "2026-09-21",
+            3889437076
+          ],
+          [
+            "2026-09-22",
+            3110106729
+          ],
+          [
+            "2026-09-23",
+            3649188216
+          ],
+          [
+            "2026-09-24",
+            3655660203
+          ],
+          [
+            "2026-09-25",
+            3765499738
+          ],
+          [
+            "2026-09-26",
+            4002821268
+          ],
+          [
+            "2026-09-27",
+            3460540169
+          ],
+          [
+            "2026-09-28",
+            3617704576
+          ],
+          [
+            "2026-09-29",
+            3802826917
+          ],
+          [
+            "2026-09-30",
+            4022920587
+          ],
+          [
+            "2026-10-01",
+            3501551971
+          ],
+          [
+            "2026-10-02",
+            3576480528
+          ],
+          [
+            "2026-10-03",
+            3855480916
+          ],
+          [
+            "2026-10-04",
+            3610432632
+          ]
+        ]
+      },
+      {
+        "id": "settori",
+        "titolo": "By sector",
+        "finestre": [
+          7,
+          30
+        ],
+        "righe": [
+          {
+            "nome": "Lending",
+            "protocolli": 26,
+            "valore_inizio_usd": 48770662116,
+            "peso_primo_contributo": 0.3561,
+            "senza_il_primo_usd": 222542154,
+            "flussi_7g_usd": 79515227,
+            "quota_7g": 0.0015,
+            "flussi_30g_usd": 1296460470,
+            "quota_30g": 0.0266
+          },
+          {
+            "nome": "Basis trading",
+            "protocolli": 8,
+            "valore_inizio_usd": 6404448904,
+            "peso_primo_contributo": 0.5773,
+            "senza_il_primo_usd": 330780432,
+            "flussi_7g_usd": 285595091,
+            "quota_7g": 0.0401,
+            "flussi_30g_usd": 969393194,
+            "quota_30g": 0.1514
+          },
+          {
+            "nome": "Liquid staking",
+            "protocolli": 25,
+            "valore_inizio_usd": 38370544042,
+            "peso_primo_contributo": 0.33,
+            "senza_il_primo_usd": 323829861,
+            "flussi_7g_usd": 21001807,
+            "quota_7g": 0.0004,
+            "flussi_30g_usd": 789213604,
+            "quota_30g": 0.0206
+          },
+          {
+            "nome": "DEXs",
+            "protocolli": 14,
+            "valore_inizio_usd": 6097262346,
+            "peso_primo_contributo": 0.3832,
+            "senza_il_primo_usd": 95083009,
+            "flussi_7g_usd": 24641978,
+            "quota_7g": 0.0034,
+            "flussi_30g_usd": 344443752,
+            "quota_30g": 0.0565
+          },
+          {
+            "nome": "Yield",
+            "protocolli": 6,
+            "valore_inizio_usd": 3352652407,
+            "peso_primo_contributo": 0.4282,
+            "senza_il_primo_usd": 43745686,
+            "flussi_7g_usd": 83266134,
+            "quota_7g": 0.0239,
+            "flussi_30g_usd": 152663587,
+            "quota_30g": 0.0455
+          },
+          {
+            "nome": "Collateralised debt",
+            "protocolli": 5,
+            "valore_inizio_usd": 7347847409,
+            "peso_primo_contributo": 0.5115,
+            "senza_il_primo_usd": -198796481,
+            "flussi_7g_usd": -166052357,
+            "quota_7g": -0.0215,
+            "flussi_30g_usd": 46807441,
+            "quota_30g": 0.0064
+          },
+          {
+            "nome": "Derivatives",
+            "protocolli": 21,
+            "valore_inizio_usd": 1888835101,
+            "peso_primo_contributo": 0.365,
+            "senza_il_primo_usd": -16605050,
+            "flussi_7g_usd": 5005544,
+            "quota_7g": 0.0025,
+            "flussi_30g_usd": 36725144,
+            "quota_30g": 0.0194
+          },
+          {
+            "nome": "Real-world assets",
+            "protocolli": 19,
+            "valore_inizio_usd": 4424751120,
+            "peso_primo_contributo": 0.5115,
+            "senza_il_primo_usd": 261642405,
+            "flussi_7g_usd": 159674795,
+            "quota_7g": 0.0383,
+            "flussi_30g_usd": -225486008,
+            "quota_30g": -0.051
+          },
+          {
+            "nome": "Other",
+            "protocolli": 79,
+            "valore_inizio_usd": 9162552482,
+            "peso_primo_contributo": 0.237,
+            "residuo": true,
+            "flussi_7g_usd": 126232465,
+            "quota_7g": 0.0128,
+            "flussi_30g_usd": 200211448,
+            "quota_30g": 0.0219
+          }
+        ],
+        "minimi": {
+          "protocolli": 5,
+          "valore_usd": 500000000
+        }
+      },
+      {
+        "id": "catene",
+        "titolo": "By chain",
+        "finestre": [
+          7,
+          30
+        ],
+        "righe": [
+          {
+            "nome": "Ethereum",
+            "protocolli": 51,
+            "valore_inizio_usd": 57400330867,
+            "peso_primo_contributo": 0.1896,
+            "senza_il_primo_usd": 1499273022,
+            "flussi_7g_usd": 501912505,
+            "quota_7g": 0.008,
+            "flussi_30g_usd": 2247455739,
+            "quota_30g": 0.0392
+          },
+          {
+            "nome": "Multi-chain",
+            "protocolli": 41,
+            "valore_inizio_usd": 39415974217,
+            "peso_primo_contributo": 0.4407,
+            "senza_il_primo_usd": 218929947,
+            "flussi_7g_usd": 165516403,
+            "quota_7g": 0.0039,
+            "flussi_30g_usd": 1292848263,
+            "quota_30g": 0.0328
+          },
+          {
+            "nome": "Solana",
+            "protocolli": 26,
+            "valore_inizio_usd": 9449905331,
+            "peso_primo_contributo": 0.2222,
+            "senza_il_primo_usd": 35386429,
+            "flussi_7g_usd": 43923737,
+            "quota_7g": 0.004,
+            "flussi_30g_usd": 169494201,
+            "quota_30g": 0.0179
+          },
+          {
+            "nome": "Tron",
+            "protocolli": 5,
+            "valore_inizio_usd": 5416670419,
+            "peso_primo_contributo": 0.4797,
+            "senza_il_primo_usd": 30543038,
+            "flussi_7g_usd": -10861287,
+            "quota_7g": -0.0012,
+            "flussi_30g_usd": 69577468,
+            "quota_30g": 0.0128
+          },
+          {
+            "nome": "Arbitrum",
+            "protocolli": 7,
+            "valore_inizio_usd": 584184728,
+            "peso_primo_contributo": 0.7989,
+            "senza_il_primo_usd": -10322974,
+            "flussi_7g_usd": 108847214,
+            "quota_7g": 0.2131,
+            "flussi_30g_usd": 33397513,
+            "quota_30g": 0.0572
+          },
+          {
+            "nome": "Binance",
+            "protocolli": 12,
+            "valore_inizio_usd": 5372047344,
+            "peso_primo_contributo": 0.3768,
+            "senza_il_primo_usd": 117128961,
+            "flussi_7g_usd": -115809317,
+            "quota_7g": -0.0203,
+            "flussi_30g_usd": -91413510,
+            "quota_30g": -0.017
+          },
+          {
+            "nome": "Hyperliquid L1",
+            "protocolli": 6,
+            "valore_inizio_usd": 2288639731,
+            "peso_primo_contributo": 0.4511,
+            "senza_il_primo_usd": -230658884,
+            "flussi_7g_usd": -151128984,
+            "quota_7g": -0.0693,
+            "flussi_30g_usd": -434967848,
+            "quota_30g": -0.1901
+          },
+          {
+            "nome": "Other",
+            "protocolli": 55,
+            "valore_inizio_usd": 5891803290,
+            "peso_primo_contributo": 0.3525,
+            "residuo": true,
+            "flussi_7g_usd": 76480414,
+            "quota_7g": 0.0104,
+            "flussi_30g_usd": 324040805,
+            "quota_30g": 0.055
+          }
+        ],
+        "regola": "a protocol belongs to a chain when at least 95% of its value locked sits there; the rest is Multi-chain",
+        "minimi": {
+          "protocolli": 5,
+          "valore_usd": 500000000
+        }
+      },
+      {
+        "id": "rotazione",
+        "titolo": "Rotation over 30 days",
+        "settori_in_entrata": [
+          "Lending",
+          "Basis trading",
+          "Liquid staking",
+          "DEXs",
+          "Yield"
+        ],
+        "settori_in_uscita": [
+          "Real-world assets"
+        ],
+        "catene_in_entrata": [
+          "Ethereum",
+          "Multi-chain",
+          "Solana",
+          "Tron",
+          "Arbitrum"
+        ],
+        "catene_in_uscita": [
+          "Hyperliquid L1",
+          "Binance"
+        ]
+      },
+      {
+        "id": "protocolli",
+        "titolo": "Largest public-universe protocols, 30 days",
+        "finestra": 30,
+        "righe": [
+          {
+            "nome": "Morpho Blue",
+            "slug": "morpho-blue",
+            "settore": "Lending",
+            "flussi_30g_usd": 1073918316,
+            "quota_30g": 0.1107,
+            "valore_inizio_usd": 9704407116
+          },
+          {
+            "nome": "SparkLend",
+            "slug": "sparklend",
+            "settore": "Lending",
+            "flussi_30g_usd": 748182717,
+            "quota_30g": 0.1677,
+            "valore_inizio_usd": 4460597395
+          },
+          {
+            "nome": "Ethena USDe",
+            "slug": "ethena-usde",
+            "settore": "Basis trading",
+            "flussi_30g_usd": 638612762,
+            "quota_30g": 0.1497,
+            "valore_inizio_usd": 4265604250
+          },
+          {
+            "nome": "Lido",
+            "slug": "lido",
+            "settore": "Liquid staking",
+            "flussi_30g_usd": 465383743,
+            "quota_30g": 0.0195,
+            "valore_inizio_usd": 23813639912
+          },
+          {
+            "nome": "ether.fi Stake",
+            "slug": "ether.fi-stake",
+            "settore": "Liquid staking",
+            "flussi_30g_usd": 260679945,
+            "quota_30g": 0.058,
+            "valore_inizio_usd": 4492956681
+          },
+          {
+            "nome": "Sky Lending",
+            "slug": "sky-lending",
+            "settore": "Collateralised debt",
+            "flussi_30g_usd": 245603922,
+            "quota_30g": 0.0444,
+            "valore_inizio_usd": 5525705549
+          },
+          {
+            "nome": "Sanctum Validator LSTs",
+            "slug": "sanctum-validator-lsts",
+            "settore": "Liquid staking",
+            "flussi_30g_usd": 134107772,
+            "quota_30g": 0.0863,
+            "valore_inizio_usd": 1554844796
+          },
+          {
+            "nome": "JustLend V1",
+            "slug": "justlend-v1",
+            "settore": "Lending",
+            "flussi_30g_usd": 39034430,
+            "quota_30g": 0.0107,
+            "valore_inizio_usd": 3663632341
+          },
+          {
+            "nome": "Maple",
+            "slug": "maple",
+            "settore": "Lending",
+            "flussi_30g_usd": -16817607,
+            "quota_30g": -0.0056,
+            "valore_inizio_usd": 3008199423
+          },
+          {
+            "nome": "Aave (all versions)",
+            "slug": "aave",
+            "settore": "Lending",
+            "flussi_30g_usd": -338283023,
+            "quota_30g": -0.0188,
+            "valore_inizio_usd": 18006499194
+          }
+        ],
+        "nota": null
+      }
+    ],
+    "frasi": [
+      {
+        "id": "totale_30g",
+        "testo": "Net deposits across DeFi, with the price effect removed, were $3.61B in 30 days",
+        "modello": "cruscotti.crypto_state.soldi_veri",
+        "contratto": "contratto",
+        "numeri": {
+          "flussi_usd": 3610432632,
+          "protocolli": 203
+        },
+        "misura": "depositi_netti_unita",
+        "finestra_giorni": 30,
+        "base": 125819555927,
+        "base_minima": 1000000000.0,
+        "quota_primo_contributo": 0.1215,
+        "cancello": "passa"
+      },
+      {
+        "id": "settore_entrate",
+        "testo": "Net deposits into Lending were $1.30B in 30 days, with the price effect removed",
+        "modello": "cruscotti.real_money_flows.settore",
+        "contratto": "contratto",
+        "numeri": {
+          "flussi_usd": 1296460470,
+          "protocolli": 26
+        },
+        "misura": "depositi_netti_unita",
+        "finestra_giorni": 30,
+        "base": 48770662116,
+        "base_minima": 500000000,
+        "quota_primo_contributo": 0.3561,
+        "classifica": [
+          1296460470,
+          969393194,
+          789213604,
+          344443752,
+          152663587,
+          46807441,
+          36725144,
+          -225486008
+        ],
+        "gruppo": "Lending",
+        "cancello": "passa"
+      },
+      {
+        "id": "settore_uscite",
+        "testo": "Net deposits into Real-world assets were −$225.5M in 30 days, with the price effect removed",
+        "modello": "cruscotti.real_money_flows.settore",
+        "contratto": "contratto",
+        "numeri": {
+          "flussi_usd": -225486008,
+          "protocolli": 19
+        },
+        "misura": "depositi_netti_unita",
+        "finestra_giorni": 30,
+        "base": 4424751120,
+        "base_minima": 500000000,
+        "quota_primo_contributo": 0.5115,
+        "classifica": [
+          -225486008,
+          36725144,
+          46807441,
+          152663587,
+          344443752,
+          789213604,
+          969393194,
+          1296460470
+        ],
+        "gruppo": "Real-world assets",
+        "cancello": "fermato",
+        "motivo": "stopped by the gate"
+      },
+      {
+        "id": "rotazione",
+        "testo": "Lending took in $1.30B while Real-world assets lost $225.5M over 30 days",
+        "modello": "cruscotti.real_money_flows.rotazione",
+        "contratto": "contratto",
+        "numeri": {
+          "entrate_usd": 1296460470,
+          "uscite_usd": -225486008
+        },
+        "misura": "depositi_netti_unita",
+        "finestra_giorni": 30,
+        "base": 4424751120,
+        "base_minima": 500000000,
+        "quota_primo_contributo": 0.5115,
+        "classifica": [
+          1296460470,
+          969393194,
+          789213604,
+          344443752,
+          152663587,
+          46807441,
+          36725144,
+          -225486008
+        ],
+        "gruppo": "Lending",
+        "cancello": "fermato",
+        "motivo": "stopped by the gate"
+      },
+      {
+        "id": "catena_entrate",
+        "testo": "Ethereum received net deposits of $2.25B in 30 days",
+        "modello": "cruscotti.real_money_flows.catena",
+        "contratto": "contratto",
+        "numeri": {
+          "flussi_usd": 2247455739,
+          "protocolli": 51
+        },
+        "misura": "depositi_netti_unita",
+        "finestra_giorni": 30,
+        "base": 57400330867,
+        "base_minima": 500000000,
+        "quota_primo_contributo": 0.1896,
+        "classifica": [
+          2247455739,
+          169494201,
+          69577468,
+          33397513,
+          -91413510,
+          -434967848
+        ],
+        "gruppo": "Ethereum",
+        "cancello": "passa"
+      },
+      {
+        "id": "catena_uscite",
+        "testo": "Hyperliquid L1 saw net withdrawals of $435.0M in 30 days",
+        "modello": "cruscotti.real_money_flows.catena_uscite",
+        "contratto": "contratto",
+        "numeri": {
+          "flussi_usd": -434967848,
+          "protocolli": 6
+        },
+        "misura": "depositi_netti_unita",
+        "finestra_giorni": 30,
+        "base": 2288639731,
+        "base_minima": 500000000,
+        "quota_primo_contributo": 0.4511,
+        "classifica": [
+          -434967848,
+          -91413510,
+          33397513,
+          69577468,
+          169494201,
+          2247455739
+        ],
+        "gruppo": "Hyperliquid L1",
+        "cancello": "passa"
+      },
+      {
+        "id": "protocollo_morpho-blue",
+        "testo": "Morpho Blue: net deposits of $1.07B in 30 days",
+        "modello": "cruscotti.real_money_flows.protocollo_entrate",
+        "contratto": "contratto",
+        "numeri": {
+          "flussi_usd": 1073918316
+        },
+        "misura": "depositi_netti_unita",
+        "finestra_giorni": 30,
+        "base": 9704407116,
+        "base_minima": 100000000.0,
+        "cancello": "passa"
+      },
+      {
+        "id": "protocollo_aave",
+        "testo": "Aave (all versions): net withdrawals of $338.3M in 30 days",
+        "modello": "cruscotti.real_money_flows.protocollo_uscite",
+        "contratto": "contratto",
+        "numeri": {
+          "flussi_usd": -338283023
+        },
+        "misura": "depositi_netti_unita",
+        "finestra_giorni": 30,
+        "base": 18006499194,
+        "base_minima": 100000000.0,
+        "cancello": "fermato",
+        "motivo": "stopped by the gate"
+      }
+    ],
+    "fonti": [
+      "DefiLlama (token breakdown of value locked, per protocol)"
+    ],
+    "metodo": "net deposits are estimated from token quantities, not traced wallet by wallet; history is rebuilt with today's groups; per token: change in quantity times the end price; stablecoins at a fixed price; start = the day with the median value among the 5 around the start of the window; only protocols whose breakdown adds up within 1%; a token deposited twice counts twice, as in the source",
+    "cancello": "ok",
+    "cancello_nota": "gate result for the sentences: ok = at least one sentence passed; each sentence carries its own result; the values in tables and history are not certified one by one",
+    "motivi": [
+      "settore_uscite: stopped by the gate",
+      "rotazione: stopped by the gate",
+      "protocollo_aave: stopped by the gate"
+    ],
+    "immagini": {
+      "1600x900": "immagine_2026-10-04_1600x900.png",
+      "1080x1350": "immagine_2026-10-04_1080x1350.png"
+    },
+    "immagine_titolo": "Net deposits into Lending were $1.30B in 30 days, with the price effect removed",
+    "carta_x": {
+      "file": "x_card.png",
+      "formato": "1200x675",
+      "data": "2026-10-04",
+      "nuova": true,
+      "modello": "A",
+      "frase_id": "totale_30g",
+      "titolo": "$3.6B of new money entered DeFi in 30 days",
+      "note": [
+        "High: +$4.0B, 30 Sep",
+        "4 Oct: +$3.6B",
+        "Positive since 9 Aug"
+      ]
+    },
+    "immagini_problemi": 0,
+    "generato_il": "2026-10-05T03:55:24Z"
+  }
+}

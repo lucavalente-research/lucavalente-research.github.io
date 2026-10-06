@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Builders vs Price — Luca Valente</title>
+<meta name="description" content="Public dataset: dates, numeric preview, downloads and source terms.">
+<link rel="canonical" href="https://lucavalente-research.github.io/dataset-builders_vs_price.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Luca Valente · Crypto research">
+<meta property="og:title" content="Builders vs Price — Luca Valente">
+<meta property="og:description" content="Public dataset: dates, numeric preview, downloads and source terms.">
+<meta property="og:url" content="https://lucavalente-research.github.io/dataset-builders_vs_price.html">
+<meta property="og:image" content="https://lucavalente-research.github.io/immagini/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@LukkVal">
+<meta name="twitter:title" content="Builders vs Price — Luca Valente">
+<meta name="twitter:description" content="Public dataset: dates, numeric preview, downloads and source terms.">
+<meta name="twitter:image" content="https://lucavalente-research.github.io/immagini/og.png">
+<link rel="alternate" type="application/rss+xml" title="Luca Valente · Crypto research" href="feed.xml">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23052C25'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23F4F0E3' text-anchor='middle'%3ELV%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="stile.css">
+</head><body><a class="skip" href="#main">Skip to content</a>
+<header class="testata">
+  <div class="marchio"><a href="./">LV / LUCA VALENTE<small>ON-CHAIN AND MACRO RESEARCH</small></a></div>
+  <nav aria-label="Main navigation"><a href="./">Home</a> <a href="charts.html">Charts</a> <a href="method.html">Methodology & data</a> <a href="code-and-data.html">Code & data</a> <a href="about.html">About</a> <a href="contact.html">Contact</a><a href="archive.html">Archive</a></nav>
+  
+</header>
+<main id="main">
+<h1>Builders vs Price</h1><p><a href="open-data.html">All datasets</a></p><p class="data">Export date: 2026-10-04</p><p>Latest date recorded in the data: 2026-10-04. Different series may end on different dates.</p><p>Retrieved UTC: Not recorded in this export. An export date is not proof of a historical snapshot.</p><h2>Coverage</h2><pre style="white-space:pre-wrap">&quot;2026-09-20&quot;</pre><figure><img src="immagini/dati-aperti/builders_vs_price.svg" alt="Numeric fields from Builders vs Price, with independent axes"><figcaption>Up to six numeric fields, in original source order. Each panel has its own scale and retains original units. The horizontal axis is record order, not elapsed time; fields are identified by JSON Pointer. Missing values are omitted; this preview does not establish continuous coverage.</figcaption></figure><p><a href="dati-aperti/builders_vs_price/2026-10-04.csv" download>Download CSV</a> · <a href="dati-aperti/builders_vs_price/2026-10-04.json" download>Download JSON</a></p><p>CSV: one scalar per JSON Pointer, encoded as JSON; null is distinct from zero.</p><h2>Sources and terms</h2><pre style="white-space:pre-wrap">{
+  &quot;licenza&quot;: &quot;CC BY 4.0&quot;,
+  &quot;licenza_url&quot;: &quot;https://creativecommons.org/licenses/by/4.0/&quot;,
+  &quot;attribuzione&quot;: &quot;Luca Valente&quot;,
+  &quot;nota_licenza_fonti&quot;: &quot;CC BY 4.0 applies to the original compilation and editorial work by Luca Valente. Underlying third-party data retain their source terms, including Coin Metrics CC BY-NC 4.0 where indicated; this export does not replace those terms.&quot;,
+  &quot;fonte&quot;: &quot;GitHub (commits in public repositories); CoinGecko (prices)&quot;,
+  &quot;fonti&quot;: [
+    &quot;GitHub (commits in public repositories)&quot;,
+    &quot;CoinGecko (prices)&quot;
+  ],
+  &quot;sorgente&quot;: &quot;dati/cruscotti/builders_vs_price/latest.json&quot;,
+  &quot;data&quot;: &quot;2026-10-04&quot;
+}</pre>
+</main>
+<footer class="piede">
+  <p class="seguimi"><a href="https://x.com/LukkVal" rel="me noopener">X</a> <a href="https://www.tradingview.com/u/lukkval/" rel="me noopener">TradingView</a> <a href="https://www.linkedin.com/in/lucavalenteweb3/" rel="me noopener">LinkedIn</a> <a href="https://github.com/lucavalente-research/defi-observatory" rel="me noopener">GitHub</a></p>
+  <p><a href="mailto:luca.valente.cv@gmail.com">luca.valente.cv@gmail.com</a> · <a href="contact.html">Contact</a> · <a href="disclaimer.html">Disclaimer</a> · <a href="feed.xml">RSS</a></p>
+  <p class="fonti">Data: DefiLlama, GitHub, CoinGecko · growthepie (<a href="https://www.growthepie.com">growthepie.com</a>, CC BY 4.0)</p>
+  <p class="legale">Not financial advice. Research based on public on-chain and market data.</p>
+</footer>
+</body></html>

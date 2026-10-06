@@ -1,0 +1,358 @@
+{
+  "metadati": {
+    "licenza": "CC BY 4.0",
+    "licenza_url": "https://creativecommons.org/licenses/by/4.0/",
+    "attribuzione": "Luca Valente",
+    "nota_licenza_fonti": "CC BY 4.0 applies to the original compilation and editorial work by Luca Valente. Underlying third-party data retain their source terms, including Coin Metrics CC BY-NC 4.0 where indicated; this export does not replace those terms.",
+    "fonte": "GitHub (commits in public repositories); CoinGecko (prices)",
+    "fonti": [
+      "GitHub (commits in public repositories)",
+      "CoinGecko (prices)"
+    ],
+    "sorgente": "dati/cruscotti/builders_vs_price/latest.json",
+    "data": "2026-10-05"
+  },
+  "dati": {
+    "nome": "builders_vs_price",
+    "titolo": "Builders vs Price",
+    "data": "2026-10-05",
+    "dati_fino_a": "2026-09-20",
+    "parola": null,
+    "da_quando": null,
+    "cadenza": "weekly",
+    "settimane_di_fila": true,
+    "blocchi": [
+      {
+        "id": "insieme",
+        "titolo": "All projects with at least 20 commits in 4 weeks",
+        "valori": [
+          {
+            "etichetta": "Commits in 4 weeks across 57 projects",
+            "valore": 20479,
+            "unita": null,
+            "variazioni": {
+              "28": 0.3381
+            },
+            "percentile_1a": null,
+            "percentile_storia": 97.8,
+            "storia_dal": "2025-11-09",
+            "stato": "expanding",
+            "fonte": "GitHub",
+            "dati_fino_a": "2026-09-20"
+          }
+        ],
+        "serie": [
+          {
+            "etichetta": "Commits in 4 weeks",
+            "unita": null,
+            "punti": [
+              [
+                "2025-11-09",
+                14293
+              ],
+              [
+                "2025-11-16",
+                14285
+              ],
+              [
+                "2025-11-23",
+                13703
+              ],
+              [
+                "2025-11-30",
+                13458
+              ],
+              [
+                "2025-12-07",
+                13357
+              ],
+              [
+                "2025-12-14",
+                13312
+              ],
+              [
+                "2025-12-21",
+                11907
+              ],
+              [
+                "2025-12-28",
+                9334
+              ],
+              [
+                "2026-01-04",
+                9050
+              ],
+              [
+                "2026-01-11",
+                9421
+              ],
+              [
+                "2026-01-18",
+                11142
+              ],
+              [
+                "2026-01-25",
+                13617
+              ],
+              [
+                "2026-02-01",
+                14254
+              ],
+              [
+                "2026-02-08",
+                14287
+              ],
+              [
+                "2026-02-15",
+                14516
+              ],
+              [
+                "2026-02-22",
+                14699
+              ],
+              [
+                "2026-03-01",
+                15216
+              ],
+              [
+                "2026-03-08",
+                15797
+              ],
+              [
+                "2026-03-15",
+                16309
+              ],
+              [
+                "2026-03-22",
+                16668
+              ],
+              [
+                "2026-03-29",
+                15949
+              ],
+              [
+                "2026-04-05",
+                15456
+              ],
+              [
+                "2026-04-12",
+                15452
+              ],
+              [
+                "2026-04-19",
+                15588
+              ],
+              [
+                "2026-04-26",
+                16084
+              ],
+              [
+                "2026-05-03",
+                16598
+              ],
+              [
+                "2026-05-10",
+                16285
+              ],
+              [
+                "2026-05-17",
+                16284
+              ],
+              [
+                "2026-05-24",
+                16321
+              ],
+              [
+                "2026-05-31",
+                16052
+              ],
+              [
+                "2026-06-07",
+                16193
+              ],
+              [
+                "2026-06-14",
+                15716
+              ],
+              [
+                "2026-06-21",
+                15481
+              ],
+              [
+                "2026-06-28",
+                15240
+              ],
+              [
+                "2026-07-05",
+                15435
+              ],
+              [
+                "2026-07-12",
+                15615
+              ],
+              [
+                "2026-07-19",
+                15442
+              ],
+              [
+                "2026-07-26",
+                15175
+              ],
+              [
+                "2026-08-02",
+                14567
+              ],
+              [
+                "2026-08-09",
+                14477
+              ],
+              [
+                "2026-08-16",
+                15032
+              ],
+              [
+                "2026-08-23",
+                15304
+              ],
+              [
+                "2026-08-30",
+                16946
+              ],
+              [
+                "2026-09-06",
+                17678
+              ],
+              [
+                "2026-09-13",
+                20880
+              ],
+              [
+                "2026-09-20",
+                20479
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "settori",
+        "titolo": "By sector (at least 5 projects)",
+        "tabella": {
+          "colonne": [
+            "Sector",
+            "Projects",
+            "Commits in 4 weeks",
+            "Commits, 4 weeks against the 4 before",
+            "Median token price change, 4 weeks",
+            "Commits, 12 weeks against the 12 before",
+            "Median token price change, 12 weeks",
+            "Projects with a listed token"
+          ],
+          "righe": [
+            [
+              "Chains",
+              17,
+              3029,
+              -0.23,
+              0.1315,
+              -0.1033,
+              0.3189,
+              17
+            ],
+            [
+              "Lending",
+              5,
+              1805,
+              -0.3344,
+              null,
+              -0.2227,
+              null,
+              3
+            ],
+            [
+              "Liquid staking",
+              6,
+              1725,
+              -0.2102,
+              null,
+              -0.1177,
+              null,
+              4
+            ]
+          ]
+        }
+      },
+      {
+        "id": "quadranti",
+        "titolo": "Code against price, 12 weeks",
+        "assi": {
+          "x": "Commits, 12 weeks against the 12 before",
+          "y": "Median token price change, 12 weeks"
+        },
+        "punti": [
+          {
+            "etichetta": "Chains",
+            "x": -0.1033,
+            "y": 0.3189
+          }
+        ]
+      }
+    ],
+    "frasi": [
+      {
+        "id": "totale",
+        "testo": "Developers across 57 projects made 20.5K commits in 4 weeks, +34% against the 4 weeks before",
+        "modello": "cruscotti.builders_vs_price.totale",
+        "contratto": "contratto",
+        "numeri": {
+          "progetti": 57,
+          "commit_4_settimane": 20479,
+          "variazione": 0.3381
+        },
+        "misura": "commit",
+        "finestra_giorni": 28,
+        "base": 15304.0,
+        "base_minima": 100,
+        "quota_primo_contributo": 0.26871429269007274,
+        "cancello": "fermato",
+        "motivo": "stopped by the gate"
+      },
+      {
+        "id": "settore_chains",
+        "testo": "Chains: commits −23% over 4 weeks, token prices +13%",
+        "modello": "cruscotti.builders_vs_price.settore",
+        "contratto": "contratto",
+        "numeri": {
+          "commit": 3029,
+          "variazione_commit": -0.23,
+          "variazione_prezzi_mediana": 0.1315,
+          "progetti": 17
+        },
+        "misura": "commit",
+        "finestra_giorni": 28,
+        "base": 3029,
+        "base_minima": 100,
+        "quota_primo_contributo": 0.15450643776824036,
+        "cancello": "passa"
+      }
+    ],
+    "fonti": [
+      "GitHub (commits in public repositories)",
+      "CoinGecko (prices)"
+    ],
+    "metodo": "weekly commit counts through the week of 2026-09-20; a project counts only with at least 20 commits in the last 4 weeks and in the 4 before; sector price = median across its projects with a listed token; commits are counted on the repositories mapped per project (when both sources exist the per-repository sum is used), so totals differ from the Chain Competition commit block; history is rebuilt with today's projects",
+    "cancello": "ok",
+    "cancello_nota": "gate result for the sentences: ok = at least one sentence passed; each sentence carries its own result; the values in tables and history are not certified one by one",
+    "motivi": [
+      "totale: stopped by the gate"
+    ],
+    "immagini": {
+      "1600x900": "immagine_2026-10-05_1600x900.png",
+      "1080x1350": "immagine_2026-10-05_1080x1350.png"
+    },
+    "immagine_titolo": "Chains: commits −23% over 4 weeks, token prices +13%",
+    "carta_x": null,
+    "immagini_problemi": 0,
+    "generato_il": "2026-10-06T03:58:21Z"
+  }
+}
