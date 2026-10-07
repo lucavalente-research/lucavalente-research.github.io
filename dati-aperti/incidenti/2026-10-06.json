@@ -1,0 +1,2070 @@
+{
+  "metadati": {
+    "licenza": "CC BY 4.0",
+    "licenza_url": "https://creativecommons.org/licenses/by/4.0/",
+    "attribuzione": "Luca Valente",
+    "nota_licenza_fonti": "CC BY 4.0 applies to the original compilation and editorial work by Luca Valente. Underlying third-party data retain their source terms, including Coin Metrics CC BY-NC 4.0 where indicated; this export does not replace those terms.",
+    "fonte": "DefiLlama (hacks list, value locked)",
+    "fonti": [
+      "DefiLlama (hacks list, value locked)"
+    ],
+    "sorgente": "dati/cruscotti/incidenti/latest.json",
+    "data": "2026-10-06"
+  },
+  "dati": {
+    "nome": "incidenti",
+    "titolo": "Incident Tracker",
+    "data": "2026-10-06",
+    "dati_fino_a": "2026-10-06",
+    "parola": null,
+    "da_quando": null,
+    "blocchi": [
+      {
+        "id": "insieme",
+        "titolo": "The last 365 days",
+        "valori": [
+          {
+            "etichetta": "Security incidents in the last 365 days (protocols above $50M)",
+            "valore": 16,
+            "unita": null,
+            "tipo": "level, change in points",
+            "variazioni": {
+              "7": 1,
+              "30": 2,
+              "90": 3
+            },
+            "percentile_1a": 100.0,
+            "percentile_storia": 100.0,
+            "storia_dal": "2024-10-06",
+            "serie_dal": "2024-10-06",
+            "giorni_di_storia": 731,
+            "giorni_presenti": null,
+            "giorni_finestra": null,
+            "stato": "expanding",
+            "da_quando": "2026-09-11",
+            "da_quando_almeno": false,
+            "banda_flat": 0.5,
+            "finestra_stato": 30,
+            "fonte": "DefiLlama",
+            "dati_fino_a": "2026-10-06",
+            "punti": [
+              [
+                "2026-07-09",
+                13
+              ],
+              [
+                "2026-07-10",
+                13
+              ],
+              [
+                "2026-07-11",
+                13
+              ],
+              [
+                "2026-07-12",
+                13
+              ],
+              [
+                "2026-07-13",
+                13
+              ],
+              [
+                "2026-07-14",
+                13
+              ],
+              [
+                "2026-07-15",
+                14
+              ],
+              [
+                "2026-07-16",
+                14
+              ],
+              [
+                "2026-07-17",
+                14
+              ],
+              [
+                "2026-07-18",
+                14
+              ],
+              [
+                "2026-07-19",
+                14
+              ],
+              [
+                "2026-07-20",
+                14
+              ],
+              [
+                "2026-07-21",
+                14
+              ],
+              [
+                "2026-07-22",
+                14
+              ],
+              [
+                "2026-07-23",
+                14
+              ],
+              [
+                "2026-07-24",
+                14
+              ],
+              [
+                "2026-07-25",
+                14
+              ],
+              [
+                "2026-07-26",
+                14
+              ],
+              [
+                "2026-07-27",
+                14
+              ],
+              [
+                "2026-07-28",
+                14
+              ],
+              [
+                "2026-07-29",
+                14
+              ],
+              [
+                "2026-07-30",
+                14
+              ],
+              [
+                "2026-07-31",
+                14
+              ],
+              [
+                "2026-08-01",
+                14
+              ],
+              [
+                "2026-08-02",
+                14
+              ],
+              [
+                "2026-08-03",
+                14
+              ],
+              [
+                "2026-08-04",
+                14
+              ],
+              [
+                "2026-08-05",
+                14
+              ],
+              [
+                "2026-08-06",
+                14
+              ],
+              [
+                "2026-08-07",
+                14
+              ],
+              [
+                "2026-08-08",
+                14
+              ],
+              [
+                "2026-08-09",
+                14
+              ],
+              [
+                "2026-08-10",
+                14
+              ],
+              [
+                "2026-08-11",
+                14
+              ],
+              [
+                "2026-08-12",
+                14
+              ],
+              [
+                "2026-08-13",
+                14
+              ],
+              [
+                "2026-08-14",
+                14
+              ],
+              [
+                "2026-08-15",
+                14
+              ],
+              [
+                "2026-08-16",
+                14
+              ],
+              [
+                "2026-08-17",
+                14
+              ],
+              [
+                "2026-08-18",
+                14
+              ],
+              [
+                "2026-08-19",
+                14
+              ],
+              [
+                "2026-08-20",
+                14
+              ],
+              [
+                "2026-08-21",
+                14
+              ],
+              [
+                "2026-08-22",
+                14
+              ],
+              [
+                "2026-08-23",
+                14
+              ],
+              [
+                "2026-08-24",
+                14
+              ],
+              [
+                "2026-08-25",
+                14
+              ],
+              [
+                "2026-08-26",
+                14
+              ],
+              [
+                "2026-08-27",
+                14
+              ],
+              [
+                "2026-08-28",
+                14
+              ],
+              [
+                "2026-08-29",
+                14
+              ],
+              [
+                "2026-08-30",
+                14
+              ],
+              [
+                "2026-08-31",
+                14
+              ],
+              [
+                "2026-09-01",
+                14
+              ],
+              [
+                "2026-09-02",
+                14
+              ],
+              [
+                "2026-09-03",
+                14
+              ],
+              [
+                "2026-09-04",
+                14
+              ],
+              [
+                "2026-09-05",
+                14
+              ],
+              [
+                "2026-09-06",
+                14
+              ],
+              [
+                "2026-09-07",
+                14
+              ],
+              [
+                "2026-09-08",
+                14
+              ],
+              [
+                "2026-09-09",
+                14
+              ],
+              [
+                "2026-09-10",
+                14
+              ],
+              [
+                "2026-09-11",
+                15
+              ],
+              [
+                "2026-09-12",
+                15
+              ],
+              [
+                "2026-09-13",
+                15
+              ],
+              [
+                "2026-09-14",
+                15
+              ],
+              [
+                "2026-09-15",
+                15
+              ],
+              [
+                "2026-09-16",
+                15
+              ],
+              [
+                "2026-09-17",
+                15
+              ],
+              [
+                "2026-09-18",
+                15
+              ],
+              [
+                "2026-09-19",
+                15
+              ],
+              [
+                "2026-09-20",
+                15
+              ],
+              [
+                "2026-09-21",
+                15
+              ],
+              [
+                "2026-09-22",
+                15
+              ],
+              [
+                "2026-09-23",
+                15
+              ],
+              [
+                "2026-09-24",
+                15
+              ],
+              [
+                "2026-09-25",
+                15
+              ],
+              [
+                "2026-09-26",
+                15
+              ],
+              [
+                "2026-09-27",
+                15
+              ],
+              [
+                "2026-09-28",
+                15
+              ],
+              [
+                "2026-09-29",
+                15
+              ],
+              [
+                "2026-09-30",
+                15
+              ],
+              [
+                "2026-10-01",
+                16
+              ],
+              [
+                "2026-10-02",
+                16
+              ],
+              [
+                "2026-10-03",
+                16
+              ],
+              [
+                "2026-10-04",
+                16
+              ],
+              [
+                "2026-10-05",
+                16
+              ],
+              [
+                "2026-10-06",
+                16
+              ]
+            ]
+          },
+          {
+            "etichetta": "Reported lost in the last 365 days",
+            "valore": 363047260,
+            "unita": "usd"
+          },
+          {
+            "etichetta": "Past incidents with no drop, or back at the pre-incident value locked within 30 days",
+            "valore": 13,
+            "unita": null,
+            "su": 28
+          }
+        ],
+        "serie": [
+          {
+            "etichetta": "Incidents in the trailing 365 days",
+            "unita": null,
+            "punti": [
+              [
+                "2026-07-09",
+                13
+              ],
+              [
+                "2026-07-10",
+                13
+              ],
+              [
+                "2026-07-11",
+                13
+              ],
+              [
+                "2026-07-12",
+                13
+              ],
+              [
+                "2026-07-13",
+                13
+              ],
+              [
+                "2026-07-14",
+                13
+              ],
+              [
+                "2026-07-15",
+                14
+              ],
+              [
+                "2026-07-16",
+                14
+              ],
+              [
+                "2026-07-17",
+                14
+              ],
+              [
+                "2026-07-18",
+                14
+              ],
+              [
+                "2026-07-19",
+                14
+              ],
+              [
+                "2026-07-20",
+                14
+              ],
+              [
+                "2026-07-21",
+                14
+              ],
+              [
+                "2026-07-22",
+                14
+              ],
+              [
+                "2026-07-23",
+                14
+              ],
+              [
+                "2026-07-24",
+                14
+              ],
+              [
+                "2026-07-25",
+                14
+              ],
+              [
+                "2026-07-26",
+                14
+              ],
+              [
+                "2026-07-27",
+                14
+              ],
+              [
+                "2026-07-28",
+                14
+              ],
+              [
+                "2026-07-29",
+                14
+              ],
+              [
+                "2026-07-30",
+                14
+              ],
+              [
+                "2026-07-31",
+                14
+              ],
+              [
+                "2026-08-01",
+                14
+              ],
+              [
+                "2026-08-02",
+                14
+              ],
+              [
+                "2026-08-03",
+                14
+              ],
+              [
+                "2026-08-04",
+                14
+              ],
+              [
+                "2026-08-05",
+                14
+              ],
+              [
+                "2026-08-06",
+                14
+              ],
+              [
+                "2026-08-07",
+                14
+              ],
+              [
+                "2026-08-08",
+                14
+              ],
+              [
+                "2026-08-09",
+                14
+              ],
+              [
+                "2026-08-10",
+                14
+              ],
+              [
+                "2026-08-11",
+                14
+              ],
+              [
+                "2026-08-12",
+                14
+              ],
+              [
+                "2026-08-13",
+                14
+              ],
+              [
+                "2026-08-14",
+                14
+              ],
+              [
+                "2026-08-15",
+                14
+              ],
+              [
+                "2026-08-16",
+                14
+              ],
+              [
+                "2026-08-17",
+                14
+              ],
+              [
+                "2026-08-18",
+                14
+              ],
+              [
+                "2026-08-19",
+                14
+              ],
+              [
+                "2026-08-20",
+                14
+              ],
+              [
+                "2026-08-21",
+                14
+              ],
+              [
+                "2026-08-22",
+                14
+              ],
+              [
+                "2026-08-23",
+                14
+              ],
+              [
+                "2026-08-24",
+                14
+              ],
+              [
+                "2026-08-25",
+                14
+              ],
+              [
+                "2026-08-26",
+                14
+              ],
+              [
+                "2026-08-27",
+                14
+              ],
+              [
+                "2026-08-28",
+                14
+              ],
+              [
+                "2026-08-29",
+                14
+              ],
+              [
+                "2026-08-30",
+                14
+              ],
+              [
+                "2026-08-31",
+                14
+              ],
+              [
+                "2026-09-01",
+                14
+              ],
+              [
+                "2026-09-02",
+                14
+              ],
+              [
+                "2026-09-03",
+                14
+              ],
+              [
+                "2026-09-04",
+                14
+              ],
+              [
+                "2026-09-05",
+                14
+              ],
+              [
+                "2026-09-06",
+                14
+              ],
+              [
+                "2026-09-07",
+                14
+              ],
+              [
+                "2026-09-08",
+                14
+              ],
+              [
+                "2026-09-09",
+                14
+              ],
+              [
+                "2026-09-10",
+                14
+              ],
+              [
+                "2026-09-11",
+                15
+              ],
+              [
+                "2026-09-12",
+                15
+              ],
+              [
+                "2026-09-13",
+                15
+              ],
+              [
+                "2026-09-14",
+                15
+              ],
+              [
+                "2026-09-15",
+                15
+              ],
+              [
+                "2026-09-16",
+                15
+              ],
+              [
+                "2026-09-17",
+                15
+              ],
+              [
+                "2026-09-18",
+                15
+              ],
+              [
+                "2026-09-19",
+                15
+              ],
+              [
+                "2026-09-20",
+                15
+              ],
+              [
+                "2026-09-21",
+                15
+              ],
+              [
+                "2026-09-22",
+                15
+              ],
+              [
+                "2026-09-23",
+                15
+              ],
+              [
+                "2026-09-24",
+                15
+              ],
+              [
+                "2026-09-25",
+                15
+              ],
+              [
+                "2026-09-26",
+                15
+              ],
+              [
+                "2026-09-27",
+                15
+              ],
+              [
+                "2026-09-28",
+                15
+              ],
+              [
+                "2026-09-29",
+                15
+              ],
+              [
+                "2026-09-30",
+                15
+              ],
+              [
+                "2026-10-01",
+                16
+              ],
+              [
+                "2026-10-02",
+                16
+              ],
+              [
+                "2026-10-03",
+                16
+              ],
+              [
+                "2026-10-04",
+                16
+              ],
+              [
+                "2026-10-05",
+                16
+              ],
+              [
+                "2026-10-06",
+                16
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "incidenti",
+        "titolo": "Every incident in the archive",
+        "tabella": {
+          "colonne": [
+            "Protocol",
+            "Sector",
+            "Day",
+            "Reported lost (usd)",
+            "Value locked before (usd)",
+            "Value locked, 1 day after",
+            "7 days after",
+            "30 days after",
+            "In units of the main asset, 30 days after",
+            "Median of peers, 30 days after",
+            "Days to recover"
+          ],
+          "righe": [
+            [
+              "(not in the public list)",
+              "Liquidity bridges",
+              "2026-10-01",
+              3800000,
+              250551067,
+              -0.1129,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              "(not in the public list)",
+              "Capital allocators",
+              "2026-09-11",
+              43260,
+              425061198,
+              0.0122,
+              0.0297,
+              null,
+              null,
+              null,
+              7
+            ],
+            [
+              "(not in the public list)",
+              "Derivatives",
+              "2026-07-15",
+              23750000,
+              64889642,
+              -0.4169,
+              -0.4175,
+              -0.7284,
+              -0.7284,
+              -0.027,
+              "not yet"
+            ],
+            [
+              "Polymarket International",
+              "Prediction markets",
+              "2026-06-25",
+              3000000,
+              434120963,
+              0.0968,
+              -0.0816,
+              -0.2096,
+              -0.2097,
+              -0.0665,
+              "not yet"
+            ],
+            [
+              "(not in the public list)",
+              "DEXs",
+              "2026-06-10",
+              1340000,
+              804767979,
+              -0.0173,
+              0.068,
+              0.099,
+              null,
+              0.075,
+              "no drop"
+            ],
+            [
+              "Fluid Lending",
+              "Lending",
+              "2026-05-31",
+              215000,
+              802036564,
+              -0.0932,
+              -0.2861,
+              -0.2487,
+              -0.0449,
+              -0.1339,
+              "not yet"
+            ],
+            [
+              "(not in the public list)",
+              "Yield",
+              "2026-05-27",
+              91000,
+              157251143,
+              -0.2273,
+              -0.2964,
+              -0.3685,
+              -0.1517,
+              -0.1833,
+              "not yet"
+            ],
+            [
+              "Kelp",
+              "Liquid restaking",
+              "2026-04-18",
+              293000000,
+              1592846928,
+              -0.009,
+              -0.0225,
+              -0.1088,
+              -0.0184,
+              null,
+              "not yet"
+            ],
+            [
+              "(not in the public list)",
+              "Lending",
+              "2026-04-16",
+              18400000,
+              80880746,
+              -0.1437,
+              -0.1524,
+              -0.1316,
+              -0.2356,
+              0.0146,
+              36
+            ],
+            [
+              "Venus Core Pool",
+              "Lending",
+              "2026-03-15",
+              3700000,
+              1314756412,
+              -0.0383,
+              -0.0675,
+              -0.0866,
+              -0.0442,
+              0.0286,
+              190
+            ],
+            [
+              "Aave V3",
+              "Lending",
+              "2026-03-12",
+              862000,
+              23959836992,
+              0.0452,
+              0.0179,
+              0.0499,
+              -0.0776,
+              0.0234,
+              "no drop"
+            ],
+            [
+              "(not in the public list)",
+              "Yield",
+              "2026-03-12",
+              176000,
+              166369372,
+              -0.1236,
+              -0.0928,
+              0.0712,
+              -0.0495,
+              -0.0572,
+              19
+            ],
+            [
+              "(not in the public list)",
+              "Liquidity bridges",
+              "2026-03-06",
+              2700000,
+              486086116,
+              0.0003,
+              0.0575,
+              -0.01,
+              0.001,
+              -0.0229,
+              "no drop"
+            ],
+            [
+              "(not in the public list)",
+              "Lending",
+              "2026-02-22",
+              10970000,
+              97128657,
+              -0.1848,
+              -0.1316,
+              -0.0598,
+              -0.0823,
+              0.0516,
+              34
+            ],
+            [
+              "(not in the public list)",
+              "Yield aggregators",
+              "2025-12-16",
+              300000,
+              431049905,
+              -0.1572,
+              -0.0496,
+              -0.046,
+              -0.1086,
+              null,
+              "not yet"
+            ],
+            [
+              "(not in the public list)",
+              "DEXs",
+              "2025-11-21",
+              700000,
+              199933569,
+              -0.1006,
+              -0.0507,
+              -0.1624,
+              -0.1322,
+              -0.0532,
+              "not yet"
+            ],
+            [
+              "(not in the public list)",
+              "RWA tokenized treasuries",
+              "2025-05-27",
+              43000,
+              387070355,
+              -0.0312,
+              -0.0637,
+              -0.1289,
+              null,
+              0.0082,
+              "not yet"
+            ],
+            [
+              "Venus Core Pool",
+              "Lending",
+              "2025-03-29",
+              902000,
+              1714796006,
+              -0.083,
+              -0.0369,
+              -0.0229,
+              null,
+              0.0465,
+              41
+            ],
+            [
+              "(not in the public list)",
+              "Derivatives",
+              "2024-07-23",
+              31000,
+              298298886,
+              -0.0101,
+              -0.1024,
+              -0.2049,
+              null,
+              -0.0517,
+              "not yet"
+            ],
+            [
+              "(not in the public list)",
+              "Derivatives",
+              "2023-11-18",
+              9000000,
+              402480342,
+              -0.0427,
+              -0.1324,
+              -0.1201,
+              null,
+              null,
+              116
+            ],
+            [
+              "Curve DEX",
+              "DEXs",
+              "2023-07-30",
+              61700000,
+              3119501807,
+              -0.4454,
+              -0.2742,
+              -0.2807,
+              null,
+              -0.0902,
+              "not yet"
+            ],
+            [
+              "(not in the public list)",
+              "Privacy",
+              "2023-05-20",
+              2173500,
+              277010749,
+              0.0171,
+              0.0343,
+              -0.0388,
+              null,
+              null,
+              "no drop"
+            ],
+            [
+              "(not in the public list)",
+              "Yield aggregators",
+              "2023-04-13",
+              11539000,
+              444691886,
+              0.0293,
+              -0.0249,
+              -0.0199,
+              null,
+              null,
+              8
+            ],
+            [
+              "Rocket Pool",
+              "Liquid staking",
+              "2023-03-30",
+              3800000,
+              854659630,
+              0.0354,
+              0.1572,
+              0.1952,
+              null,
+              0.0927,
+              "no drop"
+            ],
+            [
+              "Curve DEX",
+              "DEXs",
+              "2022-08-09",
+              575000,
+              6075356908,
+              -0.0148,
+              0.0125,
+              -0.0813,
+              null,
+              -0.1795,
+              "no drop"
+            ],
+            [
+              "Convex Finance",
+              "Yield",
+              "2022-06-24",
+              14000,
+              2970388669,
+              0.0491,
+              -0.0049,
+              0.377,
+              null,
+              null,
+              "no drop"
+            ],
+            [
+              "(not in the public list)",
+              "Liquidity bridges",
+              "2022-02-02",
+              326000000,
+              1573210852,
+              0.206,
+              0.3894,
+              0.4587,
+              null,
+              null,
+              "no drop"
+            ],
+            [
+              "(not in the public list)",
+              "Lending",
+              "2021-09-29",
+              147000000,
+              9982231360,
+              -0.0254,
+              -0.0093,
+              0.0789,
+              null,
+              null,
+              15
+            ],
+            [
+              "(not in the public list)",
+              "Yield aggregators",
+              "2021-02-05",
+              11000000,
+              911721689,
+              0.0372,
+              0.1751,
+              0.2709,
+              null,
+              null,
+              "no drop"
+            ],
+            [
+              "(not in the public list)",
+              "Insurance",
+              "2020-12-14",
+              8000000,
+              90575347,
+              0.0539,
+              0.0913,
+              0.9395,
+              null,
+              null,
+              "no drop"
+            ]
+          ]
+        },
+        "nota": "changes are against the median of the 5 days before the incident; same period, not proven cause; only protocols still followed are in the archive"
+      },
+      {
+        "id": "passati",
+        "titolo": "Against past incidents: value locked against peers",
+        "tabella": {
+          "colonne": [
+            "Horizon",
+            "Incidents",
+            "Average gap to peers",
+            "Median gap",
+            "90% interval, low",
+            "90% interval, high",
+            "Share above peers"
+          ],
+          "righe": [
+            [
+              "1 day after",
+              20,
+              -0.0925,
+              -0.0373,
+              -0.1464,
+              -0.045,
+              0.25
+            ],
+            [
+              "7 days after",
+              19,
+              -0.0877,
+              -0.0644,
+              -0.1361,
+              -0.0437,
+              0.26
+            ],
+            [
+              "30 days after",
+              18,
+              -0.0991,
+              -0.1131,
+              -0.1791,
+              -0.0374,
+              0.33
+            ]
+          ]
+        },
+        "nota": "gap = the protocol's change minus the median change of its peers over the same days"
+      }
+    ],
+    "schede": [
+      {
+        "entita_id": "near-intents",
+        "nome": null,
+        "pubblico": false,
+        "settore": "Liquidity bridges",
+        "giorno": "2026-10-01",
+        "importo_perso_usd": 3800000,
+        "valore_prima_usd": 250551067,
+        "variazione": {
+          "1": -0.1129,
+          "7": null,
+          "30": null
+        },
+        "uscito_usd": {
+          "1": 28291021,
+          "7": null,
+          "30": null
+        },
+        "variazione_unita": {
+          "7": null,
+          "30": null
+        },
+        "mediana_pari_30g": null,
+        "giorni_di_recupero": null
+      },
+      {
+        "entita_id": "ether.fi-liquid",
+        "nome": null,
+        "pubblico": false,
+        "settore": "Capital allocators",
+        "giorno": "2026-09-11",
+        "importo_perso_usd": 43260,
+        "valore_prima_usd": 425061198,
+        "variazione": {
+          "1": 0.0122,
+          "7": 0.0297,
+          "30": null
+        },
+        "uscito_usd": {
+          "1": -5182613,
+          "7": -12605114,
+          "30": null
+        },
+        "variazione_unita": {
+          "7": -0.0017,
+          "30": null
+        },
+        "mediana_pari_30g": null,
+        "giorni_di_recupero": 7
+      },
+      {
+        "entita_id": "ostium",
+        "nome": null,
+        "pubblico": false,
+        "settore": "Derivatives",
+        "giorno": "2026-07-15",
+        "importo_perso_usd": 23750000,
+        "valore_prima_usd": 64889642,
+        "variazione": {
+          "1": -0.4169,
+          "7": -0.4175,
+          "30": -0.7284
+        },
+        "uscito_usd": {
+          "1": 27055348,
+          "7": 27091842,
+          "30": 47267580
+        },
+        "variazione_unita": {
+          "7": -0.4176,
+          "30": -0.7284
+        },
+        "mediana_pari_30g": -0.027,
+        "giorni_di_recupero": "not yet"
+      },
+      {
+        "entita_id": "polymarket-international",
+        "nome": "Polymarket International",
+        "pubblico": true,
+        "settore": "Prediction markets",
+        "giorno": "2026-06-25",
+        "importo_perso_usd": 3000000,
+        "valore_prima_usd": 434120963,
+        "variazione": {
+          "1": 0.0968,
+          "7": -0.0816,
+          "30": -0.2096
+        },
+        "uscito_usd": {
+          "1": -42043618,
+          "7": 35445578,
+          "30": 90989453
+        },
+        "variazione_unita": {
+          "7": -0.0816,
+          "30": -0.2097
+        },
+        "mediana_pari_30g": -0.0665,
+        "giorni_di_recupero": "not yet"
+      },
+      {
+        "entita_id": "raydium-amm",
+        "nome": null,
+        "pubblico": false,
+        "settore": "DEXs",
+        "giorno": "2026-06-10",
+        "importo_perso_usd": 1340000,
+        "valore_prima_usd": 804767979,
+        "variazione": {
+          "1": -0.0173,
+          "7": 0.068,
+          "30": 0.099
+        },
+        "uscito_usd": {
+          "1": 13901054,
+          "7": -54755542,
+          "30": -79638987
+        },
+        "variazione_unita": {
+          "7": null,
+          "30": null
+        },
+        "mediana_pari_30g": 0.075,
+        "giorni_di_recupero": "no drop"
+      },
+      {
+        "entita_id": "fluid-lending",
+        "nome": "Fluid Lending",
+        "pubblico": true,
+        "settore": "Lending",
+        "giorno": "2026-05-31",
+        "importo_perso_usd": 215000,
+        "valore_prima_usd": 802036564,
+        "variazione": {
+          "1": -0.0932,
+          "7": -0.2861,
+          "30": -0.2487
+        },
+        "uscito_usd": {
+          "1": 74752530,
+          "7": 229461042,
+          "30": 199457101
+        },
+        "variazione_unita": {
+          "7": -0.076,
+          "30": -0.0449
+        },
+        "mediana_pari_30g": -0.1339,
+        "giorni_di_recupero": "not yet"
+      },
+      {
+        "entita_id": "stake-dao-yield",
+        "nome": null,
+        "pubblico": false,
+        "settore": "Yield",
+        "giorno": "2026-05-27",
+        "importo_perso_usd": 91000,
+        "valore_prima_usd": 157251143,
+        "variazione": {
+          "1": -0.2273,
+          "7": -0.2964,
+          "30": -0.3685
+        },
+        "uscito_usd": {
+          "1": 35740029,
+          "7": 46611275,
+          "30": 57941383
+        },
+        "variazione_unita": {
+          "7": -0.2042,
+          "30": -0.1517
+        },
+        "mediana_pari_30g": -0.1833,
+        "giorni_di_recupero": "not yet"
+      },
+      {
+        "entita_id": "kelp",
+        "nome": "Kelp",
+        "pubblico": true,
+        "settore": "Liquid restaking",
+        "giorno": "2026-04-18",
+        "importo_perso_usd": 293000000,
+        "valore_prima_usd": 1592846928,
+        "variazione": {
+          "1": -0.009,
+          "7": -0.0225,
+          "30": -0.1088
+        },
+        "uscito_usd": {
+          "1": 14295975,
+          "7": 35818512,
+          "30": 173222987
+        },
+        "variazione_unita": {
+          "7": -0.0153,
+          "30": -0.0184
+        },
+        "mediana_pari_30g": null,
+        "giorni_di_recupero": "not yet"
+      },
+      {
+        "entita_id": "rhea-lend",
+        "nome": null,
+        "pubblico": false,
+        "settore": "Lending",
+        "giorno": "2026-04-16",
+        "importo_perso_usd": 18400000,
+        "valore_prima_usd": 80880746,
+        "variazione": {
+          "1": -0.1437,
+          "7": -0.1524,
+          "30": -0.1316
+        },
+        "uscito_usd": {
+          "1": 11622445,
+          "7": 12327057,
+          "30": 10644835
+        },
+        "variazione_unita": {
+          "7": -0.1802,
+          "30": -0.2356
+        },
+        "mediana_pari_30g": 0.0146,
+        "giorni_di_recupero": 36
+      },
+      {
+        "entita_id": "venus-core-pool",
+        "nome": "Venus Core Pool",
+        "pubblico": true,
+        "settore": "Lending",
+        "giorno": "2026-03-15",
+        "importo_perso_usd": 3700000,
+        "valore_prima_usd": 1314756412,
+        "variazione": {
+          "1": -0.0383,
+          "7": -0.0675,
+          "30": -0.0866
+        },
+        "uscito_usd": {
+          "1": 50396130,
+          "7": 88697241,
+          "30": 113799989
+        },
+        "variazione_unita": {
+          "7": -0.0523,
+          "30": -0.0442
+        },
+        "mediana_pari_30g": 0.0286,
+        "giorni_di_recupero": 190
+      },
+      {
+        "entita_id": "aave",
+        "nome": "Aave V3",
+        "pubblico": true,
+        "settore": "Lending",
+        "giorno": "2026-03-12",
+        "importo_perso_usd": 862000,
+        "valore_prima_usd": 23959836992,
+        "variazione": {
+          "1": 0.0452,
+          "7": 0.0179,
+          "30": 0.0499
+        },
+        "uscito_usd": {
+          "1": -1082614831,
+          "7": -428182535,
+          "30": -1195994567
+        },
+        "variazione_unita": {
+          "7": -0.0886,
+          "30": -0.0776
+        },
+        "mediana_pari_30g": 0.0234,
+        "giorni_di_recupero": "no drop"
+      },
+      {
+        "entita_id": "stake-dao-yield",
+        "nome": null,
+        "pubblico": false,
+        "settore": "Yield",
+        "giorno": "2026-03-12",
+        "importo_perso_usd": 176000,
+        "valore_prima_usd": 166369372,
+        "variazione": {
+          "1": -0.1236,
+          "7": -0.0928,
+          "30": 0.0712
+        },
+        "uscito_usd": {
+          "1": 20569928,
+          "7": 15437391,
+          "30": -11846166
+        },
+        "variazione_unita": {
+          "7": -0.1792,
+          "30": -0.0495
+        },
+        "mediana_pari_30g": -0.0572,
+        "giorni_di_recupero": 19
+      },
+      {
+        "entita_id": "solvbtc",
+        "nome": null,
+        "pubblico": false,
+        "settore": "Liquidity bridges",
+        "giorno": "2026-03-06",
+        "importo_perso_usd": 2700000,
+        "valore_prima_usd": 486086116,
+        "variazione": {
+          "1": 0.0003,
+          "7": 0.0575,
+          "30": -0.01
+        },
+        "uscito_usd": {
+          "1": -129980,
+          "7": -27950582,
+          "30": 4860055
+        },
+        "variazione_unita": {
+          "7": 0.0065,
+          "30": 0.001
+        },
+        "mediana_pari_30g": -0.0229,
+        "giorni_di_recupero": "no drop"
+      },
+      {
+        "entita_id": "blend-pools-v2",
+        "nome": null,
+        "pubblico": false,
+        "settore": "Lending",
+        "giorno": "2026-02-22",
+        "importo_perso_usd": 10970000,
+        "valore_prima_usd": 97128657,
+        "variazione": {
+          "1": -0.1848,
+          "7": -0.1316,
+          "30": -0.0598
+        },
+        "uscito_usd": {
+          "1": 17944849,
+          "7": 12780441,
+          "30": 5808014
+        },
+        "variazione_unita": {
+          "7": -0.1145,
+          "30": -0.0823
+        },
+        "mediana_pari_30g": 0.0516,
+        "giorni_di_recupero": 34
+      },
+      {
+        "entita_id": "yearn-finance",
+        "nome": null,
+        "pubblico": false,
+        "settore": "Yield aggregators",
+        "giorno": "2025-12-16",
+        "importo_perso_usd": 300000,
+        "valore_prima_usd": 431049905,
+        "variazione": {
+          "1": -0.1572,
+          "7": -0.0496,
+          "30": -0.046
+        },
+        "uscito_usd": {
+          "1": 67765776,
+          "7": 21366757,
+          "30": 19826401
+        },
+        "variazione_unita": {
+          "7": -0.0189,
+          "30": -0.1086
+        },
+        "mediana_pari_30g": null,
+        "giorni_di_recupero": "not yet"
+      },
+      {
+        "entita_id": "aerodrome-v1",
+        "nome": null,
+        "pubblico": false,
+        "settore": "DEXs",
+        "giorno": "2025-11-21",
+        "importo_perso_usd": 700000,
+        "valore_prima_usd": 199933569,
+        "variazione": {
+          "1": -0.1006,
+          "7": -0.0507,
+          "30": -0.1624
+        },
+        "uscito_usd": {
+          "1": 20106695,
+          "7": 10134975,
+          "30": 32464382
+        },
+        "variazione_unita": {
+          "7": -0.0281,
+          "30": -0.1322
+        },
+        "mediana_pari_30g": -0.0532,
+        "giorni_di_recupero": "not yet"
+      },
+      {
+        "entita_id": "usual-usd0",
+        "nome": null,
+        "pubblico": false,
+        "settore": "RWA tokenized treasuries",
+        "giorno": "2025-05-27",
+        "importo_perso_usd": 43000,
+        "valore_prima_usd": 387070355,
+        "variazione": {
+          "1": -0.0312,
+          "7": -0.0637,
+          "30": -0.1289
+        },
+        "uscito_usd": {
+          "1": 12070060,
+          "7": 24668969,
+          "30": 49885127
+        },
+        "variazione_unita": {
+          "7": null,
+          "30": null
+        },
+        "mediana_pari_30g": 0.0082,
+        "giorni_di_recupero": "not yet"
+      },
+      {
+        "entita_id": "venus-core-pool",
+        "nome": "Venus Core Pool",
+        "pubblico": true,
+        "settore": "Lending",
+        "giorno": "2025-03-29",
+        "importo_perso_usd": 902000,
+        "valore_prima_usd": 1714796006,
+        "variazione": {
+          "1": -0.083,
+          "7": -0.0369,
+          "30": -0.0229
+        },
+        "uscito_usd": {
+          "1": 142409489,
+          "7": 63208125,
+          "30": 39256900
+        },
+        "variazione_unita": {
+          "7": null,
+          "30": null
+        },
+        "mediana_pari_30g": 0.0465,
+        "giorni_di_recupero": 41
+      },
+      {
+        "entita_id": "dydx-v3",
+        "nome": null,
+        "pubblico": false,
+        "settore": "Derivatives",
+        "giorno": "2024-07-23",
+        "importo_perso_usd": 31000,
+        "valore_prima_usd": 298298886,
+        "variazione": {
+          "1": -0.0101,
+          "7": -0.1024,
+          "30": -0.2049
+        },
+        "uscito_usd": {
+          "1": 3004271,
+          "7": 30541454,
+          "30": 61126983
+        },
+        "variazione_unita": {
+          "7": null,
+          "30": null
+        },
+        "mediana_pari_30g": -0.0517,
+        "giorni_di_recupero": "not yet"
+      },
+      {
+        "entita_id": "dydx-v3",
+        "nome": null,
+        "pubblico": false,
+        "settore": "Derivatives",
+        "giorno": "2023-11-18",
+        "importo_perso_usd": 9000000,
+        "valore_prima_usd": 402480342,
+        "variazione": {
+          "1": -0.0427,
+          "7": -0.1324,
+          "30": -0.1201
+        },
+        "uscito_usd": {
+          "1": 17193796,
+          "7": 53293510,
+          "30": 48335820
+        },
+        "variazione_unita": {
+          "7": null,
+          "30": null
+        },
+        "mediana_pari_30g": null,
+        "giorni_di_recupero": 116
+      },
+      {
+        "entita_id": "curve-dex",
+        "nome": "Curve DEX",
+        "pubblico": true,
+        "settore": "DEXs",
+        "giorno": "2023-07-30",
+        "importo_perso_usd": 61700000,
+        "valore_prima_usd": 3119501807,
+        "variazione": {
+          "1": -0.4454,
+          "7": -0.2742,
+          "30": -0.2807
+        },
+        "uscito_usd": {
+          "1": 1389405537,
+          "7": 855323088,
+          "30": 875528058
+        },
+        "variazione_unita": {
+          "7": null,
+          "30": null
+        },
+        "mediana_pari_30g": -0.0902,
+        "giorni_di_recupero": "not yet"
+      },
+      {
+        "entita_id": "tornado-cash",
+        "nome": null,
+        "pubblico": false,
+        "settore": "Privacy",
+        "giorno": "2023-05-20",
+        "importo_perso_usd": 2173500,
+        "valore_prima_usd": 277010749,
+        "variazione": {
+          "1": 0.0171,
+          "7": 0.0343,
+          "30": -0.0388
+        },
+        "uscito_usd": {
+          "1": -4749182,
+          "7": -9506150,
+          "30": 10754108
+        },
+        "variazione_unita": {
+          "7": null,
+          "30": null
+        },
+        "mediana_pari_30g": null,
+        "giorni_di_recupero": "no drop"
+      },
+      {
+        "entita_id": "yearn-finance",
+        "nome": null,
+        "pubblico": false,
+        "settore": "Yield aggregators",
+        "giorno": "2023-04-13",
+        "importo_perso_usd": 11539000,
+        "valore_prima_usd": 444691886,
+        "variazione": {
+          "1": 0.0293,
+          "7": -0.0249,
+          "30": -0.0199
+        },
+        "uscito_usd": {
+          "1": -13041222,
+          "7": 11067505,
+          "30": 8829954
+        },
+        "variazione_unita": {
+          "7": null,
+          "30": null
+        },
+        "mediana_pari_30g": null,
+        "giorni_di_recupero": 8
+      },
+      {
+        "entita_id": "rocket-pool",
+        "nome": "Rocket Pool",
+        "pubblico": true,
+        "settore": "Liquid staking",
+        "giorno": "2023-03-30",
+        "importo_perso_usd": 3800000,
+        "valore_prima_usd": 854659630,
+        "variazione": {
+          "1": 0.0354,
+          "7": 0.1572,
+          "30": 0.1952
+        },
+        "uscito_usd": {
+          "1": -30255382,
+          "7": -134346965,
+          "30": -166819111
+        },
+        "variazione_unita": {
+          "7": null,
+          "30": null
+        },
+        "mediana_pari_30g": 0.0927,
+        "giorni_di_recupero": "no drop"
+      },
+      {
+        "entita_id": "curve-dex",
+        "nome": "Curve DEX",
+        "pubblico": true,
+        "settore": "DEXs",
+        "giorno": "2022-08-09",
+        "importo_perso_usd": 575000,
+        "valore_prima_usd": 6075356908,
+        "variazione": {
+          "1": -0.0148,
+          "7": 0.0125,
+          "30": -0.0813
+        },
+        "uscito_usd": {
+          "1": 90087694,
+          "7": -76170883,
+          "30": 493645226
+        },
+        "variazione_unita": {
+          "7": null,
+          "30": null
+        },
+        "mediana_pari_30g": -0.1795,
+        "giorni_di_recupero": "no drop"
+      },
+      {
+        "entita_id": "convex-finance",
+        "nome": "Convex Finance",
+        "pubblico": true,
+        "settore": "Yield",
+        "giorno": "2022-06-24",
+        "importo_perso_usd": 14000,
+        "valore_prima_usd": 2970388669,
+        "variazione": {
+          "1": 0.0491,
+          "7": -0.0049,
+          "30": 0.377
+        },
+        "uscito_usd": {
+          "1": -145698742,
+          "7": 14617818,
+          "30": -1119937881
+        },
+        "variazione_unita": {
+          "7": null,
+          "30": null
+        },
+        "mediana_pari_30g": null,
+        "giorni_di_recupero": "no drop"
+      },
+      {
+        "entita_id": "portal",
+        "nome": null,
+        "pubblico": false,
+        "settore": "Liquidity bridges",
+        "giorno": "2022-02-02",
+        "importo_perso_usd": 326000000,
+        "valore_prima_usd": 1573210852,
+        "variazione": {
+          "1": 0.206,
+          "7": 0.3894,
+          "30": 0.4587
+        },
+        "uscito_usd": {
+          "1": -324078978,
+          "7": -612658121,
+          "30": -721657817
+        },
+        "variazione_unita": {
+          "7": null,
+          "30": null
+        },
+        "mediana_pari_30g": null,
+        "giorni_di_recupero": "no drop"
+      },
+      {
+        "entita_id": "compound-v2",
+        "nome": null,
+        "pubblico": false,
+        "settore": "Lending",
+        "giorno": "2021-09-29",
+        "importo_perso_usd": 147000000,
+        "valore_prima_usd": 9982231360,
+        "variazione": {
+          "1": -0.0254,
+          "7": -0.0093,
+          "30": 0.0789
+        },
+        "uscito_usd": {
+          "1": 253748463,
+          "7": 92966752,
+          "30": -787333114
+        },
+        "variazione_unita": {
+          "7": null,
+          "30": null
+        },
+        "mediana_pari_30g": null,
+        "giorni_di_recupero": 15
+      },
+      {
+        "entita_id": "yearn-finance",
+        "nome": null,
+        "pubblico": false,
+        "settore": "Yield aggregators",
+        "giorno": "2021-02-05",
+        "importo_perso_usd": 11000000,
+        "valore_prima_usd": 911721689,
+        "variazione": {
+          "1": 0.0372,
+          "7": 0.1751,
+          "30": 0.2709
+        },
+        "uscito_usd": {
+          "1": -33942612,
+          "7": -159605369,
+          "30": -247016165
+        },
+        "variazione_unita": {
+          "7": null,
+          "30": null
+        },
+        "mediana_pari_30g": null,
+        "giorni_di_recupero": "no drop"
+      },
+      {
+        "entita_id": "nexus-mutual",
+        "nome": null,
+        "pubblico": false,
+        "settore": "Insurance",
+        "giorno": "2020-12-14",
+        "importo_perso_usd": 8000000,
+        "valore_prima_usd": 90575347,
+        "variazione": {
+          "1": 0.0539,
+          "7": 0.0913,
+          "30": 0.9395
+        },
+        "uscito_usd": {
+          "1": -4885923,
+          "7": -8269020,
+          "30": -85098709
+        },
+        "variazione_unita": {
+          "7": null,
+          "30": null
+        },
+        "mediana_pari_30g": null,
+        "giorni_di_recupero": "no drop"
+      }
+    ],
+    "frasi": [
+      {
+        "id": "conteggio",
+        "testo": "16 security incidents hit protocols above $50M in the last 365 days; $363.0M reported lost",
+        "modello": "cruscotti.incidenti.conteggio",
+        "contratto": "contratto",
+        "numeri": {
+          "incidenti": 16,
+          "perso_usd": 363047260,
+          "incidenti_con_importo": 16
+        },
+        "misura": "incidenti",
+        "finestra_giorni": 365,
+        "base": 16,
+        "base_minima": 3,
+        "cancello": "passa"
+      },
+      {
+        "id": "storia",
+        "testo": "Across 18 past incidents, value locked was −9.9 points against peers 30 days later",
+        "modello": "cruscotti.incidenti.storia",
+        "contratto": "contratto",
+        "numeri": {
+          "eventi": 18,
+          "effetto_medio": -0.0991,
+          "intervallo": [
+            -0.1791,
+            -0.0374
+          ]
+        },
+        "misura": "studio_evento_incidenti",
+        "finestra_giorni": 30,
+        "base": 18,
+        "base_minima": 15,
+        "cancello": "passa"
+      }
+    ],
+    "fonti": [
+      "DefiLlama (hacks list, value locked)"
+    ],
+    "metodo": "event study: each incident against the median of the peers of its sector over the same days",
+    "cancello": "ok",
+    "cancello_nota": "gate result for the sentences: ok = at least one sentence passed; each sentence carries its own result; the values in tables and history are not certified one by one",
+    "motivi": [],
+    "immagini": {
+      "1600x900": "immagine_2026-10-06_1600x900.png",
+      "1080x1350": "immagine_2026-10-06_1080x1350.png"
+    },
+    "immagine_titolo": "Across 18 past incidents, value locked was −9.9 points against peers 30 days later",
+    "carta_x": {
+      "file": "x_card.png",
+      "formato": "1200x675",
+      "data": "2026-10-05",
+      "nuova": false,
+      "motivo": "no cover layout allowed today by the rules",
+      "modello": "E",
+      "frase_id": "conteggio",
+      "titolo": "Oct 2026: $363M lost to incidents in a year. Now: $363M.",
+      "note": [
+        "$363M, 1 Oct 2026",
+        "$363M, 5 Oct 2026"
+      ]
+    },
+    "immagini_problemi": 0,
+    "generato_il": "2026-10-07T03:58:08Z"
+  }
+}

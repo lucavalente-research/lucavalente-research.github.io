@@ -7,3 +7,7 @@ dati-aperti/fee_catene/*.csv
 
 # ROSSI1700: sorgenti CSV esclusi, distribuzione gzip frazionata.
 dati-aperti/fee_catene/*.csv
+
+*.riassunto.md
+
+*.bak_*
