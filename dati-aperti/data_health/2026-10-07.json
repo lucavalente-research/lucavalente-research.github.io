@@ -1,0 +1,1111 @@
+{
+  "metadati": {
+    "licenza": "CC BY 4.0",
+    "licenza_url": "https://creativecommons.org/licenses/by/4.0/",
+    "attribuzione": "Luca Valente",
+    "nota_licenza_fonti": "CC BY 4.0 applies to the original compilation and editorial work by Luca Valente. Underlying third-party data retain their source terms, including Coin Metrics CC BY-NC 4.0 where indicated; this export does not replace those terms.",
+    "fonte": "DefiLlama; growthepie; CoinGecko; Binance; Coin Metrics",
+    "fonti": [
+      "DefiLlama",
+      "growthepie",
+      "CoinGecko",
+      "Binance",
+      "Coin Metrics"
+    ],
+    "sorgente": "dati/cruscotti/data_health/latest.json",
+    "data": "2026-10-07"
+  },
+  "dati": {
+    "nome": "data_health",
+    "titolo": "Data Health",
+    "data": "2026-10-07",
+    "dati_fino_a": "2026-10-07",
+    "parola": null,
+    "da_quando": null,
+    "blocchi": [
+      {
+        "id": "oggi",
+        "titolo": "Found in the latest run",
+        "valori": [
+          {
+            "etichetta": "Revisions of past days found in the latest run",
+            "valore": 451,
+            "unita": "unita"
+          },
+          {
+            "etichetta": "Isolated spikes and drops on the latest two days",
+            "valore": 3,
+            "unita": "unita"
+          },
+          {
+            "etichetta": "Gaps on the latest two days",
+            "valore": 428,
+            "unita": "unita"
+          },
+          {
+            "etichetta": "Median data cleanliness, 0-100",
+            "valore": 98.9,
+            "unita": "unita",
+            "percentile_1a": null,
+            "percentile_storia": null,
+            "storia_dal": "2026-10-01",
+            "giorni_di_storia": 7,
+            "fonte": "data check on DefiLlama and growthepie series",
+            "dati_fino_a": "2026-10-07"
+          },
+          {
+            "etichetta": "Series with at least one flagged day in 90 days",
+            "valore": 638,
+            "unita": "unita",
+            "su": 1111
+          }
+        ]
+      },
+      {
+        "id": "per_fonte",
+        "titolo": "By source and measure, last 90 days",
+        "tabella": {
+          "colonne": [
+            "Source",
+            "Measure",
+            "Series",
+            "Isolated spikes",
+            "Isolated drops",
+            "Gaps",
+            "Revisions",
+            "Series with a flagged day",
+            "Median cleanliness"
+          ],
+          "righe": [
+            [
+              "DefiLlama",
+              "value locked",
+              345,
+              1,
+              12,
+              435,
+              501,
+              69,
+              100.0
+            ],
+            [
+              "DefiLlama",
+              "fees",
+              285,
+              433,
+              0,
+              246,
+              1132,
+              229,
+              97.8
+            ],
+            [
+              "DefiLlama",
+              "revenue",
+              244,
+              338,
+              0,
+              239,
+              982,
+              203,
+              97.8
+            ],
+            [
+              "DefiLlama",
+              "revenue to holders",
+              157,
+              92,
+              0,
+              156,
+              411,
+              101,
+              98.9
+            ],
+            [
+              "DefiLlama",
+              "DEX volume",
+              38,
+              14,
+              0,
+              0,
+              159,
+              17,
+              100.0
+            ],
+            [
+              "DefiLlama",
+              "stablecoin supply",
+              34,
+              0,
+              3,
+              1,
+              150,
+              11,
+              100.0
+            ],
+            [
+              "growthepie",
+              "layer-2 transactions",
+              8,
+              0,
+              0,
+              8,
+              0,
+              8,
+              98.9
+            ]
+          ]
+        }
+      },
+      {
+        "id": "altre_fonti",
+        "titolo": "Other sources: gaps only",
+        "tabella": {
+          "colonne": [
+            "Source",
+            "Measure",
+            "Series",
+            "Missing days",
+            "Series with a missing day"
+          ],
+          "righe": [
+            [
+              "CoinGecko",
+              "token price",
+              364,
+              379,
+              21
+            ],
+            [
+              "Binance",
+              "open interest",
+              45,
+              0,
+              0
+            ],
+            [
+              "Coin Metrics",
+              "MVRV",
+              2,
+              0,
+              0
+            ]
+          ]
+        },
+        "nota": "gaps only: spikes and revisions are not checked for these sources"
+      },
+      {
+        "id": "storico_correzioni",
+        "titolo": "History of corrections",
+        "serie": [
+          {
+            "etichetta": "Revisions found per night",
+            "unita": "unita",
+            "punti": [
+              [
+                "2026-07-10",
+                0
+              ],
+              [
+                "2026-07-11",
+                0
+              ],
+              [
+                "2026-07-12",
+                0
+              ],
+              [
+                "2026-07-13",
+                0
+              ],
+              [
+                "2026-07-14",
+                0
+              ],
+              [
+                "2026-07-15",
+                0
+              ],
+              [
+                "2026-07-16",
+                0
+              ],
+              [
+                "2026-07-17",
+                0
+              ],
+              [
+                "2026-07-18",
+                0
+              ],
+              [
+                "2026-07-19",
+                0
+              ],
+              [
+                "2026-07-20",
+                0
+              ],
+              [
+                "2026-07-21",
+                0
+              ],
+              [
+                "2026-07-22",
+                0
+              ],
+              [
+                "2026-07-23",
+                0
+              ],
+              [
+                "2026-07-24",
+                0
+              ],
+              [
+                "2026-07-25",
+                0
+              ],
+              [
+                "2026-07-26",
+                0
+              ],
+              [
+                "2026-07-27",
+                0
+              ],
+              [
+                "2026-07-28",
+                0
+              ],
+              [
+                "2026-07-29",
+                0
+              ],
+              [
+                "2026-07-30",
+                0
+              ],
+              [
+                "2026-07-31",
+                0
+              ],
+              [
+                "2026-08-01",
+                0
+              ],
+              [
+                "2026-08-02",
+                0
+              ],
+              [
+                "2026-08-03",
+                0
+              ],
+              [
+                "2026-08-04",
+                0
+              ],
+              [
+                "2026-08-05",
+                0
+              ],
+              [
+                "2026-08-06",
+                0
+              ],
+              [
+                "2026-08-07",
+                0
+              ],
+              [
+                "2026-08-08",
+                0
+              ],
+              [
+                "2026-08-09",
+                0
+              ],
+              [
+                "2026-08-10",
+                0
+              ],
+              [
+                "2026-08-11",
+                0
+              ],
+              [
+                "2026-08-12",
+                0
+              ],
+              [
+                "2026-08-13",
+                0
+              ],
+              [
+                "2026-08-14",
+                0
+              ],
+              [
+                "2026-08-15",
+                0
+              ],
+              [
+                "2026-08-16",
+                0
+              ],
+              [
+                "2026-08-17",
+                0
+              ],
+              [
+                "2026-08-18",
+                0
+              ],
+              [
+                "2026-08-19",
+                0
+              ],
+              [
+                "2026-08-20",
+                0
+              ],
+              [
+                "2026-08-21",
+                0
+              ],
+              [
+                "2026-08-22",
+                0
+              ],
+              [
+                "2026-08-23",
+                0
+              ],
+              [
+                "2026-08-24",
+                0
+              ],
+              [
+                "2026-08-25",
+                0
+              ],
+              [
+                "2026-08-26",
+                0
+              ],
+              [
+                "2026-08-27",
+                0
+              ],
+              [
+                "2026-08-28",
+                0
+              ],
+              [
+                "2026-08-29",
+                0
+              ],
+              [
+                "2026-08-30",
+                0
+              ],
+              [
+                "2026-08-31",
+                0
+              ],
+              [
+                "2026-09-01",
+                0
+              ],
+              [
+                "2026-09-02",
+                0
+              ],
+              [
+                "2026-09-03",
+                0
+              ],
+              [
+                "2026-09-04",
+                0
+              ],
+              [
+                "2026-09-05",
+                0
+              ],
+              [
+                "2026-09-06",
+                0
+              ],
+              [
+                "2026-09-07",
+                0
+              ],
+              [
+                "2026-09-08",
+                0
+              ],
+              [
+                "2026-09-09",
+                0
+              ],
+              [
+                "2026-09-10",
+                106
+              ],
+              [
+                "2026-09-11",
+                0
+              ],
+              [
+                "2026-09-12",
+                34
+              ],
+              [
+                "2026-09-13",
+                0
+              ],
+              [
+                "2026-09-14",
+                0
+              ],
+              [
+                "2026-09-15",
+                0
+              ],
+              [
+                "2026-09-16",
+                13
+              ],
+              [
+                "2026-09-17",
+                8
+              ],
+              [
+                "2026-09-18",
+                8
+              ],
+              [
+                "2026-09-19",
+                10
+              ],
+              [
+                "2026-09-20",
+                98
+              ],
+              [
+                "2026-09-21",
+                8
+              ],
+              [
+                "2026-09-22",
+                203
+              ],
+              [
+                "2026-09-23",
+                37
+              ],
+              [
+                "2026-09-24",
+                116
+              ],
+              [
+                "2026-09-25",
+                75
+              ],
+              [
+                "2026-09-26",
+                37
+              ],
+              [
+                "2026-09-27",
+                238
+              ],
+              [
+                "2026-09-28",
+                191
+              ],
+              [
+                "2026-09-29",
+                57
+              ],
+              [
+                "2026-09-30",
+                43
+              ],
+              [
+                "2026-10-01",
+                431
+              ],
+              [
+                "2026-10-02",
+                463
+              ],
+              [
+                "2026-10-03",
+                119
+              ],
+              [
+                "2026-10-04",
+                101
+              ],
+              [
+                "2026-10-05",
+                324
+              ],
+              [
+                "2026-10-06",
+                164
+              ],
+              [
+                "2026-10-07",
+                451
+              ]
+            ]
+          },
+          {
+            "etichetta": "Isolated spikes and drops per day",
+            "unita": "unita",
+            "punti": [
+              [
+                "2026-07-10",
+                30
+              ],
+              [
+                "2026-07-11",
+                3
+              ],
+              [
+                "2026-07-12",
+                22
+              ],
+              [
+                "2026-07-13",
+                14
+              ],
+              [
+                "2026-07-14",
+                28
+              ],
+              [
+                "2026-07-15",
+                3
+              ],
+              [
+                "2026-07-16",
+                23
+              ],
+              [
+                "2026-07-17",
+                4
+              ],
+              [
+                "2026-07-18",
+                19
+              ],
+              [
+                "2026-07-19",
+                4
+              ],
+              [
+                "2026-07-20",
+                19
+              ],
+              [
+                "2026-07-21",
+                6
+              ],
+              [
+                "2026-07-22",
+                24
+              ],
+              [
+                "2026-07-23",
+                12
+              ],
+              [
+                "2026-07-24",
+                0
+              ],
+              [
+                "2026-07-25",
+                18
+              ],
+              [
+                "2026-07-26",
+                4
+              ],
+              [
+                "2026-07-27",
+                30
+              ],
+              [
+                "2026-07-28",
+                3
+              ],
+              [
+                "2026-07-29",
+                24
+              ],
+              [
+                "2026-07-30",
+                17
+              ],
+              [
+                "2026-07-31",
+                26
+              ],
+              [
+                "2026-08-01",
+                0
+              ],
+              [
+                "2026-08-02",
+                21
+              ],
+              [
+                "2026-08-03",
+                7
+              ],
+              [
+                "2026-08-04",
+                19
+              ],
+              [
+                "2026-08-05",
+                8
+              ],
+              [
+                "2026-08-06",
+                36
+              ],
+              [
+                "2026-08-07",
+                12
+              ],
+              [
+                "2026-08-08",
+                16
+              ],
+              [
+                "2026-08-09",
+                3
+              ],
+              [
+                "2026-08-10",
+                25
+              ],
+              [
+                "2026-08-11",
+                7
+              ],
+              [
+                "2026-08-12",
+                9
+              ],
+              [
+                "2026-08-13",
+                27
+              ],
+              [
+                "2026-08-14",
+                3
+              ],
+              [
+                "2026-08-15",
+                22
+              ],
+              [
+                "2026-08-16",
+                3
+              ],
+              [
+                "2026-08-17",
+                14
+              ],
+              [
+                "2026-08-18",
+                6
+              ],
+              [
+                "2026-08-19",
+                11
+              ],
+              [
+                "2026-08-20",
+                12
+              ],
+              [
+                "2026-08-21",
+                3
+              ],
+              [
+                "2026-08-22",
+                2
+              ],
+              [
+                "2026-08-23",
+                5
+              ],
+              [
+                "2026-08-24",
+                5
+              ],
+              [
+                "2026-08-25",
+                5
+              ],
+              [
+                "2026-08-26",
+                0
+              ],
+              [
+                "2026-08-27",
+                9
+              ],
+              [
+                "2026-08-28",
+                7
+              ],
+              [
+                "2026-08-29",
+                3
+              ],
+              [
+                "2026-08-30",
+                8
+              ],
+              [
+                "2026-08-31",
+                3
+              ],
+              [
+                "2026-09-01",
+                0
+              ],
+              [
+                "2026-09-02",
+                13
+              ],
+              [
+                "2026-09-03",
+                4
+              ],
+              [
+                "2026-09-04",
+                6
+              ],
+              [
+                "2026-09-05",
+                11
+              ],
+              [
+                "2026-09-06",
+                4
+              ],
+              [
+                "2026-09-07",
+                12
+              ],
+              [
+                "2026-09-08",
+                13
+              ],
+              [
+                "2026-09-09",
+                12
+              ],
+              [
+                "2026-09-10",
+                7
+              ],
+              [
+                "2026-09-11",
+                6
+              ],
+              [
+                "2026-09-12",
+                1
+              ],
+              [
+                "2026-09-13",
+                0
+              ],
+              [
+                "2026-09-14",
+                13
+              ],
+              [
+                "2026-09-15",
+                5
+              ],
+              [
+                "2026-09-16",
+                16
+              ],
+              [
+                "2026-09-17",
+                3
+              ],
+              [
+                "2026-09-18",
+                10
+              ],
+              [
+                "2026-09-19",
+                1
+              ],
+              [
+                "2026-09-20",
+                0
+              ],
+              [
+                "2026-09-21",
+                18
+              ],
+              [
+                "2026-09-22",
+                7
+              ],
+              [
+                "2026-09-23",
+                4
+              ],
+              [
+                "2026-09-24",
+                6
+              ],
+              [
+                "2026-09-25",
+                7
+              ],
+              [
+                "2026-09-26",
+                6
+              ],
+              [
+                "2026-09-27",
+                0
+              ],
+              [
+                "2026-09-28",
+                11
+              ],
+              [
+                "2026-09-29",
+                9
+              ],
+              [
+                "2026-09-30",
+                15
+              ],
+              [
+                "2026-10-01",
+                5
+              ],
+              [
+                "2026-10-02",
+                3
+              ],
+              [
+                "2026-10-03",
+                5
+              ],
+              [
+                "2026-10-04",
+                1
+              ],
+              [
+                "2026-10-05",
+                12
+              ],
+              [
+                "2026-10-06",
+                3
+              ],
+              [
+                "2026-10-07",
+                0
+              ]
+            ]
+          }
+        ],
+        "nota": "a spike or a gap sits on the day of the data; a revision on the day whose nightly run found the changed value. Revisions are found only from the night two readings of the same day were first kept"
+      }
+    ],
+    "artefatti_noti": {
+      "id": "known_artefacts",
+      "titolo": "Known artefacts of the sources",
+      "disponibile": true,
+      "controllati": 26,
+      "controllato_il": "2026-10-02",
+      "valori": [
+        {
+          "etichetta": "Public-list protocols with negative fee or revenue days in the last 90 days",
+          "valore": 4,
+          "unita": "unita"
+        },
+        {
+          "etichetta": "Watched identifiers now present in the registry of entities",
+          "valore": 0,
+          "unita": "unita"
+        }
+      ],
+      "tabella": {
+        "colonne": [
+          "Protocol",
+          "Measure",
+          "Negative days in 90",
+          "Lowest day (usd)",
+          "Latest"
+        ],
+        "righe": [
+          [
+            "Spark Liquidity Layer",
+            "revenue",
+            7,
+            -37315,
+            "2026-10-06"
+          ],
+          [
+            "Gauntlet",
+            "fees",
+            1,
+            -430307,
+            "2026-07-31"
+          ],
+          [
+            "Polymarket International",
+            "revenue",
+            2,
+            -85146,
+            "2026-08-07"
+          ],
+          [
+            "Lombard LBTC",
+            "fees",
+            6,
+            -79988,
+            "2026-10-05"
+          ],
+          [
+            "Lombard LBTC",
+            "revenue",
+            6,
+            -6399,
+            "2026-10-05"
+          ]
+        ]
+      },
+      "sorvegliati_entrati": [],
+      "nota": "negative days are published by the source (refunds, corrections, losses); sums include them as they are"
+    },
+    "definizioni": {
+      "gap": "a day the source did not publish (a published zero is data)",
+      "isolated spike": "a day above 5.0 times the median of the 14 days around it, with both neighbours below 2.0 times",
+      "isolated drop": "value locked and stablecoins only: a day below half the median, neighbours above half",
+      "revision": "the value of a past day changed by more than 1% between two nights",
+      "cleanliness": "share (0-100) of the days in the window with no event"
+    },
+    "frasi": [
+      {
+        "id": "serie_marcate",
+        "testo": "638 of 1111 series had a flagged day in the last 90 days",
+        "modello": "cruscotti.data_health.serie_marcate",
+        "contratto": "contratto",
+        "numeri": {
+          "serie_marcate": 638,
+          "serie": 1111
+        },
+        "misura": "data_check",
+        "finestra_giorni": 90,
+        "base": 1111,
+        "base_minima": 100,
+        "cancello": "passa"
+      },
+      {
+        "id": "pulizia",
+        "testo": "The median data cleanliness across 1111 series was 98.9 out of 100",
+        "modello": "cruscotti.data_health.pulizia",
+        "contratto": "contratto",
+        "numeri": {
+          "pulizia_mediana": 98.9,
+          "serie": 1111
+        },
+        "misura": "data_check",
+        "finestra_giorni": 90,
+        "base": 1111,
+        "base_minima": 100,
+        "cancello": "passa"
+      },
+      {
+        "id": "fonte_defillama",
+        "testo": "DefiLlama: 878 isolated spikes, 1077 gaps and 3335 revisions in the last 90 days",
+        "modello": "cruscotti.data_health.fonte",
+        "contratto": "contratto",
+        "numeri": {
+          "picchi": 878,
+          "buchi": 1077,
+          "revisioni": 3335,
+          "serie": 1103
+        },
+        "misura": "data_check",
+        "finestra_giorni": 90,
+        "base": 1103,
+        "base_minima": 5,
+        "cancello": "passa"
+      },
+      {
+        "id": "revisioni_defillama",
+        "testo": "DefiLlama revised 2053 past days in the last 7 days",
+        "modello": "cruscotti.data_health.revisioni",
+        "contratto": "contratto",
+        "numeri": {
+          "revisioni_7g": 2053
+        },
+        "misura": "data_check",
+        "finestra_giorni": 7,
+        "base": 1103,
+        "base_minima": 5,
+        "cancello": "passa"
+      },
+      {
+        "id": "fonte_growthepie",
+        "testo": "growthepie: 0 isolated spikes, 8 gaps and 0 revisions in the last 90 days",
+        "modello": "cruscotti.data_health.fonte",
+        "contratto": "contratto",
+        "numeri": {
+          "picchi": 0,
+          "buchi": 8,
+          "revisioni": 0,
+          "serie": 8
+        },
+        "misura": "data_check",
+        "finestra_giorni": 90,
+        "base": 8,
+        "base_minima": 5,
+        "cancello": "passa"
+      }
+    ],
+    "fonti": [
+      "DefiLlama",
+      "growthepie",
+      "CoinGecko",
+      "Binance",
+      "Coin Metrics"
+    ],
+    "metodo": "counts from the nightly data check over the last 90 days",
+    "cancello": "ok",
+    "cancello_nota": "gate result for the sentences: ok = at least one sentence passed; each sentence carries its own result; the values in tables and history are not certified one by one",
+    "motivi": [],
+    "immagini": {
+      "1600x900": "immagine_2026-10-07_1600x900.png",
+      "1080x1350": "immagine_2026-10-07_1080x1350.png"
+    },
+    "immagine_titolo": "638 of 1111 series had a flagged day in the last 90 days",
+    "carta_x": null,
+    "immagini_problemi": 0,
+    "generato_il": "2026-10-08T04:03:28Z"
+  }
+}
