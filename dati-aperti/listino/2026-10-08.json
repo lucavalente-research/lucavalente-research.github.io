@@ -1,0 +1,290 @@
+{
+  "metadati": {
+    "licenza": "CC BY 4.0",
+    "licenza_url": "https://creativecommons.org/licenses/by/4.0/",
+    "attribuzione": "Luca Valente",
+    "nota_licenza_fonti": "CC BY 4.0 applies to the original compilation and editorial work by Luca Valente. Underlying third-party data retain their source terms, including Coin Metrics CC BY-NC 4.0 where indicated; this export does not replace those terms.",
+    "fonte": "CoinGecko (market value); DefiLlama (fees, revenue)",
+    "fonti": [
+      "CoinGecko (market value)",
+      "DefiLlama (fees, revenue)"
+    ],
+    "sorgente": "dati/cruscotti/listino/latest.json",
+    "data": "2026-10-08"
+  },
+  "dati": {
+    "nome": "listino",
+    "titolo": "The Price List",
+    "data": "2026-10-08",
+    "dati_fino_a": {
+      "livelli": "2026-10-08",
+      "somme": "2026-10-07"
+    },
+    "parola": null,
+    "da_quando": null,
+    "blocchi": [
+      {
+        "id": "insieme",
+        "titolo": "All tokens with full coverage",
+        "valori": [
+          {
+            "etichetta": "Median price to annual fees across 0 tokens",
+            "valore": null,
+            "unita": "x",
+            "tipo": "level",
+            "variazioni": {
+              "7": null,
+              "30": null,
+              "90": null
+            },
+            "percentile_1a": null,
+            "percentile_storia": null,
+            "storia_dal": null,
+            "serie_dal": null,
+            "giorni_di_storia": 0,
+            "giorni_presenti": null,
+            "giorni_finestra": null,
+            "stato": null,
+            "da_quando": null,
+            "da_quando_almeno": false,
+            "banda_flat": 0.05,
+            "finestra_stato": 30,
+            "fonte": "CoinGecko, DefiLlama",
+            "dati_fino_a": "2026-10-08",
+            "punti": []
+          },
+          {
+            "etichetta": "Median price to annual revenue",
+            "valore": null,
+            "unita": "x",
+            "tipo": "level",
+            "variazioni": {
+              "7": null,
+              "30": null,
+              "90": null
+            },
+            "percentile_1a": null,
+            "percentile_storia": null,
+            "storia_dal": null,
+            "serie_dal": null,
+            "giorni_di_storia": 0,
+            "giorni_presenti": null,
+            "giorni_finestra": null,
+            "stato": null,
+            "da_quando": null,
+            "da_quando_almeno": false,
+            "banda_flat": 0.05,
+            "finestra_stato": 30,
+            "fonte": "CoinGecko, DefiLlama",
+            "dati_fino_a": "2026-10-08",
+            "punti": []
+          },
+          {
+            "etichetta": "Tokens below their own one-year median multiple of fees",
+            "valore": 0,
+            "unita": "unita",
+            "su": 0
+          }
+        ],
+        "serie": [
+          {
+            "etichetta": "Median price to annual fees",
+            "unita": "x",
+            "punti": []
+          }
+        ]
+      },
+      {
+        "id": "settori",
+        "titolo": "Sector medians (at least 5 tokens)",
+        "tabella": {
+          "colonne": [
+            "Sector",
+            "Tokens",
+            "Median price to annual fees (x)",
+            "90 days earlier (x)",
+            "Median price to annual revenue (x)"
+          ],
+          "righe": []
+        }
+      },
+      {
+        "id": "listino",
+        "titolo": "The list",
+        "tabella": {
+          "colonne": [
+            "Token",
+            "Protocol",
+            "Sector",
+            "Market value (usd)",
+            "Fees, 365 days (usd)",
+            "Price to annual fees (x)",
+            "Percentile of its own last year",
+            "Own one-year median (x)",
+            "Price to annual revenue (x)",
+            "Partial coverage",
+            "Fees are staking rewards"
+          ],
+          "righe": [
+            [
+              "UNI",
+              "Uniswap V3",
+              "DEXs",
+              4944718068,
+              485481407,
+              10.19,
+              94.8,
+              4.3,
+              90.91,
+              "yes",
+              ""
+            ],
+            [
+              "AAVE",
+              "Aave V3",
+              "Lending",
+              2686221663,
+              714619121,
+              3.76,
+              91.8,
+              1.99,
+              29.53,
+              "yes",
+              ""
+            ],
+            [
+              "aerodrome-finance",
+              "Aerodrome Finance",
+              "DEXs",
+              794654405,
+              128375924,
+              6.19,
+              97.3,
+              2.38,
+              8.7,
+              "yes",
+              ""
+            ],
+            [
+              "QI",
+              "Benqi Staked Avax",
+              "Liquid staking",
+              21209759,
+              13253748,
+              1.6,
+              69.0,
+              0.84,
+              16.0,
+              "yes",
+              ""
+            ]
+          ]
+        },
+        "nota": "one row per token; 'partial coverage' = the token's family has fee-earning products outside the public list, or more than one fee series for the same token: coverage is incomplete or ambiguous and the multiple is not directly comparable; these rows are left out of medians and sentences"
+      }
+    ],
+    "righe": [
+      {
+        "token": "UNI",
+        "coingecko_id": "uniswap",
+        "nome": "Uniswap V3",
+        "settore": "DEXs",
+        "entita": [
+          "uniswap"
+        ],
+        "capitalizzazione_usd": 4944718068,
+        "commissioni_365g_usd": 485481407,
+        "ricavi_365g_usd": 54393555,
+        "prezzo_su_commissioni": 10.19,
+        "percentile_1a": 94.8,
+        "mediana_1a": 4.3,
+        "prezzo_su_ricavi": 90.91,
+        "percentile_ricavi_1a": 44.7,
+        "giorni_di_multiplo": 365,
+        "copertura_parziale": true,
+        "prodotti_fuori_universo": 1,
+        "voci_dello_stesso_token": 2,
+        "commissioni_sono_ricompense": false
+      },
+      {
+        "token": "AAVE",
+        "coingecko_id": "aave",
+        "nome": "Aave V3",
+        "settore": "Lending",
+        "entita": [
+          "aave"
+        ],
+        "capitalizzazione_usd": 2686221663,
+        "commissioni_365g_usd": 714619121,
+        "ricavi_365g_usd": 90954848,
+        "prezzo_su_commissioni": 3.76,
+        "percentile_1a": 91.8,
+        "mediana_1a": 1.99,
+        "prezzo_su_ricavi": 29.53,
+        "percentile_ricavi_1a": 95.6,
+        "giorni_di_multiplo": 365,
+        "copertura_parziale": true,
+        "prodotti_fuori_universo": 2,
+        "voci_dello_stesso_token": 1,
+        "commissioni_sono_ricompense": false
+      },
+      {
+        "token": "aerodrome-finance",
+        "coingecko_id": "aerodrome-finance",
+        "nome": "Aerodrome Finance",
+        "settore": "DEXs",
+        "entita": [
+          "aerodrome-finance"
+        ],
+        "capitalizzazione_usd": 794654405,
+        "commissioni_365g_usd": 128375924,
+        "ricavi_365g_usd": 91360639,
+        "prezzo_su_commissioni": 6.19,
+        "percentile_1a": 97.3,
+        "mediana_1a": 2.38,
+        "prezzo_su_ricavi": 8.7,
+        "percentile_ricavi_1a": 97.5,
+        "giorni_di_multiplo": 365,
+        "copertura_parziale": true,
+        "prodotti_fuori_universo": 2,
+        "voci_dello_stesso_token": 1,
+        "commissioni_sono_ricompense": false
+      },
+      {
+        "token": "QI",
+        "coingecko_id": "benqi",
+        "nome": "Benqi Staked Avax",
+        "settore": "Liquid staking",
+        "entita": [
+          "benqi-staked-avax"
+        ],
+        "capitalizzazione_usd": 21209759,
+        "commissioni_365g_usd": 13253748,
+        "ricavi_365g_usd": 1325373,
+        "prezzo_su_commissioni": 1.6,
+        "percentile_1a": 69.0,
+        "mediana_1a": 0.84,
+        "prezzo_su_ricavi": 16.0,
+        "percentile_ricavi_1a": 69.0,
+        "giorni_di_multiplo": 365,
+        "copertura_parziale": true,
+        "prodotti_fuori_universo": 1,
+        "voci_dello_stesso_token": 1,
+        "commissioni_sono_ricompense": false
+      }
+    ],
+    "frasi": [],
+    "fonti": [
+      "CoinGecko (market value)",
+      "DefiLlama (fees, revenue)"
+    ],
+    "metodo": "a multiple of market value over protocol fees, not price over earnings: the token may have no claim on those fees; the fee series and the tokens with full coverage are today's selection, applied to the whole history; market value on 2026-10-08 divided by the sum of 365 days of fees (or revenue) through 2026-10-07; percentile of today's multiple among its own daily values of the past year",
+    "cancello": "fermato",
+    "cancello_nota": "gate result for the sentences: ok = at least one sentence passed; each sentence carries its own result; the values in tables and history are not certified one by one",
+    "motivi": [],
+    "immagini": {},
+    "carta_x": null,
+    "immagini_problemi": 1,
+    "generato_il": "2026-10-09T03:53:08Z"
+  }
+}
