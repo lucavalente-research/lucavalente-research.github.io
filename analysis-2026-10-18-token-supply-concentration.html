@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Token Supply Concentration: What Top-10 Holder Lists Reveal—and What They Miss — Luca Valente</title>
+<meta name="description" content="A Blockscout snapshot of CRV, UNI and OP shows why address concentration cannot be read as a simple ranking of selling pressure.">
+<link rel="canonical" href="https://lucavalente-research.github.io/analysis-2026-10-18-token-supply-concentration.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Luca Valente · Crypto research">
+<meta property="og:title" content="Token Supply Concentration: What Top-10 Holder Lists Reveal—and What They Miss — Luca Valente">
+<meta property="og:description" content="A Blockscout snapshot of CRV, UNI and OP shows why address concentration cannot be read as a simple ranking of selling pressure.">
+<meta property="og:url" content="https://lucavalente-research.github.io/analysis-2026-10-18-token-supply-concentration.html">
+<meta property="og:image" content="https://lucavalente-research.github.io/immagini/analysis/analysis-2026-10-18-token-supply-concentration.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@LukkVal">
+<meta name="twitter:title" content="Token Supply Concentration: What Top-10 Holder Lists Reveal—and What They Miss — Luca Valente">
+<meta name="twitter:description" content="A Blockscout snapshot of CRV, UNI and OP shows why address concentration cannot be read as a simple ranking of selling pressure.">
+<meta name="twitter:image" content="https://lucavalente-research.github.io/immagini/analysis/analysis-2026-10-18-token-supply-concentration.png">
+<link rel="alternate" type="application/rss+xml" title="Luca Valente · Crypto research" href="feed.xml">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23052C25'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23F4F0E3' text-anchor='middle'%3ELV%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="stile.css">
+</head><body><a class="skip" href="#main">Skip to content</a>
+<header class="testata">
+  <div class="marchio"><a href="./">LV / LUCA VALENTE<small>ON-CHAIN AND MACRO RESEARCH</small></a></div>
+  <nav aria-label="Main navigation"><a href="./">Home</a> <a href="charts.html">Charts</a> <a href="analysis.html" class="attiva">Analysis</a> <a href="method.html">Methodology & data</a> <a href="code-and-data.html">Code & data</a> <a href="about.html">About</a> <a href="contact.html">Contact</a><a href="archive.html">Archive</a></nav>
+  
+</header>
+<main id="main">
+<article class="analisi">
+<figure><img src="immagini/analysis/analysis-2026-10-18-token-supply-concentration.png" alt="Token Supply Concentration: What Top-10 Holder Lists Reveal—and What They Miss" width="1600" height="900"></figure>
+<p class="data">18 Oct 2026</p>
+<h1>Token Supply Concentration: What Top-10 Holder Lists Reveal—and What They Miss</h1>
+<p>The ten largest OP addresses held <strong>61.13%</strong> of total on-chain supply in the 18 October 2026 snapshot. The comparable figures were <strong>57.28% for CRV</strong> and <strong>51.97% for UNI</strong>. Those totals combine addresses with very different functions: exchange custody, governance contracts, treasury wallets and, for UNI, a burn address.</p>
+<p>Restricting the comparison to top-ten addresses without smart-contract code reverses the order. UNI leads at <strong>24.54%</strong>, followed by CRV at <strong>22.62%</strong> and OP at <strong>14.17%</strong>. Yet the classification still does not identify beneficial owners or establish whether the balances are available to sell. The useful question is what sits behind each address.</p>
+<h2>CRV: escrow dominates the contract share</h2>
+<p>One address accounts for CRV’s entire <strong>34.67%</strong> smart-contract share within the top ten: Curve’s Voting Escrow contract. This is a governance lock, so its balance should be examined through lock terms and expiries rather than treated as immediately liquid supply.</p>
+<p>Five of the other nine top-ten addresses carry Binance, Bybit or Kraken labels. Together they hold <strong>12.09%</strong> of CRV supply. These labels identify custodial wallets, not the individual customers behind their balances. Four unlabelled wallets account for approximately <strong>10.53%</strong> more.</p>
+<h2>UNI: a burn address sits inside the non-contract total</h2>
+<p>UNI’s second-largest address is a burn address holding <strong>11.30%</strong> of total supply. Block explorers classify it as a non-contract address because it contains no smart-contract code. Its inclusion makes the <strong>24.54%</strong> non-contract figure unsuitable as a direct measure of potentially saleable holdings. The address is conventionally treated as inaccessible; the holder snapshot alone does not prove control of any address.</p>
+<p>Three exchange-labelled wallets account for <strong>7.17%</strong> of UNI supply. After setting those and the burn address apart, four unlabelled top-ten wallets hold <strong>6.08%</strong>. The remaining <strong>27.43%</strong> of UNI’s top-ten share sits in DAO timelock and distributor contracts.</p>
+<h2>OP: Safe wallets require a different test</h2>
+<p>The five contract addresses in OP’s top ten are labelled Safe wallets and together hold <strong>46.96%</strong> of supply. The other <strong>14.17%</strong> sits in non-contract addresses, more than half of it in a Binance-labelled wallet. The contract group includes an Optimism Foundation reserve address.</p>
+<p>A Safe is governed by signers and its configured controls. A contract flag does not show whether a particular balance is time-locked, earmarked for grants or transferable at once. The relevant next step is to inspect each wallet’s signers, modules and allocation terms.</p>
+<h2>What the ranking can—and cannot—say</h2>
+<p>OP’s <strong>14.17%</strong> non-contract share does not establish that it has the lowest ownership concentration. Its Safe balances remain inside the top ten. UNI’s comparable figure includes the burn address, while CRV’s largest balance sits in Voting Escrow. These are different forms of concentration, with different implications for liquid supply.</p>
+<p>Top-ten lists are therefore a <strong>screening tool, not a selling-pressure ranking</strong>. They point to the addresses that deserve further work: custody attribution, escrow expiries, treasury controls and beneficial ownership.</p>
+<h2>Method and source</h2>
+<p>Shares are percentages of total on-chain token supply in archived <a href="https://eth.blockscout.com/">Blockscout Ethereum</a> snapshots for CRV and UNI and <a href="https://optimism.blockscout.com/">Blockscout Optimism</a> snapshots for OP, captured <strong>18 October 2026</strong>. “Contract” means the explorer reported code at the address. Address labels are explorer metadata at the time of capture. Rounded figures may not sum to 100.00%; neither contract status nor a holder label establishes lock status or beneficial ownership.</p>
+<p class="fonti-pezzo">Sources: Blockscout holder snapshots, Ethereum (CRV and UNI) and Optimism (OP), captured 18 October 2026.</p>
+</article>
+</main>
+<footer class="piede">
+  <p class="seguimi"><a href="https://x.com/LukkVal" rel="me noopener">X</a> <a href="https://www.tradingview.com/u/lukkval/" rel="me noopener">TradingView</a> <a href="https://www.linkedin.com/in/lucavalenteweb3/" rel="me noopener">LinkedIn</a> <a href="https://github.com/lucavalente-research/defi-observatory" rel="me noopener">GitHub</a></p>
+  <p><a href="mailto:luca.valente.cv@gmail.com">luca.valente.cv@gmail.com</a> · <a href="contact.html">Contact</a> · <a href="disclaimer.html">Disclaimer</a> · <a href="feed.xml">RSS</a></p>
+  <p class="fonti">Data: DefiLlama, GitHub, CoinGecko · growthepie (<a href="https://www.growthepie.com">growthepie.com</a>, CC BY 4.0)</p>
+  <p class="legale">Not financial advice. Research based on public on-chain and market data.</p>
+</footer>
+</body></html>
