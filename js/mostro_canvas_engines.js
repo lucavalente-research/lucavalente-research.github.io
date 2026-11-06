@@ -6,6 +6,7 @@
   'use strict';
   const doc = root.document, B = root.MOSTRO_BUNDLE, E = root.MostroEngine;
   const GOLD = '#FFB800', GREEN = '#00F5A0', RED = '#FF2E63', INK = '#071A17', MUTED = '#8AB3AD';
+  const money=E.money,dateUTC=E.dateUTC;
   const colors = [GREEN, RED, GOLD];
   const finite = n => typeof n === 'number' && Number.isFinite(n);
   const clamp = (n, lo = 0, hi = 100) => Math.max(lo, Math.min(hi, n));
@@ -85,7 +86,7 @@
   }
   function details(p) {
     const r=result(p), ps=peers(p), date=p.metrics?.commissioni_giornaliere?.as_of||p.metrics?.commissioni_24h?.as_of||'N/D';
-    return `${p.name} (${p.ticker||'—'}) · ${sector(p)}\nFees: $${fmt(r.fees)} / day · MCAP/TVL: ${fmt(r.ratio)}× · as of ${date}\nSector peers (${ps.length}/4): ${ps.map(q=>`${q.ticker||q.name} [fees $${fmt(result(q).fees)}; MCAP/TVL ${fmt(result(q).ratio)}×]`).join(' · ') || 'none available'}${ps.length<4?' · fewer than four peers in this sector':''}`;
+    return `${p.name} (${p.ticker||'—'}) · ${sector(p)}\nFees: ${money(r.fees)} / day · MCAP/TVL: ${fmt(r.ratio)}× · as of ${dateUTC(date)}\nSector peers (${ps.length}/4): ${ps.map(q=>`${q.ticker||q.name} [fees ${money(result(q).fees)}; MCAP/TVL ${fmt(result(q).ratio)}×]`).join(' · ') || 'none available'}${ps.length<4?' · fewer than four peers in this sector':''}`;
   }
   function selectProtocol(id) {
     if (!byId.has(id)) return;state.selected=id;
@@ -129,10 +130,10 @@
     const names=verdict.winners.map(id=>byId.get(id).name).join(' / ');
     $('arena-battle-output').textContent=(verdict.winners.length?`${verdict.winners.length>1?'TIE':'WINNER'}: ${names}. `:'SELECT COMPARABLE PROTOCOLS. ')+verdict.reason+' '+verdict.scores.map(v=>`${byId.get(v.id).ticker}: ${fmt(v.score)} / 100`).join(' · ')+` · ${verdict.common.length}/8 common axes.`;
     $('arena-values').innerHTML='<table><thead><tr><th>Percentile / 100</th>'+entries.map((e,i)=>`<th style="color:${colors[i]}">${esc(byId.get(e.id).name)}</th>`).join('')+'</tr></thead><tbody>'+axes.map((a,i)=>'<tr><th>'+a+'</th>'+entries.map(e=>'<td>'+fmt(e.axes[i])+'</td>').join('')+'</tr>').join('')+'</tbody></table>';
-    const s=prepare('valen-arena');if(!s)return;const cx=s.w/2,cy=s.h/2,r=Math.max(25,Math.min(s.w/2-64,s.h/2-48));
+    const s=prepare('valen-arena');if(!s)return;const cx=s.w/2,cy=s.h/2,r=Math.max(25,Math.min(s.w/2-74,s.h/2-58));
     const point=(i,f)=>[cx+Math.cos(i*Math.PI/4-Math.PI/2)*r*f,cy+Math.sin(i*Math.PI/4-Math.PI/2)*r*f];
     for(let ring=1;ring<=4;ring++){s.ctx.beginPath();for(let i=0;i<8;i++){const [x,y]=point(i,ring/4);i?s.ctx.lineTo(x,y):s.ctx.moveTo(x,y);}s.ctx.closePath();s.ctx.strokeStyle='#255247';s.ctx.stroke();}
-    axes.forEach((a,i)=>{const [x,y]=point(i,1),[tx,ty]=point(i,1.22);line(s,cx,cy,x,y,'#255247');const half=s.ctx.measureText(a).width/2; text(s,a,clamp(tx,half+4,s.w-half-4),ty,MUTED,'center');});
+    axes.forEach((a,i)=>{const [x,y]=point(i,1),[tx,ty]=point(i,1.22+10/r);line(s,cx,cy,x,y,'#255247');const width=s.ctx.measureText(a).width,dx=Math.cos(i*Math.PI/4-Math.PI/2),align=dx<-.2?'right':dx>.2?'left':'center';const labelX=align==='right'?Math.max(width+14,tx):align==='left'?Math.min(s.w-width-14,tx):clamp(tx,width/2+14,s.w-width/2-14);text(s,a,labelX,ty,MUTED,align);});
     entries.forEach((e,index)=>{const c=s.ctx;c.strokeStyle=colors[index];c.lineWidth=2;
       if(e.axes.every(finite)){c.beginPath();e.axes.forEach((v,i)=>{const [x,y]=point(i,v/100);i?c.lineTo(x,y):c.moveTo(x,y);});c.closePath();c.fillStyle=colors[index]+'20';c.fill();c.stroke();}
       else e.axes.forEach((v,i)=>{const next=(i+1)%8;if(finite(v)&&finite(e.axes[next])){const a=point(i,v/100),b=point(next,e.axes[next]/100);line(s,...a,...b,colors[index],2);}});
@@ -141,24 +142,42 @@
     });
   }
   function drawTreemap() {
-    const s=prepare('valen-treemap');if(!s)return;
+    let s=prepare('valen-treemap');if(!s)return;
     // Log MCAP weights prevent a stablecoin from consuming the visual field.
     // Missing MCAP gets the minimum layout weight, never an invented valuation.
     const rows=protocols.map(p=>{const r=result(p),priced=finite(r.mcap)&&r.mcap>0;return{id:p.entity_id,mcap:r.mcap,weight:priced?1+Math.log1p(r.mcap/1e6):1,score:r.score,unpriced:!priced};});
-    const priced=rows.filter(r=>!r.unpriced),missing=rows.filter(r=>r.unpriced);
-    const rects=tile(rows.sort((a,b)=>b.weight-a.weight||a.id.localeCompare(b.id)),0,0,s.w,s.h);
-    state.rectangles=rects;
-    rects.forEach(r=>{const c=s.ctx,col=!finite(r.score)?MUTED:r.score>=50?GREEN:RED;c.fillStyle=col;c.globalAlpha=r.unpriced ? .25 : .18+Math.abs((r.score??50)-50)/100;c.fillRect(r.x+1,r.y+1,Math.max(0,r.w-2),Math.max(0,r.h-2));c.globalAlpha=1;c.strokeStyle='#255247';c.strokeRect(r.x,r.y,r.w,r.h);if(r.w>30&&r.h>17){c.save();c.beginPath();c.rect(r.x+2,r.y+2,r.w-4,r.h-4);c.clip();text(s,byId.get(r.id).ticker||byId.get(r.id).name,r.x+5,r.y+11,'#E6F4F1');if(r.h>38)text(s,fmt(r.score,0),r.x+5,r.y+27);c.restore();}});
-    $('treemap-summary').textContent=`${rects.length} protocols · Area = 1 + ln(1 + MCAP / $1M), normalized to the panel; not market share. ${missing.length} unpriced use minimum layout weight. Green ≥50 / red <50 resilience; gray N/D. TVL ${state.shocks.tvl}%, fees ${state.shocks.fees}%, derivatives ${state.shocks.derivatives}%, unlock ${state.shocks.unlock}%.`;
-
+    rows.sort((a,b)=>b.weight-a.weight||a.id.localeCompare(b.id));
+    const expanded=state.treemapExpanded===true,missing=rows.filter(r=>r.unpriced);
+    const remainder=rows.slice(36),top=rows.slice(0,36);
+    // The aggregate preserves the sum of the omitted log-layout weights.
+    const other={id:'__other__',aggregate:true,members:remainder.map(r=>r.id),weight:remainder.reduce((n,r)=>n+r.weight,0),score:null};
+    const visible=expanded?rows:remainder.length?[...top,other]:top;
+    // A taller mobile canvas gives every Top 36 ticker a readable label.
+    const height=expanded?Math.max(420,Math.ceil(rows.length/5)*42):s.w<600?840:480;
+    if(s.h!==height){s.canvas.style.height=height+'px';s=prepare('valen-treemap');}
+    const rects=!expanded&&remainder.length?[...tile(top,0,0,s.w,s.h*.88),{...other,x:0,y:s.h*.88,w:s.w,h:s.h*.12}]:tile(visible,0,0,s.w,s.h);state.rectangles=rects;
+    rects.forEach(r=>{
+      const c=s.ctx,col=r.aggregate?GOLD:!finite(r.score)?MUTED:r.score>=50?GREEN:RED;
+      c.fillStyle=col;c.globalAlpha=r.aggregate?.12:r.unpriced?.25:.18+Math.abs((r.score??50)-50)/100;
+      c.fillRect(r.x+1,r.y+1,Math.max(0,r.w-2),Math.max(0,r.h-2));c.globalAlpha=1;c.strokeStyle='#255247';c.strokeRect(r.x,r.y,r.w,r.h);
+      const label=r.aggregate?'OTHER '+r.members.length+' PROTOCOLS':byId.get(r.id).ticker||byId.get(r.id).name;
+      const lines=r.aggregate&&r.w<160?['OTHER',r.members.length+' PROTOCOLS']:[label];
+      if(r.w>22&&r.h>16){c.save();c.font=Math.min(12,...lines.map(t=>(r.w-12)/(t.length*.62)))+'px monospace';
+        lines.forEach((t,i)=>text(s,t,r.x+6,r.y+14+i*16,r.aggregate?GOLD:'#E6F4F1'));
+        if(r.h>48){const sub=r.aggregate?'EXPAND ALL ↗':fmt(r.score,0)+' / 100';c.font=Math.min(11,(r.w-12)/(sub.length*.62))+'px monospace';text(s,sub,r.x+6,r.y+lines.length*16+16,col);}c.restore();}
+    });
+    $('treemap-summary').textContent=(expanded?rows.length+' protocols':'TOP 36 + OTHER '+remainder.length+' PROTOCOLS')+' · Ranked by market capitalization. Area = 1 + ln(1 + MCAP / $1M); Top tiles use normalized log weights; OTHER reserves 12% of the panel (not to scale). Not market share. '+missing.length+' unpriced at minimum weight.';
+    $('treemap-toggle').parentElement.querySelector('h3').textContent=expanded?'MARKET TREEMAP // ALL 199':'MARKET TREEMAP // TOP 36';
+    $('treemap-toggle').textContent=expanded?'[SHOW TOP 36]':'[EXPAND ALL '+rows.length+']';$('treemap-toggle').setAttribute('aria-pressed',String(expanded));
   }
+
   function drawCorrelation() {
     state.matrix=correlation(state.shocks);const s=prepare('valen-correlation');
-    $('correlation-summary').textContent='Illustrative factor correlation, NOT observed market correlation. All four gold stress rulers update factor covariance immediately. No cross-asset return history is present in this bundle.';
+    $('correlation-summary').textContent='[SYNTHETIC FACTOR STRESS MODEL]';
     $('correlation-values').innerHTML='<table><thead><tr><th>Asset</th>'+assetNames.map(n=>'<th>'+n+'</th>').join('')+'</tr></thead><tbody>'+state.matrix.map((r,i)=>'<tr><th>'+assetNames[i]+'</th>'+r.map(v=>'<td>'+fmt(v)+'</td>').join('')+'</tr>').join('')+'</tbody></table>';
     if(!s)return;const top=44,cell=Math.min((s.w-82)/7,(s.h-top-18)/7),left=Math.max(74,(s.w-7*cell)/2);
     s.ctx.font=`${Math.min(11,(cell-5)/3.2)}px monospace`;
-    state.matrix.forEach((row,i)=>{text(s,assetNames[i],left-6,top+(i+.5)*cell,MUTED,'right');row.forEach((v,j)=>{const x=left+j*cell,y=top+i*cell;s.ctx.fillStyle=v>=0?GREEN:RED;s.ctx.globalAlpha=.12+Math.abs(v)*.62;s.ctx.fillRect(x+1,y+1,cell-2,cell-2);s.ctx.globalAlpha=1;text(s,fmt(v),x+cell/2,y+cell/2,'#E6F4F1','center');});});
+    state.matrix.forEach((row,i)=>{text(s,assetNames[i],left-6,top+(i+.5)*cell,MUTED,'right');row.forEach((v,j)=>{const x=left+j*cell,y=top+i*cell;s.ctx.fillStyle=v>=0?GREEN:RED;s.ctx.globalAlpha=v<0?.10:.12+Math.abs(v)*.62;s.ctx.fillRect(x+1,y+1,cell-2,cell-2);s.ctx.globalAlpha=1;text(s,fmt(v),x+cell/2,y+cell/2,v<0?(v<-.5?GOLD:RED):'#E6F4F1','center');});});
     assetNames.forEach((a,j)=>{s.ctx.save();s.ctx.translate(left+(j+.5)*cell,top-8);s.ctx.rotate(-.35);text(s,a==='S&P 500'?'S&P500':a,0,0,GOLD,'center');s.ctx.restore();});
   }
   function derivativeSeries(timeframe) {
@@ -184,8 +203,8 @@
     const s=prepare(id);if(!s)return;const cx=s.w/2,cy=s.h*.48,r=Math.min(s.w*.34,s.h*.34),start=Math.PI*.75,sweep=Math.PI*1.5;
     const c=s.ctx;c.lineWidth=11;c.strokeStyle='#163B33';c.beginPath();c.arc(cx,cy,r,start,start+sweep);c.stroke();
     for(let i=0;i<=10;i++){const a=start+i*sweep/10;line(s,cx+Math.cos(a)*(r+10),cy+Math.sin(a)*(r+10),cx+Math.cos(a)*(r+15),cy+Math.sin(a)*(r+15),MUTED);}
-    if(finite(value)){c.strokeStyle=color;c.lineWidth=11;c.beginPath();c.arc(cx,cy,r,start,start+sweep*value/100);c.stroke();const a=start+sweep*value/100;line(s,cx,cy,cx+Math.cos(a)*(r-12),cy+Math.sin(a)*(r-12),color,2);circ(s,cx,cy,4,color);}
-    c.font=Math.min(20,s.w*.17)+'px monospace';text(s,finite(value)?fmt(value,1):'N/D',cx,cy+30,color,'center');c.font=Math.min(11,(s.w-10)/(label.length*.62))+'px monospace';text(s,label,cx,s.h-18,color,'center');
+    if(finite(value)){c.strokeStyle=color;c.lineWidth=11;c.beginPath();c.arc(cx,cy,r,start,start+sweep*value/100);c.stroke();const a=start+sweep*value/100;line(s,cx+Math.cos(a)*r*.85,cy+Math.sin(a)*r*.85,cx+Math.cos(a)*(r+2),cy+Math.sin(a)*(r+2),color,2);}
+    c.font=Math.min(20,s.w*.17)+'px monospace';text(s,finite(value)?fmt(value,1):'N/D',cx,cy+7,color,'center');c.font=Math.min(11,(s.w-10)/(label.length*.62))+'px monospace';text(s,label,cx,s.h-18,color,'center');
   }
   function drawScope(time=0) {
     const s=prepare('valen-oscilloscope');if(!s||!state.macro)return;const m=state.macro,c=s.ctx,cx=s.w/2,cy=s.h/2;
@@ -194,7 +213,7 @@
     if(m.series.length>1){const gain=clamp(1+state.shocks.derivatives/100,.1,2),offset=(state.shocks.tvl+state.shocks.fees-state.shocks.unlock)/500;
       c.beginPath();m.series.forEach((p,i)=>{const x=12+i/(m.series.length-1)*(s.w-24),y=cy-clamp(p.value*gain+offset,-1,1)*(s.h*.35);i?c.lineTo(x,y):c.moveTo(x,y);});c.strokeStyle=GREEN;c.lineWidth=2;c.stroke();
       const baseline=cy-(m.liquidity-50)/50*s.h*.25;line(s,0,baseline,s.w,baseline,GOLD);
-      text(s,m.series[0].time,8,s.h-12);text(s,m.series.at(-1).time,s.w-8,s.h-12,MUTED,'right');
+      text(s,dateUTC(m.series[0].time),8,s.h-12);text(s,dateUTC(m.series.at(-1).time),s.w-8,s.h-12,MUTED,'right');
     }else text(s,'NO '+m.timeframe+' OBSERVATIONS',cx,cy+100,GOLD,'center');
     const angle=time/1400;line(s,cx,cy,cx+Math.cos(angle)*72,cy+Math.sin(angle)*72,GOLD,2);
     text(s,'SNAPSHOT REPLAY · '+m.timeframe,8,16,GOLD);state.frames++;
@@ -204,9 +223,10 @@
     gauge('valen-gauge-liquidity',m.liquidity,GREEN,'MACRO LIQUIDITY');gauge('valen-gauge-risk',m.risk,RED,'DERIVATIVE PRESSURE');gauge('valen-gauge-confidence',m.coverage,GOLD,'RULE DATA COVERAGE');
     $('gauge-liquidity-value').textContent=`${fmt(m.liquidity,1)} / 100 · aggregate / absolute bias capacity of ${m.ruleCount} rules`;
     $('gauge-risk-value').textContent=`${fmt(m.risk,1)} / 100 · ${m.series.length?m.timeframe+' derivative KPI pressure':'protocol funding snapshot'}`;
-    $('gauge-confidence-value').textContent=`${fmt(m.coverage,1)}% aggregate data coverage · ${m.triggered} triggered · ${m.date}`;
-    $('scope-summary').textContent=`${m.ruleCount} source rules · macro snapshot ${m.date} · ${m.series.length} ${m.timeframe} observations${m.series.length?' ('+m.series[0].time+' → '+m.series.at(-1).time+')':''}. Source: ${m.feedSource}. Green: mean tanh of deduplicated derivative KPI deltas; gold: macro scenario level. Sweep replays the dated source observations.${!m.series.length?' No observations for this timeframe; no interpolation from D1.':''}`;
+    $('gauge-confidence-value').textContent=`${fmt(m.coverage,1)}% aggregate data coverage · ${m.triggered} triggered · ${dateUTC(m.date)}`;
+    $('scope-summary').textContent=`${m.ruleCount} source rules · macro snapshot ${dateUTC(m.date)} · ${m.series.length} ${m.timeframe} observations${m.series.length?' ('+dateUTC(m.series[0].time)+' → '+dateUTC(m.series.at(-1).time)+')':''}. Source: ${m.feedSource}. Green: mean tanh of deduplicated derivative KPI deltas; gold: macro scenario level. Sweep replays the dated source observations.${!m.series.length?' No observations for this timeframe; no interpolation from D1.':''}`;
 
+    $('macro-kpi-footer').innerHTML=`<span class="kpi-badge">${m.ruleCount} SOURCE RULES</span><span class="kpi-badge">${m.triggered} TRIGGERED</span><span class="kpi-badge">${fmt(m.coverage,0)}% COVERAGE</span>`;
     drawScope(lastSweep);
   }
   function render() { if(disposed)return;state.shocks=readShocks();drawScatter();drawArena();drawTreemap();drawCorrelation();drawMacro(); if(byId.has(state.selected))$('scatter-selection').textContent=details(byId.get(state.selected)); }
@@ -235,7 +255,8 @@
       on(scatter.canvas,'pointerleave',()=>{hovered=null;$('scatter-tooltip').hidden=true;drawScatter();});on(scatter.canvas,'click',e=>{const p=hit(e);if(p)selectProtocol(p.id);});
       on(scatter.canvas,'keydown',e=>{const ids=state.points.map(p=>p.id);if(!ids.length)return;let i=ids.indexOf(state.selected);if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();selectProtocol(ids[(i+(e.key==='ArrowRight'?1:-1)+ids.length)%ids.length]);}if(e.key==='Enter')selectProtocol(state.selected);});
     }
-    const tree=surfaces.get('valen-treemap');if(tree){const hit=e=>{const p=pointer(tree,e);return state.rectangles.find(r=>p.x>=r.x&&p.x<=r.x+r.w&&p.y>=r.y&&p.y<=r.y+r.h);};on(tree.canvas,'pointermove',e=>{const r=hit(e);$('treemap-tooltip').textContent=r?details(byId.get(r.id)):'';});on(tree.canvas,'pointerleave',()=>$('treemap-tooltip').textContent='');on(tree.canvas,'click',e=>{const r=hit(e);if(r)selectProtocol(r.id);});}
+    on($('treemap-toggle'),'click',()=>{state.treemapExpanded=!state.treemapExpanded;schedule();});
+    const tree=surfaces.get('valen-treemap');if(tree){const hit=e=>{const p=pointer(tree,e);return state.rectangles.find(r=>p.x>=r.x&&p.x<=r.x+r.w&&p.y>=r.y&&p.y<=r.y+r.h);};on(tree.canvas,'pointermove',e=>{const r=hit(e);$('treemap-tooltip').textContent=r?(r.aggregate?'OTHER '+r.members.length+' PROTOCOLS · Select to expand all':details(byId.get(r.id))):'';});on(tree.canvas,'pointerleave',()=>$('treemap-tooltip').textContent='');on(tree.canvas,'click',e=>{const r=hit(e);if(r?.aggregate){state.treemapExpanded=true;schedule();}else if(r)selectProtocol(r.id);});}
     ['tvl','fees','derivatives','unlock'].forEach(k=>on($('shock-'+k),'input',schedule));on($('shock-reset'),'click',schedule);
     on($('macro-timeframe'),'change',schedule);on($('scope-pause'),'click',()=>{stopped=!stopped;$('scope-pause').textContent=stopped?'RESUME SWEEP':'PAUSE SWEEP';$('scope-pause').setAttribute('aria-pressed',String(stopped));syncAnimation();});
     on(doc,'visibilitychange',syncAnimation);on(root,'resize',schedule);if(reduced?.addEventListener)on(reduced,'change',syncAnimation);

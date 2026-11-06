@@ -10,6 +10,27 @@
     if (!numberFormats.has(digits)) numberFormats.set(digits, new Intl.NumberFormat('en-US', {maximumFractionDigits:digits,minimumFractionDigits:digits}));
     return numberFormats.get(digits).format(n);
   };
+  // Display helpers never mutate source values, timestamps or signed payloads.
+  const money = n => {
+    if (!finite(n)) return 'N/D';
+    const magnitude=Math.abs(n),sign=n<0?'-':'';
+    let scale=magnitude>=1e9?1e9:magnitude>=1e6?1e6:magnitude>=1e3?1e3:1;
+    let value=magnitude/scale;
+    if(scale<1e9 && value>=999.95){scale*=1000;value=magnitude/scale;}
+    return sign+'$'+value.toFixed(scale===1?(magnitude>0&&magnitude<1?6:2):value<10?2:1)+({1:'',1000:'K',1000000:'M',1000000000:'B'}[scale]);
+  };
+  const dateUTC = value => {
+    if(!value) return 'N/D';
+    const raw=String(value);
+    if(!/^\d{4}-\d{2}-\d{2}(?:T|$)/.test(raw))return raw;
+    const date=new Date(raw.length===10?raw+'T00:00:00Z':raw);
+    if(!Number.isFinite(date.getTime()))return 'N/D';
+    const pad=n=>String(n).padStart(2,'0');
+    return pad(date.getUTCDate())+' '+['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'][date.getUTCMonth()]+' '+date.getUTCFullYear()+' · '+pad(date.getUTCHours())+':'+pad(date.getUTCMinutes())+' UTC';
+  };
+  const strategyLabel = s => s.thesis_id==='1_1_SCONTO_MULTIPLO_PF_COMMISSIONI_30G'?'PF_FEE_DISCOUNT_30D':s.title_en.toUpperCase().replace(/[^A-Z0-9]+/g,'_').replace(/^_|_$/g,'');
+  const compactHash = hash => '0x'+hash.slice(0,4)+'...'+hash.slice(-5);
+  const hashButton = hash => '<button type="button" class="hash-copy" data-copy-hash="'+esc(hash)+'" title="'+esc(hash)+'" aria-label="Copy full SHA-256 digest"><span>'+compactHash(hash)+'</span> <span>[COPY HASH]</span></button>';
   const metric = (p, ...keys) => {
     for (const key of keys) { const value = p?.metrics?.[key]?.value; if (finite(value)) return value; }
     return null;
@@ -109,9 +130,9 @@
     seal.className='proof-seal '+(result.ok?'verified':'failed');seal.title=result.digest||result.reason;
     let digest=seal.parentElement.querySelector('.computed-digest');
     if(!digest){digest=doc.createElement('span');digest.className='hash-output computed-digest';seal.after(digest);}
-    digest.textContent=result.digest?'COMPUTED SHA-256 · '+result.digest:'Verification failed · '+result.reason;
+    digest.innerHTML=result.digest?'COMPUTED SHA-256 · '+hashButton(result.digest):'Verification failed · '+esc(result.reason);
   }
-  const API={sha256Fallback,sha256,verifyThesis,simulate,snapshot,canonical,diversified,screenerTelemetry,paintProof};
+  const API={sha256Fallback,sha256,verifyThesis,simulate,snapshot,canonical,diversified,screenerTelemetry,paintProof,money,dateUTC,strategyLabel,compactHash};
   root.MostroEngine=API;
   if (!root.document) return;
   const doc=root.document, $=id=>doc.getElementById(id);
@@ -127,25 +148,25 @@
     const bases=new Map(assets.map(p=>[p.entity_id,snapshot(p)]));
     const margins=new Map(strategies.map(s=>[s.thesis_id,10]));
     const shocks={tvl:0,fees:0,derivatives:0,unlock:0};
-    let sortKey='score',sortDir=-1,diversify=true,selected=strategies.find(s=>s.is_tier1_gold)?.thesis_id;
+    let sortKey='score',sortDir=-1,diversify=true,selected=null;
     let results=new Map(),protocolResults=new Map(),visible=[],pending=false,lastFrameMs=0;
     const p25=bundle.audit.fee_p25;
     const block=s=>s.thesis_code.startsWith('TRAP_')?'TRAP':s.derivatives_invalidation?'DERIVATIVES':'FUNDAMENTALS';
     const badge=state=>'<span class="room-badge '+(state==='INVALIDATED'?'badge-alert':state==='MONITOR'?'badge-gold':'')+'">'+state+'</span>';
     const status=$('bundle-status-indicator').querySelector('span:last-child');
-    status.textContent=`SNAPSHOT ${bundle.snapshot_dates?.at(-1)||bundle.source_inventory_timestamp.slice(0,10)} · ${protocols.length} PROTOCOLS · ${strategies.length} STRATEGIES · ${rules.length} RULES`;status.title=status.textContent;
-    $('source-gate-summary').textContent=`SOURCE DAILY FEE P25: $${fmt(p25)} · ${bundle.audit.gold_count} GOLD THESES`;
+    status.textContent=`SNAPSHOT ${dateUTC(bundle.snapshot_dates?.at(-1)||bundle.source_inventory_timestamp)} · ${protocols.length} PROTOCOLS · ${strategies.length} STRATEGIES · ${rules.length} RULES`;status.title=status.textContent;
+    $('source-gate-summary').textContent=`SOURCE DAILY FEE P25: ${money(p25)} · ${bundle.audit.gold_count} GOLD THESES`;
     // Publish only complete measured quotes; keep the comparison universe intact.
     const quotedProtocols=protocols.filter(p=>p.ticker&&p.ticker!=='XTZ'&&metric(p,'prezzo')>0&&finite(metric(p,'variazione_prezzo_24h_pct'))&&['tvl','mcap','fees','volume'].every(k=>finite(snapshot(p)[k])));
     $('mostro-ticker-track').parentNode.setAttribute('aria-label',quotedProtocols.length+' complete protocol snapshot quotes');
     const tickerItems=quotedProtocols.map(p=>{
       const price=metric(p,'prezzo'),change=metric(p,'variazione_prezzo_24h_pct'),date=p.metrics?.prezzo?.as_of||'date unavailable';
-      return '<span class="ticker-item" title="'+esc(p.name+' · '+date)+'"><span class="ticker-symbol">'+esc(p.ticker||p.name)+'</span> $'+fmt(price,price!==null&&price<1?6:2)+' <span class="'+(change<0?'ticker-down':'ticker-up')+'">'+(change===null?'Δ N/D':fmt(change)+'%')+'</span></span>';
+      return '<span class="ticker-item" title="'+esc(p.name+' · '+dateUTC(date))+'"><span class="ticker-symbol">'+esc(p.ticker||p.name)+'</span> '+money(price)+' <span class="'+(change<0?'ticker-down':'ticker-up')+'">'+(change===null?'Δ N/D':fmt(change)+'%')+'</span></span>';
     }).join('');
     $('mostro-ticker-track').innerHTML='<div class="ticker-group">'+tickerItems+'</div><div class="ticker-group" aria-hidden="true">'+tickerItems+'</div>';
     $('mostro-ticker-track').style.animationDuration=(quotedProtocols.length*4)+'s';
-    const pause=doc.createElement('button');pause.type='button';pause.className='room-btn';pause.textContent='PAUSE TICKER';pause.setAttribute('aria-pressed','false');
-    $('mostro-ticker-track').parentNode.before(pause);
+    const pause=doc.createElement('button');pause.type='button';pause.id='ticker-pause';pause.setAttribute('aria-label','Pause or resume ticker');pause.className='room-btn';pause.textContent='PAUSE TICKER';pause.setAttribute('aria-pressed','false');
+    doc.querySelector('.media-top-actions').append(pause);
     pause.addEventListener('click',()=>{const stopped=pause.getAttribute('aria-pressed')!=='true';pause.setAttribute('aria-pressed',String(stopped));pause.textContent=stopped?'RESUME TICKER':'PAUSE TICKER';$('mostro-ticker-track').style.animationPlayState=stopped?'paused':'running';});
     const nav=[...doc.querySelectorAll('.room-btn[data-room]')];
     nav.forEach(button=>{
@@ -158,7 +179,7 @@
     const stressNodes=[];
     function makeStressRow(id,label,kind) {
       const tr=doc.createElement('tr');tr.dataset.kind=kind;tr.dataset.id=id;
-      tr.innerHTML='<td>'+esc(kind+' / '+id)+'</td><td>'+esc(label)+'</td><td></td><td></td><td></td><td></td>';
+      tr.innerHTML='<td>'+esc(kind+' / '+(kind==='STRATEGY'?strategyLabel(strategies.find(s=>s.thesis_id===id)):id))+'</td><td>'+esc(label)+'</td><td></td><td></td><td></td><td></td>';
       $('stress-results').append(tr);stressNodes.push({id,kind,cells:tr.cells});
     }
     strategies.forEach(s=>makeStressRow(s.thesis_id,s.token+' · '+s.title_en,'STRATEGY'));
@@ -174,8 +195,8 @@
       const scored=aggregate.filter(x=>finite(x.score));
       const mean=scored.length?scored.reduce((sum,x)=>sum+x.score,0)/scored.length:null;
       $('quick-stats-content').innerHTML='<strong>'+esc(s.token+' · '+s.thesis_code)+'</strong><p>'+esc(s.title_en)+'</p>'+badge(r.state)+
-        '<dl><dt>Scenario score</dt><dd>'+fmt(r.score)+'/100</dd><dt>MCAP/TVL</dt><dd>'+fmt(r.ratio)+'×</dd><dt>Invalidation buffer</dt><dd>'+fmt(r.buffer)+' pp</dd><dt>Margin</dt><dd>'+margins.get(selected)+' pp</dd><dt>Daily fees · stressed</dt><dd>$'+fmt(r.fees)+'</dd><dt>24h volume · source</dt><dd>$'+fmt(base.volume)+'</dd><dt>'+r.fourthComponent+'</dt><dd>'+ (finite(r.funding)?fmt(r.funding,6):fmt(r.feeYield*100)+'%') +'</dd><dt>Coverage</dt><dd>'+r.coverage+'/4 components</dd><dt>Visible basket score</dt><dd>'+fmt(mean)+'</dd><dt>Visible invalidated</dt><dd>'+aggregate.filter(x=>x.state==='INVALIDATED').length+'/'+visible.length+'</dd></dl>'+
-        '<p class="source-note">'+esc(p?.metrics?.tvl?.as_of||p?.metrics?.prezzo?.as_of||bundle.source_inventory_timestamp.slice(0,10))+'</p>';
+        '<dl><dt>Scenario score</dt><dd>'+fmt(r.score)+'/100</dd><dt>MCAP/TVL</dt><dd>'+fmt(r.ratio)+'×</dd><dt>Invalidation buffer</dt><dd>'+fmt(r.buffer)+' pp</dd><dt>Margin</dt><dd>'+margins.get(selected)+' pp</dd><dt>Daily fees · stressed</dt><dd>'+money(r.fees)+'</dd><dt>24h volume · source</dt><dd>'+money(base.volume)+'</dd><dt>'+r.fourthComponent+'</dt><dd>'+ (finite(r.funding)?fmt(r.funding,6):fmt(r.feeYield*100)+'%') +'</dd><dt>Coverage</dt><dd>'+r.coverage+'/4 components</dd><dt>Visible basket score</dt><dd>'+fmt(mean)+'</dd><dt>Visible invalidated</dt><dd>'+aggregate.filter(x=>x.state==='INVALIDATED').length+'/'+visible.length+'</dd></dl>'+
+        '<p class="source-note">'+esc(dateUTC(p?.metrics?.tvl?.as_of||p?.metrics?.prezzo?.as_of||bundle.source_inventory_timestamp))+'</p>';
     }
     function renderScreener() {
       const query=$('screener-search').value.trim().toLowerCase(),tier=$('screener-tier').value,family=$('strategy-family').value;
@@ -183,6 +204,7 @@
       const val=s=>sortKey==='code'?s.thesis_code:sortKey==='token'?s.token:sortKey==='title'?s.title_en:results.get(s.thesis_id)[sortKey];
       visible.sort((a,b)=>{const x=val(a),y=val(b);if(x==null)return y==null?0:1;if(y==null)return -1;return sortDir*(typeof x==='number'?x-y:String(x).localeCompare(String(y),'en',{numeric:true}));});
       if(diversify)visible=diversified(visible,results);
+      if(selected===null&&visible.length)selected=visible[0].thesis_id;
       $('gold-15-tbody').innerHTML=visible.map(s=>{
         const r=results.get(s.thesis_id),index=strategies.indexOf(s),horizon=s.derivatives_invalidation?'H4/D1':'30D';
         return '<tr data-thesis="'+esc(s.thesis_id)+'" data-tier="'+(s.is_tier1_gold?'GOLD':'STANDARD')+'"><td>'+esc(s.thesis_code)+'</td><td>'+esc(s.token)+(s.is_tier1_gold?' <span class="gold-mark">GOLD</span>':'')+'</td><td><button class="thesis-select" data-select="'+esc(s.thesis_id)+'">'+esc(s.title_en)+'</button></td><td>'+fmt(r.score)+'</td><td>'+fmt(r.ratio)+'</td><td>'+fmt(r.buffer)+'</td><td>'+badge(r.state)+'</td><td><span class="room-badge '+(s.derivatives_invalidation?'badge-alert':'badge-gold')+'" title="'+esc(s.derivatives_invalidation||'Fundamental review window; scenario threshold is not a market stop order')+'">STOP '+horizon+'</span></td><td><label for="margin-'+index+'" class="sr-only">Margin Adjuster '+esc(s.thesis_code)+'</label><input id="margin-'+index+'" class="gold-slider margin-slider" type="range" min="0" max="30" step="1" value="'+margins.get(s.thesis_id)+'" data-margin="'+esc(s.thesis_id)+'"><output>'+margins.get(s.thesis_id)+' pp</output></td></tr>';
@@ -220,25 +242,36 @@
     Object.keys(shocks).forEach(key=>$('shock-'+key).addEventListener('input',event=>{shocks[key]=Number(event.target.value);$('shock-'+key+'-value').textContent=(shocks[key]>0?'+':'')+shocks[key]+'%';schedule();}));
     Object.keys(shocks).forEach(key=>$('shock-'+key).addEventListener('change',()=>{recalculate();renderScreener();}));
     $('shock-reset').addEventListener('click',()=>{Object.keys(shocks).forEach(key=>{shocks[key]=0;$('shock-'+key).value='0';$('shock-'+key+'-value').textContent='0%';});recalculate();renderScreener();schedule();});
-    $('strategies-64-grid').innerHTML=strategies.map(s=>'<details class="macro-rule-card"><summary>'+esc(s.thesis_code+' · '+s.token+' · '+s.title_en)+'</summary><p>'+esc(s.model+' · '+s.date+' · '+block(s))+'</p><p>'+esc(s.requested.join(' · '))+'</p></details>').join('');
-    $('audit-ledger-body').innerHTML=strategies.map((s,i)=>'<tr data-audit="'+i+'"><td>'+esc(s.thesis_code+' · '+s.token)+'</td><td class="hash-output">'+esc(s.sha256)+'</td><td><button type="button" class="room-btn" data-verify="'+i+'">VERIFY SHA-256 PROOF</button><output class="proof-seal" aria-live="polite">NOT VERIFIED</output></td></tr>').join('');
+    $('strategies-64-grid').innerHTML=strategies.map(s=>'<details class="macro-rule-card"><summary>'+esc(s.thesis_code+' · '+s.token+' · '+s.title_en)+'</summary><p>'+esc(s.model+' · '+dateUTC(s.date)+' · '+block(s))+'</p><p>'+esc(s.requested.join(' · '))+'</p></details>').join('');
+    $('audit-ledger-body').innerHTML=strategies.map((s,i)=>'<tr data-audit="'+i+'"><td>'+esc(s.thesis_code+' · '+s.token)+'</td><td class="hash-output">'+hashButton(s.sha256)+'</td><td><button type="button" class="room-btn" data-verify="'+i+'">[EXECUTE_AUDIT]</button><output class="proof-seal" aria-live="polite">NOT VERIFIED</output></td></tr>').join('');
     $('audit-ledger-body').addEventListener('click',async event=>{const button=event.target.closest('[data-verify]');if(!button)return;const s=strategies[Number(button.dataset.verify)],seal=button.nextElementSibling;button.disabled=true;seal.className='proof-seal';seal.textContent='VERIFYING…';
       try {const result=await verifyThesis(s,root.MOSTRO_PROOFS?.[s.thesis_id]);paintProof(seal,result);}
       catch(error){seal.textContent='VERIFICATION ERROR';seal.className='proof-seal failed';}finally{button.disabled=false;}
     });
-    $('sha256-verify-btn').addEventListener('click',async()=>{$('sha256-digest-output').textContent=await sha256($('sha256-input').value);});
+    doc.addEventListener('click',async event=>{
+      const button=event.target.closest('[data-copy-hash]');if(!button)return;
+      try{
+        if(!root.navigator?.clipboard?.writeText)throw new Error('Clipboard unavailable');
+        await root.navigator.clipboard.writeText(button.dataset.copyHash);
+        button.lastElementChild.textContent='[COPIED]';
+      }catch(_){button.lastElementChild.textContent='[COPY UNAVAILABLE]';}
+    });
+    const sandboxStrategy=strategies[0];
+    $('sha256-input').value=root.MOSTRO_PROOFS?.[sandboxStrategy.thesis_id]||'';
+    $('sha256-payload-label').textContent='PACKAGED PAYLOAD / '+sandboxStrategy.thesis_code+' · '+sandboxStrategy.token;
+    $('sha256-verify-btn').addEventListener('click',async()=>{const digest=await sha256($('sha256-input').value);$('sha256-digest-output').innerHTML=hashButton(digest)+' <span>'+(digest===sandboxStrategy.sha256?'MATCHES PACKAGED PAYLOAD':'CUSTOM PAYLOAD DIGEST')+'</span>';});
     const families=[...new Set(rules.map(r=>r.famiglia))].sort();
     $('macro-family').innerHTML='<option value="ALL">All families</option>'+families.map(f=>'<option>'+esc(f)+'</option>').join('');
     const macro=bundle.macro.latest_score;
-    $('macro-snapshot').textContent=`Snapshot ${macro.data}: score ${macro.punteggio}, regime ${macro.fascia}, ${macro.regole_scattate} triggered rules (aggregate).`;
+    $('macro-snapshot').textContent=`Snapshot ${dateUTC(macro.data)}: score ${macro.punteggio}, regime ${macro.fascia}, ${macro.regole_scattate} triggered rules (aggregate).`;
     function renderMacro() {
       const q=$('macro-search').value.trim().toLowerCase(),family=$('macro-family').value,bias=$('macro-filter').value;
       const filtered=rules.filter(r=>{const direction=r.bias_valore>0?'BULLISH':r.bias_valore<0?'DEFENSIVE':'CAUTION';return(family==='ALL'||r.famiglia===family)&&(bias==='ALL'||bias===direction)&&[r.id,r.nome,r.condizione_testo,r.lettura].join(' ').toLowerCase().includes(q);});
-      $('macro-43-grid').innerHTML=filtered.map(r=>'<details class="macro-rule-card"><summary>'+esc(r.id+' · '+r.nome)+'</summary><p>'+esc(r.condizione_testo)+'</p><p>Bias: '+esc(r.bias)+' · '+esc(r.famiglia)+'</p><p>'+esc(r.lettura)+'</p><p>Invalidation: '+esc(r.cosa_cambierebbe)+'</p><p>Data: '+esc(r.dato_richiesto)+'</p><p>Updated: '+esc(r.aggiornata_il)+(r.provvisoria?' · Provisional':'')+'</p></details>').join('')||'<p>No rules match.</p>';
+      $('macro-43-grid').innerHTML=filtered.map(r=>'<details class="macro-rule-card"><summary>'+esc(r.id+' · '+r.nome)+'</summary><p>'+esc(r.condizione_testo)+'</p><p>Bias: '+esc(r.bias)+' · '+esc(r.famiglia)+'</p><p>'+esc(r.lettura)+'</p><p>Invalidation: '+esc(r.cosa_cambierebbe)+'</p><p>Data: '+esc(r.dato_richiesto)+'</p><p>Updated: '+esc(dateUTC(r.aggiornata_il))+(r.provvisoria?' · Provisional':'')+'</p></details>').join('')||'<p>No rules match.</p>';
       $('macro-count').textContent=filtered.length+' / '+rules.length;
     }
     ['macro-filter','macro-family','macro-search'].forEach(id=>$(id).addEventListener(id==='macro-search'?'input':'change',renderMacro));
-    const stages=[['SQLite','Read-only upstream archive · '+bundle.macro.rules_table+' · snapshot '+bundle.source_inventory_timestamp],['199 Protocols',protocols.length+' protocol snapshots with metric timestamps and provider attribution.'],['43 Macro Rules',rules.length+' source definitions; latest aggregate regime: '+macro.fascia],['64 Quant Models',strategies.length+' exported thesis payloads; '+bundle.audit.gold_count+' Tier-1 Gold. Source calculations are upstream.'],['SHA-256 Proofs','64 packaged payload digests, automatically verified at startup and recheckable in Room 05.'],['Browser Scenarios','Four stress inputs, per-thesis margin budgets, 263 result rows. No live SQLite connection.']];
+    const stages=[['SQLite','Read-only upstream archive · '+bundle.macro.rules_table+' · snapshot '+dateUTC(bundle.source_inventory_timestamp)],['199 Protocols',protocols.length+' protocol snapshots with metric timestamps and provider attribution.'],['43 Macro Rules',rules.length+' source definitions; latest aggregate regime: '+macro.fascia],['64 Quant Models',strategies.length+' exported thesis payloads; '+bundle.audit.gold_count+' Tier-1 Gold. Source calculations are upstream.'],['SHA-256 Proofs','64 packaged payload digests, automatically verified at startup and recheckable in Room 05.'],['Browser Scenarios','Four stress inputs, per-thesis margin budgets, 263 result rows. No live SQLite connection.']];
     $('live-pipeline').innerHTML=stages.map((s,i)=>'<button type="button" class="room-btn" data-stage="'+i+'" aria-pressed="'+(i===0)+'">'+esc(s[0])+'</button>'+(i<stages.length-1?'<span aria-hidden="true">→</span>':'')).join('');
     $('pipeline-detail').textContent=stages[0][1];
     $('live-pipeline').addEventListener('click',event=>{const button=event.target.closest('[data-stage]');if(!button)return;$('pipeline-detail').textContent=stages[Number(button.dataset.stage)][1];$('live-pipeline').querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));});
@@ -246,7 +279,7 @@
     API.ready=true;
     API.proofsReady=Promise.all(strategies.map(async(s,i)=>{
       const seal=$('audit-ledger-body').querySelector(`[data-audit="${i}"] .proof-seal`);
-      try{paintProof(seal,await verifyThesis(s,root.MOSTRO_PROOFS?.[s.thesis_id]));}
+      try{const proof=await verifyThesis(s,root.MOSTRO_PROOFS?.[s.thesis_id]);paintProof(seal,proof);if(i===0)$('sha256-digest-output').innerHTML=hashButton(proof.digest)+' <span>'+(proof.ok?'VERIFIED PACKAGED PAYLOAD':'PAYLOAD MISMATCH')+'</span>';}
       catch(_){paintProof(seal,{ok:false,reason:'Verification error'});}
     }));
   }

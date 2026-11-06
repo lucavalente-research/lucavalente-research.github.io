@@ -65,3 +65,21 @@ body.mostro-terminal .room-title{margin:0;line-height:1.35}
 .hero-dial small{display:block;line-height:1.5;min-height:2.8em;letter-spacing:.3px}.hero-dial .dial-unit{font-size:5px}
 .proof-seal.verified{display:inline-block;padding:6px 8px;color:#00ffac;background:#003d29;border:1px solid #00f5a0;box-shadow:0 0 12px #00f5a045;font-weight:700}.computed-digest{display:block;margin-top:8px;overflow-wrap:anywhere}
 .telemetry-method{margin:0;font-size:8px}.telemetry-method summary{padding:4px 0}.telemetry-method p{font-size:9px;line-height:1.5}
+
+/* V4: readable institutional formats, compact controls and verified payloads. */
+.media-top-actions{display:flex;align-items:center;gap:3px;border:1px solid #2b5a44;border-radius:24px;padding:3px;width:max-content;max-width:100%;margin:3px 24px}
+.media-top-actions .room-btn{border:0;border-radius:20px;min-height:28px;padding:4px 12px;font-size:9px;background:#0d2b22}
+.model-badge{display:inline-block;color:#FFB800;border:1px solid #FFB80080;padding:7px 10px;background:#ffb8000a;font-size:10px;letter-spacing:.5px}
+.hash-copy{display:inline-flex;flex-wrap:wrap;gap:8px;align-items:center;background:#081e18;color:#a9dcc2;border:1px solid #315943;padding:8px;cursor:pointer;font:10px monospace;max-width:100%}.hash-copy span:last-child{color:#FFB800;font-size:8px}.hash-copy:focus-visible{outline:2px solid #FFB800}
+#room-5 [data-verify],#sha256-verify-btn{font:10px monospace;letter-spacing:.7px;color:#00F5A0;border:1px solid #00F5A080;background:#003023}
+#sha256-input{flex:1;min-width:180px;font-size:9px;resize:vertical;max-height:180px}#sha256-digest-output{display:flex;gap:12px;align-items:center;flex-wrap:wrap;color:#00F5A0}
+.computed-digest{font-size:8px}.computed-digest .hash-copy{padding:5px}.stress-scroll td:first-child{overflow-wrap:anywhere;font-size:8px}
+.live-badge::before{content:'';display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:6px;background:#00F5A0;box-shadow:0 0 8px #00F5A0;animation:activePulse 1.6s ease-in-out infinite}
+.desk-active{display:flex;align-items:center;gap:9px;width:fit-content;max-width:100%;border:1px solid #00f5a078;background:#00332280;color:#00F5A0;padding:10px 14px;font:10px/1.6 monospace;letter-spacing:.4px}.desk-active>span{width:7px;height:7px;flex:0 0 7px;background:#00F5A0;border-radius:50%;box-shadow:0 0 10px #00F5A0;animation:activePulse 1.6s ease-in-out infinite}
+#room-7 .gold-cta{color:#ffe29a;border:1px solid #FFB800;background:#ffb80012;box-shadow:0 0 16px #ffb80048,inset 0 0 14px #ffb80012;padding:14px 18px;font-weight:700;letter-spacing:.5px}#room-7 .gold-cta:hover,#room-7 .gold-cta:focus-visible{background:#ffb80026;box-shadow:0 0 22px #ffb80077}
+.macro-kpi-footer{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:12px 0}.kpi-badge{padding:10px 8px;border:1px solid #2b5a44;color:#00F5A0;background:#0b241d;font:10px monospace;text-align:center}.kpi-badge:nth-child(2){color:#FFB800}.kpi-badge:nth-child(3){color:#e6f4f1}
+@keyframes activePulse{50%{opacity:.5;box-shadow:0 0 3px #00F5A0}}
+@media(max-width:767px){.vault-grid{grid-template-columns:1fr;gap:16px}.vault-card{padding:14px}.vault-card h3{font-size:13px;min-height:0}.vault-code{font-size:10px}.vault-card .source-note{font-size:9px}.live-badge{font-size:9px;padding:6px 0}.vault-card .room-btn{font-size:10px;min-height:40px}.media-top-actions{margin:0 3px 0 0;padding:1px;gap:0;height:24px;border-radius:16px}.media-top-actions .room-btn{font-size:0;padding:0;min-height:22px;height:22px}.desk-active{font-size:9px;padding:10px}.kpi-badge{font-size:8px;padding:10px 4px}.macro-kpi-footer{gap:6px}#room-7 .gold-cta{font-size:10px;width:100%;text-align:center}#sha256-input{flex-basis:100%;min-height:54px}.model-badge{font-size:8px;padding:6px}.gauge-grid canvas{height:125px}}
+@media(prefers-reduced-motion:reduce){.live-badge::before,.desk-active>span{animation:none}}
+
+@media(max-width:767px){.command-bar{grid-template-columns:minmax(0,1fr) 94px}#ticker-pause::after{content:'Ⅱ';font-size:10px}#ticker-pause[aria-pressed='true']::after{content:'▶'}.media-top-actions .room-btn{width:28px;flex:0 0 28px}}
