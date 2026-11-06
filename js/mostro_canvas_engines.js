@@ -181,7 +181,7 @@
     const c=s.ctx;c.lineWidth=11;c.strokeStyle='#163B33';c.beginPath();c.arc(cx,cy,r,start,start+sweep);c.stroke();
     for(let i=0;i<=10;i++){const a=start+i*sweep/10;line(s,cx+Math.cos(a)*(r+10),cy+Math.sin(a)*(r+10),cx+Math.cos(a)*(r+15),cy+Math.sin(a)*(r+15),MUTED);}
     if(finite(value)){c.strokeStyle=color;c.lineWidth=11;c.beginPath();c.arc(cx,cy,r,start,start+sweep*value/100);c.stroke();const a=start+sweep*value/100;line(s,cx,cy,cx+Math.cos(a)*(r-12),cy+Math.sin(a)*(r-12),color,2);circ(s,cx,cy,4,color);}
-    c.font='20px monospace';text(s,finite(value)?fmt(value,1):'N/D',cx,cy+30,color,'center');c.font='11px monospace';text(s,label,cx,s.h-18,color,'center');
+    c.font=Math.min(20,s.w*.17)+'px monospace';text(s,finite(value)?fmt(value,1):'N/D',cx,cy+30,color,'center');c.font=Math.min(11,(s.w-10)/(label.length*.62))+'px monospace';text(s,label,cx,s.h-18,color,'center');
   }
   function drawScope(time=0) {
     const s=prepare('valen-oscilloscope');if(!s||!state.macro)return;const m=state.macro,c=s.ctx,cx=s.w/2,cy=s.h/2;

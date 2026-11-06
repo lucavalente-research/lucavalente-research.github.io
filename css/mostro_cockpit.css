@@ -33,3 +33,4 @@ body.mostro-terminal .room-title{margin:0;line-height:1.35}
 #strategy-table thead button{border:1px solid #274b39;padding:6px 10px;min-height:28px;color:#87ac94}
 #strategy-table tbody tr{box-shadow:inset 2px 0 #00f5a05c}
 @media(max-width:767px){#strategy-table thead{display:block}#strategy-table thead tr{gap:4px;padding-bottom:8px}#strategy-table thead button{font-size:7px;padding:5px 7px;min-height:28px}}
+@media(max-width:767px){.vault-controls .terminal-input{flex:0 1 auto;height:40px;min-height:40px}.vault-controls{gap:7px;margin:10px 0}.vault-controls label{font-size:9px}}
