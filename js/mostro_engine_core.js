@@ -124,7 +124,7 @@
       button.setAttribute('aria-pressed',button.classList.contains('active')?'true':'false');button.removeAttribute('aria-selected');
       button.addEventListener('click',()=>{
         nav.forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});
-        doc.querySelectorAll('.terminal-room[id^="room-"]').forEach(room=>{room.hidden=button.dataset.room!=='all'&&room.id!==button.dataset.room;});
+        doc.querySelectorAll('.terminal-room[id^="room-"]').forEach(room=>{room.hidden=room.id!==button.dataset.room;});
       });
     });
     const stressNodes=[];
@@ -161,11 +161,13 @@
       $('screener-count').textContent=visible.length+' / '+strategies.length+' strategies';
       doc.querySelectorAll('[data-sort]').forEach(b=>b.parentElement.setAttribute('aria-sort',b.dataset.sort===sortKey?(sortDir===1?'ascending':'descending'):'none'));
       renderQuickStats();
+      root.MostroCockpit?.refresh(true);
     }
     function updateScreenerCells() {
       // Keep slider nodes stable while dragging, avoiding focus loss and pointer interruption.
       $('gold-15-tbody').querySelectorAll('tr[data-thesis]').forEach(row=>{const r=results.get(row.dataset.thesis);row.cells[3].textContent=fmt(r.score);row.cells[4].textContent=fmt(r.ratio);row.cells[5].textContent=fmt(r.buffer);row.cells[6].firstElementChild.textContent=r.state;row.cells[6].firstElementChild.className='room-badge '+(r.state==='INVALIDATED'?'badge-alert':r.state==='MONITOR'?'badge-gold':'');});
       renderQuickStats();
+      root.MostroCockpit?.refresh(false);
     }
     function updateStress() {
       let invalid=0;
@@ -178,11 +180,11 @@
       if(pending)return;pending=true;
       root.requestAnimationFrame(()=>{const start=root.performance.now();pending=false;recalculate();updateStress();updateScreenerCells();lastFrameMs=root.performance.now()-start;});
     }
-    API.getState=()=>({shocks:{...shocks},results,protocolResults,margins,visible:visible.map(s=>s.thesis_id),lastFrameMs,pending});
+    API.getState=()=>({selected,shocks:{...shocks},results,protocolResults,margins,visible:visible.map(s=>s.thesis_id),lastFrameMs,pending});
     ['screener-search','screener-tier','strategy-family'].forEach(id=>$(id).addEventListener(id==='screener-search'?'input':'change',renderScreener));
     $('screener-all').addEventListener('click',()=>{$('screener-tier').value='ALL';$('strategy-family').value='ALL';$('screener-search').value='';renderScreener();});
     doc.querySelectorAll('[data-sort]').forEach(button=>button.addEventListener('click',()=>{if(sortKey===button.dataset.sort)sortDir*=-1;else{sortKey=button.dataset.sort;sortDir=1;}renderScreener();}));
-    $('gold-15-tbody').addEventListener('click',event=>{const button=event.target.closest('[data-select]');if(button){selected=button.dataset.select;renderQuickStats();}});
+    $('gold-15-tbody').addEventListener('click',event=>{const button=event.target.closest('[data-select]');if(button){selected=button.dataset.select;renderQuickStats();root.MostroCockpit?.refresh(false);}});
     $('gold-15-tbody').addEventListener('input',event=>{const input=event.target;if(!input.dataset.margin)return;selected=input.dataset.margin;margins.set(selected,Number(input.value));input.nextElementSibling.textContent=input.value+' pp';schedule();});
     $('gold-15-tbody').addEventListener('change',()=>{recalculate();renderScreener();});
     Object.keys(shocks).forEach(key=>$('shock-'+key).addEventListener('input',event=>{shocks[key]=Number(event.target.value);$('shock-'+key+'-value').textContent=(shocks[key]>0?'+':'')+shocks[key]+'%';schedule();}));

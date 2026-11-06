@@ -124,6 +124,7 @@
       min-width: 0;
     }
   </style>
+  <link rel="stylesheet" href="css/mostro_cockpit.css">
 </head>
 <body class="mostro-terminal">
 <a class="skip" href="#main">Skip to content</a>
@@ -152,34 +153,32 @@
   </div>
 
   <nav class="room-selector" aria-label="Terminal Room Selector">
-    <button type="button" class="room-btn active" data-room="all" aria-selected="true">ALL 7 ROOMS</button>
-    <button type="button" class="room-btn" data-room="room-1" aria-selected="false">01 · 15 GOLD &amp; 64 STRATEGIES</button>
-    <button type="button" class="room-btn" data-room="room-2" aria-selected="false">02 · 199 SCATTER &amp; ARENA</button>
-    <button type="button" class="room-btn" data-room="room-3" aria-selected="false">03 · LIQUIDITY SHOCK SIM</button>
-    <button type="button" class="room-btn" data-room="room-4" aria-selected="false">04 · NEON VIDEO &amp; TEARSHEETS</button>
-    <button type="button" class="room-btn" data-room="room-5" aria-selected="false">05 · SHA-256 AUDIT LEDGER</button>
-    <button type="button" class="room-btn" data-room="room-6" aria-selected="false">06 · 43-RULE MACRO RADAR</button>
-    <button type="button" class="room-btn" data-room="room-7" aria-selected="false">07 · YALE / WHARTON / HKUST ARCH</button>
+    <button type="button" class="room-btn active" data-room="room-1" aria-selected="true">01 / OVERVIEW</button>
+    <button type="button" class="room-btn" data-room="room-2" aria-selected="false">02 / VALUATION MAP</button>
+    <button type="button" class="room-btn" data-room="room-3" aria-selected="false">03 / STRESS LAB</button>
+    <button type="button" class="room-btn" data-room="room-4" aria-selected="false">04 / MEDIA VAULT</button>
+    <button type="button" class="room-btn" data-room="room-5" aria-selected="false">05 / PROOF LEDGER</button>
+    <button type="button" class="room-btn" data-room="room-6" aria-selected="false">06 / MACRO RADAR</button>
+    <button type="button" class="room-btn" data-room="room-7" aria-selected="false">07 / ARCHITECTURE</button>
   </nav>
 </section>
 
 <main id="main" class="terminal-container">
-  <header style="margin-bottom: 22px;">
-    <h1 style="margin: 0 0 8px 0; color: #00F5A0; font-family: monospace;"><span data-brand-title>VALEN TERMINAL // VALUATION, ALPHA &amp; LIQUIDITY ENGINE</span></h1>
-    <p data-brand-subtitle>FOUNDER &amp; LEAD ARCHITECT: LUCA VALENTE</p>
-    <p class="intro" style="margin: 0; color: #8AB3AD;">
-      Quantitative decision architecture across 199 audited protocols, 64 quantitative strategies, and 43 proprietary macro liquidity rules. A local JavaScript bundle loads the source snapshot on HTTPS and file:// without data fetches.
-    </p>
-  </header>
+  <header class="desk-heading"><div><span class="eyebrow">RESEARCH SYSTEM / V.02</span><h1><span data-brand-title>VALEN TERMINAL // VALUATION, ALPHA &amp; LIQUIDITY ENGINE</span></h1><p data-brand-subtitle>FOUNDER &amp; LEAD ARCHITECT: LUCA VALENTE</p></div><div class="desk-id">199 <small>PROTOCOLS</small> / 64 <small>STRATEGIES</small><span>● LOCAL SCENARIO ENGINE</span></div></header>
 
   <!-- ROOM 1: FLAGSHIP 15 GOLD & 64 STRATEGIES SCREENER -->
   <section id="room-1" class="terminal-room" aria-labelledby="title-room-1"><div class="room-header"><div><h2 id="title-room-1" class="room-title">ROOM 01 // 64 STRATEGIES SCREENER</h2><p>15 TIER-1 GOLD · Source observations, scenario sensitivity and explicit invalidation horizons.</p></div></div>
+<div id="hero-cockpit" class="hero-cockpit" aria-label="Hardware overview cockpit">
+  <div class="hardware-panel instrument-bank"><div class="panel-label"><span>01 / SYSTEM TELEMETRY</span><span class="online-dot">REFERENCE</span></div><div id="hero-dials" class="hero-dials"></div><div class="panel-foot">REFERENCE CALIBRATION · 78 / 41 / 46 · NOT LIVE MARKET DATA</div></div>
+  <div class="hardware-panel scope-panel"><div class="panel-label"><span>02 / SIGNAL OSCILLOSCOPE</span><span class="gold-text">D1 // SOURCE</span></div><div id="hero-scope"></div><div class="panel-foot"><span class="green-text">━ KPI A</span> <span class="pink-text">━ KPI B</span> · NORMALIZED SOURCE OBSERVATIONS</div></div>
+  <div class="hardware-panel threshold-panel"><div class="panel-label"><span>INVALIDATION THRESHOLD</span><span class="pink-text">RISK CONTROL</span></div><div class="threshold-readout"><strong id="hero-buffer">—</strong><span id="hero-state">LOCAL SCENARIO</span></div><div id="hero-threshold"></div><div class="panel-foot" id="hero-threshold-label"></div></div>
+</div><div class="section-strip"><h3>STRATEGY SCREENER</h3><span>01—64 / QUANTITATIVE RESEARCH</span></div>
 <div class="controls-row">
 <label for="screener-search">Search</label><input id="screener-search" type="search" class="terminal-input" placeholder="Ticker, thesis, model…">
 <label for="screener-tier">Basket</label><select id="screener-tier" class="terminal-select"><option value="GOLD" selected>15 TIER-1 GOLD</option><option value="ALL">All tiers</option></select>
 <label for="strategy-family">Block</label><select id="strategy-family" class="terminal-select"><option value="ALL">All 64</option><option value="DERIVATIVES">Derivatives H4/D1</option><option value="TRAP">Trap Kill-Switch</option><option value="FUNDAMENTALS">Fundamentals</option></select>
 <button class="room-btn" id="screener-all" type="button">SHOW ALL 64</button><output id="screener-count" aria-live="polite"></output></div>
-<div class="screener-layout"><div class="table-scroll"><table id="strategy-table" class="mostro-table" aria-label="64 strategy screener"><thead><tr>
+<div id="screener-pagination" class="pagination" aria-label="Screener pages"></div><div class="screener-layout"><div class="table-scroll"><table id="strategy-table" class="mostro-table" aria-label="64 strategy screener"><thead><tr>
 <th><button data-sort="code">Thesis ↕</button></th><th><button data-sort="token">Ticker ↕</button></th><th><button data-sort="title">Strategy ↕</button></th><th><button data-sort="score">Scenario score ↕</button></th><th><button data-sort="ratio">MCAP/TVL ↕</button></th><th><button data-sort="buffer">Buffer ↕</button></th><th><button data-sort="state">State ↕</button></th><th>Stop-loss horizon</th><th>Margin Adjuster</th>
 </tr></thead><tbody id="gold-15-tbody"></tbody></table></div>
 <aside id="quick-stats" class="arena-card" aria-label="Quick Stats"><h3>QUICK STATS</h3><div id="quick-stats-content" aria-live="polite"></div></aside></div>
@@ -187,7 +186,7 @@
 </section>
 
   <!-- ROOM 2: native Canvas visual engines -->
-  <section id="room-2" class="terminal-room" aria-labelledby="title-room-2">
+  <section id="room-2" class="terminal-room" hidden aria-labelledby="title-room-2">
     <div class="room-header"><div><h2 id="title-room-2" class="room-title">ROOM 02 // VALUATION MAP &amp; ARENA BATTLE</h2><p>199 protocols · daily fees as cash-flow proxy (USD), MCAP/TVL · logarithmic axes. Missing observations remain visible in the selector.</p></div><span class="room-badge badge-gold">NATIVE CANVAS / HiDPI</span></div>
     <div class="controls-row"><label for="canvas-sector">Sector</label><select id="canvas-sector" class="terminal-select"></select><label for="canvas-protocol">Select protocol</label><select id="canvas-protocol" class="terminal-select"></select><label for="arena-target">Click → Arena slot</label><select id="arena-target" class="terminal-select"><option value="a">A</option><option value="b">B</option><option value="c">C</option></select></div>
     <div class="scatter-grid"><div class="canvas-panel"><canvas id="valen-scatter" tabindex="0" role="img" aria-label="Logarithmic fees versus MCAP to TVL scatterplot" aria-describedby="scatter-summary">Use the protocol selector for an accessible alternative.</canvas><p id="scatter-summary" class="source-note"></p><div id="scatter-tooltip" class="canvas-tooltip" role="status" hidden></div><div id="scatter-selection" aria-live="polite"></div><details><summary>Protocols without plottable observations</summary><div id="scatter-missing" class="missing-list"></div></details></div>
@@ -196,7 +195,7 @@
   </section>
 
   <!-- ROOM 3: WHAT-IF LIQUIDITY SHOCK SIMULATOR WITH GOLD GRADUATED RULERS/SLIDERS -->
-  <section id="room-3" class="terminal-room" aria-labelledby="title-room-3"><div class="room-header"><div><h2 id="title-room-3" class="room-title">ROOM 03 // WHAT-IF LIQUIDITY SHOCK &amp; STRESS-TEST</h2><p>64 strategies + 199 protocols · Client-side scenarios on a dated snapshot.</p></div></div><div class="shock-controls"><div class="shock-slider-group"><label for="shock-tvl">TVL Shock (%)</label> <output id="shock-tvl-value" for="shock-tvl">0%</output><input type="range" class="gold-slider" id="shock-tvl" min="-60" max="100" step="1" value="0" list="ticks-tvl"><datalist id="ticks-tvl"><option value="-60"></option><option value="-20"></option><option value="0"></option><option value="50"></option><option value="100"></option></datalist><div class="graduated-ruler" aria-hidden="true"><span>-60%</span><span>-20%</span><span>+0%</span><span>+50%</span><span>+100%</span></div></div><div class="shock-slider-group"><label for="shock-fees">Fee / Take-Rate Shock (%)</label> <output id="shock-fees-value" for="shock-fees">0%</output><input type="range" class="gold-slider" id="shock-fees" min="-100" max="100" step="1" value="0" list="ticks-fees"><datalist id="ticks-fees"><option value="-100"></option><option value="-50"></option><option value="0"></option><option value="50"></option><option value="100"></option></datalist><div class="graduated-ruler" aria-hidden="true"><span>-100%</span><span>-50%</span><span>+0%</span><span>+50%</span><span>+100%</span></div></div><div class="shock-slider-group"><label for="shock-derivatives">Derivatives OI / Funding Shock (%)</label> <output id="shock-derivatives-value" for="shock-derivatives">0%</output><input type="range" class="gold-slider" id="shock-derivatives" min="-100" max="100" step="1" value="0" list="ticks-derivatives"><datalist id="ticks-derivatives"><option value="-100"></option><option value="-50"></option><option value="0"></option><option value="50"></option><option value="100"></option></datalist><div class="graduated-ruler" aria-hidden="true"><span>-100%</span><span>-50%</span><span>+0%</span><span>+50%</span><span>+100%</span></div></div><div class="shock-slider-group"><label for="shock-unlock">Unlock Dilution Pressure (%)</label> <output id="shock-unlock-value" for="shock-unlock">0%</output><input type="range" class="gold-slider" id="shock-unlock" min="0" max="100" step="1" value="0" list="ticks-unlock"><datalist id="ticks-unlock"><option value="0"></option><option value="25"></option><option value="50"></option><option value="75"></option><option value="100"></option></datalist><div class="graduated-ruler" aria-hidden="true"><span>+0%</span><span>+25%</span><span>+50%</span><span>+75%</span><span>+100%</span></div></div></div>
+  <section id="room-3" class="terminal-room" hidden aria-labelledby="title-room-3"><div class="room-header"><div><h2 id="title-room-3" class="room-title">ROOM 03 // WHAT-IF LIQUIDITY SHOCK &amp; STRESS-TEST</h2><p>64 strategies + 199 protocols · Client-side scenarios on a dated snapshot.</p></div></div><div class="shock-controls"><div class="shock-slider-group"><label for="shock-tvl">TVL Shock (%)</label> <output id="shock-tvl-value" for="shock-tvl">0%</output><input type="range" class="gold-slider" id="shock-tvl" min="-60" max="100" step="1" value="0" list="ticks-tvl"><datalist id="ticks-tvl"><option value="-60"></option><option value="-20"></option><option value="0"></option><option value="50"></option><option value="100"></option></datalist><div class="graduated-ruler" aria-hidden="true"><span>-60%</span><span>-20%</span><span>+0%</span><span>+50%</span><span>+100%</span></div></div><div class="shock-slider-group"><label for="shock-fees">Fee / Take-Rate Shock (%)</label> <output id="shock-fees-value" for="shock-fees">0%</output><input type="range" class="gold-slider" id="shock-fees" min="-100" max="100" step="1" value="0" list="ticks-fees"><datalist id="ticks-fees"><option value="-100"></option><option value="-50"></option><option value="0"></option><option value="50"></option><option value="100"></option></datalist><div class="graduated-ruler" aria-hidden="true"><span>-100%</span><span>-50%</span><span>+0%</span><span>+50%</span><span>+100%</span></div></div><div class="shock-slider-group"><label for="shock-derivatives">Derivatives OI / Funding Shock (%)</label> <output id="shock-derivatives-value" for="shock-derivatives">0%</output><input type="range" class="gold-slider" id="shock-derivatives" min="-100" max="100" step="1" value="0" list="ticks-derivatives"><datalist id="ticks-derivatives"><option value="-100"></option><option value="-50"></option><option value="0"></option><option value="50"></option><option value="100"></option></datalist><div class="graduated-ruler" aria-hidden="true"><span>-100%</span><span>-50%</span><span>+0%</span><span>+50%</span><span>+100%</span></div></div><div class="shock-slider-group"><label for="shock-unlock">Unlock Dilution Pressure (%)</label> <output id="shock-unlock-value" for="shock-unlock">0%</output><input type="range" class="gold-slider" id="shock-unlock" min="0" max="100" step="1" value="0" list="ticks-unlock"><datalist id="ticks-unlock"><option value="0"></option><option value="25"></option><option value="50"></option><option value="75"></option><option value="100"></option></datalist><div class="graduated-ruler" aria-hidden="true"><span>+0%</span><span>+25%</span><span>+50%</span><span>+75%</span><span>+100%</span></div></div></div>
 <div class="controls-row"><button id="shock-reset" class="room-btn" type="button">RESET BASELINE</button><output id="stress-summary" aria-live="polite"></output></div>
 <div class="canvas-panel"><h3>CROSS-ASSET CORRELATION // SCENARIO MODEL</h3><canvas id="valen-correlation" role="img" aria-label="Scenario cross-asset correlation matrix" aria-describedby="correlation-summary"></canvas><p id="correlation-summary" class="source-note"></p><details><summary>Matrix values &amp; method</summary><p>Normalized factor covariance: liquidity, fees, derivatives, dilution plus independent residual risk. Slider magnitude increases the variance of the corresponding factor. Exposures are illustrative assumptions, not historical return estimates. Both shock directions increase factor stress.</p><div id="correlation-values" class="table-scroll"></div></details></div>
 <details><summary>Scenario formulas &amp; limitations</summary>
@@ -207,27 +206,27 @@
 </section>
 
   <!-- ROOM 4: PORTABLE CINEMATIC VAULT -->
-  <section id="room-4" class="terminal-room" aria-labelledby="title-room-4">
+  <section id="room-4" class="terminal-room" hidden aria-labelledby="title-room-4">
     <div class="room-header"><div><h2 id="title-room-4" class="room-title">ROOM 04 // CINEMATIC VAULT &amp; INSTITUTIONAL TEARSHEETS</h2><p>64 native-resolution cards and Neon MP4s. Hover or tap Preview, open a full-screen research view, then print a sealed institutional tearsheet.</p></div><span class="room-badge badge-gold">64 CARDS / 64 VIDEOS</span></div>
     <div class="vault-controls"><label for="vault-search">Search the Vault</label><input id="vault-search" class="terminal-input" type="search" placeholder="Strategy, ticker or thesis…"><output id="vault-count" aria-live="polite"></output></div>
     <div id="vault-grid" class="vault-grid"></div>
   </section>
 
   <!-- ROOM 5: CRYPTOGRAPHIC SHA-256 AUDIT LEDGER -->
-  <section id="room-5" class="terminal-room" aria-labelledby="title-room-5"><div class="room-header"><div><h2 id="title-room-5" class="room-title">ROOM 05 // CRYPTOGRAPHIC SHA-256 AUDIT LEDGER</h2><p>Verify each packaged UTF-8 thesis payload against its stored SHA-256 digest. Integrity within this bundle; not an external signature or proof of data accuracy.</p></div></div>
+  <section id="room-5" class="terminal-room" hidden aria-labelledby="title-room-5"><div class="room-header"><div><h2 id="title-room-5" class="room-title">ROOM 05 // CRYPTOGRAPHIC SHA-256 AUDIT LEDGER</h2><p>Verify each packaged UTF-8 thesis payload against its stored SHA-256 digest. Integrity within this bundle; not an external signature or proof of data accuracy.</p></div></div>
 <div class="controls-row"><label for="sha256-input">SHA-256 sandbox</label><input id="sha256-input" class="terminal-input" value="abc"><button id="sha256-verify-btn" class="room-btn" type="button">COMPUTE SHA-256 DIGEST</button></div><output id="sha256-digest-output" class="hash-output" aria-live="polite">Not computed</output>
 <div class="table-scroll"><table class="mostro-table" aria-label="Cryptographic SHA-256 Audit Ledger"><thead><tr><th>Thesis</th><th>Packaged SHA-256</th><th>Verification</th></tr></thead><tbody id="audit-ledger-body"></tbody></table></div>
 </section>
 
   <!-- ROOM 6: PROPRIETARY 43-RULE MACRO RADAR -->
-  <section id="room-6" class="terminal-room" aria-labelledby="title-room-6"><div class="room-header"><div><h2 id="title-room-6" class="room-title">ROOM 06 // 43 PROPRIETARY MACRO RULES</h2><p>Source rule definitions and directional bias. A bias is not evidence that a rule currently fires.</p></div></div>
+  <section id="room-6" class="terminal-room" hidden aria-labelledby="title-room-6"><div class="room-header"><div><h2 id="title-room-6" class="room-title">ROOM 06 // 43 PROPRIETARY MACRO RULES</h2><p>Source rule definitions and directional bias. A bias is not evidence that a rule currently fires.</p></div></div>
 <div class="gauge-grid"><div><canvas id="valen-gauge-liquidity" role="img" aria-label="Macro liquidity gauge"></canvas><output id="gauge-liquidity-value"></output></div><div><canvas id="valen-gauge-risk" role="img" aria-label="Derivative pressure gauge"></canvas><output id="gauge-risk-value"></output></div><div><canvas id="valen-gauge-confidence" role="img" aria-label="Macro rule coverage gauge"></canvas><output id="gauge-confidence-value"></output></div></div>
 <div class="canvas-panel"><div class="controls-row"><h3>MACRO OSCILLOSCOPE // H4 / D1</h3><label for="macro-timeframe">Timeframe</label><select id="macro-timeframe" class="terminal-select"><option>D1</option><option>H4</option></select><button id="scope-pause" type="button" class="room-btn" aria-pressed="false">PAUSE SWEEP</button></div><canvas id="valen-oscilloscope" role="img" aria-label="Derivative observations with animated radar sweep" aria-describedby="scope-summary"></canvas><p id="scope-summary" class="source-note"></p></div>
 <p id="macro-snapshot"></p><div class="controls-row"><label for="macro-filter">Bias</label><select id="macro-filter" class="terminal-select"><option value="ALL">All 43 rules</option><option value="BULLISH">Expansionary bias</option><option value="CAUTION">Neutral / unresolved bias</option><option value="DEFENSIVE">Defensive bias</option></select><label for="macro-family">Family</label><select id="macro-family" class="terminal-select"></select><label for="macro-search">Search rules</label><input id="macro-search" type="search" class="terminal-input"><output id="macro-count" aria-live="polite"></output></div><div id="macro-43-grid" class="macro-grid"></div>
 </section>
 
   <!-- ROOM 7: INSTITUTIONAL ARCHITECTURE & CREDENTIALS (YALE / WHARTON / HKUST / 15Y TRACK RECORD) -->
-  <section id="room-7" class="terminal-room" aria-labelledby="title-room-7">
+  <section id="room-7" class="terminal-room" hidden aria-labelledby="title-room-7">
     <div class="room-header">
       <div>
         <h2 id="title-room-7" class="room-title">ROOM 07 // INSTITUTIONAL ARCHITECTURE &amp; ACADEMIC / QUANT CREDENTIALS</h2>
@@ -269,10 +268,8 @@
         </p>
       </div>
     </div>
-  </section>
-
-  <!-- PRESERVED RESEARCH CASE STUDIES GALLERY -->
-  <section class="terminal-room" aria-labelledby="title-case-studies">
+  <!-- Research archive is nested inside room 7. -->
+  <details class="research-archive" aria-labelledby="title-case-studies"><summary>OPEN PUBLISHED RESEARCH ARCHIVE</summary>
     <div class="room-header">
       <h2 id="title-case-studies" class="room-title">PUBLISHED RESEARCH CASE STUDIES — LUCA VALENTE (OCTOBER 2026)</h2>
       <span class="room-badge">PRIMARY SOURCE ARCHIVE</span>
@@ -300,7 +297,10 @@
         <p>Archived research snapshot.</p>
       </article>
     </div>
+  </details>
   </section>
+
+
 <noscript><p>JavaScript is required for the interactive terminal. No computed score or hash has been verified.</p></noscript>
 </main>
 
@@ -315,5 +315,6 @@
 <script defer src="js/mostro_engine_core.js"></script>
 <script defer src="js/mostro_canvas_engines.js"></script>
 <script defer src="js/mostro_media_command.js"></script>
+<script defer src="js/mostro_cockpit.js"></script>
 </body>
 </html>

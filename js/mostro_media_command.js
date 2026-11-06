@@ -76,6 +76,7 @@
     const entries=strategies.map((s,i)=>({s,i})).filter(({s})=>terms.every(t=>norm(`${s.thesis_code} ${s.token} ${s.title_en}`).includes(t)));
     $('vault-count').textContent=`${entries.length} / ${strategies.length} strategies`;
     $('vault-grid').innerHTML=entries.map(({s,i})=>`<article class="vault-card" data-vault="${i}"><div class="vault-poster"><img loading="lazy" decoding="async" src="${esc(safeAsset(s.card_png,'png'))}" alt="${esc(s.thesis_code+' '+s.title_en)}"><video muted loop playsinline preload="none" data-src="${esc(safeAsset(s.video_mp4,'mp4'))}" aria-label="Neon preview ${esc(s.thesis_code)}"></video></div><p class="vault-code">${esc(s.thesis_code)} / ${esc(s.token)} ${s.is_tier1_gold?'· GOLD':''}</p><h3>${esc(s.title_en)}</h3><div class="controls-row"><button class="room-btn" type="button" data-preview="${i}" aria-label="Play preview ${esc(s.thesis_code)}">▶ PREVIEW</button><button class="room-btn" type="button" data-open="${i}">OPEN VAULT ↗</button></div><p class="source-note">${esc(s.date)} · ${s.derivatives_invalidation?'H4/D1':'30D'}</p></article>`).join('')||'<p>No matching strategies.</p>';
+    root.MostroCockpit?.observeMedia();
   }
   function openVault(value=0) {
     const i=typeof value==='string'?strategies.findIndex(s=>s.thesis_id===value):value;
@@ -89,6 +90,8 @@
     $('media-prev').hidden=false;$('media-next').hidden=false;
     if(!activeDialog.contains(doc.activeElement))$('media-close').focus();
     $('open-tearsheet').addEventListener('click',()=>{openTearsheet().catch(e=>status('Tearsheet unavailable: '+e.message));});
+    const player=$('vault-player');player.muted=true;player.autoplay=true;
+    const playback=player.play();if(playback?.catch)playback.catch(()=>status('Tap Play to start the video.'));
     return true;
   }
   function navigate(delta) {if(mode==='vault')openVault((selected+delta+strategies.length)%strategies.length);}
