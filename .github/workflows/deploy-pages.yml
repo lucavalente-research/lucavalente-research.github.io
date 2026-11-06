@@ -20,11 +20,14 @@ jobs:
       - uses: actions/checkout@v4
       - name: Assemble public terminal
         run: |
-          mkdir -p _site/data _site/immagini
-          cp index.html portfolio.html CNAME robots.txt sitemap.xml stile.css _site/
-          cp -R assets css js _site/
-          cp data/mostro_data_bundle.json data/mostro_data_bundle.js _site/data/
-          cp -R immagini/analysis _site/immagini/
+          mkdir -p _site/assets _site/css _site/js _site/immagini
+          cp index.html portfolio.html CNAME robots.txt sitemap.xml _site/
+          cp css/mostro_terminal.css _site/css/
+          cp js/mostro_engine_core.js _site/js/
+          cp assets/terminal-v6.js assets/terminal-v6.json _site/assets/
+          cp -R assets/token-logos assets/research-v6 assets/video-v6 _site/assets/
+          mkdir -p _site/immagini/analysis
+          cp immagini/analysis/analysis-2026-10-18-liquidity-thermometer.png immagini/analysis/analysis-2026-10-18-token-supply-concentration.png _site/immagini/analysis/
           cp immagini/og.png _site/immagini/
       - uses: actions/upload-pages-artifact@v3
         with:
