@@ -1,287 +1,119 @@
-/* VALEN TERMINAL: offline-first snapshot terminal. No network calls or dependencies. */
-(function (root) {
-  'use strict';
-  const clamp = (n, a, b) => Math.max(a, Math.min(b, n));
-  const finite = n => typeof n === 'number' && Number.isFinite(n);
-  const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const numberFormats = new Map();
-  const fmt = (n, digits = 2) => {
-    if (!finite(n)) return 'N/D';
-    if (!numberFormats.has(digits)) numberFormats.set(digits, new Intl.NumberFormat('en-US', {maximumFractionDigits:digits,minimumFractionDigits:digits}));
-    return numberFormats.get(digits).format(n);
-  };
-  // Display helpers never mutate source values, timestamps or signed payloads.
-  const money = n => {
-    if (!finite(n)) return 'N/D';
-    const magnitude=Math.abs(n),sign=n<0?'-':'';
-    let scale=magnitude>=1e9?1e9:magnitude>=1e6?1e6:magnitude>=1e3?1e3:1;
-    let value=magnitude/scale;
-    if(scale<1e9 && value>=999.95){scale*=1000;value=magnitude/scale;}
-    return sign+'$'+value.toFixed(scale===1?(magnitude>0&&magnitude<1?6:2):value<10?2:1)+({1:'',1000:'K',1000000:'M',1000000000:'B'}[scale]);
-  };
-  const dateUTC = value => {
-    if(!value) return 'N/D';
-    const raw=String(value);
-    if(!/^\d{4}-\d{2}-\d{2}(?:T|$)/.test(raw))return raw;
-    const date=new Date(raw.length===10?raw+'T00:00:00Z':raw);
-    if(!Number.isFinite(date.getTime()))return 'N/D';
-    const pad=n=>String(n).padStart(2,'0');
-    return pad(date.getUTCDate())+' '+['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'][date.getUTCMonth()]+' '+date.getUTCFullYear()+' · '+pad(date.getUTCHours())+':'+pad(date.getUTCMinutes())+' UTC';
-  };
-  const strategyLabel = s => s.thesis_id==='1_1_SCONTO_MULTIPLO_PF_COMMISSIONI_30G'?'PF_FEE_DISCOUNT_30D':s.title_en.toUpperCase().replace(/[^A-Z0-9]+/g,'_').replace(/^_|_$/g,'');
-  const compactHash = hash => '0x'+hash.slice(0,4)+'...'+hash.slice(-5);
-  const hashButton = hash => '<button type="button" class="hash-copy" data-copy-hash="'+esc(hash)+'" title="'+esc(hash)+'" aria-label="Copy full SHA-256 digest"><span>'+compactHash(hash)+'</span> <span>[COPY HASH]</span></button>';
-  const metric = (p, ...keys) => {
-    for (const key of keys) { const value = p?.metrics?.[key]?.value; if (finite(value)) return value; }
-    return null;
-  };
-  const canonical = value => {
-    if (Array.isArray(value)) return '[' + value.map(canonical).join(',') + ']';
-    if (value !== null && typeof value === 'object') return '{' + Object.keys(value).sort().map(k => JSON.stringify(k)+':'+canonical(value[k])).join(',') + '}';
-    return JSON.stringify(value);
-  };
-  // SHA-256 (FIPS 180-4), UTF-8 bytes. Used when SubtleCrypto is absent or rejects file://.
-  function sha256Fallback(message) {
-    const bytes = new TextEncoder().encode(message);
-    const size = Math.ceil((bytes.length + 9) / 64) * 64;
-    const padded = new Uint8Array(size); padded.set(bytes); padded[bytes.length] = 128;
-    const view = new DataView(padded.buffer);
-    view.setUint32(size - 8, Math.floor(bytes.length / 0x20000000));
-    view.setUint32(size - 4, (bytes.length * 8) >>> 0);
-    const k = [0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2];
-    const h = [0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19];
-    const w = new Uint32Array(64), rotr = (x,n) => (x >>> n) | (x << (32-n));
-    for (let offset = 0; offset < size; offset += 64) {
-      for (let i=0;i<16;i++) w[i]=view.getUint32(offset+i*4);
-      for (let i=16;i<64;i++) { const x=w[i-15],y=w[i-2]; w[i]=(w[i-16]+(rotr(x,7)^rotr(x,18)^(x>>>3))+w[i-7]+(rotr(y,17)^rotr(y,19)^(y>>>10)))>>>0; }
-      let [a,b,c,d,e,f,g,z]=h;
-      for (let i=0;i<64;i++) { const t1=(z+(rotr(e,6)^rotr(e,11)^rotr(e,25))+((e&f)^(~e&g))+k[i]+w[i])>>>0; const t2=((rotr(a,2)^rotr(a,13)^rotr(a,22))+((a&b)^(a&c)^(b&c)))>>>0; z=g;g=f;f=e;e=(d+t1)>>>0;d=c;c=b;b=a;a=(t1+t2)>>>0; }
-      [a,b,c,d,e,f,g,z].forEach((v,i)=>{h[i]=(h[i]+v)>>>0;});
-    }
-    return h.map(n=>n.toString(16).padStart(8,'0')).join('');
-  }
-  async function sha256(message) {
-    try {
-      if (root.crypto?.subtle) {
-        const hash = await root.crypto.subtle.digest('SHA-256',new TextEncoder().encode(message));
-        return Array.from(new Uint8Array(hash),b=>b.toString(16).padStart(2,'0')).join('');
-      }
-    } catch (_) { /* File origin or unavailable crypto provider: use real SHA-256 below. */ }
-    return sha256Fallback(message);
-  }
-  async function verifyThesis(strategy, preimage) {
-    if (!preimage || !/^[a-f0-9]{64}$/i.test(strategy.sha256 || '')) return {ok:false,reason:'Missing proof'};
-    const payload = {...strategy}; delete payload.sha256;
-    const payloadBefore = canonical(payload), expectedDigest = strategy.sha256.toLowerCase();
-    // Prevent a correct old preimage from approving a modified current thesis.
-    try { if (payloadBefore !== canonical(JSON.parse(preimage))) return {ok:false,reason:'Payload changed'}; }
-    catch (_) { return {ok:false,reason:'Malformed proof'}; }
-    const digest = await sha256(preimage);
-    const unchanged = payloadBefore === canonical((({sha256: ignored, ...rest}) => rest)(strategy)) && expectedDigest === strategy.sha256.toLowerCase();
-    return {ok: unchanged && digest === expectedDigest, digest, reason:unchanged ? 'Digest comparison' : 'Payload changed during verification'};
-  }
-  function snapshot(p) {
-    return {tvl:metric(p,'tvl'),mcap:metric(p,'capitalizzazione','capitalizzazione_mercato'),
-      fees:metric(p,'commissioni_giornaliere','commissioni_24h'),volume:metric(p,'volume_24h','volume_dex_24h'),
-      oi:metric(p,'apertura_interesse'),funding:metric(p,'tasso_finanziamento')};
-  }
-  // Transparent resilience proxy, not a reconstruction of the upstream model's performance.
-  function simulate(base, shocks = {}, margin = 10, derivatives = false, p25 = 697) {
-    const tvlShock=clamp(Number(shocks.tvl)||0,-60,100)/100;
-    const feeShock=clamp(Number(shocks.fees)||0,-100,100)/100;
-    const derShock=clamp(Number(shocks.derivatives)||0,-100,100)/100;
-    const unlock=clamp(Number(shocks.unlock)||0,0,100)/100;
-    const scaled=(v,f)=>finite(v)?v*f:null;
-    const tvl=scaled(base.tvl,1+tvlShock),mcap=scaled(base.mcap,1+unlock),fees=scaled(base.fees,1+feeShock);
-    const oi=scaled(base.oi,1+derShock),funding=finite(base.funding)?base.funding+derShock*0.0001:null;
-    const ratio=finite(mcap)&&finite(tvl)&&tvl>0?mcap/tvl:null;
-    const parts=[{value:finite(ratio)&&ratio>0?clamp(1/ratio,0,1):null,weight:35},
-      {value:finite(fees)&&p25>0?clamp(fees/p25,0,1):null,weight:25},
-      {value:finite(base.volume)?clamp(base.volume/1e6,0,1):null,weight:20},
-      {value:finite(funding)?clamp(1-Math.max(0,funding)/0.0001,0,1):finite(fees)&&finite(mcap)&&mcap>0?clamp(fees*365/mcap,0,1):null,weight:20}];
-    const present=parts.filter(p=>finite(p.value)),weight=present.reduce((sum,p)=>sum+p.weight,0);
-    const score=weight?clamp(present.reduce((sum,p)=>sum+p.value*p.weight,0)/weight*100-unlock*25,0,100):null;
-    const buffer=finite(score)?score-(50-clamp(Number(margin)||0,0,30)):null;
-    const derivativeBreach=derivatives&&((finite(funding)&&funding>0.0001)||(finite(base.oi)&&base.oi>0&&derShock<=-0.2));
-    const incomplete=present.length<4||(derivatives&&!finite(oi));
-    const state=derivativeBreach||(finite(buffer)&&buffer<0)?'INVALIDATED':incomplete||!finite(buffer)||buffer<10?'MONITOR':'ACTIVE';
-    return {score,ratio,buffer,state,tvl,mcap,fees,volume:finite(base.volume)?base.volume:null,oi,funding,incomplete,coverage:present.length,derivativeBreach,components:parts.map(p=>p.value),fourthComponent:finite(funding)?'Funding balance':'Annual fees / MCAP',feeYield:finite(fees)&&finite(mcap)&&mcap>0?fees*365/mcap:null};
-  }
-  // Stable score ranking in ticker rounds: all theses remain accessible.
-  function diversified(items, results) {
-    const sorted=[...items].sort((a,b)=>(results.get(b.thesis_id)?.score??-Infinity)-(results.get(a.thesis_id)?.score??-Infinity)||a.thesis_code.localeCompare(b.thesis_code,'en',{numeric:true}));
-    const groups=new Map();for(const s of sorted){const key=s.token.toUpperCase();if(!groups.has(key))groups.set(key,[]);groups.get(key).push(s);}
-    const ordered=[];while([...groups.values()].some(g=>g.length)){
-      const round=[...groups.values()].filter(g=>g.length).map(g=>g.shift()).sort((a,b)=>sorted.indexOf(a)-sorted.indexOf(b));
-      if(ordered.length&&round.length>1&&round[0].token===ordered[ordered.length-1].token)round.push(round.shift());
-      ordered.push(...round);
-    }return ordered;
-  }
-  function screenerTelemetry(items, results) {
-    const rows=items.map(s=>results.get(s.thesis_id)).filter(Boolean),buffers=rows.map(r=>r.buffer).filter(finite).sort((a,b)=>a-b);
-    const unique=[...new Map(items.map(s=>[s.entity_id,results.get(s.thesis_id)])).values()];
-    const depth=unique.map(r=>r?.volume).filter(finite).map(v=>clamp(Math.log1p(Math.max(0,v)/1e6)/Math.log1p(1000),0,1));
-    return {active:rows.length?100*rows.filter(r=>r.state==='ACTIVE').length/rows.length:null,
-      buffer:buffers.length?(buffers[Math.floor((buffers.length-1)/2)]+buffers[Math.floor(buffers.length/2)])/2:null,
-      liquidity:depth.length?100*depth.reduce((a,b)=>a+b,0)/depth.length:null,count:rows.length,depthCount:depth.length};
-  }
-  function paintProof(seal,result) {
-    seal.textContent=result.ok?'✓ SHA-256 VERIFIED':'✗ PROOF MISMATCH';
-    seal.className='proof-seal '+(result.ok?'verified':'failed');seal.title=result.digest||result.reason;
-    let digest=seal.parentElement.querySelector('.computed-digest');
-    if(!digest){digest=doc.createElement('span');digest.className='hash-output computed-digest';seal.after(digest);}
-    digest.innerHTML=result.digest?'COMPUTED SHA-256 · '+hashButton(result.digest):'Verification failed · '+esc(result.reason);
-  }
-  const API={sha256Fallback,sha256,verifyThesis,simulate,snapshot,canonical,diversified,screenerTelemetry,paintProof,money,dateUTC,strategyLabel,compactHash};
-  root.MostroEngine=API;
-  if (!root.document) return;
-  const doc=root.document, $=id=>doc.getElementById(id);
-  function init() {
-    const bundle=root.MOSTRO_BUNDLE;
-    const required=['mostro-ticker-track','gold-15-tbody','stress-results','audit-ledger-body','macro-43-grid','live-pipeline','room-1','room-3','room-5','room-6','room-7'];
-    if (!bundle || !Array.isArray(bundle.strategies) || !Array.isArray(bundle.protocols) || required.some(id=>!$(id))) {
-      $('bundle-status-indicator').textContent='ENGINE UNAVAILABLE · missing bundle or room anchors'; return;
-    }
-    const protocols=bundle.protocols,strategies=bundle.strategies,rules=bundle.macro.rules;
-    const assets=[...protocols,...(bundle.strategy_assets||[])];
-    const byId=new Map(assets.map(p=>[p.entity_id,p]));
-    const bases=new Map(assets.map(p=>[p.entity_id,snapshot(p)]));
-    const margins=new Map(strategies.map(s=>[s.thesis_id,10]));
-    const shocks={tvl:0,fees:0,derivatives:0,unlock:0};
-    let sortKey='score',sortDir=-1,diversify=true,selected=null;
-    let results=new Map(),protocolResults=new Map(),visible=[],pending=false,lastFrameMs=0;
-    const p25=bundle.audit.fee_p25;
-    const block=s=>s.thesis_code.startsWith('TRAP_')?'TRAP':s.derivatives_invalidation?'DERIVATIVES':'FUNDAMENTALS';
-    const badge=state=>'<span class="room-badge '+(state==='INVALIDATED'?'badge-alert':state==='MONITOR'?'badge-gold':'')+'">'+state+'</span>';
-    const status=$('bundle-status-indicator').querySelector('span:last-child');
-    status.textContent=`SNAPSHOT ${dateUTC(bundle.snapshot_dates?.at(-1)||bundle.source_inventory_timestamp)} · ${protocols.length} PROTOCOLS · ${strategies.length} STRATEGIES · ${rules.length} RULES`;status.title=status.textContent;
-    $('source-gate-summary').textContent=`SOURCE DAILY FEE P25: ${money(p25)} · ${bundle.audit.gold_count} GOLD THESES`;
-    // Publish only complete measured quotes; keep the comparison universe intact.
-    const quotedProtocols=protocols.filter(p=>p.ticker&&p.ticker!=='XTZ'&&metric(p,'prezzo')>0&&finite(metric(p,'variazione_prezzo_24h_pct'))&&['tvl','mcap','fees','volume'].every(k=>finite(snapshot(p)[k])));
-    $('mostro-ticker-track').parentNode.setAttribute('aria-label',quotedProtocols.length+' complete protocol snapshot quotes');
-    const tickerItems=quotedProtocols.map(p=>{
-      const price=metric(p,'prezzo'),change=metric(p,'variazione_prezzo_24h_pct'),date=p.metrics?.prezzo?.as_of||'date unavailable';
-      return '<span class="ticker-item" title="'+esc(p.name+' · '+dateUTC(date))+'"><span class="ticker-symbol">'+esc(p.ticker||p.name)+'</span> '+money(price)+' <span class="'+(change<0?'ticker-down':'ticker-up')+'">'+(change===null?'Δ N/D':fmt(change)+'%')+'</span></span>';
-    }).join('');
-    $('mostro-ticker-track').innerHTML='<div class="ticker-group">'+tickerItems+'</div><div class="ticker-group" aria-hidden="true">'+tickerItems+'</div>';
-    $('mostro-ticker-track').style.animationDuration=(quotedProtocols.length*4)+'s';
-    const pause=doc.createElement('button');pause.type='button';pause.id='ticker-pause';pause.setAttribute('aria-label','Pause or resume ticker');pause.className='room-btn';pause.textContent='PAUSE TICKER';pause.setAttribute('aria-pressed','false');
-    doc.querySelector('.media-top-actions').append(pause);
-    pause.addEventListener('click',()=>{const stopped=pause.getAttribute('aria-pressed')!=='true';pause.setAttribute('aria-pressed',String(stopped));pause.textContent=stopped?'RESUME TICKER':'PAUSE TICKER';$('mostro-ticker-track').style.animationPlayState=stopped?'paused':'running';});
-    const nav=[...doc.querySelectorAll('.room-btn[data-room]')];
-    nav.forEach(button=>{
-      button.setAttribute('aria-pressed',button.classList.contains('active')?'true':'false');button.removeAttribute('aria-selected');
-      button.addEventListener('click',()=>{
-        nav.forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});
-        doc.querySelectorAll('.terminal-room[id^="room-"]').forEach(room=>{room.hidden=room.id!==button.dataset.room;});
-      });
-    });
-    const stressNodes=[];
-    function makeStressRow(id,label,kind) {
-      const tr=doc.createElement('tr');tr.dataset.kind=kind;tr.dataset.id=id;
-      tr.innerHTML='<td>'+esc(kind+' / '+(kind==='STRATEGY'?strategyLabel(strategies.find(s=>s.thesis_id===id)):id))+'</td><td>'+esc(label)+'</td><td></td><td></td><td></td><td></td>';
-      $('stress-results').append(tr);stressNodes.push({id,kind,cells:tr.cells});
-    }
-    strategies.forEach(s=>makeStressRow(s.thesis_id,s.token+' · '+s.title_en,'STRATEGY'));
-    protocols.forEach(p=>makeStressRow(p.entity_id,p.ticker+' · '+p.name,'PROTOCOL'));
-    function recalculate() {
-      protocolResults=new Map(protocols.map(p=>[p.entity_id,simulate(bases.get(p.entity_id),shocks,10,false,p25)]));
-      results=new Map(strategies.map(s=>[s.thesis_id,simulate(bases.get(s.entity_id)||{},shocks,margins.get(s.thesis_id),!!s.derivatives_invalidation,p25)]));
-    }
-    function renderQuickStats() {
-      const s=strategies.find(x=>x.thesis_id===selected);if(!s)return;
-      const r=results.get(selected),p=byId.get(s.entity_id),base=bases.get(s.entity_id)||{};
-      const aggregate=visible.map(x=>results.get(x.thesis_id));
-      const scored=aggregate.filter(x=>finite(x.score));
-      const mean=scored.length?scored.reduce((sum,x)=>sum+x.score,0)/scored.length:null;
-      $('quick-stats-content').innerHTML='<strong>'+esc(s.token+' · '+s.thesis_code)+'</strong><p>'+esc(s.title_en)+'</p>'+badge(r.state)+
-        '<dl><dt>Scenario score</dt><dd>'+fmt(r.score)+'/100</dd><dt>MCAP/TVL</dt><dd>'+fmt(r.ratio)+'×</dd><dt>Invalidation buffer</dt><dd>'+fmt(r.buffer)+' pp</dd><dt>Margin</dt><dd>'+margins.get(selected)+' pp</dd><dt>Daily fees · stressed</dt><dd>'+money(r.fees)+'</dd><dt>24h volume · source</dt><dd>'+money(base.volume)+'</dd><dt>'+r.fourthComponent+'</dt><dd>'+ (finite(r.funding)?fmt(r.funding,6):fmt(r.feeYield*100)+'%') +'</dd><dt>Coverage</dt><dd>'+r.coverage+'/4 components</dd><dt>Visible basket score</dt><dd>'+fmt(mean)+'</dd><dt>Visible invalidated</dt><dd>'+aggregate.filter(x=>x.state==='INVALIDATED').length+'/'+visible.length+'</dd></dl>'+
-        '<p class="source-note">'+esc(dateUTC(p?.metrics?.tvl?.as_of||p?.metrics?.prezzo?.as_of||bundle.source_inventory_timestamp))+'</p>';
-    }
-    function renderScreener() {
-      const query=$('screener-search').value.trim().toLowerCase(),tier=$('screener-tier').value,family=$('strategy-family').value;
-      visible=strategies.filter(s=>(tier!=='GOLD'||s.is_tier1_gold)&&(family==='ALL'||block(s)===family)&&[s.token,s.title_en,s.thesis_code,s.model,byId.get(s.entity_id)?.name].join(' ').toLowerCase().includes(query));
-      const val=s=>sortKey==='code'?s.thesis_code:sortKey==='token'?s.token:sortKey==='title'?s.title_en:results.get(s.thesis_id)[sortKey];
-      visible.sort((a,b)=>{const x=val(a),y=val(b);if(x==null)return y==null?0:1;if(y==null)return -1;return sortDir*(typeof x==='number'?x-y:String(x).localeCompare(String(y),'en',{numeric:true}));});
-      if(diversify)visible=diversified(visible,results);
-      if(selected===null&&visible.length)selected=visible[0].thesis_id;
-      $('gold-15-tbody').innerHTML=visible.map(s=>{
-        const r=results.get(s.thesis_id),index=strategies.indexOf(s),horizon=s.derivatives_invalidation?'H4/D1':'30D';
-        return '<tr data-thesis="'+esc(s.thesis_id)+'" data-tier="'+(s.is_tier1_gold?'GOLD':'STANDARD')+'"><td>'+esc(s.thesis_code)+'</td><td>'+esc(s.token)+(s.is_tier1_gold?' <span class="gold-mark">GOLD</span>':'')+'</td><td><button class="thesis-select" data-select="'+esc(s.thesis_id)+'">'+esc(s.title_en)+'</button></td><td>'+fmt(r.score)+'</td><td>'+fmt(r.ratio)+'</td><td>'+fmt(r.buffer)+'</td><td>'+badge(r.state)+'</td><td><span class="room-badge '+(s.derivatives_invalidation?'badge-alert':'badge-gold')+'" title="'+esc(s.derivatives_invalidation||'Fundamental review window; scenario threshold is not a market stop order')+'">STOP '+horizon+'</span></td><td><label for="margin-'+index+'" class="sr-only">Margin Adjuster '+esc(s.thesis_code)+'</label><input id="margin-'+index+'" class="gold-slider margin-slider" type="range" min="0" max="30" step="1" value="'+margins.get(s.thesis_id)+'" data-margin="'+esc(s.thesis_id)+'"><output>'+margins.get(s.thesis_id)+' pp</output></td></tr>';
-      }).join('')||'<tr><td colspan="9">No strategies match these filters.</td></tr>';
-      $('screener-count').textContent=visible.length+' / '+strategies.length+' strategies'+(diversify?' · TICKER ROUNDS / SCORE ↓':'');
-      doc.querySelectorAll('[data-sort]').forEach(b=>b.parentElement.setAttribute('aria-sort',!diversify&&b.dataset.sort===sortKey?(sortDir===1?'ascending':'descending'):'none'));
-      renderQuickStats();
-      root.MostroCockpit?.refresh(true);
-    }
-    function updateScreenerCells() {
-      // Keep slider nodes stable while dragging, avoiding focus loss and pointer interruption.
-      $('gold-15-tbody').querySelectorAll('tr[data-thesis]').forEach(row=>{const r=results.get(row.dataset.thesis);row.cells[3].textContent=fmt(r.score);row.cells[4].textContent=fmt(r.ratio);row.cells[5].textContent=fmt(r.buffer);row.cells[6].firstElementChild.textContent=r.state;row.cells[6].firstElementChild.className='room-badge '+(r.state==='INVALIDATED'?'badge-alert':r.state==='MONITOR'?'badge-gold':'');});
-      renderQuickStats();
-      root.MostroCockpit?.refresh(false);
-    }
-    function updateStress() {
-      let invalid=0;
-      stressNodes.forEach(({id,kind,cells})=>{const r=(kind==='STRATEGY'?results:protocolResults).get(id);if(r.state==='INVALIDATED')invalid++;
-        [fmt(r.score),fmt(r.ratio),fmt(r.buffer),r.state].forEach((text,i)=>{if(cells[i+2].textContent!==text)cells[i+2].textContent=text;});cells[5].className='state-'+r.state.toLowerCase();
-      });
-      $('stress-summary').textContent=`${strategies.length} strategies + ${protocols.length} protocols · ${invalid} invalidated · snapshot scenario`;
-      root.MostroCockpit?.refreshStress();
-    }
-    function schedule() {
-      if(pending)return;pending=true;
-      root.requestAnimationFrame(()=>{const start=root.performance.now();pending=false;recalculate();updateStress();updateScreenerCells();lastFrameMs=root.performance.now()-start;});
-    }
-    API.getState=()=>({selected,shocks:{...shocks},results,protocolResults,margins,visible:visible.map(s=>s.thesis_id),lastFrameMs,pending});
-    ['screener-search','screener-tier','strategy-family'].forEach(id=>$(id).addEventListener(id==='screener-search'?'input':'change',renderScreener));
-    $('screener-all').addEventListener('click',()=>{$('screener-tier').value='ALL';$('strategy-family').value='ALL';$('screener-search').value='';renderScreener();});
-    doc.querySelectorAll('[data-sort]').forEach(button=>button.addEventListener('click',()=>{diversify=false;if(sortKey===button.dataset.sort)sortDir*=-1;else{sortKey=button.dataset.sort;sortDir=1;}renderScreener();}));
-    $('gold-15-tbody').addEventListener('click',event=>{const button=event.target.closest('[data-select]');if(button){selected=button.dataset.select;renderQuickStats();root.MostroCockpit?.refresh(false);}});
-    $('gold-15-tbody').addEventListener('input',event=>{const input=event.target;if(!input.dataset.margin)return;selected=input.dataset.margin;margins.set(selected,Number(input.value));input.nextElementSibling.textContent=input.value+' pp';schedule();});
-    $('gold-15-tbody').addEventListener('change',()=>{recalculate();renderScreener();});
-    Object.keys(shocks).forEach(key=>$('shock-'+key).addEventListener('input',event=>{shocks[key]=Number(event.target.value);$('shock-'+key+'-value').textContent=(shocks[key]>0?'+':'')+shocks[key]+'%';schedule();}));
-    Object.keys(shocks).forEach(key=>$('shock-'+key).addEventListener('change',()=>{recalculate();renderScreener();}));
-    $('shock-reset').addEventListener('click',()=>{Object.keys(shocks).forEach(key=>{shocks[key]=0;$('shock-'+key).value='0';$('shock-'+key+'-value').textContent='0%';});recalculate();renderScreener();schedule();});
-    $('strategies-64-grid').innerHTML=strategies.map(s=>'<details class="macro-rule-card"><summary>'+esc(s.thesis_code+' · '+s.token+' · '+s.title_en)+'</summary><p>'+esc(s.model+' · '+dateUTC(s.date)+' · '+block(s))+'</p><p>'+esc(s.requested.join(' · '))+'</p></details>').join('');
-    $('audit-ledger-body').innerHTML=strategies.map((s,i)=>'<tr data-audit="'+i+'"><td>'+esc(s.thesis_code+' · '+s.token)+'</td><td class="hash-output">'+hashButton(s.sha256)+'</td><td><button type="button" class="room-btn" data-verify="'+i+'">[EXECUTE_AUDIT]</button><output class="proof-seal" aria-live="polite">NOT VERIFIED</output></td></tr>').join('');
-    $('audit-ledger-body').addEventListener('click',async event=>{const button=event.target.closest('[data-verify]');if(!button)return;const s=strategies[Number(button.dataset.verify)],seal=button.nextElementSibling;button.disabled=true;seal.className='proof-seal';seal.textContent='VERIFYING…';
-      try {const result=await verifyThesis(s,root.MOSTRO_PROOFS?.[s.thesis_id]);paintProof(seal,result);}
-      catch(error){seal.textContent='VERIFICATION ERROR';seal.className='proof-seal failed';}finally{button.disabled=false;}
-    });
-    doc.addEventListener('click',async event=>{
-      const button=event.target.closest('[data-copy-hash]');if(!button)return;
-      try{
-        if(!root.navigator?.clipboard?.writeText)throw new Error('Clipboard unavailable');
-        await root.navigator.clipboard.writeText(button.dataset.copyHash);
-        button.lastElementChild.textContent='[COPIED]';
-      }catch(_){button.lastElementChild.textContent='[COPY UNAVAILABLE]';}
-    });
-    const sandboxStrategy=strategies[0];
-    $('sha256-input').value=root.MOSTRO_PROOFS?.[sandboxStrategy.thesis_id]||'';
-    $('sha256-payload-label').textContent='PACKAGED PAYLOAD / '+sandboxStrategy.thesis_code+' · '+sandboxStrategy.token;
-    $('sha256-verify-btn').addEventListener('click',async()=>{const digest=await sha256($('sha256-input').value);$('sha256-digest-output').innerHTML=hashButton(digest)+' <span>'+(digest===sandboxStrategy.sha256?'MATCHES PACKAGED PAYLOAD':'CUSTOM PAYLOAD DIGEST')+'</span>';});
-    const families=[...new Set(rules.map(r=>r.famiglia))].sort();
-    $('macro-family').innerHTML='<option value="ALL">All families</option>'+families.map(f=>'<option>'+esc(f)+'</option>').join('');
-    const macro=bundle.macro.latest_score;
-    $('macro-snapshot').textContent=`Snapshot ${dateUTC(macro.data)}: score ${macro.punteggio}, regime ${macro.fascia}, ${macro.regole_scattate} triggered rules (aggregate).`;
-    function renderMacro() {
-      const q=$('macro-search').value.trim().toLowerCase(),family=$('macro-family').value,bias=$('macro-filter').value;
-      const filtered=rules.filter(r=>{const direction=r.bias_valore>0?'BULLISH':r.bias_valore<0?'DEFENSIVE':'CAUTION';return(family==='ALL'||r.famiglia===family)&&(bias==='ALL'||bias===direction)&&[r.id,r.nome,r.condizione_testo,r.lettura].join(' ').toLowerCase().includes(q);});
-      $('macro-43-grid').innerHTML=filtered.map(r=>'<details class="macro-rule-card"><summary>'+esc(r.id+' · '+r.nome)+'</summary><p>'+esc(r.condizione_testo)+'</p><p>Bias: '+esc(r.bias)+' · '+esc(r.famiglia)+'</p><p>'+esc(r.lettura)+'</p><p>Invalidation: '+esc(r.cosa_cambierebbe)+'</p><p>Data: '+esc(r.dato_richiesto)+'</p><p>Updated: '+esc(dateUTC(r.aggiornata_il))+(r.provvisoria?' · Provisional':'')+'</p></details>').join('')||'<p>No rules match.</p>';
-      $('macro-count').textContent=filtered.length+' / '+rules.length;
-    }
-    ['macro-filter','macro-family','macro-search'].forEach(id=>$(id).addEventListener(id==='macro-search'?'input':'change',renderMacro));
-    const stages=[['SQLite','Read-only upstream archive · '+bundle.macro.rules_table+' · snapshot '+dateUTC(bundle.source_inventory_timestamp)],['199 Protocols',protocols.length+' protocol snapshots with metric timestamps and provider attribution.'],['43 Macro Rules',rules.length+' source definitions; latest aggregate regime: '+macro.fascia],['64 Quant Models',strategies.length+' exported thesis payloads; '+bundle.audit.gold_count+' Tier-1 Gold. Source calculations are upstream.'],['SHA-256 Proofs','64 packaged payload digests, automatically verified at startup and recheckable in Room 05.'],['Browser Scenarios','Four stress inputs, per-thesis margin budgets, 263 result rows. No live SQLite connection.']];
-    $('live-pipeline').innerHTML=stages.map((s,i)=>'<button type="button" class="room-btn" data-stage="'+i+'" aria-pressed="'+(i===0)+'">'+esc(s[0])+'</button>'+(i<stages.length-1?'<span aria-hidden="true">→</span>':'')).join('');
-    $('pipeline-detail').textContent=stages[0][1];
-    $('live-pipeline').addEventListener('click',event=>{const button=event.target.closest('[data-stage]');if(!button)return;$('pipeline-detail').textContent=stages[Number(button.dataset.stage)][1];$('live-pipeline').querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));});
-    recalculate();renderScreener();updateStress();renderMacro();
-    API.ready=true;
-    API.proofsReady=Promise.all(strategies.map(async(s,i)=>{
-      const seal=$('audit-ledger-body').querySelector(`[data-audit="${i}"] .proof-seal`);
-      try{const proof=await verifyThesis(s,root.MOSTRO_PROOFS?.[s.thesis_id]);paintProof(seal,proof);if(i===0)$('sha256-digest-output').innerHTML=hashButton(proof.digest)+' <span>'+(proof.ok?'VERIFIED PACKAGED PAYLOAD':'PAYLOAD MISMATCH')+'</span>';}
-      catch(_){paintProof(seal,{ok:false,reason:'Verification error'});}
-    }));
-  }
-  if(doc.readyState==='loading')doc.addEventListener('DOMContentLoaded',init,{once:true});else init();
+/* VALEN TERMINAL V5. Source observations remain immutable. */
+(function(root){
+'use strict';
+const finite=Number.isFinite,clamp=(x,a=0,b=100)=>Math.max(a,Math.min(b,x));
+const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const metric=(p,...keys)=>{for(const k of keys){const v=p?.metrics?.[k]?.value;if(finite(v))return v;}return null;};
+const money=n=>!finite(n)?'N/A':new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',notation:'compact',maximumFractionDigits:1}).format(n);
+const fmt=n=>finite(n)?n.toFixed(1):'N/A';
+function assess(p,margin=10){
+ const fees=metric(p,'commissioni_giornaliere','commissioni_24h'),revenue=metric(p,'ricavi_giornalieri','ricavi_24h'),tvl=metric(p,'tvl'),cap=metric(p,'capitalizzazione','capitalizzazione_mercato');
+ const ratio=finite(cap)&&tvl>0?cap/tvl:null,volume=metric(p,'volume_24h','volume_dex_24h'),funding=metric(p,'tasso_finanziamento');
+ const whale=metric(p,'quota_primi10_esclusi_contratti','quota_primi10'),circ=metric(p,'offerta_circolante'),total=metric(p,'offerta_massima','offerta_totale');
+ const dilution=finite(circ)&&total>0?clamp(100*(1-circ/total)):null;
+ const riskParts=[finite(whale)?clamp(whale*100):null,dilution].filter(finite),risk=riskParts.length?Math.max(...riskParts):null;
+ const components=[finite(ratio)&&ratio>0?clamp(100/ratio):null,finite(revenue)&&revenue>=0?clamp(Math.log1p(revenue)/Math.log1p(1e6)*100):null,finite(volume)&&volume>=0?clamp(Math.log1p(volume)/Math.log1p(1e9)*100):null,finite(risk)?100-risk:null];
+ const present=components.filter(finite),score=present.length===4?present.reduce((a,b)=>a+b,0)/4:null;
+ return{fees,revenue,tvl,cap,ratio,volume,funding,risk,dilution,whale,score,components,buffer:finite(score)?score-(50-clamp(margin,0,30)):null,cash:finite(revenue)&&revenue>0&&finite(ratio)&&ratio<1};
+}
+const API={assess,metric,money};root.MostroApp=API;
+if(!root.document)return;
+const $=id=>document.getElementById(id),d=root.MOSTRO_BUNDLE;if(!d){$('market-verdict').textContent='Research data is unavailable. Please try again later.';return;}
+const named=p=>({...p,ticker:p.ticker||p.name.toUpperCase().slice(0,12)});
+const protocols=d.protocols.map(named),strategies=d.strategies,all=new Map([...protocols,...(d.strategy_assets||[]).map(named)].map(p=>[p.entity_id,p]));
+let basket='gold',block='all',activeEntity='aave',activeStrategy=null,margin=10,mapEntity='aave',radarMode=false;
+const green='#3bffb1',pink='#ff4498',gold='#eec76a';
+const logoSymbols=new Set(["usdt", "eth", "avax", "algo", "nexo", "ape", "fun", "doge", "zrx", "tel", "uni", "grt", "xrp", "rep", "sand", "btc", "comp", "aave"]);
+const logo=p=>`<span class="coin-logo" aria-label="${esc(p?.name||'Token')} logo"><span>${esc(p?.ticker?.slice(0,3)||'?')}</span>${logoSymbols.has(p?.ticker?.toLowerCase())?`<img loading="lazy" src="assets/token-logos/${esc(p.ticker.toLowerCase())}.svg" alt="" onerror="this.remove()">`:""}</span>`;
+function ring(label,value,color,sub,needle=false){const v=finite(value)?clamp(value):0;return `<div class="ring"><svg viewBox="0 0 160 160" role="img" aria-label="${label} ${fmt(value)}"><g stroke="#49604e">${Array.from({length:50},(_,i)=>`<path transform="rotate(${i*7.2} 80 80)" d="M80 7V${i%5?11:16}" stroke-width="${i%5?1:1.5}"/>`).join('')}</g><circle cx="80" cy="80" r="57" fill="none" stroke="#233f32" stroke-width="5"/><circle cx="80" cy="80" r="57" fill="none" stroke="${color}" stroke-width="5" stroke-linecap="round" stroke-dasharray="${v*3.58} 358" transform="rotate(-90 80 80)" style="filter:drop-shadow(0 0 4px ${color}66)"/><circle cx="80" cy="80" r="48" fill="none" stroke="${color}44"/>${needle&&finite(value)?`<g transform="rotate(${v*2.7-135} 80 80)"><path d="M77 82L80 26L83 82Z" fill="${gold}"/><circle cx="80" cy="80" r="5" fill="${gold}"/></g>`:''}<text x="80" y="${needle?112:86}" text-anchor="middle" fill="#e4eee8" font-family="monospace" font-size="${needle?19:29}">${finite(value)?Math.round(value):'N/A'}</text><text x="80" y="${needle?127:105}" text-anchor="middle" fill="#8fa89b" font-family="monospace" font-size="7">${finite(value)?'OUT OF 100':'NO OBSERVATION'}</text></svg><strong>${label}</strong><small>${sub||''}</small></div>`;}
+function poly(values,w=900,h=180){const valid=values.filter(finite);if(valid.length<2)return '';const lo=Math.min(...valid),range=Math.max(...valid)-lo||1;return values.map((v,i)=>finite(v)?`${20+i/(values.length-1)*(w-40)},${h-15-(v-lo)/range*(h-30)}`:null).filter(Boolean).join(' ');}
+function wave(s){const a=s.kpis.find(k=>/commissioni.*delta/.test(k.field))||s.kpis[1],b=s.kpis[0];const av=a.points.map(p=>p.value),bv=b.points.map(p=>p.value);return `<svg viewBox="0 0 900 180" preserveAspectRatio="none" role="img" aria-label="${esc(s.token)} fee growth and fee multiple, separately normalized"><g stroke="#274c39" stroke-width=".5">${Array.from({length:19},(_,i)=>`<path d="M${i*50} 0V180"/>`).join('')}${[0,30,60,90,120,150,180].map(y=>`<path d="M0 ${y}H900"/>`).join('')}</g><polyline points="${poly(bv)}" fill="none" stroke="${pink}" stroke-width="2"/><polyline points="${poly(av)}" fill="none" stroke="${green}" stroke-width="2.4" style="filter:drop-shadow(0 0 3px ${green}55)"/><g stroke="${gold}" fill="none"><path d="M675 0V180M0 90H900" stroke-dasharray="3 5" opacity=".5"/><circle cx="675" cy="90" r="18"/><circle cx="675" cy="90" r="4"/><path d="M648 90H659M691 90H702M675 63V74M675 106V117"/></g></svg>`;}
+function initPulse(){
+ const measured=protocols.map(p=>assess(p));
+ const lev=measured.filter(p=>finite(p.funding)),flow=measured.filter(p=>finite(p.revenue));
+ // No global money-supply observations exist in the supplied archive.
+ const leverage=lev.length?100*lev.filter(p=>p.funding>.0001).length/lev.length:null;
+ const health=flow.length?100*flow.filter(p=>p.revenue>0).length/flow.length:null;
+ $('market-rings').innerHTML=ring('GLOBAL LIQUIDITY',null,green,'GLOBAL MONEY DATA UNAVAILABLE')+ring('LEVERAGE RISK',leverage,pink,'SHARE WITH HIGH FUNDING')+ring('CASH FLOW HEALTH',health,gold,'SHARE WITH POSITIVE REVENUE');
+ $('ring-note').textContent=`Funding: ${lev.length}/199 observed · Revenue: ${flow.length}/199 observed · Global liquidity is not inferred from token volume.`;
+ $('market-verdict').textContent='The market is mixed; favour proven revenue and keep leverage low.';
+ $('regimes').innerHTML=[['MARKET BIAS','MIXED',gold],['LIQUIDITY','UNKNOWN',gold],['FUNDING',leverage<25?'CALM':'ELEVATED',leverage<25?green:pink],['CASH FLOW',health>=50?'POSITIVE':'WEAK',health>=50?green:pink]].map(([a,b,c])=>`<div class="regime"><span class="status-light" style="background:${c};box-shadow:0 0 7px ${c}66"></span><span>${a}</span><strong style="color:${c}">${b}</strong></div>`).join('');
+ const s=strategies.find(s=>s.thesis_code==='1_1');$('market-wave').innerHTML=wave(s);$('wave-source').textContent=`${s.token} / 05 OCT–04 NOV 2026 · SEPARATE SCALES`;
+}
+const isTrap=s=>/trap|risk|stress|divergence|euphoria|abandonment|apathy/i.test(s.title_en);
+function selectedStrategies(){return strategies.filter(s=>basket==='gold'?s.is_tier1_gold:basket==='cash'?!isTrap(s)&&assess(all.get(s.entity_id)).cash:isTrap(s)).filter(s=>block==='all'||s.thesis_code.replace(/^TRAP_/,'').split('_')[0]===block);}
+function tokenChips(items,current){return items.map(p=>`<button class="token-chip" data-entity="${esc(p.entity_id)}" aria-pressed="${p.entity_id===current}">${logo(p)}<span>${esc(p.ticker)}</span></button>`).join('');}
+function renderSelection(){
+ const ss=selectedStrategies(),ps=[...new Set(ss.map(s=>s.entity_id))].map(id=>all.get(id)).filter(Boolean);
+ if(!ps.some(p=>p.entity_id===activeEntity))activeEntity=ps[0]?.entity_id;
+ $('match-count').textContent=`${ss.length} IDEAS`;
+ $('token-carousel').innerHTML=tokenChips(ps,activeEntity);
+ $('token-cockpit').hidden=!ps.length;$('empty-state').hidden=!!ps.length;
+ if(!ps.length){activeStrategy=null;return;}
+ const candidates=ss.filter(s=>s.entity_id===activeEntity);
+ if(!candidates.some(s=>s.thesis_id===activeStrategy?.thesis_id))activeStrategy=candidates[0];
+ $('strategy-select').innerHTML=candidates.map(s=>`<option value="${esc(s.thesis_id)}" ${s===activeStrategy?'selected':''}>${esc(s.thesis_code+' / '+s.title_en)}</option>`).join('');renderToken();
+}
+function meter(label,value,level,color){return `<div class="meter"><div class="meter-label"><span>${label}</span><b style="color:${color}">${value}</b></div><div class="led-bricks" style="--led:${color}" role="img" aria-label="${label}: ${value}">${Array.from({length:20},(_,i)=>`<i class="${finite(level)&&i<Math.round(clamp(level)/5)?'on':''}"></i>`).join('')}</div></div>`;}
+function cashChart(p,r){
+ const vals=[r.revenue,r.fees].filter(finite),max=Math.max(...vals,1),y=n=>112-90*(n/max);
+ // A single dated observation is shown as a level, never invented history.
+ return `<svg viewBox="0 0 300 145" role="img" aria-label="Observed daily revenue ${money(r.revenue)} and fees ${money(r.fees)}; one day, not a time series"><g stroke="#294534">${[22,52,82,112].map(y=>`<path d="M12 ${y}H288"/>`).join('')}</g>${finite(r.fees)?`<rect x="193" y="${y(r.fees)}" width="45" height="${112-y(r.fees)}" fill="${pink}88" stroke="${pink}"/>`:''}${finite(r.revenue)?`<path d="M22 ${y(r.revenue)}Q82 ${y(r.revenue)} 145 ${y(r.revenue)}T278 ${y(r.revenue)}" fill="none" stroke="${green}" stroke-width="2.5"/><circle cx="88" cy="${y(r.revenue)}" r="4" fill="${green}"/>`:''}<text x="75" y="132" text-anchor="middle" fill="${green}" font-size="10">${money(r.revenue)} REVENUE</text><text x="220" y="132" text-anchor="middle" fill="${pink}" font-size="10">${money(r.fees)} FEES</text></svg>`;
+}
+function renderToken(){
+ const s=activeStrategy,p=all.get(activeEntity),r=assess(p,margin),trap=isTrap(s),cash=!trap&&r.cash;
+ $('active-logo').innerHTML=logo(p);$('active-token').textContent=p.ticker;
+ $('token-badge').textContent=trap?'● TRAP / RISK':cash?'● CASH COW':'● WATCHLIST';$('token-badge').className='badge'+(trap?' trap':'');
+ $('token-verdict').textContent=trap?`${p.ticker} faces ${s.title_en.toLowerCase()}; wait for stronger evidence.`:cash?`${p.ticker} earns revenue at a low valuation; watch supply and large holders.`:`${p.ticker} is a research idea; confirm cash flow and risk before entry.`;
+ $('token-gauge').innerHTML=ring('',r.score,gold,'',true).replace('class="ring"','class="ring" style="width:100%"');
+ $('token-chart').innerHTML=cashChart(p,r);$('cash-date').textContent='11–12 OCT';$('cash-chart-note').textContent='One-day revenue level / fees bar. No daily history supplied.';
+ $('token-meters').innerHTML=meter('Daily Cash Flow',money(r.revenue),r.components[1],green)+meter('Valuation MCAP/TVL',finite(r.ratio)?r.ratio.toFixed(2)+'×':'N/A',r.components[0],gold)+meter('Whale & Dilution Risk',finite(r.risk)?fmt(r.risk)+'%':'N/A',r.risk,pink)+meter('Safety Cushion to Stop',finite(r.buffer)?(r.buffer>=0?'+':'')+fmt(r.buffer)+' pts':'N/A',finite(r.buffer)?r.buffer+50:null,r.buffer<0?pink:green);
+ $('risk-value').textContent=margin+' points';$('token-date').textContent=`MARKET: 11–12 OCT 2026 · THESIS: ${s.date} · ${s.thesis_code}`;
+ $('tearsheet').href=`assets/tearsheets/${s.thesis_code}.pdf`;$('watch-video').disabled=!s.video_mp4;
+}
+function mapData(){return protocols.map(p=>({p,r:assess(p)})).filter(x=>finite(x.r.fees)&&x.r.fees>=0&&finite(x.r.ratio)&&x.r.ratio>0);}
+function renderMap(){
+ const p=all.get(mapEntity),r=assess(p),data=mapData(),mobile=innerWidth<768,W=mobile?390:1000,H=mobile?490:520,left=mobile?30:70,right=W-30,top=60,bottom=H-55;
+ $('scatter').setAttribute('viewBox',`0 0 ${W} ${H}`);$('radar').setAttribute('viewBox',`0 0 ${W} ${H}`);
+ const logs=data.map(x=>Math.log10(1+x.r.fees)),ys=data.map(x=>Math.log10(x.r.ratio)),xmin=0,xmax=Math.max(...logs),ymin=Math.min(...ys),ymax=Math.max(...ys);
+ const x=v=>left+Math.log10(1+v)/xmax*(right-left),y=v=>top+(Math.log10(v)-ymin)/(ymax-ymin)*(bottom-top),midX=(left+right)/2,midY=(top+bottom)/2;
+ let svg=`<g fill="none" stroke="#254e3a">${Array.from({length:9},(_,i)=>`<path d="M${left+i*(right-left)/8} ${top}V${bottom}"/>`).join('')}${Array.from({length:7},(_,i)=>`<path d="M${left} ${top+i*(bottom-top)/6}H${right}"/>`).join('')}</g><path d="M${midX} ${top}V${bottom}M${left} ${midY}H${right}" stroke="${gold}" opacity=".4" stroke-dasharray="4 5"/>`;
+ svg+=`<g font-family="monospace" font-size="${mobile?8:12}" font-weight="bold"><text x="${left}" y="25" fill="${green}">HIDDEN GEMS</text><text x="${right}" y="25" text-anchor="end" fill="${green}">CASH COW LEADERS</text><text x="${left}" y="${H-20}" fill="${pink}">OVERPRICED / LOW FEES</text><text x="${right}" y="${H-20}" text-anchor="end" fill="${gold}">EARLY STAGE</text></g>`;
+ svg+=data.map(({p,r})=>`<circle class="plot-dot" data-map-id="${esc(p.entity_id)}" cx="${x(r.fees)}" cy="${y(r.ratio)}" r="${mobile?3.5:4.5}" fill="${r.cash?green:pink}" opacity=".8"><title>${esc(p.name)} · ${money(r.fees)} fees · ${r.ratio.toFixed(2)}×</title></circle>`).join('');
+ if(finite(r.fees)&&finite(r.ratio)&&r.ratio>0){const xx=x(r.fees),yy=y(r.ratio);svg+=`<g stroke="${gold}" fill="none" stroke-width="1.5"><path d="M${xx} ${top}V${bottom}M${left} ${yy}H${right}" stroke-dasharray="3 6" opacity=".45"/><rect x="${xx-11}" y="${yy-11}" width="22" height="22"/><path d="M${xx-18} ${yy}H${xx+18}M${xx} ${yy-18}V${yy+18}"/></g>`;}
+ svg+=`<text x="${midX}" y="${H-3}" fill="#8fa89b" text-anchor="middle" font-size="${mobile?7:10}">DAILY FEES → · LOG SCALE · LOW VALUATION AT TOP</text>`;
+ $('scatter').innerHTML=svg;$('scatter').toggleAttribute('hidden',radarMode);$('radar').toggleAttribute('hidden',!radarMode);$('compare-select').hidden=!radarMode;
+ $('map-hud').textContent=`${p.ticker} / FEES ${money(r.fees)} / MCAP/TVL ${finite(r.ratio)?r.ratio.toFixed(2)+'×':'N/A'}`;
+ $('map-coverage').textContent=`${data.length} plotted · ${199-data.length} missing fees or TVL`;
+ $('map-note').textContent='Map zones are relative, not trade signals. All 199 names remain selectable; missing values are not plotted.';
+ $('map-select').value=mapEntity;$('map-carousel').querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.entity===mapEntity)));
+ if(radarMode)renderRadar(p,W,H);
+}
+function renderRadar(p,W,H){
+ const q=all.get($('compare-select').value),a=assess(p),b=assess(q),cx=W/2,cy=H/2,rr=Math.min(W*.29,H*.34),labels=['VALUE','REVENUE','VOLUME','SUPPLY SAFETY'];
+ const xy=(i,v)=>[cx+Math.sin(i*Math.PI/2)*rr*v/100,cy-Math.cos(i*Math.PI/2)*rr*v/100];
+ let svg=[25,50,75,100].map(n=>`<polygon points="${labels.map((_,i)=>xy(i,n).join(',')).join(' ')}" fill="none" stroke="#31563f"/>`).join('');
+ svg+=labels.map((l,i)=>{const [x,y]=xy(i,120);return `<text x="${x}" y="${y}" text-anchor="middle" fill="#8fa89b" font-size="${W<500?8:12}">${l}</text>`;}).join('');
+ for(const [r,c] of [[a,green],[b,pink]]){const vs=r.components;if(vs.every(finite))svg+=`<polygon points="${vs.map((v,i)=>xy(i,v).join(',')).join(' ')}" fill="${c}15" stroke="${c}" stroke-width="2"/>`;vs.forEach((v,i)=>{if(finite(v)){const [x,y]=xy(i,v);svg+=`<circle cx="${x}" cy="${y}" r="4" fill="${c}"/>`;}});}
+ $('radar').innerHTML=svg;$('map-hud').textContent=`${p.ticker} (GREEN) vs ${q.ticker} (PINK) · ${a.components.filter(finite).length}/4 vs ${b.components.filter(finite).length}/4 observed`;
+ $('map-note').textContent='Equal-scale research scores: value, revenue, trading volume and supply safety. Missing values remain open; no winner is forced.';
+}
+function closeVideo(){const v=$('strategy-video');v.pause();v.removeAttribute('src');v.load();$('video-dialog').close();$('watch-video').focus();}
+$('watch-video').addEventListener('click',()=>{if(!activeStrategy)return;const v=$('strategy-video');$('video-title').textContent=activeStrategy.token+' / '+activeStrategy.thesis_code;v.src=activeStrategy.video_mp4;$('video-status').textContent='Six-second research clip. Press Escape or close to return.';$('video-dialog').showModal();v.currentTime=0;v.play().catch(()=>{$('video-status').textContent='This video could not play. Close and use the PDF tearsheet.';});});
+$('strategy-video').addEventListener('timeupdate',()=>{if($('strategy-video').currentTime>=6)$('strategy-video').pause();});
+$('close-video').addEventListener('click',closeVideo);$('video-dialog').addEventListener('cancel',e=>{e.preventDefault();closeVideo();});
+document.querySelectorAll('[data-screen]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.screen').forEach(s=>s.hidden=s.id!=='screen-'+b.dataset.screen);document.querySelectorAll('[data-screen]').forEach(x=>x.removeAttribute('aria-current'));b.setAttribute('aria-current','page');if(b.dataset.screen==='3')renderMap();document.title='VALEN TERMINAL | '+b.textContent.trim();}));
+document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{basket=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));renderSelection();}));
+$('block-select').addEventListener('change',e=>{block=e.target.value;renderSelection();});
+$('token-carousel').addEventListener('click',e=>{const b=e.target.closest('[data-entity]');if(b){activeEntity=b.dataset.entity;renderSelection();}});
+$('strategy-select').addEventListener('change',e=>{activeStrategy=strategies.find(s=>s.thesis_id===e.target.value);renderToken();});
+$('risk-ruler').addEventListener('input',e=>{margin=Number(e.target.value);renderToken();});
+$('map-select').innerHTML=protocols.map(p=>`<option value="${esc(p.entity_id)}">${esc(p.ticker+' / '+p.name)}</option>`).join('');$('compare-select').innerHTML=$('map-select').innerHTML;$('compare-select').value='uniswap';
+$('map-carousel').innerHTML=tokenChips(protocols,mapEntity);
+$('map-select').addEventListener('change',e=>{mapEntity=e.target.value;renderMap();});$('compare-select').addEventListener('change',renderMap);
+$('map-carousel').addEventListener('click',e=>{const b=e.target.closest('[data-entity]');if(b){mapEntity=b.dataset.entity;renderMap();}});
+$('scatter').addEventListener('click',e=>{const b=e.target.closest('[data-map-id]');if(b){mapEntity=b.dataset.mapId;renderMap();}});
+$('map-mode').addEventListener('click',()=>{radarMode=!radarMode;$('map-mode').setAttribute('aria-pressed',String(radarMode));$('map-mode').textContent=radarMode?'← Protocols map':'Radar Head-to-Head ↗';$('map-label').textContent=radarMode?'HEAD-TO-HEAD / FOUR FACTORS':'DAILY FEES × MCAP / TVL';renderMap();});
+root.addEventListener('resize',()=>{if(!$('screen-3').hidden)renderMap();});
+initPulse();renderSelection();renderMap();API.ready=true;API.state=()=>({basket,block,activeEntity,thesis:activeStrategy?.thesis_code,margin,mapEntity,radarMode});
 })(typeof window!=='undefined'?window:globalThis);
