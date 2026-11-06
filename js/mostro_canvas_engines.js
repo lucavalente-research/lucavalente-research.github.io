@@ -202,7 +202,7 @@
     $('gauge-liquidity-value').textContent=`${fmt(m.liquidity,1)} / 100 · aggregate / absolute bias capacity of ${m.ruleCount} rules`;
     $('gauge-risk-value').textContent=`${fmt(m.risk,1)} / 100 · ${m.series.length?m.timeframe+' derivative KPI pressure':'protocol funding snapshot'}`;
     $('gauge-confidence-value').textContent=`${fmt(m.coverage,1)}% aggregate data coverage · ${m.triggered} triggered · ${m.date}`;
-    $('scope-summary').textContent=`${m.ruleCount} source rules · macro snapshot ${m.date} · ${m.series.length} ${m.timeframe} observations${m.series.length?' ('+m.series[0].time+' → '+m.series.at(-1).time+')':''}. Source: ${m.feedSource}. Green: mean tanh of deduplicated derivative KPI deltas; gold: macro scenario level. Sweep animates the dated observations, not incoming prices.${!m.series.length?' No observations for this timeframe; no interpolation from D1.':''}`;
+    $('scope-summary').textContent=`${m.ruleCount} source rules · macro snapshot ${m.date} · ${m.series.length} ${m.timeframe} observations${m.series.length?' ('+m.series[0].time+' → '+m.series.at(-1).time+')':''}. Source: ${m.feedSource}. Green: mean tanh of deduplicated derivative KPI deltas; gold: macro scenario level. Sweep replays the dated source observations.${!m.series.length?' No observations for this timeframe; no interpolation from D1.':''}`;
     root.MostroCockpit?.updateDials(m);
     drawScope(lastSweep);
   }
