@@ -60,3 +60,8 @@ body.mostro-terminal .room-title{margin:0;line-height:1.35}
 /* Center quote baselines inside the compact tape, on desktop and mobile. */
 .ticker-wrap{padding:0;display:flex;align-items:center}.ticker-item{padding:0 20px;line-height:30px}
 @media(max-width:767px){.command-top-row{flex-direction:row;justify-content:flex-start}.ticker-item{line-height:20px;padding:0 12px}.media-top-actions{grid-column:2;min-width:0;justify-content:flex-end}}
+
+/* Phase 2 / 3: measured telemetry and computed integrity seals. */
+.hero-dial small{display:block;line-height:1.5;min-height:2.8em;letter-spacing:.3px}.hero-dial .dial-unit{font-size:5px}
+.proof-seal.verified{display:inline-block;padding:6px 8px;color:#00ffac;background:#003d29;border:1px solid #00f5a0;box-shadow:0 0 12px #00f5a045;font-weight:700}.computed-digest{display:block;margin-top:8px;overflow-wrap:anywhere}
+.telemetry-method{margin:0;font-size:8px}.telemetry-method summary{padding:4px 0}.telemetry-method p{font-size:9px;line-height:1.5}

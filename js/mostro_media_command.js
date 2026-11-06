@@ -70,11 +70,13 @@
     const {result:r,margin}=scenario(s);
     return `<p class="media-state">${esc(r.state)} · ${frozen?'FROZEN':'LIVE'} LOCAL SCENARIO</p><dl class="media-kpis"><div><dt>Score</dt><dd>${fmt(r.score)} /100</dd></div><div><dt>MCAP / TVL</dt><dd>${fmt(r.ratio)}×</dd></div><div><dt>Invalidation buffer</dt><dd>${fmt(r.buffer)} pp</dd></div><div><dt>Daily fees · scenario</dt><dd>$${fmt(r.fees)}</dd></div><div><dt>${esc(r.fourthComponent)}</dt><dd>${r.funding!==null?fmt(r.funding,6):fmt(r.feeYield*100)+'%'}</dd></div><div><dt>Margin / coverage</dt><dd>${margin} pp · ${r.coverage}/4</dd></div></dl><p>Snapshot: ${esc(B.source_inventory_timestamp)}. No streaming market feed.</p><p><strong>Invalidation ${s.derivatives_invalidation?'H4/D1':'30D'}:</strong> ${esc(s.derivatives_invalidation||'30D fundamental review window. Reassess the thesis against its source KPIs.')}</p><p>Scenario threshold: score &lt; ${50-margin}; ${s.derivatives_invalidation?'funding &gt; 0.0001 or OI shock ≤ −20% also invalidates. ':''}Scenario thresholds are computed from the dated source observations.</p>`;
   }
+  let vaultSignature='';
   function renderVault(query='') {
     const terms=norm(query).trim().split(/\s+/).filter(Boolean);
     stopPreview();
-    const entries=strategies.map((s,i)=>({s,i})).filter(({s})=>terms.every(t=>norm(`${s.thesis_code} ${s.token} ${s.title_en}`).includes(t)));
-    $('vault-count').textContent=`${entries.length} / ${strategies.length} strategies`;
+    const entries=E.diversified(strategies,E.getState().results).map(s=>({s,i:strategies.indexOf(s)})).filter(({s})=>terms.every(t=>norm(`${s.thesis_code} ${s.token} ${s.title_en}`).includes(t)));
+    const signature=JSON.stringify(entries.map(({i})=>i));if(signature===vaultSignature)return;vaultSignature=signature;
+    $('vault-count').textContent=`${entries.length} / ${strategies.length} strategies · TICKER ROUNDS / SCORE ↓`;
     $('vault-grid').innerHTML=entries.map(({s,i})=>`<article class="vault-card" data-vault="${i}"><div class="vault-poster"><img loading="lazy" decoding="async" src="${esc(safeAsset(s.card_png,'png'))}" alt="${esc(s.thesis_code+' '+s.title_en)}"><video muted loop playsinline preload="none" data-src="${esc(safeAsset(s.video_mp4,'mp4'))}" aria-label="Neon preview ${esc(s.thesis_code)}"></video></div><p class="vault-code">${esc(s.thesis_code)} / ${esc(s.token)} ${s.is_tier1_gold?'· GOLD':''}</p><h3>${esc(s.title_en)}</h3><div class="controls-row"><button class="room-btn" type="button" data-preview="${i}" aria-label="Play preview ${esc(s.thesis_code)}">▶ PREVIEW</button><button class="room-btn" type="button" data-open="${i}">OPEN VAULT ↗</button></div><p class="source-note">${esc(s.date)} · ${s.derivatives_invalidation?'H4/D1':'30D'}</p></article>`).join('')||'<p>No matching strategies.</p>';
     root.MostroCockpit?.observeMedia();
   }
@@ -153,7 +155,7 @@
         try{result=await E.verifyThesis(s,root.MOSTRO_PROOFS?.[s.thesis_id]);}catch(_){result={ok:false,reason:'Verification error'};}
         if(result.ok)good++;
         const seal=doc.querySelector(`[data-audit="${i}"] .proof-seal`);
-        if(seal){seal.textContent=result.ok?'✓ SHA-256 VERIFIED':'✗ PROOF MISMATCH';seal.className='proof-seal '+(result.ok?'verified':'failed');seal.title=result.digest||result.reason;}
+        if(seal)E.paintProof(seal,result);
       }
       status(`VERIFY ALL · ${good} / ${strategies.length} verified · ${strategies.length-good} mismatches`);return {verified:good,total:strategies.length};
     }finally{verifying=false;}
@@ -240,7 +242,7 @@
     on(doc,'input',e=>{if(e.target.matches('.gold-slider')){const n=Number(e.target.value),min=Number(e.target.min),max=Number(e.target.max);tone(max>min?(n-min)/(max-min)*100:50);refreshLive();}});
     on(doc,'change',e=>{if(e.target.matches('.gold-slider'))refreshLive();});
     on(doc,'pointermove',e=>{if(e.target.matches('canvas[id^="valen-"]')){const box=e.target.getBoundingClientRect();tone(box.width?(e.clientX-box.left)/box.width*100:50);}});
-    on(doc,'click',e=>{if(e.target.closest('.room-selector [data-room]'))stopPreview();if(e.target.closest('#shock-reset'))refreshLive();});
+    on(doc,'click',e=>{if(e.target.closest('.room-selector [data-room]'))stopPreview();if(e.target.closest('[data-room="room-4"]'))renderVault($('vault-search').value);if(e.target.closest('#shock-reset'))refreshLive();});
     on(doc,'visibilitychange',()=>{if(doc.hidden){stopPreview();for(const v of $('media-dialog').querySelectorAll('video'))v.pause();}});
     on(root,'beforeprint',()=>{if(mode==='tearsheet')doc.body.classList.add('printing-tearsheet');});on(root,'afterprint',()=>doc.body.classList.remove('printing-tearsheet'));
     API.ready=true;

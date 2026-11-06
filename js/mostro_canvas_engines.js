@@ -31,8 +31,8 @@
   }
   // Gram matrix of independent factor exposures + asset-specific residual variance.
   // These exposures are explicit scenario assumptions; no historical correlation claim.
-  const assetNames = ['BTC', 'ETH', 'DeFi', 'S&P 500', 'Gold', 'USD', 'UST'];
-  const exposures = [[1,.1,1,-.1],[1.1,.6,1.1,-.3],[1.3,1.4,1.2,-1],[.7,.1,.3,-.1],[.2,0,-.4,0],[-.8,-.1,-.3,.1],[.3,0,-.6,0]];
+  const assetNames = ['BTC', 'ETH', 'DeFi', 'S&P 500', 'Gold', 'USD', 'SOL'];
+  const exposures = [[1,.1,1,-.1],[1.1,.6,1.1,-.3],[1.3,1.4,1.2,-1],[.7,.1,.3,-.1],[.2,0,-.4,0],[-.8,-.1,-.3,.1],[1.25,.8,1.35,-.55]];
   function correlation(shocks) {
     const variance = ['tvl','fees','derivatives','unlock'].map(k => 1 + Math.abs(Number(shocks[k]) || 0) / 25);
     const cov = exposures.map((a, i) => exposures.map((b, j) => a.reduce((s, x, k) => s + x * b[k] * variance[k], 0) + (i === j ? .6 : 0)));
@@ -142,13 +142,15 @@
   }
   function drawTreemap() {
     const s=prepare('valen-treemap');if(!s)return;
-    const rows=protocols.map(p=>{const r=result(p);return{id:p.entity_id,weight:r.mcap,score:r.score};}),priced=rows.filter(r=>finite(r.weight)&&r.weight>0).sort((a,b)=>b.weight-a.weight),missing=rows.filter(r=>!finite(r.weight)||r.weight<=0);
-    const reserve=missing.length?Math.min(s.h*.35,Math.max(65,Math.ceil(missing.length/12)*17)):0,mainHeight=s.h-reserve;
-    const rects=tile(priced,0,0,s.w,mainHeight);if(missing.length)tile(missing.map(r=>({...r,weight:1,unpriced:true})),0,mainHeight+20,s.w,Math.max(1,reserve-20),rects);
+    // Log MCAP weights prevent a stablecoin from consuming the visual field.
+    // Missing MCAP gets the minimum layout weight, never an invented valuation.
+    const rows=protocols.map(p=>{const r=result(p),priced=finite(r.mcap)&&r.mcap>0;return{id:p.entity_id,mcap:r.mcap,weight:priced?1+Math.log1p(r.mcap/1e6):1,score:r.score,unpriced:!priced};});
+    const priced=rows.filter(r=>!r.unpriced),missing=rows.filter(r=>r.unpriced);
+    const rects=tile(rows.sort((a,b)=>b.weight-a.weight||a.id.localeCompare(b.id)),0,0,s.w,s.h);
     state.rectangles=rects;
     rects.forEach(r=>{const c=s.ctx,col=!finite(r.score)?MUTED:r.score>=50?GREEN:RED;c.fillStyle=col;c.globalAlpha=r.unpriced ? .25 : .18+Math.abs((r.score??50)-50)/100;c.fillRect(r.x+1,r.y+1,Math.max(0,r.w-2),Math.max(0,r.h-2));c.globalAlpha=1;c.strokeStyle='#255247';c.strokeRect(r.x,r.y,r.w,r.h);if(r.w>30&&r.h>17){c.save();c.beginPath();c.rect(r.x+2,r.y+2,r.w-4,r.h-4);c.clip();text(s,byId.get(r.id).ticker||byId.get(r.id).name,r.x+5,r.y+11,'#E6F4F1');if(r.h>38)text(s,fmt(r.score,0),r.x+5,r.y+27);c.restore();}});
-    if(missing.length)text(s,`NO MCAP · ${missing.length} equal tiles, not market weight`,5,mainHeight+10,GOLD);
-    $('treemap-summary').textContent=`${rects.length} protocols · ${priced.length} sized by MCAP · ${missing.length} unpriced in separate equal-cell strip. Green ≥50 / red <50 resilience; gray N/D. TVL ${state.shocks.tvl}%, fees ${state.shocks.fees}%, derivatives ${state.shocks.derivatives}%, unlock ${state.shocks.unlock}%.`;
+    $('treemap-summary').textContent=`${rects.length} protocols · Area = 1 + ln(1 + MCAP / $1M), normalized to the panel; not market share. ${missing.length} unpriced use minimum layout weight. Green ≥50 / red <50 resilience; gray N/D. TVL ${state.shocks.tvl}%, fees ${state.shocks.fees}%, derivatives ${state.shocks.derivatives}%, unlock ${state.shocks.unlock}%.`;
+
   }
   function drawCorrelation() {
     state.matrix=correlation(state.shocks);const s=prepare('valen-correlation');
@@ -203,7 +205,7 @@
     $('gauge-risk-value').textContent=`${fmt(m.risk,1)} / 100 · ${m.series.length?m.timeframe+' derivative KPI pressure':'protocol funding snapshot'}`;
     $('gauge-confidence-value').textContent=`${fmt(m.coverage,1)}% aggregate data coverage · ${m.triggered} triggered · ${m.date}`;
     $('scope-summary').textContent=`${m.ruleCount} source rules · macro snapshot ${m.date} · ${m.series.length} ${m.timeframe} observations${m.series.length?' ('+m.series[0].time+' → '+m.series.at(-1).time+')':''}. Source: ${m.feedSource}. Green: mean tanh of deduplicated derivative KPI deltas; gold: macro scenario level. Sweep replays the dated source observations.${!m.series.length?' No observations for this timeframe; no interpolation from D1.':''}`;
-    root.MostroCockpit?.updateDials(m);
+
     drawScope(lastSweep);
   }
   function render() { if(disposed)return;state.shocks=readShocks();drawScatter();drawArena();drawTreemap();drawCorrelation();drawMacro(); if(byId.has(state.selected))$('scatter-selection').textContent=details(byId.get(state.selected)); }

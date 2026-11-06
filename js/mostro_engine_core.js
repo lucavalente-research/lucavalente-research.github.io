@@ -84,9 +84,34 @@
     const derivativeBreach=derivatives&&((finite(funding)&&funding>0.0001)||(finite(base.oi)&&base.oi>0&&derShock<=-0.2));
     const incomplete=present.length<4||(derivatives&&!finite(oi));
     const state=derivativeBreach||(finite(buffer)&&buffer<0)?'INVALIDATED':incomplete||!finite(buffer)||buffer<10?'MONITOR':'ACTIVE';
-    return {score,ratio,buffer,state,tvl,mcap,fees,oi,funding,incomplete,coverage:present.length,derivativeBreach,components:parts.map(p=>p.value),fourthComponent:finite(funding)?'Funding balance':'Annual fees / MCAP',feeYield:finite(fees)&&finite(mcap)&&mcap>0?fees*365/mcap:null};
+    return {score,ratio,buffer,state,tvl,mcap,fees,volume:finite(base.volume)?base.volume:null,oi,funding,incomplete,coverage:present.length,derivativeBreach,components:parts.map(p=>p.value),fourthComponent:finite(funding)?'Funding balance':'Annual fees / MCAP',feeYield:finite(fees)&&finite(mcap)&&mcap>0?fees*365/mcap:null};
   }
-  const API={sha256Fallback,sha256,verifyThesis,simulate,snapshot,canonical};
+  // Stable score ranking in ticker rounds: all theses remain accessible.
+  function diversified(items, results) {
+    const sorted=[...items].sort((a,b)=>(results.get(b.thesis_id)?.score??-Infinity)-(results.get(a.thesis_id)?.score??-Infinity)||a.thesis_code.localeCompare(b.thesis_code,'en',{numeric:true}));
+    const groups=new Map();for(const s of sorted){const key=s.token.toUpperCase();if(!groups.has(key))groups.set(key,[]);groups.get(key).push(s);}
+    const ordered=[];while([...groups.values()].some(g=>g.length)){
+      const round=[...groups.values()].filter(g=>g.length).map(g=>g.shift()).sort((a,b)=>sorted.indexOf(a)-sorted.indexOf(b));
+      if(ordered.length&&round.length>1&&round[0].token===ordered[ordered.length-1].token)round.push(round.shift());
+      ordered.push(...round);
+    }return ordered;
+  }
+  function screenerTelemetry(items, results) {
+    const rows=items.map(s=>results.get(s.thesis_id)).filter(Boolean),buffers=rows.map(r=>r.buffer).filter(finite).sort((a,b)=>a-b);
+    const unique=[...new Map(items.map(s=>[s.entity_id,results.get(s.thesis_id)])).values()];
+    const depth=unique.map(r=>r?.volume).filter(finite).map(v=>clamp(Math.log1p(Math.max(0,v)/1e6)/Math.log1p(1000),0,1));
+    return {active:rows.length?100*rows.filter(r=>r.state==='ACTIVE').length/rows.length:null,
+      buffer:buffers.length?(buffers[Math.floor((buffers.length-1)/2)]+buffers[Math.floor(buffers.length/2)])/2:null,
+      liquidity:depth.length?100*depth.reduce((a,b)=>a+b,0)/depth.length:null,count:rows.length,depthCount:depth.length};
+  }
+  function paintProof(seal,result) {
+    seal.textContent=result.ok?'✓ SHA-256 VERIFIED':'✗ PROOF MISMATCH';
+    seal.className='proof-seal '+(result.ok?'verified':'failed');seal.title=result.digest||result.reason;
+    let digest=seal.parentElement.querySelector('.computed-digest');
+    if(!digest){digest=doc.createElement('span');digest.className='hash-output computed-digest';seal.after(digest);}
+    digest.textContent=result.digest?'COMPUTED SHA-256 · '+result.digest:'Verification failed · '+result.reason;
+  }
+  const API={sha256Fallback,sha256,verifyThesis,simulate,snapshot,canonical,diversified,screenerTelemetry,paintProof};
   root.MostroEngine=API;
   if (!root.document) return;
   const doc=root.document, $=id=>doc.getElementById(id);
@@ -102,7 +127,7 @@
     const bases=new Map(assets.map(p=>[p.entity_id,snapshot(p)]));
     const margins=new Map(strategies.map(s=>[s.thesis_id,10]));
     const shocks={tvl:0,fees:0,derivatives:0,unlock:0};
-    let sortKey='code',sortDir=1,selected=strategies.find(s=>s.is_tier1_gold)?.thesis_id;
+    let sortKey='score',sortDir=-1,diversify=true,selected=strategies.find(s=>s.is_tier1_gold)?.thesis_id;
     let results=new Map(),protocolResults=new Map(),visible=[],pending=false,lastFrameMs=0;
     const p25=bundle.audit.fee_p25;
     const block=s=>s.thesis_code.startsWith('TRAP_')?'TRAP':s.derivatives_invalidation?'DERIVATIVES':'FUNDAMENTALS';
@@ -157,12 +182,13 @@
       visible=strategies.filter(s=>(tier!=='GOLD'||s.is_tier1_gold)&&(family==='ALL'||block(s)===family)&&[s.token,s.title_en,s.thesis_code,s.model,byId.get(s.entity_id)?.name].join(' ').toLowerCase().includes(query));
       const val=s=>sortKey==='code'?s.thesis_code:sortKey==='token'?s.token:sortKey==='title'?s.title_en:results.get(s.thesis_id)[sortKey];
       visible.sort((a,b)=>{const x=val(a),y=val(b);if(x==null)return y==null?0:1;if(y==null)return -1;return sortDir*(typeof x==='number'?x-y:String(x).localeCompare(String(y),'en',{numeric:true}));});
+      if(diversify)visible=diversified(visible,results);
       $('gold-15-tbody').innerHTML=visible.map(s=>{
         const r=results.get(s.thesis_id),index=strategies.indexOf(s),horizon=s.derivatives_invalidation?'H4/D1':'30D';
         return '<tr data-thesis="'+esc(s.thesis_id)+'" data-tier="'+(s.is_tier1_gold?'GOLD':'STANDARD')+'"><td>'+esc(s.thesis_code)+'</td><td>'+esc(s.token)+(s.is_tier1_gold?' <span class="gold-mark">GOLD</span>':'')+'</td><td><button class="thesis-select" data-select="'+esc(s.thesis_id)+'">'+esc(s.title_en)+'</button></td><td>'+fmt(r.score)+'</td><td>'+fmt(r.ratio)+'</td><td>'+fmt(r.buffer)+'</td><td>'+badge(r.state)+'</td><td><span class="room-badge '+(s.derivatives_invalidation?'badge-alert':'badge-gold')+'" title="'+esc(s.derivatives_invalidation||'Fundamental review window; scenario threshold is not a market stop order')+'">STOP '+horizon+'</span></td><td><label for="margin-'+index+'" class="sr-only">Margin Adjuster '+esc(s.thesis_code)+'</label><input id="margin-'+index+'" class="gold-slider margin-slider" type="range" min="0" max="30" step="1" value="'+margins.get(s.thesis_id)+'" data-margin="'+esc(s.thesis_id)+'"><output>'+margins.get(s.thesis_id)+' pp</output></td></tr>';
       }).join('')||'<tr><td colspan="9">No strategies match these filters.</td></tr>';
-      $('screener-count').textContent=visible.length+' / '+strategies.length+' strategies';
-      doc.querySelectorAll('[data-sort]').forEach(b=>b.parentElement.setAttribute('aria-sort',b.dataset.sort===sortKey?(sortDir===1?'ascending':'descending'):'none'));
+      $('screener-count').textContent=visible.length+' / '+strategies.length+' strategies'+(diversify?' · TICKER ROUNDS / SCORE ↓':'');
+      doc.querySelectorAll('[data-sort]').forEach(b=>b.parentElement.setAttribute('aria-sort',!diversify&&b.dataset.sort===sortKey?(sortDir===1?'ascending':'descending'):'none'));
       renderQuickStats();
       root.MostroCockpit?.refresh(true);
     }
@@ -187,7 +213,7 @@
     API.getState=()=>({selected,shocks:{...shocks},results,protocolResults,margins,visible:visible.map(s=>s.thesis_id),lastFrameMs,pending});
     ['screener-search','screener-tier','strategy-family'].forEach(id=>$(id).addEventListener(id==='screener-search'?'input':'change',renderScreener));
     $('screener-all').addEventListener('click',()=>{$('screener-tier').value='ALL';$('strategy-family').value='ALL';$('screener-search').value='';renderScreener();});
-    doc.querySelectorAll('[data-sort]').forEach(button=>button.addEventListener('click',()=>{if(sortKey===button.dataset.sort)sortDir*=-1;else{sortKey=button.dataset.sort;sortDir=1;}renderScreener();}));
+    doc.querySelectorAll('[data-sort]').forEach(button=>button.addEventListener('click',()=>{diversify=false;if(sortKey===button.dataset.sort)sortDir*=-1;else{sortKey=button.dataset.sort;sortDir=1;}renderScreener();}));
     $('gold-15-tbody').addEventListener('click',event=>{const button=event.target.closest('[data-select]');if(button){selected=button.dataset.select;renderQuickStats();root.MostroCockpit?.refresh(false);}});
     $('gold-15-tbody').addEventListener('input',event=>{const input=event.target;if(!input.dataset.margin)return;selected=input.dataset.margin;margins.set(selected,Number(input.value));input.nextElementSibling.textContent=input.value+' pp';schedule();});
     $('gold-15-tbody').addEventListener('change',()=>{recalculate();renderScreener();});
@@ -197,7 +223,7 @@
     $('strategies-64-grid').innerHTML=strategies.map(s=>'<details class="macro-rule-card"><summary>'+esc(s.thesis_code+' · '+s.token+' · '+s.title_en)+'</summary><p>'+esc(s.model+' · '+s.date+' · '+block(s))+'</p><p>'+esc(s.requested.join(' · '))+'</p></details>').join('');
     $('audit-ledger-body').innerHTML=strategies.map((s,i)=>'<tr data-audit="'+i+'"><td>'+esc(s.thesis_code+' · '+s.token)+'</td><td class="hash-output">'+esc(s.sha256)+'</td><td><button type="button" class="room-btn" data-verify="'+i+'">VERIFY SHA-256 PROOF</button><output class="proof-seal" aria-live="polite">NOT VERIFIED</output></td></tr>').join('');
     $('audit-ledger-body').addEventListener('click',async event=>{const button=event.target.closest('[data-verify]');if(!button)return;const s=strategies[Number(button.dataset.verify)],seal=button.nextElementSibling;button.disabled=true;seal.className='proof-seal';seal.textContent='VERIFYING…';
-      try {const result=await verifyThesis(s,root.MOSTRO_PROOFS?.[s.thesis_id]);seal.textContent=result.ok?'✓ SHA-256 VERIFIED':'✗ PROOF MISMATCH';seal.className='proof-seal '+(result.ok?'verified':'failed');seal.title=result.digest||result.reason;}
+      try {const result=await verifyThesis(s,root.MOSTRO_PROOFS?.[s.thesis_id]);paintProof(seal,result);}
       catch(error){seal.textContent='VERIFICATION ERROR';seal.className='proof-seal failed';}finally{button.disabled=false;}
     });
     $('sha256-verify-btn').addEventListener('click',async()=>{$('sha256-digest-output').textContent=await sha256($('sha256-input').value);});
@@ -212,12 +238,17 @@
       $('macro-count').textContent=filtered.length+' / '+rules.length;
     }
     ['macro-filter','macro-family','macro-search'].forEach(id=>$(id).addEventListener(id==='macro-search'?'input':'change',renderMacro));
-    const stages=[['SQLite','Read-only upstream archive · '+bundle.macro.rules_table+' · snapshot '+bundle.source_inventory_timestamp],['199 Protocols',protocols.length+' protocol snapshots with metric timestamps and provider attribution.'],['43 Macro Rules',rules.length+' source definitions; latest aggregate regime: '+macro.fascia],['64 Quant Models',strategies.length+' exported thesis payloads; '+bundle.audit.gold_count+' Tier-1 Gold. Source calculations are upstream.'],['SHA-256 Proofs','64 packaged payload digests, verified on demand in Room 05.'],['Browser Scenarios','Four stress inputs, per-thesis margin budgets, 263 result rows. No live SQLite connection.']];
+    const stages=[['SQLite','Read-only upstream archive · '+bundle.macro.rules_table+' · snapshot '+bundle.source_inventory_timestamp],['199 Protocols',protocols.length+' protocol snapshots with metric timestamps and provider attribution.'],['43 Macro Rules',rules.length+' source definitions; latest aggregate regime: '+macro.fascia],['64 Quant Models',strategies.length+' exported thesis payloads; '+bundle.audit.gold_count+' Tier-1 Gold. Source calculations are upstream.'],['SHA-256 Proofs','64 packaged payload digests, automatically verified at startup and recheckable in Room 05.'],['Browser Scenarios','Four stress inputs, per-thesis margin budgets, 263 result rows. No live SQLite connection.']];
     $('live-pipeline').innerHTML=stages.map((s,i)=>'<button type="button" class="room-btn" data-stage="'+i+'" aria-pressed="'+(i===0)+'">'+esc(s[0])+'</button>'+(i<stages.length-1?'<span aria-hidden="true">→</span>':'')).join('');
     $('pipeline-detail').textContent=stages[0][1];
     $('live-pipeline').addEventListener('click',event=>{const button=event.target.closest('[data-stage]');if(!button)return;$('pipeline-detail').textContent=stages[Number(button.dataset.stage)][1];$('live-pipeline').querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));});
     recalculate();renderScreener();updateStress();renderMacro();
     API.ready=true;
+    API.proofsReady=Promise.all(strategies.map(async(s,i)=>{
+      const seal=$('audit-ledger-body').querySelector(`[data-audit="${i}"] .proof-seal`);
+      try{paintProof(seal,await verifyThesis(s,root.MOSTRO_PROOFS?.[s.thesis_id]));}
+      catch(_){paintProof(seal,{ok:false,reason:'Verification error'});}
+    }));
   }
   if(doc.readyState==='loading')doc.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })(typeof window!=='undefined'?window:globalThis);
