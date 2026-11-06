@@ -156,9 +156,10 @@
     state.matrix=correlation(state.shocks);const s=prepare('valen-correlation');
     $('correlation-summary').textContent='Illustrative factor correlation, NOT observed market correlation. All four gold stress rulers update factor covariance immediately. No cross-asset return history is present in this bundle.';
     $('correlation-values').innerHTML='<table><thead><tr><th>Asset</th>'+assetNames.map(n=>'<th>'+n+'</th>').join('')+'</tr></thead><tbody>'+state.matrix.map((r,i)=>'<tr><th>'+assetNames[i]+'</th>'+r.map(v=>'<td>'+fmt(v)+'</td>').join('')+'</tr>').join('')+'</tbody></table>';
-    if(!s)return;const left=74,top=44,cell=Math.min((s.w-left-8)/7,(s.h-top-18)/7);
+    if(!s)return;const top=44,cell=Math.min((s.w-82)/7,(s.h-top-18)/7),left=Math.max(74,(s.w-7*cell)/2);
+    s.ctx.font=`${Math.min(11,(cell-5)/3.2)}px monospace`;
     state.matrix.forEach((row,i)=>{text(s,assetNames[i],left-6,top+(i+.5)*cell,MUTED,'right');row.forEach((v,j)=>{const x=left+j*cell,y=top+i*cell;s.ctx.fillStyle=v>=0?GREEN:RED;s.ctx.globalAlpha=.12+Math.abs(v)*.62;s.ctx.fillRect(x+1,y+1,cell-2,cell-2);s.ctx.globalAlpha=1;text(s,fmt(v),x+cell/2,y+cell/2,'#E6F4F1','center');});});
-    assetNames.forEach((a,j)=>{s.ctx.save();s.ctx.translate(left+(j+.5)*cell,top-8);s.ctx.rotate(-.35);text(s,a,0,0,GOLD,'center');s.ctx.restore();});
+    assetNames.forEach((a,j)=>{s.ctx.save();s.ctx.translate(left+(j+.5)*cell,top-8);s.ctx.rotate(-.35);text(s,a==='S&P 500'?'S&P500':a,0,0,GOLD,'center');s.ctx.restore();});
   }
   function derivativeSeries(timeframe) {
     if(feed?.timeframe===timeframe) return feed.points;
