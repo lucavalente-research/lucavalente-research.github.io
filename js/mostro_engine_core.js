@@ -175,6 +175,7 @@
         [fmt(r.score),fmt(r.ratio),fmt(r.buffer),r.state].forEach((text,i)=>{if(cells[i+2].textContent!==text)cells[i+2].textContent=text;});cells[5].className='state-'+r.state.toLowerCase();
       });
       $('stress-summary').textContent=`${strategies.length} strategies + ${protocols.length} protocols · ${invalid} invalidated · snapshot scenario`;
+      root.MostroCockpit?.refreshStress();
     }
     function schedule() {
       if(pending)return;pending=true;
