@@ -34,3 +34,29 @@ body.mostro-terminal .room-title{margin:0;line-height:1.35}
 #strategy-table tbody tr{box-shadow:inset 2px 0 #00f5a05c}
 @media(max-width:767px){#strategy-table thead{display:block}#strategy-table thead tr{gap:4px;padding-bottom:8px}#strategy-table thead button{font-size:7px;padding:5px 7px;min-height:28px}}
 @media(max-width:767px){.vault-controls .terminal-input{flex:0 1 auto;height:40px;min-height:40px}.vault-controls{gap:7px;margin:10px 0}.vault-controls label{font-size:9px}}
+
+/* Phase 2 / Step 2: one dense command row; 134px total iPhone chrome. */
+@media(max-width:767px){
+ .testata{height:40px;min-height:40px;padding:4px 10px;gap:4px;flex-wrap:nowrap;box-sizing:border-box}
+ .testata .marchio a{font-size:14px;letter-spacing:1px;line-height:1.2}
+ .testata .marchio small{font-size:5px;letter-spacing:.4px;margin-top:2px}
+ .testata nav{gap:3px;flex-wrap:nowrap}.testata nav a{font-size:7px;padding:3px;min-width:0;min-height:30px}
+ .command-bar{display:grid;grid-template-columns:minmax(0,1fr) 64px;grid-template-areas:'kpi actions' 'tape tape' 'rooms rooms';padding:0;margin:0;border:0}
+ .command-top-row{grid-area:kpi;height:28px;min-width:0;padding:0 10px;display:flex;align-items:center;box-sizing:border-box;overflow:hidden}
+ .command-top-row>div:last-child{display:none}.led-status{min-width:0;gap:4px;font-size:6px;white-space:nowrap;letter-spacing:-.15px}
+ #bundle-status-indicator>span:last-child{overflow:hidden;text-overflow:ellipsis}
+ .media-top-actions{grid-area:actions;gap:2px;margin:0;padding:0 4px 0 0;height:28px;align-items:center}
+ .media-top-actions .room-btn{font-size:0;min-height:24px;height:24px;width:28px;flex:0 0 28px;padding:0}
+ #command-open::after{content:'⌘K';font-size:9px}#sound-hud::after{content:'♪';font-size:13px}#sound-hud[aria-pressed='true']::after{color:#00F5A0}
+ .ticker-wrap{grid-area:tape;height:22px;min-height:22px;margin:0;box-sizing:border-box}.ticker-item{font-size:8px;line-height:22px}
+ .command-bar>.room-btn{position:absolute;right:0;top:28px;height:22px;min-height:22px;font-size:6px;padding:2px 4px;z-index:2;background:#071A17}
+ .room-selector{grid-area:rooms;display:flex;overflow-x:auto;overflow-y:hidden;gap:0;height:38px;padding:0 4px;margin:0;scrollbar-width:none;box-sizing:border-box}
+ .room-selector::-webkit-scrollbar{display:none}.room-selector .room-btn{flex:0 0 auto;min-width:83px;min-height:36px;height:36px;padding:4px 8px;font-size:7px;white-space:nowrap}
+ .media-status:empty{display:none}.media-status:not(:empty){position:fixed;bottom:8px;left:8px;right:8px;z-index:30;background:#071A17;border:1px solid #00F5A0}
+ .terminal-container{padding-top:6px}main>.desk-heading{min-height:32px;margin-bottom:6px}.desk-heading .eyebrow{display:none}
+ .desk-heading h1{line-height:1;margin:2px 0}.desk-heading [data-brand-title]::before{font-size:15px}.desk-heading [data-brand-subtitle]{margin:4px 0 0}
+ .room-header{padding-bottom:5px!important;margin-bottom:7px!important}.room-header p{margin:2px 0!important}
+}
+/* Center quote baselines inside the compact tape, on desktop and mobile. */
+.ticker-wrap{padding:0;display:flex;align-items:center}.ticker-item{padding:0 20px;line-height:30px}
+@media(max-width:767px){.command-top-row{flex-direction:row;justify-content:flex-start}.ticker-item{line-height:20px;padding:0 12px}.media-top-actions{grid-column:2;min-width:0;justify-content:flex-end}}

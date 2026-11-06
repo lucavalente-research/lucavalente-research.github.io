@@ -77,14 +77,14 @@
     const parts=[{value:finite(ratio)&&ratio>0?clamp(1/ratio,0,1):null,weight:35},
       {value:finite(fees)&&p25>0?clamp(fees/p25,0,1):null,weight:25},
       {value:finite(base.volume)?clamp(base.volume/1e6,0,1):null,weight:20},
-      {value:finite(funding)?clamp(1-Math.max(0,funding)/0.0001,0,1):null,weight:20}];
+      {value:finite(funding)?clamp(1-Math.max(0,funding)/0.0001,0,1):finite(fees)&&finite(mcap)&&mcap>0?clamp(fees*365/mcap,0,1):null,weight:20}];
     const present=parts.filter(p=>finite(p.value)),weight=present.reduce((sum,p)=>sum+p.weight,0);
     const score=weight?clamp(present.reduce((sum,p)=>sum+p.value*p.weight,0)/weight*100-unlock*25,0,100):null;
     const buffer=finite(score)?score-(50-clamp(Number(margin)||0,0,30)):null;
     const derivativeBreach=derivatives&&((finite(funding)&&funding>0.0001)||(finite(base.oi)&&base.oi>0&&derShock<=-0.2));
     const incomplete=present.length<4||(derivatives&&!finite(oi));
     const state=derivativeBreach||(finite(buffer)&&buffer<0)?'INVALIDATED':incomplete||!finite(buffer)||buffer<10?'MONITOR':'ACTIVE';
-    return {score,ratio,buffer,state,tvl,mcap,fees,oi,funding,incomplete,coverage:present.length,derivativeBreach};
+    return {score,ratio,buffer,state,tvl,mcap,fees,oi,funding,incomplete,coverage:present.length,derivativeBreach,components:parts.map(p=>p.value),fourthComponent:finite(funding)?'Funding balance':'Annual fees / MCAP',feeYield:finite(fees)&&finite(mcap)&&mcap>0?fees*365/mcap:null};
   }
   const API={sha256Fallback,sha256,verifyThesis,simulate,snapshot,canonical};
   root.MostroEngine=API;
@@ -97,8 +97,9 @@
       $('bundle-status-indicator').textContent='ENGINE UNAVAILABLE · missing bundle or room anchors'; return;
     }
     const protocols=bundle.protocols,strategies=bundle.strategies,rules=bundle.macro.rules;
-    const byId=new Map(protocols.map(p=>[p.entity_id,p]));
-    const bases=new Map(protocols.map(p=>[p.entity_id,snapshot(p)]));
+    const assets=[...protocols,...(bundle.strategy_assets||[])];
+    const byId=new Map(assets.map(p=>[p.entity_id,p]));
+    const bases=new Map(assets.map(p=>[p.entity_id,snapshot(p)]));
     const margins=new Map(strategies.map(s=>[s.thesis_id,10]));
     const shocks={tvl:0,fees:0,derivatives:0,unlock:0};
     let sortKey='code',sortDir=1,selected=strategies.find(s=>s.is_tier1_gold)?.thesis_id;
@@ -107,15 +108,17 @@
     const block=s=>s.thesis_code.startsWith('TRAP_')?'TRAP':s.derivatives_invalidation?'DERIVATIVES':'FUNDAMENTALS';
     const badge=state=>'<span class="room-badge '+(state==='INVALIDATED'?'badge-alert':state==='MONITOR'?'badge-gold':'')+'">'+state+'</span>';
     const status=$('bundle-status-indicator').querySelector('span:last-child');
-    status.textContent=`SNAPSHOT ${bundle.source_inventory_timestamp.slice(0,10)} · ${protocols.length} PROTOCOLS · ${strategies.length} STRATEGIES · ${rules.length} RULES`;
+    status.textContent=`SNAPSHOT ${bundle.snapshot_dates?.at(-1)||bundle.source_inventory_timestamp.slice(0,10)} · ${protocols.length} PROTOCOLS · ${strategies.length} STRATEGIES · ${rules.length} RULES`;status.title=status.textContent;
     $('source-gate-summary').textContent=`SOURCE DAILY FEE P25: $${fmt(p25)} · ${bundle.audit.gold_count} GOLD THESES`;
-    // Seamless ticker: exactly one accessible set of 199 protocols plus an inert visual copy.
-    const tickerItems=protocols.map(p=>{
+    // Publish only complete measured quotes; keep the comparison universe intact.
+    const quotedProtocols=protocols.filter(p=>p.ticker&&p.ticker!=='XTZ'&&metric(p,'prezzo')>0&&finite(metric(p,'variazione_prezzo_24h_pct'))&&['tvl','mcap','fees','volume'].every(k=>finite(snapshot(p)[k])));
+    $('mostro-ticker-track').parentNode.setAttribute('aria-label',quotedProtocols.length+' complete protocol snapshot quotes');
+    const tickerItems=quotedProtocols.map(p=>{
       const price=metric(p,'prezzo'),change=metric(p,'variazione_prezzo_24h_pct'),date=p.metrics?.prezzo?.as_of||'date unavailable';
       return '<span class="ticker-item" title="'+esc(p.name+' · '+date)+'"><span class="ticker-symbol">'+esc(p.ticker||p.name)+'</span> $'+fmt(price,price!==null&&price<1?6:2)+' <span class="'+(change<0?'ticker-down':'ticker-up')+'">'+(change===null?'Δ N/D':fmt(change)+'%')+'</span></span>';
     }).join('');
     $('mostro-ticker-track').innerHTML='<div class="ticker-group">'+tickerItems+'</div><div class="ticker-group" aria-hidden="true">'+tickerItems+'</div>';
-    $('mostro-ticker-track').style.animationDuration=(protocols.length*4)+'s';
+    $('mostro-ticker-track').style.animationDuration=(quotedProtocols.length*4)+'s';
     const pause=doc.createElement('button');pause.type='button';pause.className='room-btn';pause.textContent='PAUSE TICKER';pause.setAttribute('aria-pressed','false');
     $('mostro-ticker-track').parentNode.before(pause);
     pause.addEventListener('click',()=>{const stopped=pause.getAttribute('aria-pressed')!=='true';pause.setAttribute('aria-pressed',String(stopped));pause.textContent=stopped?'RESUME TICKER':'PAUSE TICKER';$('mostro-ticker-track').style.animationPlayState=stopped?'paused':'running';});
@@ -146,8 +149,8 @@
       const scored=aggregate.filter(x=>finite(x.score));
       const mean=scored.length?scored.reduce((sum,x)=>sum+x.score,0)/scored.length:null;
       $('quick-stats-content').innerHTML='<strong>'+esc(s.token+' · '+s.thesis_code)+'</strong><p>'+esc(s.title_en)+'</p>'+badge(r.state)+
-        '<dl><dt>Scenario score</dt><dd>'+fmt(r.score)+'/100</dd><dt>MCAP/TVL</dt><dd>'+fmt(r.ratio)+'×</dd><dt>Invalidation buffer</dt><dd>'+fmt(r.buffer)+' pp</dd><dt>Margin</dt><dd>'+margins.get(selected)+' pp</dd><dt>Daily fees · stressed</dt><dd>$'+fmt(r.fees)+'</dd><dt>24h volume · source</dt><dd>$'+fmt(base.volume)+'</dd><dt>Funding · stressed</dt><dd>'+fmt(r.funding,6)+'</dd><dt>Coverage</dt><dd>'+r.coverage+'/4 components</dd><dt>Visible basket score</dt><dd>'+fmt(mean)+'</dd><dt>Visible invalidated</dt><dd>'+aggregate.filter(x=>x.state==='INVALIDATED').length+'/'+visible.length+'</dd></dl>'+ 
-        '<p class="source-note">'+esc(p?.metrics?.tvl?.as_of||p?.metrics?.prezzo?.as_of||'Protocol snapshot unavailable')+'</p>';
+        '<dl><dt>Scenario score</dt><dd>'+fmt(r.score)+'/100</dd><dt>MCAP/TVL</dt><dd>'+fmt(r.ratio)+'×</dd><dt>Invalidation buffer</dt><dd>'+fmt(r.buffer)+' pp</dd><dt>Margin</dt><dd>'+margins.get(selected)+' pp</dd><dt>Daily fees · stressed</dt><dd>$'+fmt(r.fees)+'</dd><dt>24h volume · source</dt><dd>$'+fmt(base.volume)+'</dd><dt>'+r.fourthComponent+'</dt><dd>'+ (finite(r.funding)?fmt(r.funding,6):fmt(r.feeYield*100)+'%') +'</dd><dt>Coverage</dt><dd>'+r.coverage+'/4 components</dd><dt>Visible basket score</dt><dd>'+fmt(mean)+'</dd><dt>Visible invalidated</dt><dd>'+aggregate.filter(x=>x.state==='INVALIDATED').length+'/'+visible.length+'</dd></dl>'+
+        '<p class="source-note">'+esc(p?.metrics?.tvl?.as_of||p?.metrics?.prezzo?.as_of||bundle.source_inventory_timestamp.slice(0,10))+'</p>';
     }
     function renderScreener() {
       const query=$('screener-search').value.trim().toLowerCase(),tier=$('screener-tier').value,family=$('strategy-family').value;
@@ -201,7 +204,7 @@
     const families=[...new Set(rules.map(r=>r.famiglia))].sort();
     $('macro-family').innerHTML='<option value="ALL">All families</option>'+families.map(f=>'<option>'+esc(f)+'</option>').join('');
     const macro=bundle.macro.latest_score;
-    $('macro-snapshot').textContent=`Snapshot ${macro.data}: score ${macro.punteggio}, regime ${macro.fascia}, ${macro.regole_scattate} triggered rules (aggregate). Individual live activation is not supplied.`;
+    $('macro-snapshot').textContent=`Snapshot ${macro.data}: score ${macro.punteggio}, regime ${macro.fascia}, ${macro.regole_scattate} triggered rules (aggregate).`;
     function renderMacro() {
       const q=$('macro-search').value.trim().toLowerCase(),family=$('macro-family').value,bias=$('macro-filter').value;
       const filtered=rules.filter(r=>{const direction=r.bias_valore>0?'BULLISH':r.bias_valore<0?'DEFENSIVE':'CAUTION';return(family==='ALL'||r.famiglia===family)&&(bias==='ALL'||bias===direction)&&[r.id,r.nome,r.condizione_testo,r.lettura].join(' ').toLowerCase().includes(q);});

@@ -53,7 +53,7 @@
   const $ = id => doc.getElementById(id), protocols = B.protocols, byId = new Map(protocols.map(p => [p.entity_id,p]));
   const snapshots = new Map(protocols.map(p => [p.entity_id,E.snapshot(p)]));
   const listeners = [], surfaces = new Map(), reduced = root.matchMedia?.('(prefers-reduced-motion: reduce)');
-  let state = {sector:'ALL', selected:protocols[0]?.entity_id, shocks:{}, points:[], missing:[], rectangles:[], matrix:[], arena:null, macro:null, frames:0};
+  let state = {sector:'ALL', selected:B.canvas_config?.scatter_default||'aave', shocks:{}, points:[], missing:[], rectangles:[], matrix:[], arena:null, macro:null, frames:0};
   let hovered = null, pending = 0, animation = 0, stopped = false, disposed = false, lastSweep = 0, feed = null;
   let observer, resizeObserver;
   function on(node, event, fn) { if (node) { node.addEventListener(event,fn); listeners.push(() => node.removeEventListener(event,fn)); } }
@@ -120,14 +120,14 @@
   }
   function circ(s,x,y,r,color,fill=true) { const c=s.ctx;c.beginPath();c.arc(x,y,r,0,Math.PI*2);c.fillStyle=color;c.strokeStyle=color;fill?c.fill():c.stroke(); }
   function arenaRows() {
-    const all=protocols.map(p=>{const r=result(p),share=metric(p,'quota_primi10_esclusi_contratti','quota_primi10');return {id:p.entity_id,raw:[r.fees,r.tvl,finite(r.ratio)&&r.ratio>0?1/r.ratio:null,metric(p,'volume_24h','volume_dex_24h'),metric(p,'ricavi_giornalieri','ricavi_24h'),finite(share)?1-share:null,metric(p,'commit_settimanale','commit_settimanali_entita'),finite(r.funding)?-Math.abs(r.funding):null]};});
+    const all=protocols.map(p=>{const r=result(p),share=metric(p,'quota_primi10_esclusi_contratti','quota_primi10');return {id:p.entity_id,raw:[r.fees,r.tvl,finite(r.ratio)&&r.ratio>0?1/r.ratio:null,metric(p,'volume_24h','volume_dex_24h'),metric(p,'ricavi_giornalieri','ricavi_24h'),finite(share)?1-share:null,metric(p,'commit_settimanali_entita','commit_settimanale'),finite(r.funding)?-Math.abs(r.funding):null]};});
     const populations=axes.map((_,i)=>all.map(r=>r.raw[i]));return all.map(r=>({...r,axes:r.raw.map((v,i)=>rank(v,populations[i]))}));
   }
   function drawArena() {
     const ids=[...new Set(['a','b','c'].map(k=>$('arena-select-'+k).value).filter(id=>byId.has(id)))];
     const all=arenaRows(),entries=ids.map(id=>all.find(r=>r.id===id)),verdict=arenaVerdict(entries);state.arena={entries,...verdict};
     const names=verdict.winners.map(id=>byId.get(id).name).join(' / ');
-    $('arena-battle-output').textContent=(verdict.winners.length?`${verdict.winners.length>1?'TIE':'WINNER'}: ${names}. `:'NO VERDICT. ')+verdict.reason+' '+verdict.scores.map(v=>`${byId.get(v.id).ticker}: ${fmt(v.score)} / 100`).join(' · ')+` · ${verdict.common.length}/8 common axes.`;
+    $('arena-battle-output').textContent=(verdict.winners.length?`${verdict.winners.length>1?'TIE':'WINNER'}: ${names}. `:'SELECT COMPARABLE PROTOCOLS. ')+verdict.reason+' '+verdict.scores.map(v=>`${byId.get(v.id).ticker}: ${fmt(v.score)} / 100`).join(' · ')+` · ${verdict.common.length}/8 common axes.`;
     $('arena-values').innerHTML='<table><thead><tr><th>Percentile / 100</th>'+entries.map((e,i)=>`<th style="color:${colors[i]}">${esc(byId.get(e.id).name)}</th>`).join('')+'</tr></thead><tbody>'+axes.map((a,i)=>'<tr><th>'+a+'</th>'+entries.map(e=>'<td>'+fmt(e.axes[i])+'</td>').join('')+'</tr>').join('')+'</tbody></table>';
     const s=prepare('valen-arena');if(!s)return;const cx=s.w/2,cy=s.h/2,r=Math.max(25,Math.min(s.w/2-64,s.h/2-48));
     const point=(i,f)=>[cx+Math.cos(i*Math.PI/4-Math.PI/2)*r*f,cy+Math.sin(i*Math.PI/4-Math.PI/2)*r*f];
@@ -172,7 +172,8 @@
     const rules=B.macro.rules,aggregate=B.macro.latest_score,timeframe=$('macro-timeframe').value,series=derivativeSeries(timeframe);
     const capacity=rules.reduce((s,r)=>s+Math.abs(Number(r.bias_valore)||0),0),score=Number(aggregate.punteggio);
     const liquidity=capacity&&finite(score)?clamp(50+50*score/capacity+state.shocks.tvl*.2+state.shocks.fees*.1-state.shocks.unlock*.15):null;
-    const last=series.at(-1),risk=last?clamp(50+50*last.value+state.shocks.derivatives*.25+state.shocks.unlock*.15):null;
+    const last=series.at(-1),observedFunding=protocols.map(p=>metric(p,'tasso_finanziamento')).filter(finite),fundingPressure=mean(observedFunding.map(v=>Math.tanh(v/.0001)));
+    const risk=last?clamp(50+50*last.value+state.shocks.derivatives*.25+state.shocks.unlock*.15):finite(fundingPressure)?clamp(50+50*fundingPressure+state.shocks.derivatives*.25+state.shocks.unlock*.15):null;
     const missing=Number(aggregate.regole_mancanti),coverage=finite(missing)&&rules.length?clamp(100*(rules.length-missing)/rules.length):null;
     return{liquidity,risk,coverage,capacity,ruleCount:rules.length,triggered:aggregate.regole_scattate,date:aggregate.data,timeframe,series,feedSource:feed?.timeframe===timeframe?feed.source:'bundle derivative KPI daily deltas'};
   }
@@ -199,9 +200,10 @@
     state.macro=macroState();const m=state.macro;
     gauge('valen-gauge-liquidity',m.liquidity,GREEN,'MACRO LIQUIDITY');gauge('valen-gauge-risk',m.risk,RED,'DERIVATIVE PRESSURE');gauge('valen-gauge-confidence',m.coverage,GOLD,'RULE DATA COVERAGE');
     $('gauge-liquidity-value').textContent=`${fmt(m.liquidity,1)} / 100 · aggregate / absolute bias capacity of ${m.ruleCount} rules`;
-    $('gauge-risk-value').textContent=`${fmt(m.risk,1)} / 100 · ${m.timeframe} normalized derivative KPI pressure`;
-    $('gauge-confidence-value').textContent=`${fmt(m.coverage,1)}% aggregate data coverage · ${m.triggered} triggered; individual activation unknown`;
+    $('gauge-risk-value').textContent=`${fmt(m.risk,1)} / 100 · ${m.series.length?m.timeframe+' derivative KPI pressure':'protocol funding snapshot'}`;
+    $('gauge-confidence-value').textContent=`${fmt(m.coverage,1)}% aggregate data coverage · ${m.triggered} triggered · ${m.date}`;
     $('scope-summary').textContent=`${m.ruleCount} source rules · macro snapshot ${m.date} · ${m.series.length} ${m.timeframe} observations${m.series.length?' ('+m.series[0].time+' → '+m.series.at(-1).time+')':''}. Source: ${m.feedSource}. Green: mean tanh of deduplicated derivative KPI deltas; gold: macro scenario level. Sweep animates the dated observations, not incoming prices.${!m.series.length?' No observations for this timeframe; no interpolation from D1.':''}`;
+    root.MostroCockpit?.updateDials(m);
     drawScope(lastSweep);
   }
   function render() { if(disposed)return;state.shocks=readShocks();drawScatter();drawArena();drawTreemap();drawCorrelation();drawMacro(); if(byId.has(state.selected))$('scatter-selection').textContent=details(byId.get(state.selected)); }
@@ -222,7 +224,7 @@
     ['scatter','arena','treemap','correlation','oscilloscope'].forEach((n,i)=>makeSurface('valen-'+n,[360,340,420,430,280][i]));['liquidity','risk','confidence'].forEach(n=>makeSurface('valen-gauge-'+n,220));
     setBrand();$('canvas-sector').innerHTML='<option value="ALL">All sectors · '+protocols.length+'</option>'+[...new Set(protocols.map(sector))].sort().map(s=>'<option>'+esc(s)+'</option>').join('');
     const options=protocols.map(p=>`<option value="${esc(p.entity_id)}">${esc(p.ticker||'—')} · ${esc(p.name)}</option>`).join('');
-    ['a','b','c'].forEach((slot,i)=>{const node=$('arena-select-'+slot);node.innerHTML=(slot==='c'?'<option value="">No third protocol</option>':'')+options;if(i<2)node.selectedIndex=i;on(node,'change',schedule);});
+    ['a','b','c'].forEach((slot,i)=>{const node=$('arena-select-'+slot);node.innerHTML=(slot==='c'?'<option value="">No third protocol</option>':'')+options;if(i<2)node.value=(B.canvas_config?.arena_defaults||['aave','uniswap'])[i];on(node,'change',schedule);});
     on($('canvas-sector'),'change',updateFilter);on($('canvas-protocol'),'change',e=>selectProtocol(e.target.value));on($('scatter-missing'),'click',e=>{const b=e.target.closest('[data-protocol]');if(b)selectProtocol(b.dataset.protocol);});
     const scatter=surfaces.get('valen-scatter');if(scatter){
       const hit=e=>{const q=pointer(scatter,e);let best=null,distance=13;state.points.forEach(p=>{const d=Math.hypot(q.x-p.x,q.y-p.y);if(d<distance){best=p;distance=d;}});return best;};
