@@ -1,70 +1,319 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Luca Valente — On-chain &amp; Macro Research</title>
-<meta name="description" content="Independent crypto research by Luca Valente. On-chain data, macro context, peer comparisons and data quality, with methods and limitations.">
-<link rel="canonical" href="https://lucavalente-research.github.io/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Luca Valente · Crypto research">
-<meta property="og:title" content="Luca Valente — On-chain &amp; Macro Research">
-<meta property="og:description" content="Independent crypto research by Luca Valente. On-chain data, macro context, peer comparisons and data quality, with methods and limitations.">
-<meta property="og:url" content="https://lucavalente-research.github.io/">
-<meta property="og:image" content="https://lucavalente-research.github.io/immagini/og.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@LukkVal">
-<meta name="twitter:title" content="Luca Valente — On-chain &amp; Macro Research">
-<meta name="twitter:description" content="Independent crypto research by Luca Valente. On-chain data, macro context, peer comparisons and data quality, with methods and limitations.">
-<meta name="twitter:image" content="https://lucavalente-research.github.io/immagini/og.png">
-<link rel="alternate" type="application/rss+xml" title="Luca Valente · Crypto research" href="feed.xml">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23052C25'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23F4F0E3' text-anchor='middle'%3ELV%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="stile.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://lucavalente-research.github.io/#author", "name": "Luca Valente", "url": "https://lucavalente-research.github.io/about.html"}, {"@type": "WebSite", "@id": "https://lucavalente-research.github.io/#website", "url": "https://lucavalente-research.github.io/", "name": "Luca Valente", "creator": {"@id": "https://lucavalente-research.github.io/#author"}}]}</script>
-</head><body><a class="skip" href="#main">Skip to content</a>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>VALEN TERMINAL // VALUATION, ALPHA &amp; LIQUIDITY ENGINE</title>
+  <meta name="description" content="VALEN TERMINAL // VALUATION, ALPHA &amp; LIQUIDITY ENGINE">
+  <link rel="canonical" href="https://valenterminal.com/portfolio.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VALEN TERMINAL // VALUATION, ALPHA &amp; LIQUIDITY ENGINE">
+  <meta property="og:title" content="VALEN TERMINAL // VALUATION, ALPHA &amp; LIQUIDITY ENGINE">
+  <meta property="og:description" content="VALEN TERMINAL // VALUATION, ALPHA &amp; LIQUIDITY ENGINE">
+  <meta property="og:url" content="https://valenterminal.com/portfolio.html">
+  <meta property="og:image" content="https://valenterminal.com/immagini/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@LukkVal">
+  <meta name="twitter:title" content="VALEN TERMINAL // VALUATION, ALPHA &amp; LIQUIDITY ENGINE">
+  <meta name="twitter:description" content="VALEN TERMINAL // VALUATION, ALPHA &amp; LIQUIDITY ENGINE">
+  <meta name="twitter:image" content="https://valenterminal.com/immagini/og.png">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23052C25'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23F4F0E3' text-anchor='middle'%3ELV%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="stile.css">
+  <link rel="stylesheet" href="css/mostro_terminal.css">
+  <link rel="stylesheet" href="css/mostro_media_command.css">
+  <style>
+    :root {
+      --mostro-bg: #071A17;
+      --mostro-panel: #0D2B26;
+      --mostro-emerald: #00F5A0;
+      --mostro-crimson: #FF2E63;
+      --mostro-gold: #FFB800;
+    }
+    .portfolio-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+      gap: clamp(14px, 2.5vw, 20px);
+      margin-top: 24px;
+    }
+    .portfolio-cards .voce-galleria {
+      background: #0D2B26;
+      border: 1px solid rgba(0, 245, 160, 0.25);
+      border-radius: 8px;
+      padding: clamp(12px, 2.5vw, 18px);
+      min-width: 0;
+    }
+    .portfolio-cards figure { overflow: hidden; margin: 0; }
+    .portfolio-cards img { width: 100%; max-width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; display: block; }
+    .portfolio-cards h2 { margin: 14px 0 10px; font-size: 1.1rem; overflow-wrap: anywhere; }
+    .portfolio-cards .data { line-height: 1.5; color: #FFB800; font-family: monospace; font-size: 0.78rem; }
+    .kpi-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 175px), 1fr));
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .kpi-box {
+      background: #071A17;
+      border: 1px solid rgba(0, 245, 160, 0.22);
+      border-left: 3px solid #00F5A0;
+      padding: 12px;
+      border-radius: 4px;
+    }
+    .kpi-box.gold { border-left-color: #FFB800; }
+    .kpi-box.alert { border-left-color: #FF2E63; }
+    .kpi-label { font-family: monospace; font-size: 0.72rem; color: #8AB3AD; text-transform: uppercase; }
+    .kpi-val { font-family: monospace; font-size: 1.25rem; font-weight: 700; color: #E6F4F1; margin-top: 4px; }
+    .controls-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .terminal-input, .terminal-select {
+      background: #071A17;
+      color: #E6F4F1;
+      border: 1px solid rgba(0, 245, 160, 0.35);
+      border-radius: 4px;
+      min-height: 44px;
+      padding: 8px 10px;
+      font-family: monospace;
+      font-size: 0.8rem;
+      max-width: 100%;
+    }
+    .vault-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+      gap: 16px;
+    }
+    .vault-card {
+      background: #071A17;
+      border: 1px solid rgba(0, 245, 160, 0.24);
+      border-radius: 6px;
+      padding: 14px;
+      min-width: 0;
+    }
+    .macro-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr));
+      gap: 10px;
+      max-height: 440px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+    .macro-rule-card {
+      background: #071A17;
+      border: 1px solid rgba(0, 245, 160, 0.2);
+      border-radius: 4px;
+      padding: 10px;
+      font-family: monospace;
+      font-size: 0.75rem;
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+    .cred-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+      gap: 16px;
+    }
+    .cred-card {
+      background: #071A17;
+      border: 1px solid rgba(255, 184, 0, 0.35);
+      border-radius: 6px;
+      padding: 16px;
+      min-width: 0;
+    }
+  </style>
+</head>
+<body class="mostro-terminal">
+<a class="skip" href="#main">Skip to content</a>
+
 <header class="testata">
-  <div class="marchio"><a href="./">LV / LUCA VALENTE<small>ON-CHAIN AND MACRO RESEARCH</small></a></div>
-  <nav aria-label="Main navigation"><a href="./" class="attiva">Home</a> <a href="portfolio.html">Portfolio</a> <a href="charts.html">Charts</a> <a href="analysis.html">Analysis</a> <a href="method.html">Methodology & data</a> <a href="code-and-data.html">Code & data</a> <a href="about.html">About</a> <a href="contact.html">Contact</a><a href="archive.html">Archive</a></nav>
-  
+  <div class="marchio"><a href="./"><span data-brand-name>VALEN TERMINAL</span><small data-brand-tagline>VALUATION, ALPHA &amp; LIQUIDITY ENGINE</small></a></div>
+  <nav aria-label="Main navigation"><a href="./">Terminal</a><a href="assets/docs/Luca_Valente_CV.pdf" download>Institutional CV</a><a href="mailto:luca.valente.cv@gmail.com">Contact</a></nav>
 </header>
-<main id="main">
-<section class="chi">
-<p class="data">Luca Valente</p>
-<h1>Crypto markets, measured in context.</h1>
-<p>Independent on-chain and macro research by Luca Valente. Usage, liquidity and derivatives, compared across sectors and over time.</p>
-<p>Historical data. Defined comparisons. Explicit limits.</p>
-<p><a href="charts.html">Research</a> · <a href="method.html">Methodology &amp; data</a> · <a href="contact.html">Contact</a></p>
-<p>What I look at: usage, liquidity, derivatives and flows, each protocol against similar ones.</p>
+
+<!-- TOP COMMAND BAR WITH LIVE LED, 199 PROTOCOLS TICKER TAPE & 7-ROOM SELECTOR -->
+<section class="command-bar" aria-label="Institutional Command Bar">
+  <div class="command-top-row">
+    <div class="led-status" id="bundle-status-indicator">
+      <span class="led-dot" aria-hidden="true"></span>
+      <span>VALEN TERMINAL · LOADING SNAPSHOT</span>
+    </div>
+    <div style="font-family: monospace; font-size: 0.75rem; color: #FFB800;">
+      <span id="source-gate-summary">Reading source provenance…</span>
+    </div>
+  </div>
+
+  <div class="media-top-actions"><button type="button" id="command-open" class="room-btn" aria-haspopup="dialog" aria-keyshortcuts="Meta+K Control+K /">COMMAND / ⌘K · Ctrl+K</button><button type="button" id="sound-hud" class="room-btn" aria-pressed="false">[SOUND HUD: OFF]</button></div>
+  <p id="media-status" class="media-status" role="status" aria-live="polite"></p>
+  <div class="ticker-wrap" role="region" aria-label="199 Protocols Live Ticker Tape">
+    <div class="ticker-track" id="mostro-ticker-track"></div>
+  </div>
+
+  <nav class="room-selector" aria-label="Terminal Room Selector">
+    <button type="button" class="room-btn active" data-room="all" aria-selected="true">ALL 7 ROOMS</button>
+    <button type="button" class="room-btn" data-room="room-1" aria-selected="false">01 · 15 GOLD &amp; 64 STRATEGIES</button>
+    <button type="button" class="room-btn" data-room="room-2" aria-selected="false">02 · 199 SCATTER &amp; ARENA</button>
+    <button type="button" class="room-btn" data-room="room-3" aria-selected="false">03 · LIQUIDITY SHOCK SIM</button>
+    <button type="button" class="room-btn" data-room="room-4" aria-selected="false">04 · NEON VIDEO &amp; TEARSHEETS</button>
+    <button type="button" class="room-btn" data-room="room-5" aria-selected="false">05 · SHA-256 AUDIT LEDGER</button>
+    <button type="button" class="room-btn" data-room="room-6" aria-selected="false">06 · 43-RULE MACRO RADAR</button>
+    <button type="button" class="room-btn" data-room="room-7" aria-selected="false">07 · YALE / WHARTON / HKUST ARCH</button>
+  </nav>
 </section>
-<section class="voce" aria-labelledby="featured-liquidity">
-<p class="data">FEATURED ANALYSIS · 18 OCT 2026</p>
-<h2 id="featured-liquidity"><a href="analysis-2026-10-18-liquidity-thermometer.html">The Liquidity Thermometer: USDT and USDC Supply Falls 0.46% as US Macro Signals Diverge</a></h2>
-<p class="sotto">USDT and USDC outstanding supply fell by a combined $1.191B in seven days, while the latest US macro readings sent mixed signals.</p>
+
+<main id="main" class="terminal-container">
+  <header style="margin-bottom: 22px;">
+    <h1 style="margin: 0 0 8px 0; color: #00F5A0; font-family: monospace;"><span data-brand-title>VALEN TERMINAL // VALUATION, ALPHA &amp; LIQUIDITY ENGINE</span></h1>
+    <p data-brand-subtitle>FOUNDER &amp; LEAD ARCHITECT: LUCA VALENTE</p>
+    <p class="intro" style="margin: 0; color: #8AB3AD;">
+      Quantitative decision architecture across 199 audited protocols, 64 quantitative strategies, and 43 proprietary macro liquidity rules. A local JavaScript bundle loads the source snapshot on HTTPS and file:// without data fetches.
+    </p>
+  </header>
+
+  <!-- ROOM 1: FLAGSHIP 15 GOLD & 64 STRATEGIES SCREENER -->
+  <section id="room-1" class="terminal-room" aria-labelledby="title-room-1"><div class="room-header"><div><h2 id="title-room-1" class="room-title">ROOM 01 // 64 STRATEGIES SCREENER</h2><p>15 TIER-1 GOLD · Source observations, scenario sensitivity and explicit invalidation horizons.</p></div></div>
+<div class="controls-row">
+<label for="screener-search">Search</label><input id="screener-search" type="search" class="terminal-input" placeholder="Ticker, thesis, model…">
+<label for="screener-tier">Basket</label><select id="screener-tier" class="terminal-select"><option value="GOLD" selected>15 TIER-1 GOLD</option><option value="ALL">All tiers</option></select>
+<label for="strategy-family">Block</label><select id="strategy-family" class="terminal-select"><option value="ALL">All 64</option><option value="DERIVATIVES">Derivatives H4/D1</option><option value="TRAP">Trap Kill-Switch</option><option value="FUNDAMENTALS">Fundamentals</option></select>
+<button class="room-btn" id="screener-all" type="button">SHOW ALL 64</button><output id="screener-count" aria-live="polite"></output></div>
+<div class="screener-layout"><div class="table-scroll"><table id="strategy-table" class="mostro-table" aria-label="64 strategy screener"><thead><tr>
+<th><button data-sort="code">Thesis ↕</button></th><th><button data-sort="token">Ticker ↕</button></th><th><button data-sort="title">Strategy ↕</button></th><th><button data-sort="score">Scenario score ↕</button></th><th><button data-sort="ratio">MCAP/TVL ↕</button></th><th><button data-sort="buffer">Buffer ↕</button></th><th><button data-sort="state">State ↕</button></th><th>Stop-loss horizon</th><th>Margin Adjuster</th>
+</tr></thead><tbody id="gold-15-tbody"></tbody></table></div>
+<aside id="quick-stats" class="arena-card" aria-label="Quick Stats"><h3>QUICK STATS</h3><div id="quick-stats-content" aria-live="polite"></div></aside></div>
+<details><summary>All 64 source thesis cards &amp; assumptions</summary><p>Margin Adjuster adds 0–30 points to the scenario risk budget (default 10). It is a sensitivity control, not account leverage or an executable stop order. H4/D1 follows the source derivatives rule; 30D denotes the fundamental review window.</p><div id="strategies-64-grid" class="macro-grid"></div></details>
 </section>
-<section class="voce" aria-labelledby="featured-analysis">
-<p class="data">FEATURED ANALYSIS · 18 OCT 2026</p>
-<h2 id="featured-analysis"><a href="analysis-2026-10-18-token-supply-concentration.html">Token Supply Concentration: What Top-10 Holder Lists Reveal—and What They Miss</a></h2>
-<p class="sotto">A Blockscout snapshot of CRV, UNI and OP shows why address concentration cannot be read as a simple ranking of selling pressure.</p>
+
+  <!-- ROOM 2: native Canvas visual engines -->
+  <section id="room-2" class="terminal-room" aria-labelledby="title-room-2">
+    <div class="room-header"><div><h2 id="title-room-2" class="room-title">ROOM 02 // VALUATION MAP &amp; ARENA BATTLE</h2><p>199 protocols · daily fees as cash-flow proxy (USD), MCAP/TVL · logarithmic axes. Missing observations remain visible in the selector.</p></div><span class="room-badge badge-gold">NATIVE CANVAS / HiDPI</span></div>
+    <div class="controls-row"><label for="canvas-sector">Sector</label><select id="canvas-sector" class="terminal-select"></select><label for="canvas-protocol">Select protocol</label><select id="canvas-protocol" class="terminal-select"></select><label for="arena-target">Click → Arena slot</label><select id="arena-target" class="terminal-select"><option value="a">A</option><option value="b">B</option><option value="c">C</option></select></div>
+    <div class="scatter-grid"><div class="canvas-panel"><canvas id="valen-scatter" tabindex="0" role="img" aria-label="Logarithmic fees versus MCAP to TVL scatterplot" aria-describedby="scatter-summary">Use the protocol selector for an accessible alternative.</canvas><p id="scatter-summary" class="source-note"></p><div id="scatter-tooltip" class="canvas-tooltip" role="status" hidden></div><div id="scatter-selection" aria-live="polite"></div><details><summary>Protocols without plottable observations</summary><div id="scatter-missing" class="missing-list"></div></details></div>
+    <div class="canvas-panel"><h3>ARENA BATTLE // 8 AXES</h3><div class="controls-row"><label>A <select id="arena-select-a" class="terminal-select"></select></label><label>B <select id="arena-select-b" class="terminal-select"></select></label><label>C (optional) <select id="arena-select-c" class="terminal-select"></select></label></div><canvas id="valen-arena" role="img" aria-label="Eight-axis protocol comparison" aria-describedby="arena-battle-output"></canvas><div id="arena-battle-output" aria-live="polite"></div><details><summary>Axis values &amp; scoring</summary><p>Universe percentile ranks; higher is stronger. Equal weights on common observed axes only; at least four required. Missing axes are open gaps. Ties within 0.1 points share the verdict.</p><div id="arena-values" class="table-scroll"></div></details></div></div>
+    <div class="canvas-panel"><h3>MARKET TREEMAP // 199 PROTOCOLS</h3><canvas id="valen-treemap" tabindex="0" role="img" aria-label="Market capitalization treemap colored by scenario resilience" aria-describedby="treemap-summary"></canvas><p id="treemap-summary" class="source-note"></p><div id="treemap-tooltip" role="status"></div></div>
+  </section>
+
+  <!-- ROOM 3: WHAT-IF LIQUIDITY SHOCK SIMULATOR WITH GOLD GRADUATED RULERS/SLIDERS -->
+  <section id="room-3" class="terminal-room" aria-labelledby="title-room-3"><div class="room-header"><div><h2 id="title-room-3" class="room-title">ROOM 03 // WHAT-IF LIQUIDITY SHOCK &amp; STRESS-TEST</h2><p>64 strategies + 199 protocols · Client-side scenarios on a dated snapshot.</p></div></div><div class="shock-controls"><div class="shock-slider-group"><label for="shock-tvl">TVL Shock (%)</label> <output id="shock-tvl-value" for="shock-tvl">0%</output><input type="range" class="gold-slider" id="shock-tvl" min="-60" max="100" step="1" value="0" list="ticks-tvl"><datalist id="ticks-tvl"><option value="-60"></option><option value="-20"></option><option value="0"></option><option value="50"></option><option value="100"></option></datalist><div class="graduated-ruler" aria-hidden="true"><span>-60%</span><span>-20%</span><span>+0%</span><span>+50%</span><span>+100%</span></div></div><div class="shock-slider-group"><label for="shock-fees">Fee / Take-Rate Shock (%)</label> <output id="shock-fees-value" for="shock-fees">0%</output><input type="range" class="gold-slider" id="shock-fees" min="-100" max="100" step="1" value="0" list="ticks-fees"><datalist id="ticks-fees"><option value="-100"></option><option value="-50"></option><option value="0"></option><option value="50"></option><option value="100"></option></datalist><div class="graduated-ruler" aria-hidden="true"><span>-100%</span><span>-50%</span><span>+0%</span><span>+50%</span><span>+100%</span></div></div><div class="shock-slider-group"><label for="shock-derivatives">Derivatives OI / Funding Shock (%)</label> <output id="shock-derivatives-value" for="shock-derivatives">0%</output><input type="range" class="gold-slider" id="shock-derivatives" min="-100" max="100" step="1" value="0" list="ticks-derivatives"><datalist id="ticks-derivatives"><option value="-100"></option><option value="-50"></option><option value="0"></option><option value="50"></option><option value="100"></option></datalist><div class="graduated-ruler" aria-hidden="true"><span>-100%</span><span>-50%</span><span>+0%</span><span>+50%</span><span>+100%</span></div></div><div class="shock-slider-group"><label for="shock-unlock">Unlock Dilution Pressure (%)</label> <output id="shock-unlock-value" for="shock-unlock">0%</output><input type="range" class="gold-slider" id="shock-unlock" min="0" max="100" step="1" value="0" list="ticks-unlock"><datalist id="ticks-unlock"><option value="0"></option><option value="25"></option><option value="50"></option><option value="75"></option><option value="100"></option></datalist><div class="graduated-ruler" aria-hidden="true"><span>+0%</span><span>+25%</span><span>+50%</span><span>+75%</span><span>+100%</span></div></div></div>
+<div class="controls-row"><button id="shock-reset" class="room-btn" type="button">RESET BASELINE</button><output id="stress-summary" aria-live="polite"></output></div>
+<div class="canvas-panel"><h3>CROSS-ASSET CORRELATION // SCENARIO MODEL</h3><canvas id="valen-correlation" role="img" aria-label="Scenario cross-asset correlation matrix" aria-describedby="correlation-summary"></canvas><p id="correlation-summary" class="source-note"></p><details><summary>Matrix values &amp; method</summary><p>Normalized factor covariance: liquidity, fees, derivatives, dilution plus independent residual risk. Slider magnitude increases the variance of the corresponding factor. Exposures are illustrative assumptions, not historical return estimates. Both shock directions increase factor stress.</p><div id="correlation-values" class="table-scroll"></div></details></div>
+<details><summary>Scenario formulas &amp; limitations</summary>
+<p>TVL′ = TVL × (1 + TVL shock). MCAP′ = MCAP × (1 + unlock pressure), assuming constant token price. Fees′ = observed daily fees × (1 + fee shock). OI′ = OI × (1 + derivatives shock). Funding′ = funding + shock × 0.0001, with shock expressed as a fraction. Fees are daily observations, not fabricated 30-day totals.</p>
+<p>Score = weighted mean of available components: TVL/MCAP (35%), daily fees/P25 (25%), 24h volume/$1M (20%), funding proximity to 0.0001 (20%), each capped to [0,1], minus unlock pressure × 25 points. Missing components are omitted and force MONITOR unless a known invalidation already occurs. Buffer = score − (50 − margin) points. ACTIVE requires buffer ≥ 10 and complete metrics; buffer &lt; 0 is INVALIDATED. Derivatives also invalidate above funding 0.0001 or a simulated OI drop of 20% (explicit scenario assumption). Trap strategies monitor the affected protocol's resilience, not the profitability of a short position.</p>
+<p>This transparent sensitivity model does not rerun the source SQLite thesis expressions, predict returns, or establish historical performance. Frame updates use requestAnimationFrame; actual frame rate depends on the device.</p></details>
+<div class="table-scroll stress-scroll"><table class="mostro-table" aria-label="Stress results for every strategy and protocol"><thead><tr><th>Universe / ID</th><th>Protocol / thesis</th><th>Score /100</th><th>MCAP/TVL</th><th>Buffer (pp)</th><th>State</th></tr></thead><tbody id="stress-results"></tbody></table></div>
 </section>
-<section class="voce" aria-labelledby="featured-jup">
-<p class="data">INDICATOR CASE STUDY · 16 OCT 2026</p>
-<h2 id="featured-jup"><a href="analysis-2026-10-16-jup-fragile-trend.html">JUP 4H: Reading a Fragile Trend</a></h2>
-<p class="sotto">A native TradingView capture explains a 41.4/100 Trend Strength reading, with price below its guide and direction unconfirmed.</p>
+
+  <!-- ROOM 4: PORTABLE CINEMATIC VAULT -->
+  <section id="room-4" class="terminal-room" aria-labelledby="title-room-4">
+    <div class="room-header"><div><h2 id="title-room-4" class="room-title">ROOM 04 // CINEMATIC VAULT &amp; INSTITUTIONAL TEARSHEETS</h2><p>64 native-resolution cards and Neon MP4s. Hover or tap Preview, open a full-screen research view, then print a sealed institutional tearsheet.</p></div><span class="room-badge badge-gold">64 CARDS / 64 VIDEOS</span></div>
+    <div class="vault-controls"><label for="vault-search">Search the Vault</label><input id="vault-search" class="terminal-input" type="search" placeholder="Strategy, ticker or thesis…"><output id="vault-count" aria-live="polite"></output></div>
+    <div id="vault-grid" class="vault-grid"></div>
+  </section>
+
+  <!-- ROOM 5: CRYPTOGRAPHIC SHA-256 AUDIT LEDGER -->
+  <section id="room-5" class="terminal-room" aria-labelledby="title-room-5"><div class="room-header"><div><h2 id="title-room-5" class="room-title">ROOM 05 // CRYPTOGRAPHIC SHA-256 AUDIT LEDGER</h2><p>Verify each packaged UTF-8 thesis payload against its stored SHA-256 digest. Integrity within this bundle; not an external signature or proof of data accuracy.</p></div></div>
+<div class="controls-row"><label for="sha256-input">SHA-256 sandbox</label><input id="sha256-input" class="terminal-input" value="abc"><button id="sha256-verify-btn" class="room-btn" type="button">COMPUTE SHA-256 DIGEST</button></div><output id="sha256-digest-output" class="hash-output" aria-live="polite">Not computed</output>
+<div class="table-scroll"><table class="mostro-table" aria-label="Cryptographic SHA-256 Audit Ledger"><thead><tr><th>Thesis</th><th>Packaged SHA-256</th><th>Verification</th></tr></thead><tbody id="audit-ledger-body"></tbody></table></div>
 </section>
-<h2>Selected research</h2>
-<p class="regola">What the data shows, and what I&rsquo;m watching.</p>
-<p class="sotto">Data through 8 Oct 2026. <a href="charts.html">All charts</a></p>
-<div class="recenti">
-<div class="voce-galleria"><p class="data"><a href="real-money.html">Real money</a> · 8 Oct 2026</p><h2><a href="real-money-2026-10-08.html">SOL deposited in Marinade Liquid Staking fell 2.4% in 30 days; value locked +9.6%</a></h2>
-<figure><a href="real-money-2026-10-08.html"><picture><source media="(max-width:600px)" srcset="immagini/gallery/2026-10-08/real_money_marinade-liquid-staking_2026-10-08_1080x1350.webp" width="1080" height="1350"><img src="immagini/gallery/2026-10-08/real_money_marinade-liquid-staking_2026-10-08_1600x900.webp" alt="SOL deposited in Marinade Liquid Staking fell 2.4% in 30 days; value locked +9.6%" width="1600" height="900"></picture></a><figcaption>Marinade Liquid Staking&#x27;s value locked went from $242.7M to $266.0M in the 30 days to 8 Oct 2026 (+9.6%). Token prices account for +12% of the change and net deposits for −2.7%. Source: DefiLlama.</figcaption></figure>
-<p class="sotto"><a href="real-money-2026-10-08.html">The reading</a></p></div>
-<div class="voce-galleria"><p class="data"><a href="health-index.html">Health index</a> · 7 Oct 2026</p><h2><a href="health-index-2026-10-07.html">POL (ex-MATIC)&#x27;s health index: 41 out of 100, below the median of 19 peer chains</a></h2>
-<figure><a href="health-index-2026-10-07.html"><picture><source media="(max-width:600px)" srcset="immagini/gallery/2026-10-07/health_index_polygon-ecosystem-token_2026-10-07_1080x1350.webp" width="1080" height="1350"><img src="immagini/gallery/2026-10-07/health_index_polygon-ecosystem-token_2026-10-07_1600x900.webp" alt="POL (ex-MATIC)&#x27;s health index: 41 out of 100, below the median of 19 peer chains" width="1600" height="900" loading="lazy"></picture></a><figcaption>POL (ex-MATIC)&#x27;s health index was 41 out of 100 on 7 Oct 2026, place 13 of 19 among its sector peers; 4 of 5 measures were available. Seven days earlier it was 49. Source: DefiLlama, CoinGecko.</figcaption></figure>
-<p class="sotto"><a href="health-index-2026-10-07.html">The reading</a></p></div>
-</div>
+
+  <!-- ROOM 6: PROPRIETARY 43-RULE MACRO RADAR -->
+  <section id="room-6" class="terminal-room" aria-labelledby="title-room-6"><div class="room-header"><div><h2 id="title-room-6" class="room-title">ROOM 06 // 43 PROPRIETARY MACRO RULES</h2><p>Source rule definitions and directional bias. A bias is not evidence that a rule currently fires.</p></div></div>
+<div class="gauge-grid"><div><canvas id="valen-gauge-liquidity" role="img" aria-label="Macro liquidity gauge"></canvas><output id="gauge-liquidity-value"></output></div><div><canvas id="valen-gauge-risk" role="img" aria-label="Derivative pressure gauge"></canvas><output id="gauge-risk-value"></output></div><div><canvas id="valen-gauge-confidence" role="img" aria-label="Macro rule coverage gauge"></canvas><output id="gauge-confidence-value"></output></div></div>
+<div class="canvas-panel"><div class="controls-row"><h3>MACRO OSCILLOSCOPE // H4 / D1</h3><label for="macro-timeframe">Timeframe</label><select id="macro-timeframe" class="terminal-select"><option>D1</option><option>H4</option></select><button id="scope-pause" type="button" class="room-btn" aria-pressed="false">PAUSE SWEEP</button></div><canvas id="valen-oscilloscope" role="img" aria-label="Derivative observations with animated radar sweep" aria-describedby="scope-summary"></canvas><p id="scope-summary" class="source-note"></p></div>
+<p id="macro-snapshot"></p><div class="controls-row"><label for="macro-filter">Bias</label><select id="macro-filter" class="terminal-select"><option value="ALL">All 43 rules</option><option value="BULLISH">Expansionary bias</option><option value="CAUTION">Neutral / unresolved bias</option><option value="DEFENSIVE">Defensive bias</option></select><label for="macro-family">Family</label><select id="macro-family" class="terminal-select"></select><label for="macro-search">Search rules</label><input id="macro-search" type="search" class="terminal-input"><output id="macro-count" aria-live="polite"></output></div><div id="macro-43-grid" class="macro-grid"></div>
+</section>
+
+  <!-- ROOM 7: INSTITUTIONAL ARCHITECTURE & CREDENTIALS (YALE / WHARTON / HKUST / 15Y TRACK RECORD) -->
+  <section id="room-7" class="terminal-room" aria-labelledby="title-room-7">
+    <div class="room-header">
+      <div>
+        <h2 id="title-room-7" class="room-title">ROOM 07 // INSTITUTIONAL ARCHITECTURE &amp; ACADEMIC / QUANT CREDENTIALS</h2>
+        <p style="margin: 4px 0 0; font-size: 0.84rem; color: #8AB3AD;">
+          Methodological provenance grounded in academic coursework and research frameworks across Yale, Wharton, HKUST, and a 15-Year Quantitative &amp; Financial Markets Track Record.
+        </p>
+      </div>
+      <span class="room-badge badge-gold">YALE · WHARTON · HKUST · 15Y TRACK RECORD</span>
+    </div>
+
+<h3>LIVE PIPELINE // SQLite → 64 Quant Models</h3><p>Interactive architecture of the exported snapshot. SQLite ingestion and source model execution run upstream; this page recalculates scenarios locally.</p><div id="live-pipeline" class="pipeline" aria-label="Select a pipeline stage"></div><div id="pipeline-detail" class="arena-card" aria-live="polite"></div><div class="controls-row"><a class="room-btn gold-cta" href="assets/docs/Luca_Valente_CV.pdf" download>DOWNLOAD INSTITUTIONAL CV [PDF]</a><a class="room-btn" href="https://valenterminal.com" rel="me noopener">VALEN TERMINAL · https://valenterminal.com</a><a class="room-btn" href="https://x.com/LukkVal" rel="me noopener">X · @LukkVal</a><a class="room-btn" href="https://www.linkedin.com/in/lucavalenteweb3/" rel="me noopener">LinkedIn · Luca Valente</a></div>
+    <div class="cred-grid">
+      <div class="cred-card">
+        <div style="font-family:monospace;color:#FFB800;font-size:0.78rem;">ACADEMIC FOUNDATION // YALE UNIVERSITY</div>
+        <h3 style="margin:6px 0;font-size:1rem;color:#E6F4F1;">Yale — Financial Markets &amp; Systemic Risk Architecture</h3>
+        <p style="margin:0;font-size:0.83rem;color:#8AB3AD;">
+          Macro-liquidity transmission, collateral haircutting, and endogenous leverage cycles applied directly to Rooms 03 and 06.
+        </p>
+      </div>
+      <div class="cred-card">
+        <div style="font-family:monospace;color:#FFB800;font-size:0.78rem;">QUANTITATIVE FINANCE // WHARTON</div>
+        <h3 style="margin:6px 0;font-size:1rem;color:#E6F4F1;">Wharton — Quantitative Modeling &amp; Cashflow Valuation</h3>
+        <p style="margin:0;font-size:0.83rem;color:#8AB3AD;">
+          Empirical fee-multiple screening and Thesis 5_4 on-chain revenue attribution (<code>commissioni_30g &ge; P25</code>, <code>volume_24h &gt; $1M</code>).
+        </p>
+      </div>
+      <div class="cred-card">
+        <div style="font-family:monospace;color:#FFB800;font-size:0.78rem;">DEFI &amp; CRYPTOGRAPHIC ENGINEERING // HKUST</div>
+        <h3 style="margin:6px 0;font-size:1rem;color:#E6F4F1;">HKUST — Distributed Ledger &amp; Automated Market Makers</h3>
+        <p style="margin:0;font-size:0.83rem;color:#8AB3AD;">
+          Smart-contract state auditing, concentrated liquidity microstructure, and SHA-256 reproducible data pipelines.
+        </p>
+      </div>
+      <div class="cred-card">
+        <div style="font-family:monospace;color:#00F5A0;font-size:0.78rem;">INSTITUTIONAL PROVENANCE // 15Y TRACK RECORD</div>
+        <h3 style="margin:6px 0;font-size:1rem;color:#E6F4F1;">15-Year Multi-Cycle Market Structure &amp; Risk Execution</h3>
+        <p style="margin:0;font-size:0.83rem;color:#8AB3AD;">
+          Cross-asset execution discipline combining traditional macro liquidity indicators with verifiable on-chain protocol cashflows.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESERVED RESEARCH CASE STUDIES GALLERY -->
+  <section class="terminal-room" aria-labelledby="title-case-studies">
+    <div class="room-header">
+      <h2 id="title-case-studies" class="room-title">PUBLISHED RESEARCH CASE STUDIES — LUCA VALENTE (OCTOBER 2026)</h2>
+      <span class="room-badge">PRIMARY SOURCE ARCHIVE</span>
+    </div>
+    <div class="portfolio-cards">
+      <article class="voce-galleria">
+        <p class="data">On-chain research · Published 18 Oct 2026</p>
+        <figure><img src="immagini/analysis/analysis-2026-10-18-token-supply-concentration.png" alt="Research chart for Token Supply Concentration: What Top-10 Holder Lists Reveal—and What They Miss" loading="lazy"></figure>
+        <h2>Token Supply Concentration: What Top-10 Holder Lists Reveal—and What They Miss</h2>
+        <p>CRV, UNI and OP holder concentration, with a closer look at contracts, exchanges and burned supply.</p>
+        <p>Archived research snapshot.</p>
+      </article>
+      <article class="voce-galleria">
+        <p class="data">Macro and liquidity · Published 18 Oct 2026</p>
+        <figure><img src="immagini/analysis/analysis-2026-10-18-liquidity-thermometer.png" alt="Research chart for The Liquidity Thermometer: USDT and USDC Supply Falls 0.46% as US Macro Signals Diverge" loading="lazy"></figure>
+        <h2>The Liquidity Thermometer: USDT and USDC Supply Falls 0.46% as US Macro Signals Diverge</h2>
+        <p>US macro conditions alongside the latest USDT and USDC supply observations.</p>
+        <p>Archived research snapshot.</p>
+      </article>
+      <article class="voce-galleria">
+        <p class="data">Market structure · Published 18 Oct 2026 · Chart captured 16 Oct 2026</p>
+        <figure><img src="immagini/analysis/analysis-2026-10-16-jup-fragile-trend.png" alt="Research chart for JUP 4H: Reading a Fragile Trend" loading="lazy"></figure>
+        <h2>JUP 4H: Reading a Fragile Trend</h2>
+        <p>A JUP four-hour case study with a three-part trend reading.</p>
+        <p>Archived research snapshot.</p>
+      </article>
+    </div>
+  </section>
+<noscript><p>JavaScript is required for the interactive terminal. No computed score or hash has been verified.</p></noscript>
 </main>
+
 <footer class="piede">
-  <p class="seguimi"><a href="https://x.com/LukkVal" rel="me noopener">X</a> <a href="https://www.tradingview.com/u/lukkval/" rel="me noopener">TradingView</a> <a href="https://www.linkedin.com/in/lucavalenteweb3/" rel="me noopener">LinkedIn</a> <a href="https://github.com/lucavalente-research/defi-observatory" rel="me noopener">GitHub</a></p>
-  <p><a href="mailto:luca.valente.cv@gmail.com">luca.valente.cv@gmail.com</a> · <a href="contact.html">Contact</a> · <a href="disclaimer.html">Disclaimer</a> · <a href="feed.xml">RSS</a></p>
+  <p class="seguimi"><a href="https://x.com/LukkVal" rel="me noopener">X</a> <a href="https://www.linkedin.com/in/lucavalenteweb3/" rel="me noopener">LinkedIn</a> <a href="https://github.com/lucavalente-research/defi-observatory" rel="me noopener">GitHub</a></p>
+  <p><a href="mailto:luca.valente.cv@gmail.com">luca.valente.cv@gmail.com</a></p>
   <p class="fonti">Data: DefiLlama, GitHub, CoinGecko · growthepie (<a href="https://www.growthepie.com">growthepie.com</a>, CC BY 4.0)</p>
   <p class="legale">Not financial advice. Research based on public on-chain and market data.</p>
 </footer>
-</body></html>
+
+<script defer src="data/mostro_data_bundle.js"></script>
+<script defer src="js/mostro_engine_core.js"></script>
+<script defer src="js/mostro_canvas_engines.js"></script>
+<script defer src="js/mostro_media_command.js"></script>
+</body>
+</html>

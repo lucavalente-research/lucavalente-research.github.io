@@ -11,3 +11,6 @@ dati-aperti/fee_catene/*.csv
 *.riassunto.md
 
 *.bak_*
+
+# Private audits, fixtures and legacy archives must never be deployed.
+.private/
